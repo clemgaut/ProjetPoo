@@ -11,7 +11,7 @@ using System.Text;
 
 public interface IUnitFactory 
 {
-	System::Collections::Generic::IEnumerable<Unit> getUnits(int unitNumber);
+	IEnumerable<Unit> getUnits(int unitNumber);
 
 }
 

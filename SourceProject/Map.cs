@@ -30,10 +30,6 @@ public abstract class Map : IMap
 		throw new System.NotImplementedException();
 	}
 
-	public Map()
-	{
-	}
-
 	public virtual void setBox(Box box, int x, int y)
 	{
 		throw new System.NotImplementedException();
@@ -44,9 +40,13 @@ public abstract class Map : IMap
 		throw new System.NotImplementedException();
 	}
 
-	public virtual IEnumerable<int> getInitCoordonates()
+	public virtual IEnumerable<IEnumerable<int>> getInitCoordonates()
 	{
 		throw new System.NotImplementedException();
+	}
+
+	public Map()
+	{
 	}
 
 }

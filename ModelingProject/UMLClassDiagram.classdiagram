@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="68355e09-ae43-450f-a7ed-8b59914f0208" name="UMLClassDiagram" linkedPackageId="b9632282-b6a8-48ec-9f46-a220d2c782d5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="68355e09-ae43-450f-a7ed-8b59914f0208" name="UMLClassDiagram" linkedPackageId="b9632282-b6a8-48ec-9f46-a220d2c782d5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="7ad64266-d7c7-49a9-95d3-5538b9537011" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="5832e6ea-3a2e-4c74-83da-5ec3de251946">
-      <profileInstance Id="9a1f62b1-4588-4816-887f-17dadebc7aad" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e1f5c004-d2e2-488e-950d-e8c0fdd2c414">
-      <profileInstance Id="af38c87d-fa7b-4283-b599-49ffe17e830f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8e6ecf6c-ad39-40ab-be31-9720917108bf">
-      <profileInstance Id="825b7fcb-f872-49d3-a011-f0c4f3b314de" name="CSharpProfile">
-        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
-      </profileInstance>
-      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="fa457616-56ed-43e6-94f6-85cca220118c">
-      <profileInstance Id="a3ba5a9e-cb0c-493d-8f44-022c6d2e3d47" name="TextTemplateBindings">
-        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
-      </profileInstance>
-      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="24a720c2-d159-4425-82b8-d74ff17fa1e4" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
@@ -115,9 +89,9 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="bf6cf323-9e70-4bdb-9468-aa1e66a3ec88" name="Box" isAbstract="true" isLeaf="false" isActiveClass="false">
+      <class Id="bf6cf323-9e70-4bdb-9468-aa1e66a3ec88" name="Box" visibility="Private" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
-          <reference Id="10f718d7-1b9b-4132-952e-326f85069d3f" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBox" tag="ViewCode">
+          <reference Id="10f718d7-1b9b-4132-952e-326f85069d3f" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3D(Name%3DBox ArrayRank%3D2 ParentType%3DBox)" tag="ViewCode">
             <elementDefinition Id="b6cce155-c27d-4e50-9cc4-b4190717cfdb" />
           </reference>
         </referencesInternal>
@@ -223,7 +197,7 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="47357025-28b5-4153-8b5c-c24ce1e5d862" name="BoxFactory" visibility="Private" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
-          <reference Id="5e0dc10c-5545-45a4-be55-cc24fcc58f11" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBoxFactory" tag="ViewCode">
+          <reference Id="5e0dc10c-5545-45a4-be55-cc24fcc58f11" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBoxFactory" tag="ViewCode">
             <elementDefinition Id="de3864f4-672d-4f72-ba9f-44e8d5d3e027" />
           </reference>
         </referencesInternal>
@@ -3092,7 +3066,7 @@
     <logicalClassDesignerModelHasTypes>
       <Interface Id="313270c0-88b4-4e46-b1ce-c12868a89023" name="IMap" isAbstract="false" isLeaf="false">
         <referencesInternal>
-          <reference Id="6e29d4b5-2322-4d51-8fd3-2cd1bc0a8658" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DIMap" tag="ViewCode">
+          <reference Id="6e29d4b5-2322-4d51-8fd3-2cd1bc0a8658" handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DIMap" tag="ViewCode">
             <elementDefinition Id="fae3d805-3a56-475a-8132-18e8699bc3dd" />
           </reference>
         </referencesInternal>
@@ -3822,13 +3796,13 @@
                 <parameter Id="feaf0879-2510-4490-b959-d9c454b0fd23" direction="Return" isUnique="false">
                   <elementDefinition Id="ad844f28-ada3-4b73-929a-5e1505201bbf" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="100415af-4034-4511-8ee4-dd057c994fca" LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;" />
+                    <referencedTypeMoniker Id="47fd60e9-43c6-4ced-b3fd-49dfc5495b2d" LastKnownName="IEnumerable&lt;Unit&gt;" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="03e19ab9-6c85-4b73-9ec4-fc3b799e16d6" name="unitNumber" direction="In" isUnique="false">
-                  <elementDefinition Id="b8a29f2d-ce37-4928-9b2d-0ae4118a2599" />
+                <parameter Id="e9718a93-9d1c-4fcc-902d-1811ac3c0172" name="unitNumber" direction="In" isUnique="false">
+                  <elementDefinition Id="2e71a5a7-2820-418f-884a-06d831b9417e" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="24a720c2-d159-4425-82b8-d74ff17fa1e4" LastKnownName="Integer" />
                   </type_NamedElement>
@@ -3948,7 +3922,7 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="b9affb1c-10d9-4115-b836-b5d563f2ba12" name="Map" isAbstract="true" isLeaf="false" isActiveClass="false">
         <referencesInternal>
-          <reference Id="f5e4df8e-d446-4ef6-8eee-15221fba8888" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap" tag="ViewCode">
+          <reference Id="f5e4df8e-d446-4ef6-8eee-15221fba8888" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap" tag="ViewCode">
             <elementDefinition Id="2a341fbc-584b-4739-961e-1219b480bd5b" />
           </reference>
         </referencesInternal>
@@ -3999,7 +3973,7 @@
         <ownedAttributesInternal>
           <property Id="6e29721f-8209-4101-ae5d-dec793dc713f" name="fabriqueCase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
-              <reference Id="f2ddc001-d669-4dbb-a3d0-dad6181bf080" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DfabriqueCase" tag="ViewCode">
+              <reference Id="f2ddc001-d669-4dbb-a3d0-dad6181bf080" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DfabriqueCase" tag="ViewCode">
                 <elementDefinition Id="32989b4a-5bf2-4561-bb4d-8b406563e94e" />
               </reference>
             </referencesInternal>
@@ -4047,7 +4021,7 @@
           </property>
           <property Id="c12b979b-c907-4a19-b295-2b2a46c489fb" name="_map" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
-              <reference Id="e91f11c4-1b35-42ad-a625-9529ab26633c" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D_map" tag="ViewCode">
+              <reference Id="e91f11c4-1b35-42ad-a625-9529ab26633c" handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D_map" tag="ViewCode">
                 <elementDefinition Id="e782756e-d143-48df-bc4d-6d5962057703" />
               </reference>
             </referencesInternal>
@@ -4107,7 +4081,7 @@
         <ownedOperationsInternal>
           <operation Id="431d6a92-a724-4bf8-a866-7781f7acf582" name="genererCarte" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="3ce31084-e1f0-40c0-b72d-af17d01e38c0" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DgenererCarte" tag="ViewCode">
+              <reference Id="3ce31084-e1f0-40c0-b72d-af17d01e38c0" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DgenererCarte" tag="ViewCode">
                 <elementDefinition Id="3b7e5ee7-56cd-40d3-8f70-61481a354e9f" />
               </reference>
             </referencesInternal>
@@ -4158,7 +4132,7 @@
           </operation>
           <operation Id="8d6971cc-b289-4560-ab14-2bb3a2f209bc" name="refreshMap" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="75fe84ed-22d4-45f4-a6a5-6305a561cbfb" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DrefreshMap" tag="ViewCode">
+              <reference Id="75fe84ed-22d4-45f4-a6a5-6305a561cbfb" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DrefreshMap" tag="ViewCode">
                 <elementDefinition Id="cf0fe98a-e2c8-4bad-af86-23bc39a9a1e0" />
               </reference>
             </referencesInternal>
@@ -4209,7 +4183,7 @@
           </operation>
           <operation Id="2bc2d473-dcdd-49b0-b6be-0f797d39165e" name="showMap" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="a6784b9e-aa78-4fe6-9774-78a752447044" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DshowMap" tag="ViewCode">
+              <reference Id="a6784b9e-aa78-4fe6-9774-78a752447044" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DshowMap" tag="ViewCode">
                 <elementDefinition Id="9e4fbfa9-6610-427c-8586-18f87bf59cf9" />
               </reference>
             </referencesInternal>
@@ -4258,60 +4232,9 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="2ef81246-326e-49f5-b60e-2cc44772bd02" />
           </operation>
-          <operation Id="c7e1a157-d32a-4811-901b-fce81cd8d992" name="Map" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <referencesInternal>
-              <reference Id="1a71efc0-9a49-41ac-8133-6acf6ba2791d" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D.ctor" tag="ViewCode">
-                <elementDefinition Id="0bd1fae8-bdce-4425-806e-340c659604e4" />
-              </reference>
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="f5d28cdd-2f1c-4394-888a-f1d8e3848ab4" name="method" profile="CSharpProfile">
-                <elementDefinition Id="65c82530-3393-4c60-86fc-84384c565338" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="73120820-07ee-4eaf-9200-92ae788858f6">
-                    <propertyInstance Id="9f340e80-56be-48ad-b07b-920f7ba30af6" name="ClrAttributes">
-                      <elementDefinition Id="6d29b81d-e2ae-423a-8f22-faa3945911e5" />
-                    </propertyInstance>
-                    <elementDefinition Id="fd37a8e2-eb86-4e5a-a9fa-a043bf56ceee" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="5cd81b0f-8925-40af-b3fe-a62a29e35f32">
-                    <propertyInstance Id="a0c266b4-3cd6-49c0-9aa7-475ea811788f" name="IsPartial" value="false">
-                      <elementDefinition Id="bfeef799-5b23-4fc3-8701-55d3256a187b" />
-                    </propertyInstance>
-                    <elementDefinition Id="c0fe7254-6b04-4b41-845e-cbd5362bd3eb" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="efdf3efc-c6db-444c-bf7c-64dc7b63416b">
-                    <propertyInstance Id="cdf3ffa8-f909-4a3a-957e-a1e8412049cf" name="IsUnsafe" value="false">
-                      <elementDefinition Id="b0fa251e-22bc-4b87-a7be-c5fab48aa86e" />
-                    </propertyInstance>
-                    <elementDefinition Id="da3d4ffb-ea94-4c67-8292-6136aa829ab7" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="acde3a12-bf8c-4364-b5d4-5637cdaf58e9">
-                    <propertyInstance Id="6d4c0bf0-5911-4a32-824e-37610d53ee85" name="Inheritance" value="none">
-                      <elementDefinition Id="3fe8baed-2c9f-419c-9437-72d257e16bc8" />
-                    </propertyInstance>
-                    <elementDefinition Id="28d1ed5d-3c45-4697-b470-cd1a97011ae6" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="385d3517-fb83-4489-a40d-e1bde4be09b7">
-                    <propertyInstance Id="c5a7a8b4-e28f-49ab-aaba-7a7efb6c12b3" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="474302b5-28eb-4419-827a-a2f84e5d083f" />
-                    </propertyInstance>
-                    <elementDefinition Id="58d863c7-3412-4c43-bd96-5a95f759636a" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="fafc6308-c5c6-446d-bd2c-68c445e4dabc">
-                    <propertyInstance Id="b6be43ca-a61d-4d53-80f0-bc328ff8d941" name="params" value="false">
-                      <elementDefinition Id="8347b941-324d-41a3-a675-f2625309257e" />
-                    </propertyInstance>
-                    <elementDefinition Id="05fec0c3-e801-4afb-b980-dc27c5131299" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="a45aa85f-b2df-4201-80e7-6a48a1e19ab0" />
-          </operation>
           <operation Id="b0cd8b84-5d48-40fb-adc9-56610cd209c9" name="setBox" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
-              <reference Id="ee4091dc-3510-4804-aef1-11e2ee7fda16" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])" tag="ViewCode">
+              <reference Id="ee4091dc-3510-4804-aef1-11e2ee7fda16" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])" tag="ViewCode">
                 <elementDefinition Id="a6322be1-7d50-4475-b11d-3b5d17a87966" />
               </reference>
             </referencesInternal>
@@ -4362,6 +4285,11 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="3019f5d4-f41c-4c6b-a8e6-9b85cb6984e1" name="box" direction="In" isUnique="false">
+                  <referencesInternal>
+                    <reference Id="66f1de91-9283-4746-9b97-8e38a65bde63" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dbox" tag="ViewCode">
+                      <elementDefinition Id="10627783-1628-4a50-a714-06fcab12bbad" />
+                    </reference>
+                  </referencesInternal>
                   <elementDefinition Id="841e62cd-7fcc-4332-981d-0c212410e4e0" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="54bfccfb-9ba6-480f-8784-7feb04de17bf" LastKnownName="Box" />
@@ -4370,6 +4298,11 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="21ce86a9-8419-45e6-a364-4ce845a7619a" name="x" direction="In" isUnique="false">
+                  <referencesInternal>
+                    <reference Id="de50054c-de66-498e-ac10-a613377815e5" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx" tag="ViewCode">
+                      <elementDefinition Id="9bb82242-1c78-47c1-9b18-8e9c1399a17d" />
+                    </reference>
+                  </referencesInternal>
                   <elementDefinition Id="8919ca41-7e74-4c94-b92d-046c3337e845" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="24a720c2-d159-4425-82b8-d74ff17fa1e4" LastKnownName="Integer" />
@@ -4378,6 +4311,11 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="d714c2a8-8e3f-4a14-ab98-b70c0bc8d9d7" name="y" direction="In" isUnique="false">
+                  <referencesInternal>
+                    <reference Id="03c1705a-74c0-49d2-b03b-309de96d0e0e" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy" tag="ViewCode">
+                      <elementDefinition Id="6a6f610f-d4a7-4744-bab8-1e98f22e1d20" />
+                    </reference>
+                  </referencesInternal>
                   <elementDefinition Id="53754df0-44a4-4a0b-b5ae-8551709010c9" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="24a720c2-d159-4425-82b8-d74ff17fa1e4" LastKnownName="Integer" />
@@ -4387,6 +4325,11 @@
             </ownedParameters>
           </operation>
           <operation Id="1f0a10c6-69e6-473b-9a02-60cf43feb6a2" name="addNation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="3e2859ca-03a0-4536-9863-632c1e85b005" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DaddNation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation)])" tag="ViewCode">
+                <elementDefinition Id="f5dc0a9d-e87e-411b-b183-57224d87eec2" />
+              </reference>
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance Id="5af0c8b9-657a-4619-ad0b-746f58848505" name="method" profile="CSharpProfile">
                 <elementDefinition Id="48a93bb2-1e98-459c-9c20-1f64daa20532" />
@@ -4434,6 +4377,11 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="a9a09d17-f655-41c4-b8f9-808152fc4481" name="nation" direction="In" isUnique="false">
+                  <referencesInternal>
+                    <reference Id="a2ef40b8-b280-4232-b6f8-b4c3f9a4f6ab" handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DaddNation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation)]) ParameterIdentifier%3Dnation" tag="ViewCode">
+                      <elementDefinition Id="56bee461-1b79-4939-8595-583077fd7826" />
+                    </reference>
+                  </referencesInternal>
                   <elementDefinition Id="4663b03c-548f-4d3d-9a8f-740c1efd22c5" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="839db8e7-9b92-46ea-85e4-11b70a322a77" LastKnownName="Nation" />
@@ -4443,6 +4391,11 @@
             </ownedParameters>
           </operation>
           <operation Id="f822fa58-0f90-421e-a720-18a8e1ee11d7" name="getInitCoordonates" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="3478ac56-e79e-4969-9fbd-bad9a3c4d1ae" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DgetInitCoordonates" tag="ViewCode">
+                <elementDefinition Id="02c08dd8-4913-4508-9d1b-3b6e211f692c" />
+              </reference>
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance Id="b00c8de1-e124-412c-8cbf-54c9c54c3bfb" name="method" profile="CSharpProfile">
                 <elementDefinition Id="4bc53eea-65e9-49b6-888f-c89ce468564d" />
@@ -4502,11 +4455,62 @@
                   </upperValueInternal>
                   <elementDefinition Id="5d0a54be-c4dc-4ba4-91b2-78360ef9a536" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="957cbd75-207e-4f3d-a3ae-542b05f32853" LastKnownName="int" />
+                    <referencedTypeMoniker Id="02a11926-48c9-4f0a-8ac8-ffd4448b90e5" LastKnownName="IEnumerable&lt;Int32‎&gt;" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation Id="f76efb19-3ac2-47c3-bf32-0601d118814b" name="Map" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c4fef06e-29b7-4174-b292-3f21666d9cf4" handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="61beebfd-28d2-45f0-8e92-055e323dd761" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f0e69d90-ec09-4d7b-9578-9dacad10aaf9" name="method" profile="CSharpProfile">
+                <elementDefinition Id="7de1d8e7-e86b-4e2d-b0d7-ff33fec424c8" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="94c01426-b2cf-4ef5-8f7d-db612abbfdb1">
+                    <propertyInstance Id="8db0ad2e-16a8-46e9-b4cc-76ac8882fc71" name="ClrAttributes">
+                      <elementDefinition Id="11bdf113-d422-4482-9f0c-b4fc49bf866b" />
+                    </propertyInstance>
+                    <elementDefinition Id="d7d499ff-3c0f-4d26-addd-8ea22cf886dd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5dbe4ae3-c263-4fbc-9d50-67a6d3497e5d">
+                    <propertyInstance Id="d853dcec-cb5c-42c0-945e-828bc0476b84" name="IsPartial" value="false">
+                      <elementDefinition Id="3a0ae70b-b6e6-44aa-9017-09a0bac0adee" />
+                    </propertyInstance>
+                    <elementDefinition Id="4005dd2e-1827-4820-9b93-84006d35321c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d61fe90f-bfbc-4d13-a559-a26635ac701c">
+                    <propertyInstance Id="2a32f5fd-11ef-4528-ba3b-d3ce8d1989cc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="27f954c7-1b29-46a9-b43c-1c4244769dcd" />
+                    </propertyInstance>
+                    <elementDefinition Id="41a4596f-efca-4253-a30a-d6d6fd0fe66d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="22ab0705-be8a-4faa-9658-d04efcc153b3">
+                    <propertyInstance Id="c8bab0cf-c99b-4d29-bc0d-f72492ec9a09" name="Inheritance" value="none">
+                      <elementDefinition Id="218456a2-35a1-4a21-ac86-0e86bd814401" />
+                    </propertyInstance>
+                    <elementDefinition Id="e2525d6b-3cf9-4636-90cb-c1e2cb750c95" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eb412c75-289c-47b2-9d4e-206124869f57">
+                    <propertyInstance Id="05a6170a-5821-4bde-82c3-2d0f85de5a71" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="a1b0492a-d2a1-491b-aad9-050629ccd93c" />
+                    </propertyInstance>
+                    <elementDefinition Id="98e22c72-05db-444e-939f-275e3b1c1fdd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="94358d1f-aa22-4b79-a2fd-bdd9a3f7ea51">
+                    <propertyInstance Id="3ccd95b6-b46c-4fe5-88c1-4cab69b2078e" name="params" value="false">
+                      <elementDefinition Id="332c1248-1359-48f6-854d-37f03cc698ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="886eba50-f766-4190-aee2-ca6120ca92d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="df025da4-62be-425e-858d-7996e517960a" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -4726,7 +4730,7 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="f220da31-77b1-4497-965a-59149481ea7f" name="Nation" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
-          <reference Id="2e2c7f91-d587-4a76-a162-c47cedf0464b" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DNation" tag="ViewCode">
+          <reference Id="2e2c7f91-d587-4a76-a162-c47cedf0464b" handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation" tag="ViewCode">
             <elementDefinition Id="bc8eca82-eabe-4db8-a5b9-a9fb5672f823" />
           </reference>
         </referencesInternal>
@@ -4820,7 +4824,7 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="39cd5c50-0a65-4bb2-8a52-d7b797b963a9" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="100415af-4034-4511-8ee4-dd057c994fca" LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;" />
+              <referencedTypeMoniker Id="47fd60e9-43c6-4ced-b3fd-49dfc5495b2d" LastKnownName="IEnumerable&lt;Unit&gt;" />
             </type_NamedElement>
           </property>
           <property Id="dc1bc083-d2b9-46bb-9880-2642fe432fb7" name="unitFactory" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -7267,13 +7271,13 @@
                 <parameter Id="ceebc79b-43f2-439b-989e-5a3c7a03d32d" direction="Return" isUnique="false">
                   <elementDefinition Id="ec9a31da-c5d6-4e2a-9be6-d762871a88a2" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="100415af-4034-4511-8ee4-dd057c994fca" LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;" />
+                    <referencedTypeMoniker Id="47fd60e9-43c6-4ced-b3fd-49dfc5495b2d" LastKnownName="IEnumerable&lt;Unit&gt;" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="636b7065-cf90-464f-889b-99c9171dd5cb" name="unitNumber" direction="In" isUnique="false">
-                  <elementDefinition Id="abf21c58-428f-4dfe-9f22-00213b3d14d5" />
+                <parameter Id="ef3ab892-cc1c-482a-8e69-10ec2b6db468" name="unitNumber" direction="In" isUnique="false">
+                  <elementDefinition Id="ad891d40-7d45-444a-958a-9c33798ac064" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="24a720c2-d159-4425-82b8-d74ff17fa1e4" LastKnownName="Integer" />
                   </type_NamedElement>
@@ -8022,11 +8026,6 @@
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <referencedType Id="100415af-4034-4511-8ee4-dd057c994fca" name="System::Collections::Generic::IEnumerable&lt;Unit&gt;" isAbstract="false" isLeaf="false" cachedFullName="System::Collections::Generic::IEnumerable&lt;Unit&gt;">
-        <elementDefinition Id="de57e3eb-5aac-4d2e-b2e4-05352cd4ef3b" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <referencedType Id="957cbd75-207e-4f3d-a3ae-542b05f32853" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
         <elementDefinition Id="06833c4c-d23e-44e8-8286-1658b4e2860a" />
       </referencedType>
@@ -8036,8 +8035,44 @@
         <elementDefinition Id="af54f1ba-d4bc-4d4a-9c4c-cec83740d082" />
       </referencedType>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="47fd60e9-43c6-4ced-b3fd-49dfc5495b2d" name="IEnumerable&lt;Unit&gt;" isAbstract="false" isLeaf="false" cachedFullName="IEnumerable&lt;Unit&gt;">
+        <elementDefinition Id="b9ae401f-3d5b-4cbd-bfbd-2e48105a542c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="02a11926-48c9-4f0a-8ac8-ffd4448b90e5" name="IEnumerable&lt;Int32‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject::System::Collections::Generic::IEnumerable&lt;Int32‎&gt;">
+        <elementDefinition Id="66343f12-3348-48c4-a8b2-54563f231d9c" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="b9632282-b6a8-48ec-9f46-a220d2c782d5" name="ModelingProject">
     <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5832e6ea-3a2e-4c74-83da-5ec3de251946">
+        <profileInstance Id="9a1f62b1-4588-4816-887f-17dadebc7aad" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e1f5c004-d2e2-488e-950d-e8c0fdd2c414">
+        <profileInstance Id="af38c87d-fa7b-4283-b599-49ffe17e830f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8e6ecf6c-ad39-40ab-be31-9720917108bf">
+        <profileInstance Id="825b7fcb-f872-49d3-a011-f0c4f3b314de" name="CSharpProfile">
+          <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+        </profileInstance>
+        <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="fa457616-56ed-43e6-94f6-85cca220118c">
+        <profileInstance Id="a3ba5a9e-cb0c-493d-8f44-022c6d2e3d47" name="TextTemplateBindings">
+          <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+        </profileInstance>
+        <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

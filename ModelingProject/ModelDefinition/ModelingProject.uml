@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="de446e78-cb1a-4d6a-836a-0882308efb32"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="475de7f9-db7e-4fae-98cf-5d723eab92cc"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3D::"
+      tag="ViewCode" />
+  </referencesInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
       Id="fab6bb60-eac1-4ac5-899f-93cd60031c54"
@@ -186,13 +192,14 @@
       <class
         Id="d3257b0b-bca3-4898-ac2d-1bd562cc8834"
         name="Box"
-        isAbstract="true"
+        visibility="Private"
+        isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
             Id="b6cce155-c27d-4e50-9cc4-b4190717cfdb"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBox"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3D(Name%3DBox ArrayRank%3D2 ParentType%3DBox)"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -327,7 +334,7 @@
         <referencesInternal>
           <reference
             Id="de3864f4-672d-4f72-ba9f-44e8d5d3e027"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBoxFactory"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBoxFactory"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -4041,7 +4048,7 @@
         <referencesInternal>
           <reference
             Id="fae3d805-3a56-475a-8132-18e8699bc3dd"
-            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DIMap"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DIMap"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -4969,15 +4976,15 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="de57e3eb-5aac-4d2e-b2e4-05352cd4ef3b"
-                      LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;"
+                      Id="b9ae401f-3d5b-4cbd-bfbd-2e48105a542c"
+                      LastKnownName="IEnumerable&lt;Unit&gt;"
                       LastKnownLocation="ModelingProject.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b8a29f2d-ce37-4928-9b2d-0ae4118a2599"
+                  Id="2e71a5a7-2820-418f-884a-06d831b9417e"
                   name="unitNumber"
                   direction="In"
                   isUnique="false">
@@ -5139,7 +5146,7 @@
         <referencesInternal>
           <reference
             Id="2a341fbc-584b-4739-961e-1219b480bd5b"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -5210,7 +5217,7 @@
             <referencesInternal>
               <reference
                 Id="32989b4a-5bf2-4561-bb4d-8b406563e94e"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DfabriqueCase"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DfabriqueCase"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5278,7 +5285,7 @@
             <referencesInternal>
               <reference
                 Id="e782756e-d143-48df-bc4d-6d5962057703"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D_map"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D_map"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5356,7 +5363,7 @@
             <referencesInternal>
               <reference
                 Id="3b7e5ee7-56cd-40d3-8f70-61481a354e9f"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DgenererCarte"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DgenererCarte"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5421,7 +5428,7 @@
             <referencesInternal>
               <reference
                 Id="cf0fe98a-e2c8-4bad-af86-23bc39a9a1e0"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DrefreshMap"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DrefreshMap"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5486,7 +5493,7 @@
             <referencesInternal>
               <reference
                 Id="9e4fbfa9-6610-427c-8586-18f87bf59cf9"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3DshowMap"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DshowMap"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5541,71 +5548,6 @@
             </appliedStereotypesInternal>
           </operation>
           <operation
-            Id="a45aa85f-b2df-4201-80e7-6a48a1e19ab0"
-            name="Map"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="0bd1fae8-bdce-4425-806e-340c659604e4"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D.ctor"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="65c82530-3393-4c60-86fc-84384c565338"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fd37a8e2-eb86-4e5a-a9fa-a043bf56ceee">
-                    <propertyInstance
-                      Id="6d29b81d-e2ae-423a-8f22-faa3945911e5"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c0fe7254-6b04-4b41-845e-cbd5362bd3eb">
-                    <propertyInstance
-                      Id="bfeef799-5b23-4fc3-8701-55d3256a187b"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="da3d4ffb-ea94-4c67-8292-6136aa829ab7">
-                    <propertyInstance
-                      Id="b0fa251e-22bc-4b87-a7be-c5fab48aa86e"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="28d1ed5d-3c45-4697-b470-cd1a97011ae6">
-                    <propertyInstance
-                      Id="3fe8baed-2c9f-419c-9437-72d257e16bc8"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="58d863c7-3412-4c43-bd96-5a95f759636a">
-                    <propertyInstance
-                      Id="474302b5-28eb-4419-827a-a2f84e5d083f"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="05fec0c3-e801-4afb-b980-dc27c5131299">
-                    <propertyInstance
-                      Id="8347b941-324d-41a3-a675-f2625309257e"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </operation>
-          <operation
             Id="91b2dab3-afc3-4c7f-9793-ea44f732e7b8"
             name="setBox"
             isLeaf="false"
@@ -5616,7 +5558,7 @@
             <referencesInternal>
               <reference
                 Id="a6322be1-7d50-4475-b11d-3b5d17a87966"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -5676,6 +5618,12 @@
                   name="box"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="10627783-1628-4a50-a714-06fcab12bbad"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dbox"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
                       Id="d3257b0b-bca3-4898-ac2d-1bd562cc8834"
@@ -5690,6 +5638,12 @@
                   name="x"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="9bb82242-1c78-47c1-9b18-8e9c1399a17d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -5704,6 +5658,12 @@
                   name="y"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="6a6f610f-d4a7-4744-bab8-1e98f22e1d20"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DsetBox OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DBox)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
@@ -5722,6 +5682,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f5dc0a9d-e87e-411b-b183-57224d87eec2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DaddNation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation)])"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="48a93bb2-1e98-459c-9c20-1f64daa20532"
@@ -5779,6 +5745,12 @@
                   name="nation"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="56bee461-1b79-4939-8595-583077fd7826"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D(Name%3DaddNation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation)]) ParameterIdentifier%3Dnation"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
                       Id="7a9e5a2c-4566-438a-99ba-6a2e948eeeee"
@@ -5797,6 +5769,12 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="02c08dd8-4913-4508-9d1b-3b6e211f692c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3DgetInitCoordonates"
+                tag="ViewCode" />
+            </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
                 Id="4bc53eea-65e9-49b6-888f-c89ce468564d"
@@ -5866,14 +5844,79 @@
                       value="2" />
                   </upperValueInternal>
                   <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="06833c4c-d23e-44e8-8286-1658b4e2860a"
-                      LastKnownName="int"
-                      LastKnownLocation="ModelingProject.uml" />
+                    <interfaceMoniker
+                      Id="66343f12-3348-48c4-a8b2-54563f231d9c"
+                      LastKnownName="IEnumerable&lt;Int32‎&gt;"
+                      LastKnownLocation="Package2_1238.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation
+            Id="df025da4-62be-425e-858d-7996e517960a"
+            name="Map"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="61beebfd-28d2-45f0-8e92-055e323dd761"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DMap Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7de1d8e7-e86b-4e2d-b0d7-ff33fec424c8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7d499ff-3c0f-4d26-addd-8ea22cf886dd">
+                    <propertyInstance
+                      Id="11bdf113-d422-4482-9f0c-b4fc49bf866b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4005dd2e-1827-4820-9b93-84006d35321c">
+                    <propertyInstance
+                      Id="3a0ae70b-b6e6-44aa-9017-09a0bac0adee"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41a4596f-efca-4253-a30a-d6d6fd0fe66d">
+                    <propertyInstance
+                      Id="27f954c7-1b29-46a9-b43c-1c4244769dcd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2525d6b-3cf9-4636-90cb-c1e2cb750c95">
+                    <propertyInstance
+                      Id="218456a2-35a1-4a21-ac86-0e86bd814401"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98e22c72-05db-444e-939f-275e3b1c1fdd">
+                    <propertyInstance
+                      Id="a1b0492a-d2a1-491b-aad9-050629ccd93c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="886eba50-f766-4190-aee2-ca6120ca92d5">
+                    <propertyInstance
+                      Id="332c1248-1359-48f6-854d-37f03cc698ef"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -6158,7 +6201,7 @@
         <referencesInternal>
           <reference
             Id="bc8eca82-eabe-4db8-a5b9-a9fb5672f823"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FH:%2FProjetPOO%2FTP1 Modelisation%2FTP1 Modelisation%2FModelingProject1Lib%2Fbin%2FDebug%2FModelingProject1Lib.dll&quot; Namespace%3DTP1_Modelisation Type%3DNation"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fclemgaut%2FDocuments%2FVisual Studio 2012%2FProjects%2FProjetPOO%2FSourceProject%2Fbin%2FDebug%2FSourceProject.dll&quot; Type%3DNation"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -6277,8 +6320,8 @@
             </appliedStereotypesInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="de57e3eb-5aac-4d2e-b2e4-05352cd4ef3b"
-                LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;"
+                Id="b9ae401f-3d5b-4cbd-bfbd-2e48105a542c"
+                LastKnownName="IEnumerable&lt;Unit&gt;"
                 LastKnownLocation="ModelingProject.uml" />
             </type_NamedElement>
           </property>
@@ -9478,15 +9521,15 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="de57e3eb-5aac-4d2e-b2e4-05352cd4ef3b"
-                      LastKnownName="System::Collections::Generic::IEnumerable&lt;Unit&gt;"
+                      Id="b9ae401f-3d5b-4cbd-bfbd-2e48105a542c"
+                      LastKnownName="IEnumerable&lt;Unit&gt;"
                       LastKnownLocation="ModelingProject.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="abf21c58-428f-4dfe-9f22-00213b3d14d5"
+                  Id="ad891d40-7d45-444a-958a-9c33798ac064"
                   name="unitNumber"
                   direction="In"
                   isUnique="false">
@@ -14022,7 +14065,7 @@
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false"
-            signatureText="+ getUnits(unitNumber : Integer) : System::Collections::Generic::IEnumerable&lt;Unit&gt;">
+            signatureText="+ getUnits(unitNumber : Integer) : IEnumerable&lt;Unit&gt;">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="4c677de4-33c1-4306-9e9f-05829040ae8d"
@@ -14212,7 +14255,7 @@
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="true"
-            signatureText="+ getInitCoordonates() : int[2]">
+            signatureText="+ getInitCoordonates() : ModelingProject::System::Collections::Generic::IEnumerable&lt;Int32‎&gt;[2]">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
                 Id="be4b482c-3f29-44b4-94ce-b9d76f60fe94"
@@ -15820,6 +15863,17 @@
           </include>
         </additions>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b9ae401f-3d5b-4cbd-bfbd-2e48105a542c"
+        name="IEnumerable&lt;Unit&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fbcb8f85-4e98-42c5-931d-563975b38b3a"
+        LastKnownName="System"
+        LastKnownLocation="Package_1238.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

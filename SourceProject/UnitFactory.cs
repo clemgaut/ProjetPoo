@@ -15,7 +15,7 @@ public class UnitFactory : IUnitFactory
 	{
 	}
 
-	public virtual System::Collections::Generic::IEnumerable<Unit> getUnits(int unitNumber)
+	public virtual IEnumerable<Unit> getUnits(int unitNumber)
 	{
 		throw new System.NotImplementedException();
 	}

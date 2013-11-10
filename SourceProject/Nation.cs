@@ -11,7 +11,7 @@ using System.Text;
 
 public class Nation : INation
 {
-	private System::Collections::Generic::IEnumerable<Unit> units;
+	private IEnumerable<Unit> units;
 
 	private UnitFactory unitFactory;
 
