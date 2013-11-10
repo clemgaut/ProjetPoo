@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="76126951-2597-4e2d-9121-0aef45a46591" name="UMLUseCaseDiagramGameStep" linkedPackageId="bebf4835-af1f-417b-9bbc-d889619b37a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="80162cee-cbeb-4de6-9dca-ab85f3129dbb" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ad74c91d-f857-469f-b9ae-c4c4ead64915">
+          <propertyInstance Id="3ca37928-09d0-40d9-ae11-6b865e962917" name="BaseName">
+            <elementDefinition Id="cdc244a7-4a7f-43ef-9584-aa667b50a612" />
+          </propertyInstance>
+          <elementDefinition Id="cf332869-1d71-4f7b-a325-7120855b4730" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="198614ec-3c76-44a9-af19-ef2aed84d8e6">
+          <propertyInstance Id="04fdce46-0845-4130-b536-b5b5e1983282" name="ClrAttributes">
+            <elementDefinition Id="779cd6ac-7a54-4c5a-833b-25f5b421fea1" />
+          </propertyInstance>
+          <elementDefinition Id="b241fa14-0829-4702-8179-7905bfb0f7fc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="738b08e5-190a-4331-a8ff-bb54143e5556">
+          <propertyInstance Id="b5db094c-f6db-4030-855b-e396e8302493" name="Usings">
+            <elementDefinition Id="87768fcf-90e3-482c-8ff2-456b88a4630f" />
+          </propertyInstance>
+          <elementDefinition Id="9414dfd7-7da9-4587-8a62-f85ccbce2ca6" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="4f03d692-c552-4eb7-866b-c04b6ca6e282" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="72737fda-a094-4105-8deb-4ab322f2579d" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="319eed5d-8c93-4f7d-a5e0-1b0a28fc5eaf">
+          <propertyInstance Id="b0d8a12f-12f4-458a-902a-af8d2dd343bf" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="28aef8c5-14c1-412f-91d1-3950c65a629a" />
+          </propertyInstance>
+          <elementDefinition Id="ae90c841-d23e-4e61-ba5e-6fbd129da253" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f5eef866-1b4d-4efb-a97a-b9f5aff5d9b9">
+          <propertyInstance Id="b314403a-cecc-4274-8b09-81b3759b7a41" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="b50b7b40-3124-4f3f-9aaa-0cddd3317905" />
+          </propertyInstance>
+          <elementDefinition Id="8338d943-9b03-4b19-b237-0c53d0e17375" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b6f72c8c-c3f9-46ba-8d66-2194e518a8d9">
+          <propertyInstance Id="a69a779c-3a0e-440b-9216-fd400499e42c" name="ProjectPath" value="ClassTemplate=..\SourceProject\SourceProject.csproj|EnumTemplate=..\SourceProject\SourceProject.csproj|InterfaceTemplate=..\SourceProject\SourceProject.csproj|StructTemplate=..\SourceProject\SourceProject.csproj">
+            <elementDefinition Id="2e55290d-c853-49c0-902c-73c5f3246d44" />
+          </propertyInstance>
+          <elementDefinition Id="7de4db11-c05c-4008-a328-d01e348fb351" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fed944d3-e5e9-49d1-9946-395ed35cb94f">
+          <propertyInstance Id="fe63b262-6791-41c2-9b33-42cb7933e0f9" name="TargetDirectory" value="ClassTemplate={PackageStructure}|EnumTemplate={PackageStructure}|InterfaceTemplate={PackageStructure}|StructTemplate={PackageStructure}">
+            <elementDefinition Id="cebf1945-2431-4948-a737-68c08949c0ba" />
+          </propertyInstance>
+          <elementDefinition Id="11e1b24a-a69e-4ba0-8d8a-a7b9c5f2bcfc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d7b4af4e-9210-4a5d-a8db-7437a1e75387">
+          <propertyInstance Id="03a961c9-a6f4-4b3f-8cb9-97bbbe8bf0af" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="f9b0193d-03ea-4ff0-88b5-f6e45428b9aa" />
+          </propertyInstance>
+          <elementDefinition Id="bb1a4106-d9a9-4b1e-9a22-be9878465198" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="616b56ed-e156-4d4b-8d33-15de71f31a26">
+          <propertyInstance Id="3b73fc92-7204-4460-8c45-34be23bc5c99" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="ac9b1950-4963-458d-9816-980c44d80d6b" />
+          </propertyInstance>
+          <elementDefinition Id="ad64ce68-4241-42a7-a7c4-b71499018d76" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7e957c5d-2508-4038-9a44-4498bb0bdd9a">
+          <propertyInstance Id="95f44f58-aaee-4926-a092-d281f63c3ba8" name="Parameters">
+            <elementDefinition Id="f6791ef7-6d38-4b37-9926-2a4a21656559" />
+          </propertyInstance>
+          <elementDefinition Id="3e9d1937-9cd6-4168-95a7-5e1b79cfcaac" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="5add5bb1-e6c5-42c8-a628-a63137e6f378">
+      <profileInstance Id="610cf9f6-b222-49f1-ad19-923d258660ed" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1b5ef232-ea71-4a29-8f2d-cca550dc9af8">
+      <profileInstance Id="e8e250ff-8729-4444-ba29-6c0e271414e3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9fdfbad2-ea13-4927-b2f3-698a3b2c3519">
+      <profileInstance Id="936b86c5-5bd3-4a9b-abed-98a0d35d076f" name="CSharpProfile">
+        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+      </profileInstance>
+      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e5bf76bc-62fa-40f1-a473-72d698113d9b">
+      <profileInstance Id="14729d9d-f196-4789-89ac-b588ee5df6ae" name="TextTemplateBindings">
+        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+      </profileInstance>
+      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="bbe62228-2bc4-4c3a-9cfa-d1be492717e2" name="Player" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26fd20ff-5731-415d-999c-eed46ff110d3" />
+        <targetEnds>
+          <association Id="cd192175-c385-437b-b3d4-3320a7a678a7" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Arrêter la partie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2cec354b-c59a-4cef-b341-5925a30b2ff1" LastKnownName="Arrêter la partie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7cd8e4f-669d-43b5-b3f0-033e58df5723" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dc008fb5-e651-4bcd-9184-0cd52781f20a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66d83d23-bbe5-416d-8999-01b999018987" name="Arrêter la partie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1740e096-588a-4265-9b02-88df1c9d70d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="37c8b1d6-af61-4ccb-be1b-9c5056c65598" />
+          </association>
+          <association Id="edb7651c-4452-4271-a072-9d6f2341072d" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Déplacer l'unité sélectionnée" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2edae3ee-cbd5-4965-921b-60586009f0a5" LastKnownName="Déplacer l'unité sélectionnée" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="03d955ee-f443-470f-b525-0472df46e7af" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="067896d4-b6e4-4177-a4d1-fa7779a09502" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a2c016d-5bb6-4382-8ec6-f83fa2561777" name="Déplacer l'unité sélectionnée" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="990ef495-fd40-471e-895d-56f57ab08d00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c22e3a1e-2868-4ef0-8c03-e9cfe65645fe" />
+          </association>
+          <association Id="4d1b5ee1-278b-493e-955e-f2905e3e9fa7" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Passer le tour de l'unité sélectionnée" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c9bf1a5a-89ae-4ea6-8329-f33f3d5ff27a" LastKnownName="Passer le tour de l'unité sélectionnée" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="019d2960-ab41-4b8c-b9f9-769ab58e62ad" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="13e32066-b644-436f-8196-f85eeb320a29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3eb336f5-2601-4221-a50f-74406740bad9" name="Passer le tour de l'unité sélectionnée" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20b204c2-5409-46d5-b607-6356efcecd43" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4964a8aa-1976-4b8a-8510-1469f627a3d8" />
+          </association>
+          <association Id="75547abc-5e3b-4c03-88ec-d096d41df5a7" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Attaquer une case avec l'unité sélectionnée" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6b54bbd-51d2-4356-989a-43261bb43098" LastKnownName="Attaquer une case avec l'unité sélectionnée" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c680eb71-6d9b-4901-b844-2d5f77f14c34" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a77a18eb-afab-4959-81e2-23d77382387a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9313cd2-7c0f-4281-ab7b-2bceeb77db4d" name="Attaquer une case avec l'unité sélectionnée" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a9783901-29fe-4f42-92b6-ea49881720a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5d3f7455-de4c-417a-b108-d9cd39f28b28" />
+          </association>
+          <association Id="fe83c223-336e-48f8-aa31-c7a9a452e594" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Sélectionner une unité" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e9b6872-4f40-49d4-988f-0e775ccb34f1" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="949bf46b-28f1-4e9a-88a9-e7b4fd11c479" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46036208-cd51-4293-ac7e-096377fa27c1" name="Sélectionner une unité" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c81b7c85-5adb-4250-ac63-c6b38b14fd0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3824443a-5f96-4b6a-8786-6b7953dc9e39" />
+          </association>
+          <association Id="2f9f762a-e285-4291-b068-b19791ccfcde" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Passer son tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1b495389-9e57-44ef-8aaa-0521f46b00ed" LastKnownName="Passer son tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a142aaa2-f7f2-4678-b6f1-af194b557729" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="30fbf602-1ee5-4953-88e5-03c3f74ce48a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="19876780-08cb-4f98-97f8-a6e3a974692b" name="Passer son tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6784a3de-ccc9-4bd4-b99b-24be568fe40e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="76beb6e6-edcd-4014-85ac-b3e3c4b6dacd" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" name="Sélectionner une unité" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0ac7ebe6-7b90-487a-9742-b08f222a373d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1b495389-9e57-44ef-8aaa-0521f46b00ed" name="Passer son tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1f9fe431-242b-4423-9b20-88432283a865" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b6b54bbd-51d2-4356-989a-43261bb43098" name="Attaquer une case avec l'unité sélectionnée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dcc24f4e-98c2-40c0-9de5-a9bb7a5aa6ef" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c52fca90-1be1-41f5-b628-9de0d3926ff3" name="Case non occupée par un ennemi" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a473bec-f082-4cb9-93bc-a76a58575bda" />
+        <extendedCases>
+          <extend Id="ef03f001-c7a0-4ec9-814a-cef4586adde8">
+            <useCaseMoniker Id="b6b54bbd-51d2-4356-989a-43261bb43098" LastKnownName="Attaquer une case avec l'unité sélectionnée" />
+            <elementDefinition Id="4143b760-b48a-485a-b12f-d7529b1f523a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9bf1a5a-89ae-4ea6-8329-f33f3d5ff27a" name="Passer le tour de l'unité sélectionnée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d973be63-f51a-4f8a-a165-5d57eda52d91" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2edae3ee-cbd5-4965-921b-60586009f0a5" name="Déplacer l'unité sélectionnée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac61fdeb-a3b8-4d6f-b5bd-f760f82c72a8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2cec354b-c59a-4cef-b341-5925a30b2ff1" name="Arrêter la partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="db7b3804-826f-41c8-8ef5-39bcbcbf9642" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2388ccfc-dd65-4648-94e4-db4a883eca2b" name="Sauvegarder la partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ab2068e3-8a40-4804-9354-a64f18c72e55" />
+        <extendedCases>
+          <extend Id="7a4417ce-92e4-4e53-9b80-3530feb5d264">
+            <useCaseMoniker Id="2cec354b-c59a-4cef-b341-5925a30b2ff1" LastKnownName="Arrêter la partie" />
+            <elementDefinition Id="1f14ba7a-846e-471c-9d11-5433e37d0537" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b01b20d0-84c0-474e-aeb0-cfc97d8d226d" name="Case occupée par un ennemi" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe5a54ae-e7f8-4df7-8eae-a0697e0a2ee0" />
+        <extendedCases>
+          <extend Id="6ec14e2d-f978-49e5-97c4-ddb4a1d51130">
+            <useCaseMoniker Id="2edae3ee-cbd5-4965-921b-60586009f0a5" LastKnownName="Déplacer l'unité sélectionnée" />
+            <elementDefinition Id="5ad3d79c-b403-43a5-8573-121e7454b9dd" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="44b6f900-7d65-4735-aa23-0f77a0375647" name="Pas d'unité sélectionnée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c8f7f95-1a96-4aa9-8c5a-74bb74f2ace7" />
+        <extendedCases>
+          <extend Id="b063cc73-f925-481b-b3b8-2208fcbbac0c">
+            <useCaseMoniker Id="2edae3ee-cbd5-4965-921b-60586009f0a5" LastKnownName="Déplacer l'unité sélectionnée" />
+            <elementDefinition Id="79fbf9b2-ccfb-4e9e-900f-b122a2212bb1" />
+          </extend>
+          <extend Id="01596bea-0989-41ea-8b41-79de8a8ba92b">
+            <useCaseMoniker Id="c9bf1a5a-89ae-4ea6-8329-f33f3d5ff27a" LastKnownName="Passer le tour de l'unité sélectionnée" />
+            <elementDefinition Id="3f4f9375-b663-4f1f-98d6-3aa03d11139c" />
+          </extend>
+          <extend Id="cb985015-2294-4aa2-a65a-088948a9cd28">
+            <useCaseMoniker Id="b6b54bbd-51d2-4356-989a-43261bb43098" LastKnownName="Attaquer une case avec l'unité sélectionnée" />
+            <elementDefinition Id="883160f7-afe3-4acc-9b96-3f06e463b5cb" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="265fdcf0-e0cb-4889-a9b2-0d1ba0daae85" name="Plus assez de points de déplacement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="511b491d-1ec4-47cd-b021-1f494f17da3a" />
+        <extendedCases>
+          <extend Id="99088006-c5fb-42d7-9e37-3e91a8a9506a">
+            <useCaseMoniker Id="b6b54bbd-51d2-4356-989a-43261bb43098" LastKnownName="Attaquer une case avec l'unité sélectionnée" />
+            <elementDefinition Id="ff734530-a31c-47f3-a126-fa098d895119" />
+          </extend>
+          <extend Id="e9679a96-daea-4e50-bba7-553287e641e8">
+            <useCaseMoniker Id="2edae3ee-cbd5-4965-921b-60586009f0a5" LastKnownName="Déplacer l'unité sélectionnée" />
+            <elementDefinition Id="09f28c58-442d-4600-a4bc-9bed38f1cde1" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5f0d1dc4-40f4-4d87-8b1f-1910256375d4" name="Case trop loin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="43df5444-d78a-41c5-8fc0-dceeaab7cafc" />
+        <extendedCases>
+          <extend Id="b8249295-5a16-4cea-bb01-47849ab32c6e">
+            <useCaseMoniker Id="2edae3ee-cbd5-4965-921b-60586009f0a5" LastKnownName="Déplacer l'unité sélectionnée" />
+            <elementDefinition Id="988ad5eb-546e-4d63-a323-7d5b0a0a2b1b" />
+          </extend>
+          <extend Id="421d65f9-cc58-4c76-b4f1-47e4ddb91e05">
+            <useCaseMoniker Id="b6b54bbd-51d2-4356-989a-43261bb43098" LastKnownName="Attaquer une case avec l'unité sélectionnée" />
+            <elementDefinition Id="d1f91ca6-fe99-41c3-a392-af7a9b7fed41" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="bebf4835-af1f-417b-9bbc-d889619b37a9" name="ModelingProject">
+    <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+  </package>
+</useCaseModelRoot>

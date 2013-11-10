@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bcf35a74-98f0-4803-ad95-5864496b46b4" name="UMLUseCaseDiagramGameStart" linkedPackageId="33127352-cc7b-48dd-947b-fc0c08bdc185" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="1913c1c8-d472-4e04-bab3-75e5880a352c" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="0ccca7be-1197-4db7-a19c-d595669ef6b8">
+          <propertyInstance Id="65daf120-d40e-4d9b-8ec3-3daf88d9b76a" name="BaseName">
+            <elementDefinition Id="cdc244a7-4a7f-43ef-9584-aa667b50a612" />
+          </propertyInstance>
+          <elementDefinition Id="cf332869-1d71-4f7b-a325-7120855b4730" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="074a6a1d-9086-42bc-a3d1-26139033e0f1">
+          <propertyInstance Id="48b0f98b-cf2b-43b7-a395-f1ee1119b3c2" name="ClrAttributes">
+            <elementDefinition Id="779cd6ac-7a54-4c5a-833b-25f5b421fea1" />
+          </propertyInstance>
+          <elementDefinition Id="b241fa14-0829-4702-8179-7905bfb0f7fc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5edbeb0b-2e7a-40e5-ab35-fdff3cd859dd">
+          <propertyInstance Id="486e56b3-e47d-4921-8902-d60de5210f9e" name="Usings">
+            <elementDefinition Id="87768fcf-90e3-482c-8ff2-456b88a4630f" />
+          </propertyInstance>
+          <elementDefinition Id="9414dfd7-7da9-4587-8a62-f85ccbce2ca6" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="f9c84c73-60a1-4c88-909c-0fdf90bc48a1" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="72737fda-a094-4105-8deb-4ab322f2579d" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="199408fb-9e92-462c-9ba2-f3c5ad51f4d9">
+          <propertyInstance Id="cf630f56-d5e0-49da-9db6-042f7b22103e" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="28aef8c5-14c1-412f-91d1-3950c65a629a" />
+          </propertyInstance>
+          <elementDefinition Id="ae90c841-d23e-4e61-ba5e-6fbd129da253" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9a8df612-4032-4b2d-9206-f23a2310de64">
+          <propertyInstance Id="ae5e3e34-098f-4dfc-87c2-bca4fb491c45" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="b50b7b40-3124-4f3f-9aaa-0cddd3317905" />
+          </propertyInstance>
+          <elementDefinition Id="8338d943-9b03-4b19-b237-0c53d0e17375" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="cc655c28-d8e6-4074-876b-49f7958c8a9c">
+          <propertyInstance Id="ab40bb1f-6881-43c2-8e39-9ba5f559ae21" name="ProjectPath" value="ClassTemplate=..\SourceProject\SourceProject.csproj|EnumTemplate=..\SourceProject\SourceProject.csproj|InterfaceTemplate=..\SourceProject\SourceProject.csproj|StructTemplate=..\SourceProject\SourceProject.csproj">
+            <elementDefinition Id="2e55290d-c853-49c0-902c-73c5f3246d44" />
+          </propertyInstance>
+          <elementDefinition Id="7de4db11-c05c-4008-a328-d01e348fb351" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="016746cd-0259-4de9-ac3b-25be3eb3e06a">
+          <propertyInstance Id="764d74d7-b0c1-4731-b5a9-02a6369c75a1" name="TargetDirectory" value="ClassTemplate={PackageStructure}|EnumTemplate={PackageStructure}|InterfaceTemplate={PackageStructure}|StructTemplate={PackageStructure}">
+            <elementDefinition Id="cebf1945-2431-4948-a737-68c08949c0ba" />
+          </propertyInstance>
+          <elementDefinition Id="11e1b24a-a69e-4ba0-8d8a-a7b9c5f2bcfc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="35fa253d-7085-43e3-8b4a-828d8c68505b">
+          <propertyInstance Id="2d119f1f-cf20-4a84-a26c-b8bde7f2e1f7" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="f9b0193d-03ea-4ff0-88b5-f6e45428b9aa" />
+          </propertyInstance>
+          <elementDefinition Id="bb1a4106-d9a9-4b1e-9a22-be9878465198" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b9f300a4-0765-4295-a4f1-fe392b800b6a">
+          <propertyInstance Id="ade05d65-203d-47c3-b770-300391b08c65" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="ac9b1950-4963-458d-9816-980c44d80d6b" />
+          </propertyInstance>
+          <elementDefinition Id="ad64ce68-4241-42a7-a7c4-b71499018d76" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d9c97707-43e6-4562-8e55-8731d07a49a7">
+          <propertyInstance Id="e373db58-8818-44de-b0f0-2246ebba5330" name="Parameters">
+            <elementDefinition Id="f6791ef7-6d38-4b37-9926-2a4a21656559" />
+          </propertyInstance>
+          <elementDefinition Id="3e9d1937-9cd6-4168-95a7-5e1b79cfcaac" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f794702b-bff7-4e67-a2e5-0f68918e7251">
+      <profileInstance Id="736e126b-6e6d-4a7f-a9ef-58093716024b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="bd5d0a37-c00d-4de7-9018-409818d2301e">
+      <profileInstance Id="31fddb5c-c589-4a10-afcb-79d28c716e2e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7c4dba19-4c97-45a1-9a14-44ada341d35d">
+      <profileInstance Id="d40eb4e2-c056-4ebe-9981-59df1b3ce885" name="CSharpProfile">
+        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+      </profileInstance>
+      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a89ba743-04b6-422f-b81f-4aa526b6b7c9">
+      <profileInstance Id="c0fb069c-ca83-4ab2-873b-872aaa61ca67" name="TextTemplateBindings">
+        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+      </profileInstance>
+      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c3ac9394-bbe8-4b4a-a018-3a77a7c992b2" name="Joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b6f4693-07cb-47a6-b142-03ab00ed24cb" />
+        <targetEnds>
+          <association Id="4c4b275c-bb79-4ec1-b526-0250ca45ac9d" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Reprendre une partie existante" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="33f2daf5-9bc4-4bdc-a7b2-6fa6de568c9a" LastKnownName="Reprendre une partie existante" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="73e2bbae-d0ce-44e7-a8ce-8f7c36ce01bd" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="11885c5f-8b33-4ded-bae5-e306fbec2ce9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2acbccc-9625-4f02-bd79-5f7828e3a5de" name="Reprendre une partie existante" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84a455de-be39-4a44-addf-9ffd3e09a745" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="916c115f-0822-45ac-bfd7-baa227701702" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8a2c611a-a8a4-4d48-a479-a641f8f7a375" name="Lancer la partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1ec3c89e-2719-4829-90e9-6fa4df466384" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="be288765-2816-4993-a6cb-d93b81179039" name="Choisir la partie à continuer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4745130-e25b-4d88-bc45-bae1ae763037" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="33f2daf5-9bc4-4bdc-a7b2-6fa6de568c9a" name="Reprendre une partie existante" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe22b8f3-559f-45cd-8718-71b0041e59fc" />
+        <additions>
+          <include Id="7b23b19c-a3fa-44c0-b184-234b0e13fad3">
+            <useCaseMoniker Id="be288765-2816-4993-a6cb-d93b81179039" LastKnownName="Choisir la partie à continuer" />
+            <elementDefinition Id="2f7d7472-4aba-4174-a2e2-86a79e2a88e1" />
+          </include>
+          <include Id="73c9bdd8-795f-4e06-93ff-5996bae4c6a8">
+            <useCaseMoniker Id="8a2c611a-a8a4-4d48-a479-a641f8f7a375" LastKnownName="Lancer la partie" />
+            <elementDefinition Id="9af43c3b-62a0-4e25-826e-d2019815979a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" name="Choisir la taille de la carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="946eea1a-a87b-4fff-bd94-7d7e1f7cbfa5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" name="Choisir un peuple" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="852dcd9f-d3ee-40bb-97e2-5c353d66d3de" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="801e5d58-60f0-4dd5-bc57-7f5f307417ab" name="Peuple déjà choisi" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ba858107-c392-459d-abe8-0fb1a9addd2c" />
+        <extendedCases>
+          <extend Id="b4e49e26-f79c-4476-b509-8c8088086bea">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="70d78c7c-f25b-4b81-8e21-1aca5d40a0c9" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" name="Donner un pseudo à chaque joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="78b5f04e-982f-4e7f-b532-3683cc63faef" />
+        <extendedCases>
+          <extend Id="4419ce62-948b-4c2d-8f17-7303db5a1b61">
+            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
+            <elementDefinition Id="e41dafae-1c02-47a6-9b79-a64346643467" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="538df801-4d5a-4ef9-aa72-c1db0b6e37c3" name="Pseudo déjà utilisé" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8c9ee17a-5ea8-44c2-ae87-bbd8df038744" />
+        <extendedCases>
+          <extend Id="f44b4bb9-7a35-4526-a039-0f06d0a74770">
+            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
+            <elementDefinition Id="c1ca0bb6-1121-4b65-aa26-28e761493342" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" name="Pseudo incorrect" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f7297ec7-39c0-4a67-a050-d0db8eb1865d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5fe72f76-217e-4ffa-a45e-c1adf3c2eb67" name="Pseudo vide" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="323f345c-f81b-4380-9487-ec7eb786efbf" />
+        <generalsInternal>
+          <generalization Id="a3ac61af-144b-4c5c-b259-e0d590e8387c" isSubstitutable="false">
+            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
+            <elementDefinition Id="1bb4bf1f-4e29-4c6c-9dce-378c10d407b7" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="90e40a0b-77d8-4f64-845d-6802bdd2c9ea" name="Caractère non authorisé" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b8ce104-76f7-42bf-b447-e28be28775e4" />
+        <generalsInternal>
+          <generalization Id="da6bc7be-6e92-4cd9-b7a8-af56507b6bd4" isSubstitutable="false">
+            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
+            <elementDefinition Id="b8ff3d6e-4b92-4f55-b264-7256118d02af" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0ec92ee6-d10d-4849-b959-ccf311efc1c1" name="Pseudo trop long" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6a84a589-4b17-4971-b711-f02a60ec642a" />
+        <generalsInternal>
+          <generalization Id="c7976d74-cdd6-4dd5-9193-bee8ffa6aea7" isSubstitutable="false">
+            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
+            <elementDefinition Id="2527f771-ff16-41d8-b2e9-b6b7bbfc6b40" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9cce279f-04a5-429b-beb1-d5392a684320" name="Démarrer une nouvelle partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6b65f41c-28e0-423d-80b3-f5beee16e3a4" />
+        <additions>
+          <include Id="b5844415-c00e-42b6-a4cc-5c4b263a15af">
+            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
+            <elementDefinition Id="5c2fa575-fc7e-4924-bcee-0680bfd839ba" />
+          </include>
+          <include Id="e4c733c4-8a23-41c1-98a5-314318328d2a">
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la taille de la carte" />
+            <elementDefinition Id="56c489c9-03e2-4ee7-bb5e-f99d342954f5" />
+          </include>
+          <include Id="7df5ae87-c791-4d62-9dde-575502cbfe65">
+            <useCaseMoniker Id="8a2c611a-a8a4-4d48-a479-a641f8f7a375" LastKnownName="Lancer la partie" />
+            <elementDefinition Id="7d604cf9-642f-462b-89e6-de85d7a030de" />
+          </include>
+          <include Id="aa688f8f-c383-48ed-ba83-e22d83815ced">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="67aaecb0-61aa-4225-bf29-a1136cbcd161" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="33127352-cc7b-48dd-947b-fc0c08bdc185" name="ModelingProject">
+    <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+  </package>
+</useCaseModelRoot>
