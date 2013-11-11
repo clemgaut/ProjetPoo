@@ -45,15 +45,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Game" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAgAACgCACAAAAAAABBAAKAAEAAAAAEIAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="_map" />
       <Field Name="_player1" />
       <Field Name="_player2" />
-      <Field Name="_map" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -190,7 +190,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="UnitFactory">
-    <Position X="17.5" Y="0.5" Width="1.5" />
+    <Position X="17.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UnitFactory.cs</FileName>
@@ -221,7 +221,7 @@
   <Interface Name="IGameDirector">
     <Position X="10.25" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IGameDirector.cs</FileName>
     </TypeIdentifier>
   </Interface>

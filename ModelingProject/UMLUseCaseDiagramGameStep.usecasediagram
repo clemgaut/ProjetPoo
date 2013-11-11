@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="76126951-2597-4e2d-9121-0aef45a46591" name="UMLUseCaseDiagramGameStep" linkedPackageId="bebf4835-af1f-417b-9bbc-d889619b37a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="76126951-2597-4e2d-9121-0aef45a46591" name="UMLUseCaseDiagramGameStep" linkedPackageId="bebf4835-af1f-417b-9bbc-d889619b37a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="80162cee-cbeb-4de6-9dca-ab85f3129dbb" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="5add5bb1-e6c5-42c8-a628-a63137e6f378">
-      <profileInstance Id="610cf9f6-b222-49f1-ad19-923d258660ed" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1b5ef232-ea71-4a29-8f2d-cca550dc9af8">
-      <profileInstance Id="e8e250ff-8729-4444-ba29-6c0e271414e3" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="9fdfbad2-ea13-4927-b2f3-698a3b2c3519">
-      <profileInstance Id="936b86c5-5bd3-4a9b-abed-98a0d35d076f" name="CSharpProfile">
-        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
-      </profileInstance>
-      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e5bf76bc-62fa-40f1-a473-72d698113d9b">
-      <profileInstance Id="14729d9d-f196-4789-89ac-b588ee5df6ae" name="TextTemplateBindings">
-        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
-      </profileInstance>
-      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="bbe62228-2bc4-4c3a-9cfa-d1be492717e2" name="Player" isAbstract="false" isLeaf="false">
@@ -215,6 +189,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="b6b54bbd-51d2-4356-989a-43261bb43098" name="Attaquer une case avec l'unité sélectionnée" isAbstract="false" isLeaf="false">
         <elementDefinition Id="dcc24f4e-98c2-40c0-9de5-a9bb7a5aa6ef" />
+        <suppliersInternal>
+          <dependency Id="bec1b237-a512-42df-8033-5f018cb57c33">
+            <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
+            <elementDefinition Id="e6d3dc4a-15de-461e-8802-d0fe8d9965e6" />
+          </dependency>
+        </suppliersInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -231,11 +211,23 @@
     <useCaseModelRootHasTypes>
       <useCase Id="c9bf1a5a-89ae-4ea6-8329-f33f3d5ff27a" name="Passer le tour de l'unité sélectionnée" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d973be63-f51a-4f8a-a165-5d57eda52d91" />
+        <suppliersInternal>
+          <dependency Id="49f1c480-abdc-4b4b-9aea-d076b40e7fb6">
+            <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
+            <elementDefinition Id="9fb679c1-5686-4810-b08a-f5ceeaf338a9" />
+          </dependency>
+        </suppliersInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="2edae3ee-cbd5-4965-921b-60586009f0a5" name="Déplacer l'unité sélectionnée" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ac61fdeb-a3b8-4d6f-b5bd-f760f82c72a8" />
+        <suppliersInternal>
+          <dependency Id="cea2d502-1b15-4f88-a167-5adb05452d9f">
+            <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
+            <elementDefinition Id="64666009-9557-45f0-9cc1-7b4bafa75aab" />
+          </dependency>
+        </suppliersInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -317,5 +309,31 @@
   </packagedElements>
   <package Id="bebf4835-af1f-417b-9bbc-d889619b37a9" name="ModelingProject">
     <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5add5bb1-e6c5-42c8-a628-a63137e6f378">
+        <profileInstance Id="610cf9f6-b222-49f1-ad19-923d258660ed" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1b5ef232-ea71-4a29-8f2d-cca550dc9af8">
+        <profileInstance Id="e8e250ff-8729-4444-ba29-6c0e271414e3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9fdfbad2-ea13-4927-b2f3-698a3b2c3519">
+        <profileInstance Id="936b86c5-5bd3-4a9b-abed-98a0d35d076f" name="CSharpProfile">
+          <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+        </profileInstance>
+        <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e5bf76bc-62fa-40f1-a473-72d698113d9b">
+        <profileInstance Id="14729d9d-f196-4789-89ac-b588ee5df6ae" name="TextTemplateBindings">
+          <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+        </profileInstance>
+        <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

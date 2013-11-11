@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bcf35a74-98f0-4803-ad95-5864496b46b4" name="UMLUseCaseDiagramGameStart" linkedPackageId="33127352-cc7b-48dd-947b-fc0c08bdc185" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="bcf35a74-98f0-4803-ad95-5864496b46b4" name="UMLUseCaseDiagramGameStart" linkedPackageId="33127352-cc7b-48dd-947b-fc0c08bdc185" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="1913c1c8-d472-4e04-bab3-75e5880a352c" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -72,32 +72,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="f794702b-bff7-4e67-a2e5-0f68918e7251">
-      <profileInstance Id="736e126b-6e6d-4a7f-a9ef-58093716024b" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="bd5d0a37-c00d-4de7-9018-409818d2301e">
-      <profileInstance Id="31fddb5c-c589-4a10-afcb-79d28c716e2e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="7c4dba19-4c97-45a1-9a14-44ada341d35d">
-      <profileInstance Id="d40eb4e2-c056-4ebe-9981-59df1b3ce885" name="CSharpProfile">
-        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
-      </profileInstance>
-      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="a89ba743-04b6-422f-b81f-4aa526b6b7c9">
-      <profileInstance Id="c0fb069c-ca83-4ab2-873b-872aaa61ca67" name="TextTemplateBindings">
-        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
-      </profileInstance>
-      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="c3ac9394-bbe8-4b4a-a018-3a77a7c992b2" name="Joueur" isAbstract="false" isLeaf="false">
@@ -119,12 +93,42 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="916c115f-0822-45ac-bfd7-baa227701702" />
           </association>
+          <association Id="8c9c3c7c-a81f-4dba-8e3e-f258020a8e70" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Démarrer une nouvelle partie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9cce279f-04a5-429b-beb1-d5392a684320" LastKnownName="Démarrer une nouvelle partie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8af12399-edca-4dae-885d-07d0c8d4ea5c" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24edf7a1-b0c1-4da9-89e2-7f169fd37616" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e9ad19d-dce8-48a5-bb8b-d4b0fe4f0301" name="Démarrer une nouvelle partie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f17e08b6-6407-41e1-b3e4-cde6d583623d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fa747901-fa9d-494e-b62d-3645090476ed" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="8a2c611a-a8a4-4d48-a479-a641f8f7a375" name="Lancer la partie" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1ec3c89e-2719-4829-90e9-6fa4df466384" />
+        <suppliersInternal>
+          <dependency Id="b87750bf-664c-47c1-99ce-40ac67845406">
+            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
+            <elementDefinition Id="f3303208-342e-4c70-8ef9-cfe5c46a8533" />
+          </dependency>
+          <dependency Id="ac0cebb0-0b56-4293-8c6c-35e77eb12efb">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="5eb1bced-1afe-4e6d-a413-41f69c08d750" />
+          </dependency>
+          <dependency Id="4ed42697-fdff-447e-a92d-3b2633f502bf">
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la taille de la carte" />
+            <elementDefinition Id="01e0f83d-714d-4c38-8ca7-700a5956b50a" />
+          </dependency>
+        </suppliersInternal>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -171,12 +175,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" name="Donner un pseudo à chaque joueur" isAbstract="false" isLeaf="false">
         <elementDefinition Id="78b5f04e-982f-4e7f-b532-3683cc63faef" />
-        <extendedCases>
-          <extend Id="4419ce62-948b-4c2d-8f17-7303db5a1b61">
-            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
-            <elementDefinition Id="e41dafae-1c02-47a6-9b79-a64346643467" />
-          </extend>
-        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -193,6 +191,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" name="Pseudo incorrect" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f7297ec7-39c0-4a67-a050-d0db8eb1865d" />
+        <extendedCases>
+          <extend Id="e0e436a6-2301-496b-b08f-3c5239c34e75">
+            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
+            <elementDefinition Id="81b6c1d3-dad1-440b-b4bf-f5f227934895" />
+          </extend>
+        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -254,5 +258,31 @@
   </packagedElements>
   <package Id="33127352-cc7b-48dd-947b-fc0c08bdc185" name="ModelingProject">
     <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f794702b-bff7-4e67-a2e5-0f68918e7251">
+        <profileInstance Id="736e126b-6e6d-4a7f-a9ef-58093716024b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bd5d0a37-c00d-4de7-9018-409818d2301e">
+        <profileInstance Id="31fddb5c-c589-4a10-afcb-79d28c716e2e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7c4dba19-4c97-45a1-9a14-44ada341d35d">
+        <profileInstance Id="d40eb4e2-c056-4ebe-9981-59df1b3ce885" name="CSharpProfile">
+          <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+        </profileInstance>
+        <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a89ba743-04b6-422f-b81f-4aa526b6b7c9">
+        <profileInstance Id="c0fb069c-ca83-4ab2-873b-872aaa61ca67" name="TextTemplateBindings">
+          <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+        </profileInstance>
+        <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
