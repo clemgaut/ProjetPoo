@@ -45,6 +45,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceDiagramGameCreation.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceDiagramStep.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceDiagramStep.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceDiagramStep.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLUseCaseDiagramGameStart.usecasediagram">
       <SubType>Content</SubType>
     </Content>
