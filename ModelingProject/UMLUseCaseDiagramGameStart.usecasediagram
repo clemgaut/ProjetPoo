@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="bcf35a74-98f0-4803-ad95-5864496b46b4" name="UMLUseCaseDiagramGameStart" linkedPackageId="33127352-cc7b-48dd-947b-fc0c08bdc185" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bcf35a74-98f0-4803-ad95-5864496b46b4" name="UMLUseCaseDiagramGameStart" linkedPackageId="33127352-cc7b-48dd-947b-fc0c08bdc185" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="1913c1c8-d472-4e04-bab3-75e5880a352c" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -94,7 +94,7 @@
             <elementDefinition Id="916c115f-0822-45ac-bfd7-baa227701702" />
           </association>
           <association Id="8c9c3c7c-a81f-4dba-8e3e-f258020a8e70" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Démarrer une nouvelle partie" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="9cce279f-04a5-429b-beb1-d5392a684320" LastKnownName="Démarrer une nouvelle partie" />
+            <useCaseMoniker Id="9cce279f-04a5-429b-beb1-d5392a684320" LastKnownName="Créer une nouvelle partie" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="8af12399-edca-4dae-885d-07d0c8d4ea5c" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -116,24 +116,26 @@
       <useCase Id="8a2c611a-a8a4-4d48-a479-a641f8f7a375" name="Lancer la partie" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1ec3c89e-2719-4829-90e9-6fa4df466384" />
         <suppliersInternal>
-          <dependency Id="b87750bf-664c-47c1-99ce-40ac67845406">
-            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
-            <elementDefinition Id="f3303208-342e-4c70-8ef9-cfe5c46a8533" />
-          </dependency>
           <dependency Id="ac0cebb0-0b56-4293-8c6c-35e77eb12efb">
             <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
             <elementDefinition Id="5eb1bced-1afe-4e6d-a413-41f69c08d750" />
           </dependency>
           <dependency Id="4ed42697-fdff-447e-a92d-3b2633f502bf">
-            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la taille de la carte" />
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la carte" />
             <elementDefinition Id="01e0f83d-714d-4c38-8ca7-700a5956b50a" />
           </dependency>
         </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="be288765-2816-4993-a6cb-d93b81179039" name="Choisir la partie à continuer" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a4745130-e25b-4d88-bc45-bae1ae763037" />
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -149,16 +151,25 @@
             <elementDefinition Id="9af43c3b-62a0-4e25-826e-d2019815979a" />
           </include>
         </additions>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" name="Choisir la taille de la carte" isAbstract="false" isLeaf="false">
+      <useCase Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" name="Choisir la carte" isAbstract="false" isLeaf="false">
         <elementDefinition Id="946eea1a-a87b-4fff-bd94-7d7e1f7cbfa5" />
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" name="Choisir un peuple" isAbstract="false" isLeaf="false">
         <elementDefinition Id="852dcd9f-d3ee-40bb-97e2-5c353d66d3de" />
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -170,78 +181,17 @@
             <elementDefinition Id="70d78c7c-f25b-4b81-8e21-1aca5d40a0c9" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" name="Donner un pseudo à chaque joueur" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="78b5f04e-982f-4e7f-b532-3683cc63faef" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="538df801-4d5a-4ef9-aa72-c1db0b6e37c3" name="Pseudo déjà utilisé" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="8c9ee17a-5ea8-44c2-ae87-bbd8df038744" />
-        <extendedCases>
-          <extend Id="f44b4bb9-7a35-4526-a039-0f06d0a74770">
-            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
-            <elementDefinition Id="c1ca0bb6-1121-4b65-aa26-28e761493342" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" name="Pseudo incorrect" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="f7297ec7-39c0-4a67-a050-d0db8eb1865d" />
-        <extendedCases>
-          <extend Id="e0e436a6-2301-496b-b08f-3c5239c34e75">
-            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
-            <elementDefinition Id="81b6c1d3-dad1-440b-b4bf-f5f227934895" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="5fe72f76-217e-4ffa-a45e-c1adf3c2eb67" name="Pseudo vide" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="323f345c-f81b-4380-9487-ec7eb786efbf" />
-        <generalsInternal>
-          <generalization Id="a3ac61af-144b-4c5c-b259-e0d590e8387c" isSubstitutable="false">
-            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
-            <elementDefinition Id="1bb4bf1f-4e29-4c6c-9dce-378c10d407b7" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="90e40a0b-77d8-4f64-845d-6802bdd2c9ea" name="Caractère non authorisé" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="3b8ce104-76f7-42bf-b447-e28be28775e4" />
-        <generalsInternal>
-          <generalization Id="da6bc7be-6e92-4cd9-b7a8-af56507b6bd4" isSubstitutable="false">
-            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
-            <elementDefinition Id="b8ff3d6e-4b92-4f55-b264-7256118d02af" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="0ec92ee6-d10d-4849-b959-ccf311efc1c1" name="Pseudo trop long" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="6a84a589-4b17-4971-b711-f02a60ec642a" />
-        <generalsInternal>
-          <generalization Id="c7976d74-cdd6-4dd5-9193-bee8ffa6aea7" isSubstitutable="false">
-            <useCaseMoniker Id="d9cbcfe0-bd7b-4daa-93ca-0ffcabe4811a" LastKnownName="Pseudo incorrect" />
-            <elementDefinition Id="2527f771-ff16-41d8-b2e9-b6b7bbfc6b40" />
-          </generalization>
-        </generalsInternal>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="9cce279f-04a5-429b-beb1-d5392a684320" name="Démarrer une nouvelle partie" isAbstract="false" isLeaf="false">
+      <useCase Id="9cce279f-04a5-429b-beb1-d5392a684320" name="Créer une nouvelle partie" isAbstract="false" isLeaf="false">
         <elementDefinition Id="6b65f41c-28e0-423d-80b3-f5beee16e3a4" />
         <additions>
-          <include Id="b5844415-c00e-42b6-a4cc-5c4b263a15af">
-            <useCaseMoniker Id="ebcc350b-83b1-4342-8a0c-466743eaadc3" LastKnownName="Donner un pseudo à chaque joueur" />
-            <elementDefinition Id="5c2fa575-fc7e-4924-bcee-0680bfd839ba" />
-          </include>
           <include Id="e4c733c4-8a23-41c1-98a5-314318328d2a">
-            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la taille de la carte" />
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la carte" />
             <elementDefinition Id="56c489c9-03e2-4ee7-bb5e-f99d342954f5" />
           </include>
           <include Id="7df5ae87-c791-4d62-9dde-575502cbfe65">
@@ -253,8 +203,100 @@
             <elementDefinition Id="67aaecb0-61aa-4225-bf29-a1136cbcd161" />
           </include>
         </additions>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="93062d88-16cf-42b5-a441-57675a6fdca8" name="Démarrage de la partie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f92440c9-e654-4092-8399-ec205e1dfe86" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="c3fff093-37e4-4c3f-ac60-6d4059aadecc" name="Choisir Gaulois" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e915b857-7732-4e04-badd-bf976a7d5049" />
+        <generalsInternal>
+          <generalization Id="5ff42821-6050-4b44-86c8-543f3aca90b9" isSubstitutable="false">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="5b2d84c2-3b89-498b-96fc-86af19b376fa" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f680a272-5bce-4fab-9498-19f918846566" name="Choisir Nains" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5cf3b602-23b2-4ca9-a81b-40b2b8e08806" />
+        <generalsInternal>
+          <generalization Id="b5650227-b532-4c1a-9161-387011662fd6" isSubstitutable="false">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="5e5218ee-b0de-49c7-be7c-a1dd3e9b426c" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2718e3fc-e428-43c6-9f4e-11d1837ec98e" name="Choisir Vikings" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b275e952-d7e7-49a6-b081-f229507f793c" />
+        <generalsInternal>
+          <generalization Id="a6a44d90-77c8-4b94-bd56-ae15d0710337" isSubstitutable="false">
+            <useCaseMoniker Id="14badbdc-1ea0-412c-9e21-1cce01b6fb1a" LastKnownName="Choisir un peuple" />
+            <elementDefinition Id="eeaa08f9-6088-4d5d-a71e-2474716d2c17" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="aff9c059-23d6-428f-9fc4-555b09bdf196" name="Choisir petit carte" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9d93d419-d6c8-47b9-a651-fc3a69f8105a" />
+        <generalsInternal>
+          <generalization Id="e2d4c6c8-57ef-4b86-acf2-2c42f10d3de2" isSubstitutable="false">
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la carte" />
+            <elementDefinition Id="fedbebcf-71bc-4fef-821d-b86d22c6476e" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="ffbb3dba-04de-4de3-879e-458034d1c570" name="Choisir carte normale" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="26e07489-27bb-47bb-947d-b71a4ac0d0e5" />
+        <generalsInternal>
+          <generalization Id="bc24de63-1a83-4f3d-ad03-7aa0e16278e3" isSubstitutable="false">
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la carte" />
+            <elementDefinition Id="8c935064-57dc-4fc8-8232-4a593ee5416d" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="609db51b-9dca-4cb6-b00a-dee1b1768b33" name="Choisir carte demo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe2b9bee-c679-48a4-80fd-863817f4ec54" />
+        <generalsInternal>
+          <generalization Id="ea82c760-2e06-4db1-9ac0-ac3c136a9588" isSubstitutable="false">
+            <useCaseMoniker Id="b95549eb-e549-41c9-ba6c-74afb208cb5a" LastKnownName="Choisir la carte" />
+            <elementDefinition Id="a1bcf81f-d6cb-4807-9b35-06ab7c670bdd" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="93062d88-16cf-42b5-a441-57675a6fdca8" LastKnownName="Démarrage de la partie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="33127352-cc7b-48dd-947b-fc0c08bdc185" name="ModelingProject">
     <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />

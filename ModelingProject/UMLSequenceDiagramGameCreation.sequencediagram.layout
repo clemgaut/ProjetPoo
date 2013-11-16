@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.375, 21.875" name="UMLSequenceDiagramGameCreation">
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.75, 21.875" name="UMLSequenceDiagramGameCreation">
   <SequenceDesignerModelMoniker Id="b8db1d82-2d98-4bd0-b453-73121bc96b2e" />
   <nestedChildShapes>
     <lifelineShape Id="71df4647-8a66-462d-baff-000da8b39348" absoluteBounds="2.3, 1, 0.15, 20.082013836130525" visible="true" visualStyleMode="Modified">
@@ -184,20 +184,12 @@
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
-    <commentShape Id="ce226774-2ced-4a64-a1a2-af33550aca12" absoluteBounds="17.625, 9.75, 1.25, 0.375" customColor="251, 247, 200">
-      <commentMoniker Id="8e06be78-a455-450a-b885-4c6c6f58c73c" />
-      <relativeChildShapes />
-    </commentShape>
     <commentShape Id="7105d7fc-d753-4911-ae70-29222d9d3268" absoluteBounds="1.75, 21.25, 1.25, 0.375" customColor="251, 247, 200">
       <commentMoniker Id="f3ba41e3-5c53-48bb-803f-63d49ba3d975" />
       <relativeChildShapes />
     </commentShape>
     <commentShape Id="ff7201bf-e8f8-402c-8978-995215ba4d67" absoluteBounds="6, 1.125, 1.25, 0.375" customColor="251, 247, 200">
       <commentMoniker Id="12cc6221-57da-4071-b604-2b33a2e82c01" />
-      <relativeChildShapes />
-    </commentShape>
-    <commentShape Id="7695e5e0-e708-49dd-96cd-72a49330c7b0" absoluteBounds="17.875, 15.75, 1.25, 0.375" customColor="251, 247, 200">
-      <commentMoniker Id="272c8624-606e-46e6-a66d-6bc45f3fd530" />
       <relativeChildShapes />
     </commentShape>
     <lifelineShape Id="f34b2e2b-19a5-43ee-a300-02514405563c" absoluteBounds="1.025, 1, 0.15, 20.082013836130525" visible="true" visualStyleMode="Modified">

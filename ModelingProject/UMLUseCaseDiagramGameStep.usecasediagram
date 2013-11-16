@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="76126951-2597-4e2d-9121-0aef45a46591" name="UMLUseCaseDiagramGameStep" linkedPackageId="bebf4835-af1f-417b-9bbc-d889619b37a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="76126951-2597-4e2d-9121-0aef45a46591" name="UMLUseCaseDiagramGameStep" linkedPackageId="bebf4835-af1f-417b-9bbc-d889619b37a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="80162cee-cbeb-4de6-9dca-ab85f3129dbb" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -173,17 +173,45 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="76beb6e6-edcd-4014-85ac-b3e3c4b6dacd" />
           </association>
+          <association Id="6aea639e-3de6-4f67-9455-d689d064647a" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Sélectionner une case" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="27d2fb20-ff7e-458a-82b1-dbce0e0ee21b" LastKnownName="Sélectionner une case" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd1fbd8a-64b0-4714-a1e7-75195d0dac55" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="debd8055-f9bc-40ac-8125-ae47f13af12d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="079a1e9f-1392-4008-b08d-e4fd0103b32a" name="Sélectionner une case" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="08601267-d43c-4292-a692-e7bdbc724604" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="78262e03-3c20-405d-a81c-b40f1f6798f7" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" name="Sélectionner une unité" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0ac7ebe6-7b90-487a-9742-b08f222a373d" />
+        <suppliersInternal>
+          <dependency Id="d72e2738-c90d-4f16-a8ea-a7e8a01af762">
+            <useCaseMoniker Id="156f3c71-2e91-49ad-837a-ded9af11bb42" LastKnownName="Sélectionner case de départ" />
+            <elementDefinition Id="fe4c3da0-e429-46bb-94ab-2d3773c48be6" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="1b495389-9e57-44ef-8aaa-0521f46b00ed" name="Passer son tour" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1f9fe431-242b-4423-9b20-88432283a865" />
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -194,7 +222,18 @@
             <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
             <elementDefinition Id="e6d3dc4a-15de-461e-8802-d0fe8d9965e6" />
           </dependency>
+          <dependency Id="9afba096-9b32-4f35-a35f-dc26160381e4">
+            <useCaseMoniker Id="156f3c71-2e91-49ad-837a-ded9af11bb42" LastKnownName="Sélectionner case de départ" />
+            <elementDefinition Id="947edd62-05f1-436b-ad77-3a8bf0be510a" />
+          </dependency>
+          <dependency Id="705a7f86-8f9c-4fde-b58e-183d45ab7258">
+            <useCaseMoniker Id="7dd27bcf-d92c-426b-96b2-6438fae50be2" LastKnownName="Sélectionner case d'arrivée" />
+            <elementDefinition Id="19384775-2a56-4b16-b77b-76837c3fe7b4" />
+          </dependency>
         </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -206,6 +245,9 @@
             <elementDefinition Id="4143b760-b48a-485a-b12f-d7529b1f523a" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -217,6 +259,9 @@
             <elementDefinition Id="9fb679c1-5686-4810-b08a-f5ceeaf338a9" />
           </dependency>
         </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -227,12 +272,26 @@
             <useCaseMoniker Id="5bf4a4fa-a290-4f32-8805-2a0c1c1584c9" LastKnownName="Sélectionner une unité" />
             <elementDefinition Id="64666009-9557-45f0-9cc1-7b4bafa75aab" />
           </dependency>
+          <dependency Id="9dd8443a-bee6-432d-b7c4-962065403bad">
+            <useCaseMoniker Id="7dd27bcf-d92c-426b-96b2-6438fae50be2" LastKnownName="Sélectionner case d'arrivée" />
+            <elementDefinition Id="9779cddc-c19f-4a5a-93a1-6bc18340bc28" />
+          </dependency>
+          <dependency Id="3f602728-d331-43e9-838f-d4dc12234065">
+            <useCaseMoniker Id="156f3c71-2e91-49ad-837a-ded9af11bb42" LastKnownName="Sélectionner case de départ" />
+            <elementDefinition Id="5f0a7f28-ce68-4353-b45d-e1be12f1912a" />
+          </dependency>
         </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="2cec354b-c59a-4cef-b341-5925a30b2ff1" name="Arrêter la partie" isAbstract="false" isLeaf="false">
         <elementDefinition Id="db7b3804-826f-41c8-8ef5-39bcbcbf9642" />
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -244,6 +303,9 @@
             <elementDefinition Id="1f14ba7a-846e-471c-9d11-5433e37d0537" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -255,6 +317,9 @@
             <elementDefinition Id="5ad3d79c-b403-43a5-8573-121e7454b9dd" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -274,6 +339,9 @@
             <elementDefinition Id="883160f7-afe3-4acc-9b96-3f06e463b5cb" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -289,6 +357,9 @@
             <elementDefinition Id="09f28c58-442d-4600-a4bc-9bed38f1cde1" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -304,8 +375,52 @@
             <elementDefinition Id="d1f91ca6-fe99-41c3-a392-af7a9b7fed41" />
           </extend>
         </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="27d2fb20-ff7e-458a-82b1-dbce0e0ee21b" name="Sélectionner une case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb5b5a0f-3b2d-4d22-88ca-e4ac1834d171" />
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" name="Tour de jeu" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a827bbb1-e42f-4455-bf58-3531663c5096" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="156f3c71-2e91-49ad-837a-ded9af11bb42" name="Sélectionner case de départ" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9954bad-17b7-4110-a7b2-9a3f4b38f4c0" />
+        <generalsInternal>
+          <generalization Id="e49df43b-c4cf-4e37-b041-888073898750" isSubstitutable="false">
+            <useCaseMoniker Id="27d2fb20-ff7e-458a-82b1-dbce0e0ee21b" LastKnownName="Sélectionner une case" />
+            <elementDefinition Id="cd56bec4-73e7-4bdc-b4f7-3429e1097d10" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7dd27bcf-d92c-426b-96b2-6438fae50be2" name="Sélectionner case d'arrivée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e8dcce0d-17d8-4299-80fc-c5dab178db12" />
+        <generalsInternal>
+          <generalization Id="89fe7b57-1f64-48e3-a83f-320d1c4c0112" isSubstitutable="false">
+            <useCaseMoniker Id="27d2fb20-ff7e-458a-82b1-dbce0e0ee21b" LastKnownName="Sélectionner une case" />
+            <elementDefinition Id="9e1a7c9f-310f-4e01-95e0-a1a68f0cd764" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="35271e5c-cbbf-4c47-baf4-94f0e246228c" LastKnownName="Tour de jeu" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="bebf4835-af1f-417b-9bbc-d889619b37a9" name="ModelingProject">
     <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
