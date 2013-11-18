@@ -52,10 +52,6 @@ internal class Game : IGame
 		throw new System.NotImplementedException();
 	}
 
-	public virtual Player getWinner()
-	{
-		throw new System.NotImplementedException();
-	}
 
 	public virtual bool move()
 	{

@@ -67,7 +67,7 @@ private class Unit : IUnit
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void move(int x, int y)
+	public virtual bool attack(Unit defUnit)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -82,25 +82,8 @@ private class Unit : IUnit
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool attack(Unit defUnit)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool setLifePoints(int value)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool hasMoves()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool isAlive()
-	{
-		throw new System.NotImplementedException();
-	}
+    private int _x;
+    private int _y;
 
 }
 
