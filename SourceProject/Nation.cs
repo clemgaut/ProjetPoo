@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,26 @@ public class Nation : INation
 
 	public Nation(ENation nation, int unitNumber)
 	{
+	}
+
+	public virtual void setInitBox(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit[] getUnits()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit getUnit(int i)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit getUnit(int i)
+	{
+		throw new System.NotImplementedException();
 	}
 
 	public virtual void setInitBox(int x, int y)

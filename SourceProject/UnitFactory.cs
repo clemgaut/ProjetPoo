@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ public class UnitFactory : IUnitFactory
 {
 	public UnitFactory()
 	{
+	}
+
+	public virtual IEnumerable<Unit> getUnits(int unitNumber)
+	{
+		throw new System.NotImplementedException();
 	}
 
 	public virtual IEnumerable<Unit> getUnits(int unitNumber)

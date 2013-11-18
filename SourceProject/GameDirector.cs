@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,61 @@ public class GameDirector : IGameDirector
 
 	public GameDirector()
 	{
+	}
+
+	public virtual void initStep()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Player getActivePlayer()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit[] getSelectableUnits()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void SelectUnit(int i)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void selectAdjacentBox(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void endOfStep()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void stopGame()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void SelectUnit(int i)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void selectAdjacentBox(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Player getActivePlayer()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual IEnumerable<Unit> getSelectableUnits()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

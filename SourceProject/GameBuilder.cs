@@ -4,17 +4,23 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class GameBuilder
+public abstract class GameBuilder : IGameBuilder
 {
 	protected Game _game;
 
 	public GameBuilder()
 	{
+	}
+
+	public virtual Game getGame()
+	{
+		throw new System.NotImplementedException();
 	}
 
 	public virtual Game getGame()

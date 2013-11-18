@@ -6,7 +6,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Box.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BoxFactory" BaseTypeListCollapsed="true">
     <Position X="12" Y="4.5" Width="1.5" />
@@ -17,7 +16,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="DemoGameBuilder">
-    <Position X="0.5" Y="3" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DemoGameBuilder.cs</FileName>
@@ -45,9 +44,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Game" BaseTypeListCollapsed="true">
-    <Position X="10" Y="0.75" Width="1.5" />
+    <Position X="10" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAgAACgCACAAAAAAABBAAKAAEAAAAAEIAA=</HashCode>
+      <HashCode>AAIAAAAAAIAgAICgCACAAAAAAABBQAKAAEAAAAAEIAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -58,19 +57,20 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="GameBuilder">
-    <Position X="2.75" Y="1.75" Width="1.5" />
+    <Position X="3.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAw=</HashCode>
       <FileName>GameBuilder.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_game" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="GameDirector" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAACAABAAAAEAAACAAAAIAIAIAQAAAAAAACAA=</HashCode>
       <FileName>GameDirector.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -120,7 +120,7 @@
   <Class Name="NormalGameBuilder">
     <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NormalGameBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -134,7 +134,7 @@
   <Class Name="Player" BaseTypeListCollapsed="true">
     <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIEAAAAAAAAAAgAAAAAAAQAAAAiAQAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAIEAAAAAAAAAAgEAAAAAAQAAAAiAQAAAEAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -150,7 +150,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SmallGameBuilder">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SmallGameBuilder.cs</FileName>
@@ -166,7 +166,7 @@
   <Class Name="Unit">
     <Position X="20.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAACBEAIAACAAAAAAACCAAAAAAAAJACA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAACBEAIAACAAAAAAACCAAAAAAAkJACA=</HashCode>
       <FileName>Unit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -181,7 +181,7 @@
   <Class Name="Nation">
     <Position X="15.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAgAAAAAGAAAAAAAAAAAAAAQgAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EACAAAgAAAAAGAAAAAAAAAAAAAAQgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Nation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -197,67 +197,67 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="IBox">
-    <Position X="10.25" Y="11.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IBox.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IBoxFactory">
-    <Position X="12" Y="11.5" Width="1.5" />
+  <Interface Name="SourceProject.IBoxFactory">
+    <Position X="5.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>IBoxFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="IGame">
-    <Position X="13.75" Y="14.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAgAACACACAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>IGame.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IGameDirector">
-    <Position X="10.25" Y="13.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IGameDirector.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IMap">
-    <Position X="12" Y="13.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>IMap.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="INation">
-    <Position X="13.75" Y="11.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>INation.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IPlayer">
-    <Position X="10.25" Y="14.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAiAAAAAEAAAAAAA=</HashCode>
-      <FileName>IPlayer.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IUnit">
-    <Position X="12" Y="14.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACBEAIAACAAAAAAACCAAAAAAAAAACA=</HashCode>
-      <FileName>IUnit.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="IUnitFactory">
-    <Position X="13.75" Y="13.25" Width="1.5" />
+  <Interface Name="SourceProject.IUnitFactory">
+    <Position X="8.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IUnitFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IUnit">
+    <Position X="7" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACBEAIAACAAAAAAACCAAAAAAAkAACA=</HashCode>
+      <FileName>IUnit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IPlayer">
+    <Position X="5.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAEAAAAAAAAAAAiAAAAAEAAAAAAA=</HashCode>
+      <FileName>IPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.INation">
+    <Position X="10.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAgAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IMap">
+    <Position X="8.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIAAAABAAIAAEAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>IMap.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IGameDirector">
+    <Position X="3.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAEAAACAAAAIAIAIAQAAAAAAAAAA=</HashCode>
+      <FileName>IGameDirector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IGameBuilder">
+    <Position X="10.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>IGameBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SourceProject.IGame">
+    <Position X="12.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIAgAICgCACAAAAAAAABQAIAAAAAAAAEIAA=</HashCode>
+      <FileName>IGame.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="EBoxType">
@@ -268,7 +268,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="EGameType">
-    <Position X="3.75" Y="4.25" Width="1.5" />
+    <Position X="4.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAQAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>EGameType.cs</FileName>

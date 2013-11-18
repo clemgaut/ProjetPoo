@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,11 @@ private class BoxFactory : IBoxFactory
 
 	public BoxFactory()
 	{
+	}
+
+	public virtual Box getBox(EBoxType boxType)
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

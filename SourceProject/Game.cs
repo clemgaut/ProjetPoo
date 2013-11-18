@@ -4,12 +4,13 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-private class Game : IGame
+internal class Game : IGame
 {
 	protected Map _map;
 
@@ -67,6 +68,46 @@ private class Game : IGame
 	}
 
 	public virtual void start()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Player getActivePlayer()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit getBestDefensiveUnit(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool checkEndfOfGame()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void nextStep()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Unit getBestDefensiveUnit(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool checkEndfOfGame()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Player getActivePlayer()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Player getWinner()
 	{
 		throw new System.NotImplementedException();
 	}

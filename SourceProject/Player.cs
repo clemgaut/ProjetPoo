@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,21 @@ public class Player : IPlayer
 
 	public Player()
 	{
+	}
+
+	public virtual Unit[] getSelectableUnits()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Nation getNation()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual IEnumerable<Unit> getSelectableUnits()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }
