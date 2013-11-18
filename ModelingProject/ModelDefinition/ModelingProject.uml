@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="de446e78-cb1a-4d6a-836a-0882308efb32"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -23594,6 +23594,297 @@
       <executionEvent
         Id="e064d48e-6ab7-4457-abbd-dda5132ed2ca"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="9a7fb635-07df-4e32-903b-7cf4a52c8265"
+        name="ActivityComat"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="fba4caf2-6bad-4250-906e-ed0b003f82b6"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a7a89088-caeb-4609-9ec1-e376c2d0e26e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="029906ee-a400-483a-a900-e6b9aa7db67c"
+                  LastKnownName="Sélectionner unité défensive"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="029906ee-a400-483a-a900-e6b9aa7db67c"
+            name="Sélectionner unité défensive"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4c0b6e1f-d36c-44bf-95b5-da449980ba9c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ff2653c5-70f4-479e-be2b-f0e1c7c67d74"
+                  LastKnownName="Choisir nombre de tours"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ff2653c5-70f4-479e-be2b-f0e1c7c67d74"
+            name="Choisir nombre de tours"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9044b8c8-7d27-47f0-9e70-8c65f701c04e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b5d3ff44-2572-4da5-9044-8b906b310e3d"
+                  LastKnownName="Nombre de tours restant"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b5d3ff44-2572-4da5-9044-8b906b310e3d"
+            name="Nombre de tours restant"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="599b6a58-0ea4-4fbe-bacb-730eba978510"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="a726d1b2-cdf0-4b53-94ee-4e0ed422c8d4"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4476209d-e692-42fe-b962-4f332f9189d4"
+            name="Match nul"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cebd8746-505d-4cf9-8e2a-000ab818ab31"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="ac916d79-1aa6-4ce8-abe9-ad12bb39ea86"
+                  LastKnownName="ActivityFinal3"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="ce385108-1788-454c-a992-c2acf08942d4"
+            name="Calcul de la probabilité de perdre une vie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4a1f5aa7-32fb-452f-8856-c294b4138521"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9a2c46bc-1d41-4b9d-9968-0c3d394d7913"
+                  LastKnownName="Résultat du tour"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9a2c46bc-1d41-4b9d-9968-0c3d394d7913"
+            name="Résultat du tour"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7a346c64-19e6-47c8-b84e-1991dfb4c0d7"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="377983ff-5f0c-4593-8483-6c5311e10b2a"
+                  LastKnownName="Decision11"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="67874bc4-30d9-48af-a0b6-2b09bf4c9b67"
+            name="L'unité attaquante perd un point de vie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c92e8424-f7c1-4b6e-a6fb-7d54b196bf73"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="b00e0b43-55b8-4134-b34a-3a7a057a026d"
+                  LastKnownName="Decision1111"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="b38afbe9-11ec-4b44-8b54-801ec8dce749"
+            name="L'unité défensive perd un point de vie"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8f476ff7-cfdb-4170-9a01-61babab2da46"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="44494685-81cb-4763-8115-9ec15bee4770"
+                  LastKnownName="Decision111"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6fec5f27-b2e1-4264-a54d-d78f4deb8d52"
+            name="Le défenseur gagne le combat"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f0e0b7d0-3036-4b6b-b8ea-8bef00d5f1dd"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="3f6840b4-7023-4d38-9482-4aee7bca9f6b"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="03f46a32-5c17-47b2-8e49-55555ab9a2a1"
+            name="L'attaquant gagne le combat"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="493d02bc-037f-4ec3-a604-bdb180c5f09e"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="f61d1267-cc83-464d-b19d-c4e0d3a68510"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="a726d1b2-cdf0-4b53-94ee-4e0ed422c8d4"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ca69c55c-47b0-4d8e-8be0-4c4aad403a32"
+                guard="0 tours restant"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4476209d-e692-42fe-b962-4f332f9189d4"
+                  LastKnownName="Match nul"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="c1f98ccb-69c4-429a-9f8e-fee3f647a46c"
+                guard="au moins1 tours restant"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ce385108-1788-454c-a992-c2acf08942d4"
+                  LastKnownName="Calcul de la probabilité de perdre une vie"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="377983ff-5f0c-4593-8483-6c5311e10b2a"
+            name="Decision11"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="62fa6ab5-3f22-4167-92f9-fed1234deacc"
+                guard="la défense gagne le tour"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="67874bc4-30d9-48af-a0b6-2b09bf4c9b67"
+                  LastKnownName="L'unité attaquante perd un point de vie"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="1816843a-64dd-4e14-b3d7-dbb6ba9e6105"
+                guard="l'attaque gagne le tour"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b38afbe9-11ec-4b44-8b54-801ec8dce749"
+                  LastKnownName="L'unité défensive perd un point de vie"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="44494685-81cb-4763-8115-9ec15bee4770"
+            name="Decision111"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="09cdb374-3a3d-4ad2-b12b-8d61127e9ac1"
+                guard="Point de vie de la défense = 0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="03f46a32-5c17-47b2-8e49-55555ab9a2a1"
+                  LastKnownName="L'attaquant gagne le combat"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="96eac0d2-3684-4221-94de-b921f4fc1f1f"
+                guard="Point de vie de la défense &gt; 0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b5d3ff44-2572-4da5-9044-8b906b310e3d"
+                  LastKnownName="Nombre de tours restant"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="b00e0b43-55b8-4134-b34a-3a7a057a026d"
+            name="Decision1111"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="03db2e36-3c76-48de-8b3d-f9927231fdaa"
+                guard="Point de vie de l'attaque = 0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6fec5f27-b2e1-4264-a54d-d78f4deb8d52"
+                  LastKnownName="Le défenseur gagne le combat"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f21217f0-d37d-4b72-90e8-c22be1c3ff57"
+                guard="Point de vie de 'lattaque &gt; 0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b5d3ff44-2572-4da5-9044-8b906b310e3d"
+                  LastKnownName="Nombre de tours restant"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="3f6840b4-7023-4d38-9482-4aee7bca9f6b"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="f61d1267-cc83-464d-b19d-c4e0d3a68510"
+            name="ActivityFinal2"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="ac916d79-1aa6-4ce8-abe9-ad12bb39ea86"
+            name="ActivityFinal3"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
