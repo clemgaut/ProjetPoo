@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="61f8adf0-d337-445f-835a-2876e3d6c164" name="ActivityCombat" linkedPackageId="dd5b940f-3f9d-4883-9b98-920cc8f2e858" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="21a5fd42-7bbe-4264-a18a-e535bb786edf" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="3c8a6bf6-ac9e-4cc1-8a69-4de4c917bd05">
+          <propertyInstance Id="38b33ba1-2653-4dbc-9059-cea17f87272f" name="BaseName">
+            <elementDefinition Id="cdc244a7-4a7f-43ef-9584-aa667b50a612" />
+          </propertyInstance>
+          <elementDefinition Id="cf332869-1d71-4f7b-a325-7120855b4730" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="64a522b7-4c0e-4247-b998-7c0481d35c7f">
+          <propertyInstance Id="3893a612-847d-4cda-ac28-8393b8d28077" name="ClrAttributes">
+            <elementDefinition Id="779cd6ac-7a54-4c5a-833b-25f5b421fea1" />
+          </propertyInstance>
+          <elementDefinition Id="b241fa14-0829-4702-8179-7905bfb0f7fc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="b149d9f8-0358-4719-8cf1-3897c87e380a">
+          <propertyInstance Id="06a6a503-2e25-4381-a88c-b198b40bf359" name="Usings">
+            <elementDefinition Id="87768fcf-90e3-482c-8ff2-456b88a4630f" />
+          </propertyInstance>
+          <elementDefinition Id="9414dfd7-7da9-4587-8a62-f85ccbce2ca6" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="72db4c48-c866-4831-8b6e-b828f3524f70" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="72737fda-a094-4105-8deb-4ab322f2579d" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="a5cfcd98-47fb-4284-b637-9ff3d577cf5a">
+          <propertyInstance Id="fc703767-58fd-4f20-b317-fa53c9cb8d83" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="28aef8c5-14c1-412f-91d1-3950c65a629a" />
+          </propertyInstance>
+          <elementDefinition Id="ae90c841-d23e-4e61-ba5e-6fbd129da253" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="35744316-2ad1-4ccb-b706-95a50a95229e">
+          <propertyInstance Id="d4b2e469-7e56-46bd-9774-685a27b327a3" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="b50b7b40-3124-4f3f-9aaa-0cddd3317905" />
+          </propertyInstance>
+          <elementDefinition Id="8338d943-9b03-4b19-b237-0c53d0e17375" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="8408152b-2666-45e4-abf5-af3fca995494">
+          <propertyInstance Id="314ff249-870f-4b50-b402-193de5519728" name="ProjectPath" value="ClassTemplate=..\SourceProject\SourceProject.csproj|EnumTemplate=..\SourceProject\SourceProject.csproj|InterfaceTemplate=..\SourceProject\SourceProject.csproj|StructTemplate=..\SourceProject\SourceProject.csproj">
+            <elementDefinition Id="2e55290d-c853-49c0-902c-73c5f3246d44" />
+          </propertyInstance>
+          <elementDefinition Id="7de4db11-c05c-4008-a328-d01e348fb351" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="94786cd2-2c2d-41fb-b615-41d6121f36d4">
+          <propertyInstance Id="c9e92f93-6b20-41f9-a7f9-2b933317f823" name="TargetDirectory" value="ClassTemplate={PackageStructure}|EnumTemplate={PackageStructure}|InterfaceTemplate={PackageStructure}|StructTemplate={PackageStructure}">
+            <elementDefinition Id="cebf1945-2431-4948-a737-68c08949c0ba" />
+          </propertyInstance>
+          <elementDefinition Id="11e1b24a-a69e-4ba0-8d8a-a7b9c5f2bcfc" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5875979a-1230-4ed6-b38b-f1bcfc15f4c2">
+          <propertyInstance Id="3eea850b-a49e-4254-abd2-ed38b877c947" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="f9b0193d-03ea-4ff0-88b5-f6e45428b9aa" />
+          </propertyInstance>
+          <elementDefinition Id="bb1a4106-d9a9-4b1e-9a22-be9878465198" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="df80f409-ae53-48d2-a0a9-96e1b9d0b01e">
+          <propertyInstance Id="7dcce8c9-6bde-4220-9dfa-bdbc0b8544a7" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="ac9b1950-4963-458d-9816-980c44d80d6b" />
+          </propertyInstance>
+          <elementDefinition Id="ad64ce68-4241-42a7-a7c4-b71499018d76" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e89e8f15-6fb5-4694-b047-066b39432168">
+          <propertyInstance Id="06e21b9d-e2cc-4148-bf07-d960adf11887" name="Parameters">
+            <elementDefinition Id="f6791ef7-6d38-4b37-9926-2a4a21656559" />
+          </propertyInstance>
+          <elementDefinition Id="3e9d1937-9cd6-4168-95a7-5e1b79cfcaac" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="437b6f63-887e-4c4e-91b7-23e3672c1b7e">
+      <profileInstance Id="6bd2560d-eff3-419a-87bd-7930052d2789" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6fea976d-c76a-4950-af8e-8fb589fc06a8">
+      <profileInstance Id="81e270d8-50c1-4668-8377-1982655875fd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4b38e0d8-670b-487c-b8dd-084c2599c9c0">
+      <profileInstance Id="0e231c94-f95a-4abd-89ff-d3d5ed567ad6" name="CSharpProfile">
+        <elementDefinition Id="443ef110-c11e-4577-83e3-1da67ad3ef24" />
+      </profileInstance>
+      <elementDefinition Id="0793e677-129d-472a-b3b6-9c9a015d2435" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4cf3cb78-f2fb-4788-bfbf-a9c9595db836">
+      <profileInstance Id="4fb6d191-176e-4288-80eb-624e7deee372" name="TextTemplateBindings">
+        <elementDefinition Id="1a668e46-e254-4b67-b6f4-4dbe1277cf59" />
+      </profileInstance>
+      <elementDefinition Id="9b7ea35f-6686-42c0-835c-03c69975c5cb" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="22890022-a77c-41c7-b52c-6cd0ae8cb146" name="ActivityCombat" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b51af491-b263-446b-8888-70c92d780d6b" />
+        <nodes>
+          <initialNode Id="3e8939df-decc-4203-8cfa-0b7f7eaa4070" name="Initial1" isLeaf="false">
+            <elementDefinition Id="d6aa03d7-bc34-4e5d-b6df-87ba1cab7aad" />
+            <flowNodeTargets>
+              <controlFlow Id="994ff4be-640c-4b6a-9540-1055f2a80693" isLeaf="false">
+                <opaqueActionMoniker Id="f7234c1c-4e2b-427e-ae3e-88371c6e6167" LastKnownName="Choisir unité défensive" />
+                <elementDefinition Id="51ce6d31-7b67-452b-abde-e29c8e223a4d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="f7234c1c-4e2b-427e-ae3e-88371c6e6167" name="Choisir unité défensive" isLeaf="false">
+            <elementDefinition Id="233e86e6-5379-4868-8a2c-35da264c2a74" />
+            <flowNodeTargets>
+              <controlFlow Id="a5273e3a-c89b-41db-985c-11db0f607885" isLeaf="false">
+                <opaqueActionMoniker Id="11bf7b65-1986-4a4f-b5b3-e198fdeb0a20" LastKnownName="Choisir nombre maximum de tours" />
+                <elementDefinition Id="5a944979-81c3-427e-8b3e-7404bc043359" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="11bf7b65-1986-4a4f-b5b3-e198fdeb0a20" name="Choisir nombre maximum de tours" isLeaf="false">
+            <elementDefinition Id="05f81192-afdc-436a-8dc5-82aa3e04fe8f" />
+            <flowNodeTargets>
+              <controlFlow Id="147fa37f-84c3-423e-8f45-d32f0713640d" isLeaf="false">
+                <opaqueActionMoniker Id="7145000a-230c-42e9-a8cb-f4a21204011f" LastKnownName="Nombre de tours à jouer" />
+                <elementDefinition Id="8276a50e-4766-4e05-9c09-938b1daf3bd0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="7145000a-230c-42e9-a8cb-f4a21204011f" name="Nombre de tours à jouer" isLeaf="false">
+            <elementDefinition Id="18a835ae-9179-4670-8e29-fb04583760ad" />
+            <flowNodeTargets>
+              <controlFlow Id="108ba095-ebf3-48f7-b04b-21bf70f02e35" isLeaf="false">
+                <decisionNodeMoniker Id="0ade7742-1af2-4afc-acfb-13a91ac0473b" LastKnownName="Decision1" />
+                <elementDefinition Id="c9db0b7f-c133-47e2-bb9e-f4beb4389a4b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="0ade7742-1af2-4afc-acfb-13a91ac0473b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="0da1f8ae-6bf4-4d47-af71-52acf8f85f7c" />
+            <flowNodeTargets>
+              <controlFlow Id="8db58bac-1dd4-4177-8836-ed3d4fffc90e" guard="0 tour restant" isLeaf="false">
+                <opaqueActionMoniker Id="131615f7-3b70-447c-91b6-4e60caa6099e" LastKnownName="Match nul" />
+                <elementDefinition Id="2dad8483-94f1-4a10-a7db-9a13b739df51" />
+              </controlFlow>
+              <controlFlow Id="f5b0a35a-c0b8-47ae-bd52-ba24f2dac1b9" guard="Au moins 1 tour restant" isLeaf="false">
+                <opaqueActionMoniker Id="11379594-18d1-4005-8d31-6e8758161f57" LastKnownName="Calcul de la probabilité de perdre une vie" />
+                <elementDefinition Id="d692e791-a4a9-4dbf-8bcf-02bab38375ab" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="131615f7-3b70-447c-91b6-4e60caa6099e" name="Match nul" isLeaf="false">
+            <elementDefinition Id="5cd16cd7-3abe-4b2c-bb28-260eccfab46d" />
+            <flowNodeTargets>
+              <controlFlow Id="97af6acc-76d2-4192-8e48-b486a6b129b3" isLeaf="false">
+                <activityFinalNodeMoniker Id="a45f3962-0294-44b8-adf3-312975494575" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="da3b6cbe-ab81-49ad-a608-2fc477a0dce9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="a45f3962-0294-44b8-adf3-312975494575" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="57de927f-4286-4e84-8993-dc62d10c883a" />
+          </activityFinalNode>
+          <opaqueAction Id="11379594-18d1-4005-8d31-6e8758161f57" name="Calcul de la probabilité de perdre une vie" isLeaf="false">
+            <elementDefinition Id="7cc35956-b6da-4696-bba4-2f56650b47e8" />
+            <flowNodeTargets>
+              <controlFlow Id="7cfc079e-4480-4530-921f-b3955da7b05f" isLeaf="false">
+                <opaqueActionMoniker Id="595b55b9-5de2-47e8-ac39-ff8540156747" LastKnownName="Calcul du résultat du tour en accord avec la probabilité de perdre une vie" />
+                <elementDefinition Id="05037754-dac4-4a0c-8b7a-c104daf7a2af" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="595b55b9-5de2-47e8-ac39-ff8540156747" name="Calcul du résultat du tour en accord avec la probabilité de perdre une vie" isLeaf="false">
+            <elementDefinition Id="14975e94-d076-43d5-a2c1-11f27e7f6f4f" />
+            <flowNodeTargets>
+              <controlFlow Id="36d8faf7-2f82-40fb-a0e3-670383b9e773" isLeaf="false">
+                <decisionNodeMoniker Id="abc37cd0-a05d-458d-8b19-adfb32f230ab" LastKnownName="Decision2" />
+                <elementDefinition Id="8b161cf4-30a5-47d8-ad67-a71bae04045e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="abc37cd0-a05d-458d-8b19-adfb32f230ab" name="Decision2" isLeaf="false">
+            <elementDefinition Id="1ab5d6aa-6446-43dc-aa6e-42e18c28f404" />
+            <flowNodeTargets>
+              <controlFlow Id="010cd7d9-4ab2-4cdd-b199-4a8d91e1e20e" guard="Défenseur perd le tour" isLeaf="false">
+                <opaqueActionMoniker Id="f9073148-0e4d-4d41-a958-c8126b1a143d" LastKnownName="Défenseur perd un point de vie" />
+                <elementDefinition Id="8285e960-caf3-4e83-bf50-056ee326f5ae" />
+              </controlFlow>
+              <controlFlow Id="76a39d5b-ba27-4102-b2a1-91aa4080eb98" guard="Attaquant perd le tour" isLeaf="false">
+                <opaqueActionMoniker Id="7c7ad18d-561d-424f-ace2-632b629ae250" LastKnownName="Attaquant perd un point de vie" />
+                <elementDefinition Id="f6116487-e095-4b32-8744-198997ebe849" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="7c7ad18d-561d-424f-ace2-632b629ae250" name="Attaquant perd un point de vie" isLeaf="false">
+            <elementDefinition Id="ffb93a88-5076-4a09-a39c-8a89153f7d29" />
+            <flowNodeTargets>
+              <controlFlow Id="c6579617-4407-423b-8814-a877953011f6" isLeaf="false">
+                <decisionNodeMoniker Id="f26defe9-97f8-4d5f-a101-b65fad1dc492" LastKnownName="Decision4" />
+                <elementDefinition Id="b95aa1ae-0ee4-414b-b36e-f9593894d818" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f9073148-0e4d-4d41-a958-c8126b1a143d" name="Défenseur perd un point de vie" isLeaf="false">
+            <elementDefinition Id="7d5815b2-0b27-4327-8aeb-f3dbc23ece75" />
+            <flowNodeTargets>
+              <controlFlow Id="07ba84e9-2bbe-4ae1-b2cd-a621f4e8acba" isLeaf="false">
+                <decisionNodeMoniker Id="67007b6f-9d78-4db2-8f59-7e1d3ba319ea" LastKnownName="Decision3" />
+                <elementDefinition Id="cb893054-898f-443e-bbf3-464c5819b0ad" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="67007b6f-9d78-4db2-8f59-7e1d3ba319ea" name="Decision3" isLeaf="false">
+            <elementDefinition Id="72adf6f2-c4ef-4896-8625-bd682d98594d" />
+            <flowNodeTargets>
+              <controlFlow Id="4385d1c6-742e-48cf-b7f4-3e3c92451a2b" guard="points de vie défenseur &gt; 0" isLeaf="false">
+                <opaqueActionMoniker Id="7145000a-230c-42e9-a8cb-f4a21204011f" LastKnownName="Nombre de tours à jouer" />
+                <elementDefinition Id="f34174bb-f905-409e-b83a-a6a530cd6fc8" />
+              </controlFlow>
+              <controlFlow Id="1c66ab9a-0a24-41d0-adec-b8b9b55edb08" guard="points de vie défenseur = 0" isLeaf="false">
+                <opaqueActionMoniker Id="8e822607-32ca-403b-8be7-3ce96f63c9c7" LastKnownName="Victoire de l'attaquant" />
+                <elementDefinition Id="97f4a3ad-cd62-44c4-b27d-6393bf841ff4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="f26defe9-97f8-4d5f-a101-b65fad1dc492" name="Decision4" isLeaf="false">
+            <elementDefinition Id="ede73562-718a-471d-93c3-dfd804097d18" />
+            <flowNodeTargets>
+              <controlFlow Id="b9514cb1-133f-49b8-8e84-611364db0371" guard="points de vie attaquant &gt; 0" isLeaf="false">
+                <opaqueActionMoniker Id="7145000a-230c-42e9-a8cb-f4a21204011f" LastKnownName="Nombre de tours à jouer" />
+                <elementDefinition Id="ff6d883f-a028-466f-a70d-78ccddb9234a" />
+              </controlFlow>
+              <controlFlow Id="aa7e8318-877d-42fb-91b3-82b7a3631b4d" guard="points de vie attaquant = 0" isLeaf="false">
+                <opaqueActionMoniker Id="d266b618-fe2c-40b7-b73c-b0a0bfe9fd1c" LastKnownName="Victoire du défenseur" />
+                <elementDefinition Id="865541e6-387d-4df0-88bb-a1cc5ce2134a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="8e822607-32ca-403b-8be7-3ce96f63c9c7" name="Victoire de l'attaquant" isLeaf="false">
+            <elementDefinition Id="afeabc9f-e07e-4d23-865d-f8731ee03192" />
+            <flowNodeTargets>
+              <controlFlow Id="9e03c423-caaf-4b3f-92a7-07828c384df5" isLeaf="false">
+                <activityFinalNodeMoniker Id="d9aa79e8-0632-49a0-adab-077f6c3c4426" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="4419b1cd-79f3-4b9b-bec6-33b98d92c544" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d266b618-fe2c-40b7-b73c-b0a0bfe9fd1c" name="Victoire du défenseur" isLeaf="false">
+            <elementDefinition Id="5edddf81-a556-4ba6-87fa-f64b3bd45dc5" />
+            <flowNodeTargets>
+              <controlFlow Id="4900e30b-9292-48d8-a194-3291ae4fbb57" isLeaf="false">
+                <activityFinalNodeMoniker Id="088e545d-42ca-405a-83d0-235e4de9d690" LastKnownName="ActivityFinal3" />
+                <elementDefinition Id="56e12f53-f891-4894-994f-59827638a7ec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d9aa79e8-0632-49a0-adab-077f6c3c4426" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="b2431de3-4540-434b-9b7f-748f5dbc7aa2" />
+          </activityFinalNode>
+          <activityFinalNode Id="088e545d-42ca-405a-83d0-235e4de9d690" name="ActivityFinal3" isLeaf="false">
+            <elementDefinition Id="5a7a0e46-df6d-43cd-ac59-56aa7246712e" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="dd5b940f-3f9d-4883-9b98-920cc8f2e858" name="ModelingProject">
+    <elementDefinition Id="de446e78-cb1a-4d6a-836a-0882308efb32" />
+  </package>
+</activityRootModel>
