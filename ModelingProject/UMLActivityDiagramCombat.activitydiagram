@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d06e075d-061d-48f3-a986-618886cfc5cb" name="ActivityComat" linkedPackageId="ae4d9af2-b4e4-4f31-8eae-de3e4d3926a2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d06e075d-061d-48f3-a986-618886cfc5cb" name="ActivityCombat" linkedPackageId="ae4d9af2-b4e4-4f31-8eae-de3e4d3926a2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="91c89dd0-c1e7-483c-a3a6-2682c9f73bdf" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -74,27 +74,9 @@
   </appliedStereotypesInternal>
   <packagedElements>
     <activityRootModelHasActivity>
-      <activity Id="3a925b4a-1bae-4951-9aa5-1e258307f361" name="ActivityComat" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+      <activity Id="3a925b4a-1bae-4951-9aa5-1e258307f361" name="ActivityCombat" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
         <elementDefinition Id="9a7fb635-07df-4e32-903b-7cf4a52c8265" />
         <nodes>
-          <initialNode Id="25368dc9-7e15-45ed-875e-db20a3ae1c3d" name="Initial1" isLeaf="false">
-            <elementDefinition Id="fba4caf2-6bad-4250-906e-ed0b003f82b6" />
-            <flowNodeTargets>
-              <controlFlow Id="686dd113-3074-43de-8553-e5a7e27e7cbd" isLeaf="false">
-                <opaqueActionMoniker Id="d32da8dc-6fa6-4d3c-9dc2-bd40d4553793" LastKnownName="Sélectionner unité défensive" />
-                <elementDefinition Id="a7a89088-caeb-4609-9ec1-e376c2d0e26e" />
-              </controlFlow>
-            </flowNodeTargets>
-          </initialNode>
-          <opaqueAction Id="d32da8dc-6fa6-4d3c-9dc2-bd40d4553793" name="Sélectionner unité défensive" isLeaf="false">
-            <elementDefinition Id="029906ee-a400-483a-a900-e6b9aa7db67c" />
-            <flowNodeTargets>
-              <controlFlow Id="2e81b8e0-d3a0-43b1-9a5b-31d562200014" isLeaf="false">
-                <opaqueActionMoniker Id="a806f59e-717c-4f3c-acb4-c1eb38300626" LastKnownName="Choisir nombre de tours" />
-                <elementDefinition Id="4c0b6e1f-d36c-44bf-95b5-da449980ba9c" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
           <opaqueAction Id="a806f59e-717c-4f3c-acb4-c1eb38300626" name="Choisir nombre de tours" isLeaf="false">
             <elementDefinition Id="ff2653c5-70f4-479e-be2b-f0e1c7c67d74" />
             <flowNodeTargets>
@@ -237,6 +219,64 @@
           <activityFinalNode Id="1eb06a60-e589-4f9c-994f-77a1753e64cd" name="ActivityFinal3" isLeaf="false">
             <elementDefinition Id="ac916d79-1aa6-4ce8-abe9-ad12bb39ea86" />
           </activityFinalNode>
+          <opaqueAction Id="0560c72a-83d4-4207-9e40-2b8b1cea9e01" name="Récupérer les points de vie des deux unités" isLeaf="false">
+            <elementDefinition Id="96523287-cf08-48ca-acc6-cb1ab72e3b03" />
+            <flowNodeTargets>
+              <controlFlow Id="a471efcb-8b52-477f-9a5d-c27fb2317f96" isLeaf="false">
+                <decisionNodeMoniker Id="4458ad20-8277-4a8a-85ac-baeadda60f3d" LastKnownName="Decision2" />
+                <elementDefinition Id="2938bd9a-bc4b-4737-8d2c-c573e564696c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="4458ad20-8277-4a8a-85ac-baeadda60f3d" name="Decision2" isLeaf="false">
+            <elementDefinition Id="5317601f-51a9-4fad-8f2a-a91fdfc08f8d" />
+            <flowNodeTargets>
+              <controlFlow Id="80118931-5a03-4795-9d78-c0c5925b148d" guard="L'attaquant a plus de vie" isLeaf="false">
+                <opaqueActionMoniker Id="de960350-666b-494d-811e-4cac008444d3" LastKnownName="Nombre max de tours = vie de l'attaquant + 2" />
+                <elementDefinition Id="0afad6eb-4261-4867-ab6f-7451fd26992a" />
+              </controlFlow>
+              <controlFlow Id="9a031fa5-0c57-47f9-afeb-18296b3c1e82" guard="Le defenseur a plus de vie" isLeaf="false">
+                <opaqueActionMoniker Id="699e6848-156a-48be-bfd6-7aab19928c77" LastKnownName="Nombre max de tours = vie du defenseur + 2" />
+                <elementDefinition Id="930afcfe-fee2-4d33-a0e8-a8c45ef726aa" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="699e6848-156a-48be-bfd6-7aab19928c77" name="Nombre max de tours = vie du defenseur + 2" isLeaf="false">
+            <elementDefinition Id="4858618a-0825-41d9-8356-b999cb0aa4bf" />
+            <flowNodeTargets>
+              <controlFlow Id="d191d129-c534-4a1a-a6e8-c6ca876f1dd5" isLeaf="false">
+                <opaqueActionMoniker Id="044bec82-5196-4748-9e52-c3253dcb1363" LastKnownName="Générer un nombre de tour compris entre 3 et le nombre max de tours" />
+                <elementDefinition Id="fb035368-d3fe-4fd3-ba8e-a1da2d095d87" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="de960350-666b-494d-811e-4cac008444d3" name="Nombre max de tours = vie de l'attaquant + 2" isLeaf="false">
+            <elementDefinition Id="72727d97-8f8a-49b9-b2ad-4b98c40073db" />
+            <flowNodeTargets>
+              <controlFlow Id="0c987209-5643-4fb6-ba7b-18528b45b2f3" isLeaf="false">
+                <opaqueActionMoniker Id="044bec82-5196-4748-9e52-c3253dcb1363" LastKnownName="Générer un nombre de tour compris entre 3 et le nombre max de tours" />
+                <elementDefinition Id="9c6e1f8d-5017-41f6-ae66-70e78a4fe299" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="044bec82-5196-4748-9e52-c3253dcb1363" name="Générer un nombre de tour compris entre 3 et le nombre max de tours" isLeaf="false">
+            <elementDefinition Id="0ae5580a-2b65-4183-b883-cdb61631e84a" />
+            <flowNodeTargets>
+              <controlFlow Id="b6f4296e-a948-4c66-9a82-21117504a4e0" isLeaf="false">
+                <opaqueActionMoniker Id="a806f59e-717c-4f3c-acb4-c1eb38300626" LastKnownName="Choisir nombre de tours" />
+                <elementDefinition Id="e65b908e-aad7-4954-b325-8c5afa34b44b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <initialNode Id="a1636500-a0f4-4264-b28c-17b02063747f" name="Initial1" isLeaf="false">
+            <elementDefinition Id="f1131d22-7203-4bdb-b65c-bd4cf7c4bfa5" />
+            <flowNodeTargets>
+              <controlFlow Id="ba6e32e9-74f5-4fc6-b21e-f167d9be7a9f" isLeaf="false">
+                <opaqueActionMoniker Id="0560c72a-83d4-4207-9e40-2b8b1cea9e01" LastKnownName="Récupérer les points de vie des deux unités" />
+                <elementDefinition Id="f975d767-f863-43f4-9702-3d48aac2f178" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
