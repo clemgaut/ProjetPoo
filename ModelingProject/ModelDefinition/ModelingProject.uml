@@ -12031,7 +12031,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -12079,7 +12079,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12109,7 +12109,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12190,7 +12190,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12428,7 +12428,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12476,7 +12476,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12494,7 +12494,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12504,7 +12504,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -12544,7 +12544,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12564,7 +12564,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12574,7 +12574,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12602,7 +12602,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12612,7 +12612,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -12652,7 +12652,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12667,7 +12667,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12702,7 +12702,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -12720,7 +12720,7 @@
             <covered>
               <lifelineMoniker
                 Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-                LastKnownName="Player1 : Player"
+                LastKnownName="Player"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -12924,7 +12924,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -12980,7 +12980,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -13010,7 +13010,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13021,7 +13021,7 @@
             <coveredLifelines>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
               <lifelineMoniker
                 Id="2ab203b7-372c-433f-9815-51370df79f35"
@@ -13035,7 +13035,7 @@
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                    LastKnownName="Nation : Nation"
+                    LastKnownName="Nation"
                     LastKnownLocation="ModelingProject.uml" />
                   <lifelineMoniker
                     Id="2ab203b7-372c-433f-9815-51370df79f35"
@@ -13085,7 +13085,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13160,7 +13160,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13195,7 +13195,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13233,7 +13233,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -13253,7 +13253,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -13271,7 +13271,7 @@
             <covered>
               <lifelineMoniker
                 Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-                LastKnownName="Nation : Nation"
+                LastKnownName="Nation"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -13841,9 +13841,9 @@
           </lifeline>
           <lifeline
             Id="cfac28b3-fa7f-46ab-80cf-77842386a3a3"
-            name="Player1 : Player"
+            name="Player"
             isActor="false"
-            lifelineDisplayName="Player1 : Player">
+            lifelineDisplayName="Player">
             <represents>
               <propertyMoniker
                 Id="b518e6ba-5b81-4a1d-b61f-4eb643e0865d"
@@ -13870,9 +13870,9 @@
           </lifeline>
           <lifeline
             Id="1d5892f9-7f25-45ba-a480-8497c6f4bb41"
-            name="Nation : Nation"
+            name="Nation"
             isActor="false"
-            lifelineDisplayName="Nation : Nation">
+            lifelineDisplayName="Nation">
             <represents>
               <propertyMoniker
                 Id="18b69c69-71d9-4259-9970-8e95400fcfd9"
