@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,11 @@ public abstract class Map : IMap
 
 	public Map()
 	{
+	}
+
+	public virtual IEnumerable<IEnumerable<int>> getInitCoordonates()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

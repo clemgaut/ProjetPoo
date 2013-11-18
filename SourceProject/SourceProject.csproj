@@ -52,9 +52,9 @@
     <Compile Include="GameBuilder.cs" />
     <Compile Include="GameDirector.cs" />
     <Compile Include="GaulUnit.cs" />
-    <Compile Include="IBox.cs" />
     <Compile Include="IBoxFactory.cs" />
     <Compile Include="IGame.cs" />
+    <Compile Include="IGameBuilder.cs" />
     <Compile Include="IGameDirector.cs" />
     <Compile Include="IMap.cs" />
     <Compile Include="INation.cs" />

@@ -31,6 +31,9 @@
     <Content Include="ModelDefinition\Package_1238.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1813.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="UMLActivityDiagramCombat.activitydiagram">
       <SubType>Content</SubType>
     </Content>

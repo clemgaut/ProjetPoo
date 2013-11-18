@@ -4,12 +4,13 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using SourceProject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class Unit : IUnit
+private class Unit : IUnit
 {
 	private int _defensive;
 
@@ -59,6 +60,46 @@ public abstract class Unit : IUnit
 
 	public Unit()
 	{
+	}
+
+	public virtual bool hasMoves()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void move(int x, int y)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool attack(Unit defUnit)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool isAlive()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool attack(Unit defUnit)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool setLifePoints(int value)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool hasMoves()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual bool isAlive()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }
