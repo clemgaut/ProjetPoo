@@ -60,7 +60,7 @@
   <Class Name="GameBuilder">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAw=</HashCode>
       <FileName>GameBuilder.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -120,7 +120,7 @@
   <Class Name="NormalGameBuilder">
     <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NormalGameBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
