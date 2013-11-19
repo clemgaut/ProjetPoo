@@ -8,7 +8,6 @@ namespace SourceProject
         void endOfPlay();
         bool fight();
         Player getActivePlayer();
-        Player getActivePlayer();
         Unit getBestDefensiveUnit(int x, int y);
         Player getWinner();
         bool move();
