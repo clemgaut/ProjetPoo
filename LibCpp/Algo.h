@@ -12,5 +12,6 @@ public:
 	DLL Algo(void);
 	DLL ~Algo(void);
 	DLL int fTest(int n);
+	DLL int* mapGeneration (int size, int types);
 };
 
