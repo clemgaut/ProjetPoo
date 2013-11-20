@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-private class Unit : IUnit
+public class Unit : IUnit
 {
 	private int _defensive;
 
@@ -63,11 +63,6 @@ private class Unit : IUnit
 	}
 
 	public virtual bool hasMoves()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool attack(Unit defUnit)
 	{
 		throw new System.NotImplementedException();
 	}

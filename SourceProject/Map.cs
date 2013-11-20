@@ -41,7 +41,7 @@ public abstract class Map : IMap
 		throw new System.NotImplementedException();
 	}
 
-	public virtual IEnumerable<IEnumerable<int>> getInitCoordonates()
+	public virtual IEnumerable<IEnumerable<int> > getInitCoordonates()
 	{
 		throw new System.NotImplementedException();
 	}
@@ -49,11 +49,5 @@ public abstract class Map : IMap
 	public Map()
 	{
 	}
-
-	public virtual IEnumerable<IEnumerable<int>> getInitCoordonates()
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

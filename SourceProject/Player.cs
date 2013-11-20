@@ -48,11 +48,5 @@ public class Player : IPlayer
 	{
 		throw new System.NotImplementedException();
 	}
-
-	public virtual IEnumerable<Unit> getSelectableUnits()
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 
