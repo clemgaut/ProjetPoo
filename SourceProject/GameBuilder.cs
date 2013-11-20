@@ -23,10 +23,5 @@ public abstract class GameBuilder : IGameBuilder
 		throw new System.NotImplementedException();
 	}
 
-	public virtual Game getGame()
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

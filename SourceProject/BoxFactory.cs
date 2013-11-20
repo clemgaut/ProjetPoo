@@ -23,10 +23,5 @@ private class BoxFactory : IBoxFactory
 	{
 	}
 
-	public virtual Box getBox(EBoxType boxType)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

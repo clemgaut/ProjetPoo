@@ -58,11 +58,6 @@ public class GameDirector : IGameDirector
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void SelectUnit(int i)
-	{
-		throw new System.NotImplementedException();
-	}
-
 	public virtual void selectAdjacentBox(int x, int y)
 	{
 		throw new System.NotImplementedException();

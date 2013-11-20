@@ -5,7 +5,6 @@ namespace SourceProject
     {
         void createUnits(int nombreUnites);
         Unit getUnit(int i);
-        void getUnits();
         Unit[] getUnits();
         int getUnitsNumber();
         void setInitBox(int x, int y);

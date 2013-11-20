@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="c0530c62-6beb-4090-831e-27b8a77554d0" name="SequenceStep" linkedPackageId="aa60b085-5d0f-4300-a95f-4647f3bb2ac0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="c0530c62-6beb-4090-831e-27b8a77554d0" name="SequenceStep" linkedPackageId="aa60b085-5d0f-4300-a95f-4647f3bb2ac0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="1912b0df-89b7-46f5-90b9-fa85fb18bcb9" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="fab6bb60-eac1-4ac5-899f-93cd60031c54" />
@@ -1205,16 +1205,16 @@
               <lifelineMoniker Id="83a2e535-256d-4a22-9adf-2fee1cc51a80" LastKnownName="Unit" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="725305a6-8346-4e97-9b64-3e396007d85e" name="OperandOccurrenceSpecification125">
+            <elementDefinition Id="a9faac4a-3866-40b2-988d-e404491b5446" />
+            <covered>
+              <lifelineMoniker Id="7c46b05d-f38e-4a29-9526-17d89b26a4d3" LastKnownName="GameDirector" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="e7857498-2b18-41b2-b30a-b3cfad49ff8c" name="OperandOccurrenceSpecification127">
             <elementDefinition Id="82831ff0-aaf6-4e10-b63d-53cf14a40f96" />
             <covered>
               <lifelineMoniker Id="29202916-295d-47f1-99f7-919e45384f0d" LastKnownName="HIM" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="6c579a10-9e12-4c37-b13e-359ec93f1d8c" name="OperandOccurrenceSpecification137">
-            <elementDefinition Id="6fe18249-5ec9-4f3d-99ca-3ea31eb1dc7e" />
-            <covered>
-              <lifelineMoniker Id="29fadec6-84ca-4c23-b81c-0f35e0274f54" LastKnownName="Game" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="4f7c2a2d-eb82-4039-aa6b-6ecd94f8f672" name="OperandOccurrenceSpecification129">
@@ -1223,10 +1223,10 @@
               <lifelineMoniker Id="13152aef-ef23-46ca-832f-27d35137da3e" LastKnownName="Nation" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="725305a6-8346-4e97-9b64-3e396007d85e" name="OperandOccurrenceSpecification125">
-            <elementDefinition Id="a9faac4a-3866-40b2-988d-e404491b5446" />
+          <operandOccurrenceSpecification Id="6c579a10-9e12-4c37-b13e-359ec93f1d8c" name="OperandOccurrenceSpecification137">
+            <elementDefinition Id="6fe18249-5ec9-4f3d-99ca-3ea31eb1dc7e" />
             <covered>
-              <lifelineMoniker Id="7c46b05d-f38e-4a29-9526-17d89b26a4d3" LastKnownName="GameDirector" />
+              <lifelineMoniker Id="29fadec6-84ca-4c23-b81c-0f35e0274f54" LastKnownName="Game" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="c2e2d7ed-49a9-45ce-b943-57a9c929257c" name="BehaviorExecutionSpecification16">
@@ -2534,16 +2534,16 @@
               <lifelineMoniker Id="7c46b05d-f38e-4a29-9526-17d89b26a4d3" LastKnownName="GameDirector" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="950a5aa4-f207-4b46-a270-a48b4c86368a" name="OperandOccurrenceSpecification80">
+            <elementDefinition Id="76334c8c-57c8-4c19-a399-f27052bd4f6a" />
+            <covered>
+              <lifelineMoniker Id="13152aef-ef23-46ca-832f-27d35137da3e" LastKnownName="Nation" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="7ea7009d-a365-4a3a-a50f-2658e447d522" name="OperandOccurrenceSpecification78">
             <elementDefinition Id="f055b417-8cde-42f7-a550-260ef15b09b6" />
             <covered>
               <lifelineMoniker Id="29202916-295d-47f1-99f7-919e45384f0d" LastKnownName="HIM" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="a9ae3cf5-c8ff-4842-b136-ed8da2c027f8" name="OperandOccurrenceSpecification82">
-            <elementDefinition Id="41cb449f-1fa4-44e8-b4ae-fc449ef1e384" />
-            <covered>
-              <lifelineMoniker Id="29fadec6-84ca-4c23-b81c-0f35e0274f54" LastKnownName="Game" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="996b6878-1ae5-4ac2-9326-eaebf3d9fc70" name="OperandOccurrenceSpecification84">
@@ -2552,10 +2552,10 @@
               <lifelineMoniker Id="83a2e535-256d-4a22-9adf-2fee1cc51a80" LastKnownName="Unit" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="950a5aa4-f207-4b46-a270-a48b4c86368a" name="OperandOccurrenceSpecification80">
-            <elementDefinition Id="76334c8c-57c8-4c19-a399-f27052bd4f6a" />
+          <operandOccurrenceSpecification Id="a9ae3cf5-c8ff-4842-b136-ed8da2c027f8" name="OperandOccurrenceSpecification82">
+            <elementDefinition Id="41cb449f-1fa4-44e8-b4ae-fc449ef1e384" />
             <covered>
-              <lifelineMoniker Id="13152aef-ef23-46ca-832f-27d35137da3e" LastKnownName="Nation" />
+              <lifelineMoniker Id="29fadec6-84ca-4c23-b81c-0f35e0274f54" LastKnownName="Game" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="8bbc6bac-1be8-4496-95b2-4a999fea3a23" name="BehaviorExecutionSpecification26">

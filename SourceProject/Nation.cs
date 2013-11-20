@@ -21,10 +21,6 @@ public class Nation : INation
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void getUnits()
-	{
-		throw new System.NotImplementedException();
-	}
 
 	public virtual int getUnitsNumber()
 	{
@@ -35,17 +31,7 @@ public class Nation : INation
 	{
 	}
 
-	public virtual void setInitBox(int x, int y)
-	{
-		throw new System.NotImplementedException();
-	}
-
 	public virtual Unit[] getUnits()
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual Unit getUnit(int i)
 	{
 		throw new System.NotImplementedException();
 	}

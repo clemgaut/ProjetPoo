@@ -21,10 +21,5 @@ public class UnitFactory : IUnitFactory
 		throw new System.NotImplementedException();
 	}
 
-	public virtual IEnumerable<Unit> getUnits(int unitNumber)
-	{
-		throw new System.NotImplementedException();
-	}
-
 }
 

@@ -30,11 +30,6 @@ public class Player : IPlayer
 		throw new System.NotImplementedException();
 	}
 
-	public virtual Nation getNation()
-	{
-		throw new System.NotImplementedException();
-	}
-
 	public virtual void refresh()
 	{
 		throw new System.NotImplementedException();
