@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-internal class Box :
+public class Box
 {
 	public Box()
 	{
