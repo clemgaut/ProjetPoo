@@ -16,6 +16,7 @@ namespace Wrapper {
 		WrapperAlgo(){algoCpp = new Algo();}
 		~WrapperAlgo(){delete algoCpp;}
 		System::Int32 fTest(int n){return algoCpp->fTest(n);}
+		
 
 	protected:
 		!WrapperAlgo(){delete algoCpp;}

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algo.cpp" />
+    <ClCompile Include="Api.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

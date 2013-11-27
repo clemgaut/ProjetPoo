@@ -21,7 +21,7 @@ int Algo::fTest(int n)
 }
 
 int* Algo::mapGeneration (int size, int types) {
-
+ 
 	/* initialize random seed: */
 	srand (time (NULL));
 
