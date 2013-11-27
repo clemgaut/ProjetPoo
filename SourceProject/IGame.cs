@@ -14,6 +14,7 @@ namespace SourceProject
         void nextStep();
         void onPropertyChanged();
         void setMap(Map map);
+        Map getMap();
         void setMaxSteps(int max);
         void start();
     }

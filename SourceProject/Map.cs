@@ -14,7 +14,24 @@ public abstract class Map : IMap
 {
 	private BoxFactory fabriqueCase;
 
-	protected IEnumerable<Box> _map;
+	protected Box[,] _map;
+
+    public int Width
+    {
+        get;
+        set;
+    }
+
+    public int Height
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+        set
+        {
+        }
+    }
 
 	public virtual void genererCarte()
 	{
@@ -35,6 +52,11 @@ public abstract class Map : IMap
 	{
 		throw new System.NotImplementedException();
 	}
+
+    public virtual Box getBox(int x, int y)
+    {
+        return _map[x, y];
+    }
 
 	public virtual void addNation(Nation nation)
 	{

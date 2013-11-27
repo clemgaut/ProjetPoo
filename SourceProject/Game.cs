@@ -23,6 +23,11 @@ public class Game : IGame
 		throw new System.NotImplementedException();
 	}
 
+    public virtual Map getMap()
+    {
+        return _map;
+    }
+
 	public virtual void setMaxSteps(int max)
 	{
 		throw new System.NotImplementedException();
