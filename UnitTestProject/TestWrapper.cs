@@ -21,5 +21,22 @@ namespace UnitTestProject
             Assert.AreNotEqual(w, null);
             Assert.AreEqual(10, w.fTest(10));
         }
+
+        [TestMethod]
+        public void TestBasicMapGeneration()
+        {
+            WrapperAlgo w = new WrapperAlgo();
+            int types = 6;
+            int size = 10;
+
+            System.Collections.Generic.List<int> l = w.mapGeneration(size, types);
+
+            Assert.AreEqual(size, l.Count);
+
+            foreach(int n in l)
+            {
+                Assert.IsTrue(n >= 1 && n <= types);
+            }
+        }
     }
 }

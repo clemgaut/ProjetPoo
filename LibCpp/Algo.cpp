@@ -20,13 +20,25 @@ int Algo::fTest(int n)
 	return n;
 }
 
+/*
+Generate the map (first step : random -> done)
+
+size : size of the generated map
+types : number of case types (generated number is between 1 and value of types)
+*/
 int* Algo::mapGeneration (int size, int types) {
  
 	/* initialize random seed: */
 	srand (time (NULL));
 
-	/* generate secret number between 1 and 10: */
-	int i = rand () % 10 + 1;
+	/* create new array*/
+	int* map = (int*)malloc(size*sizeof(int));
 
-	return &size;
+	for (int i = 0; i < size; i++)
+	{
+		/* generate secret number between 1 and types */
+		map[i] = rand() % types + 1;
+	}
+
+	return map;
 }
