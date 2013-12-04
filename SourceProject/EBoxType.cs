@@ -11,7 +11,7 @@ using System.Text;
 
 public enum EBoxType : int
 {
-	DESERT,
+	DESERT = 1,
 	FOREST,
 	LOWLAND,
 	MOUTAIN,

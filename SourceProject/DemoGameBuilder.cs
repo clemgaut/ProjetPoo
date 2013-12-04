@@ -13,6 +13,7 @@ public class DemoGameBuilder : GameBuilder
 {
 	public DemoGameBuilder()
 	{
+        Map map = new DemoMap();
 	}
 
 }

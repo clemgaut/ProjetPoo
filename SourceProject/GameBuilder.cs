@@ -20,7 +20,7 @@ public abstract class GameBuilder : IGameBuilder
 
 	public virtual Game getGame()
 	{
-		throw new System.NotImplementedException();
+        return _game;
 	}
 
 }

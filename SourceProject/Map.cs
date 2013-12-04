@@ -12,7 +12,9 @@ using System.Text;
 
 public abstract class Map : IMap
 {
-	private BoxFactory fabriqueCase;
+	protected BoxFactory boxFactory;
+
+    protected Wrapper.WrapperAlgo wrapperAlgo;
 
 	protected Box[,] _map;
 
@@ -24,13 +26,8 @@ public abstract class Map : IMap
 
     public int Height
     {
-        get
-        {
-            throw new System.NotImplementedException();
-        }
-        set
-        {
-        }
+        get;
+        set;
     }
 
 	public virtual void genererCarte()
@@ -48,14 +45,19 @@ public abstract class Map : IMap
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void setBox(Box box, int x, int y)
+	public void setBox(Box box, int line, int column)
 	{
-		throw new System.NotImplementedException();
+        _map[line, column] = box;
 	}
 
     public virtual Box getBox(int x, int y)
     {
         return _map[x, y];
+    }
+
+    public Box[,] getMap()
+    {
+        return _map;
     }
 
 	public virtual void addNation(Nation nation)
@@ -70,6 +72,47 @@ public abstract class Map : IMap
 
 	public Map()
 	{
+        wrapperAlgo = new Wrapper.WrapperAlgo();
+        boxFactory = new BoxFactory();
 	}
+
+    /*
+     * Convert a List<int> to a Box[,] according to the size of the map
+    */
+    protected void convertIntListToMap(List<int> l)
+    {
+        for(int line = 0; line<Height; line++)
+        {
+            for (int column = 0; column < Width; column++)
+            {
+                switch (l[line * Width + column])
+                {
+                    case (int)EBoxType.DESERT:
+                        setBox(boxFactory.getBox(EBoxType.DESERT), line, column);
+                        break;
+
+                    case (int)EBoxType.FOREST:
+                        setBox(boxFactory.getBox(EBoxType.FOREST), line, column);
+                        break;
+
+                    case (int)EBoxType.LOWLAND:
+                        setBox(boxFactory.getBox(EBoxType.LOWLAND), line, column);
+                        break;
+
+                    case (int)EBoxType.MOUTAIN:
+                        setBox(boxFactory.getBox(EBoxType.MOUTAIN), line, column);
+                        break;
+
+                    case (int)EBoxType.SEA:
+                        setBox(boxFactory.getBox(EBoxType.SEA), line, column);
+                        break;
+
+                    default:
+                        //TODO Error
+                        break;  
+                }
+            }
+        }
+    }
 }
 

@@ -12,15 +12,51 @@ using System.Text;
 
 public class BoxFactory : IBoxFactory
 {
-	protected IEnumerable<Box> _box;
+	protected Box _desertBox;
+    protected Box _forestBox;
+    protected Box _lowlandBox;
+    protected Box _mountainBox;
+    protected Box _seaBox;
 
 	public virtual Box getBox(EBoxType boxType)
 	{
-		throw new System.NotImplementedException();
+        Box box;
+		switch(boxType)
+        {
+            case EBoxType.DESERT:
+                box =  _desertBox;
+                break;
+
+            case EBoxType.FOREST:
+                box = _forestBox;
+                break;
+
+            case EBoxType.LOWLAND:
+                box = _lowlandBox;
+                break;
+
+            case EBoxType.MOUTAIN:
+                box = _mountainBox;
+                break;
+
+            case EBoxType.SEA:
+                box = _seaBox;
+                break;
+
+            default:
+                box = null;
+                break;
+        }
+        return box;
 	}
 
 	public BoxFactory()
 	{
+        _desertBox = new DesertBox();
+        _forestBox = new ForestBox();
+        _lowlandBox = new LowlandBox();
+        _mountainBox = new MountainBox();
+        _seaBox = new SeaBox();
 	}
 
 }

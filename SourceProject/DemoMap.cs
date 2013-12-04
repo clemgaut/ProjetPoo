@@ -13,6 +13,12 @@ public class DemoMap : Map
 {
 	public DemoMap()
 	{
+        Width = 5;
+        Height = 5;
+        _map = new Box[Height, Width];
+        List<int> generatedMap = wrapperAlgo.mapGeneration(Height * Width, Enum.GetNames(typeof(EBoxType)).Length);
+
+        convertIntListToMap(generatedMap);
 	}
 
 }
