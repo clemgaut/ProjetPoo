@@ -20,7 +20,7 @@ public class Game : IGame
 
 	public virtual void setMap(Map map)
 	{
-		throw new System.NotImplementedException();
+        _map = map;
 	}
 
     public virtual Map getMap()

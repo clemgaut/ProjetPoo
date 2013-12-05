@@ -16,6 +16,7 @@ public abstract class GameBuilder : IGameBuilder
 
 	public GameBuilder()
 	{
+        _game = new Game();
 	}
 
 	public virtual Game getGame()

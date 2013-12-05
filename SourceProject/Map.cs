@@ -50,9 +50,9 @@ public abstract class Map : IMap
         _map[line, column] = box;
 	}
 
-    public virtual Box getBox(int x, int y)
+    public virtual Box getBox(int line, int column)
     {
-        return _map[x, y];
+        return _map[line, column];
     }
 
     public Box[,] getMap()

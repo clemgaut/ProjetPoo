@@ -23,12 +23,15 @@ namespace IHM
     {
         Map map;
         Game game;
+        GameBuilder builder;
         Rectangle selectedVisual;
 
         public MainWindow()
         {
             InitializeComponent();
-            game = new Game();
+            //TODO gérer les différents types de jeux
+            builder = new DemoGameBuilder();
+            game = builder.getGame();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,16 +45,16 @@ namespace IHM
 
             for (int c = 0; c < map.Width; c++)
             {
-                mapGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(20, GridUnitType.Pixel) });
+                mapGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
             }
 
             for (int l = 0; l < map.Height; l++)
             {
-                mapGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20, GridUnitType.Pixel) });
+                mapGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
                 for (int c = 0; c < map.Width; c++)
                 {
-                    var tile = map.getBox(c, l);
-                    var rect = createRectangle(c, l, tile);
+                    var tile = map.getBox(l, c);
+                    var rect = createRectangle(l, c, tile);
                     mapGrid.Children.Add(rect);
                 }
             }
@@ -61,11 +64,11 @@ namespace IHM
         private Rectangle createRectangle(int c, int l, Box tile)
         {
             var rectangle = new Rectangle();
-            if (tile is ForestBox) rectangle.Fill = Brushes.Brown;
+            if (tile is ForestBox) rectangle.Fill = Brushes.ForestGreen;
             if (tile is SeaBox) rectangle.Fill = Brushes.Blue;
-            if (tile is MountainBox) rectangle.Fill = Brushes.Gray;
-            if (tile is LowlandBox) rectangle.Fill = Brushes.Green;
-            if (tile is DesertBox) rectangle.Fill = Brushes.Gold;
+            if (tile is MountainBox) rectangle.Fill = Brushes.Silver;
+            if (tile is LowlandBox) rectangle.Fill = Brushes.GreenYellow;
+            if (tile is DesertBox) rectangle.Fill = Brushes.PapayaWhip;
 
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
