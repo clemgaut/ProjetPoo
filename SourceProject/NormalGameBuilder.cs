@@ -13,6 +13,8 @@ public class NormalGameBuilder : GameBuilder
 {
 	public NormalGameBuilder()
 	{
+        Map map = new NormalMap();
+        _game.setMap(map);
 	}
 
 }

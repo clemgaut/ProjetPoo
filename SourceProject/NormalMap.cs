@@ -13,6 +13,9 @@ public class NormalMap : Map
 {
 	public NormalMap()
 	{
+        Width = 15;
+        Height = 15;
+        generateMap();
 	}
 
 }

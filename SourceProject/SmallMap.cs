@@ -13,6 +13,9 @@ public class SmallMap : Map
 {
 	public SmallMap()
 	{
+        Width = 10;
+        Height = 10;
+        generateMap();
 	}
 
 }

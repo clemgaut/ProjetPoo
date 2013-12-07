@@ -30,9 +30,11 @@ public abstract class Map : IMap
         set;
     }
 
-	public virtual void genererCarte()
+	public virtual void generateMap()
 	{
-		throw new System.NotImplementedException();
+        _map = new Box[Height, Width];
+        List<int> generatedMap = wrapperAlgo.mapGeneration(Height * Width, Enum.GetNames(typeof(EBoxType)).Length);
+        convertIntListToMap(generatedMap);
 	}
 
 	public virtual void refreshMap()

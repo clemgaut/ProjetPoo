@@ -13,6 +13,8 @@ public class SmallGameBuilder : GameBuilder
 {
 	public SmallGameBuilder()
 	{
+        Map map = new SmallMap();
+        _game.setMap(map);
 	}
 
 }
