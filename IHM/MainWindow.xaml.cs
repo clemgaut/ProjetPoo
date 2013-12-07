@@ -50,6 +50,7 @@ namespace IHM
                     this.Close();
                     break;
             }
+            MapLabel.Content = "Type de carte : " + mapType.ToLower();
             game = builder.getGame();
         }
 

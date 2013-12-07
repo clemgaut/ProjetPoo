@@ -7,6 +7,7 @@
         <Grid DockPanel.Dock="Bottom">
             <StackPanel Orientation="Horizontal">
                 <Label Name="InfoLabel"/>
+                <Label Name="MapLabel"/>
             </StackPanel>
             <Button HorizontalAlignment="Right" Content="Fin du tour" Click="Button_Click" />
         </Grid>
