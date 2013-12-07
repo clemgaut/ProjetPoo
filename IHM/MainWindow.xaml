@@ -12,7 +12,6 @@
         </Grid>
         
         <Grid Name="mapGrid" Background="Azure">
-            <Ellipse Fill="White" Width="10" Height="10" Name="unitEllipse" Panel.ZIndex="444" IsHitTestVisible="False"/>
         </Grid>
 
     </DockPanel>
