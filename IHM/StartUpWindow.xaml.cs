@@ -26,7 +26,9 @@ namespace IHM
 
         private void StartUpButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow();
+            // We retrieve game type with the tag
+            ComboBoxItem item = (ComboBoxItem)GameTypeComboBox.SelectedItem;
+            MainWindow win = new MainWindow((string)item.Tag);
             win.Show();
             this.Close();
         }

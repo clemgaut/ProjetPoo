@@ -26,11 +26,30 @@ namespace IHM
         GameBuilder builder;
         Rectangle selectedVisual;
 
-        public MainWindow()
+        public MainWindow(string mapType)
         {
             InitializeComponent();
+
             //TODO gérer les différents types de jeux
-            builder = new DemoGameBuilder();
+            switch(mapType)
+            {
+                case "DEMO":
+                    builder = new DemoGameBuilder();
+                    break;
+
+                case "SMALL":
+                    builder = new SmallGameBuilder();
+                    break;
+
+                case "NORMAL":
+                    builder = new NormalGameBuilder();
+                    break;
+
+                default:
+                    MessageBox.Show(this, "Type de jeu non reconnu", "Erreur du jeu", MessageBoxButton.OK, MessageBoxImage.Error);
+                    this.Close();
+                    break;
+            }
             game = builder.getGame();
         }
 
