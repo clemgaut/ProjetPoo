@@ -22,13 +22,16 @@ namespace IHM
         public StartUpWindow()
         {
             InitializeComponent();
+            this.DemoItem.Tag = EGameType.DEMO;
+            this.SmallItem.Tag = EGameType.SMALL;
+            this.NormalItem.Tag = EGameType.NORMAL;
         }
 
         private void StartUpButton_Click(object sender, RoutedEventArgs e)
         {
             // We retrieve game type with the tag
             ComboBoxItem item = (ComboBoxItem)GameTypeComboBox.SelectedItem;
-            MainWindow win = new MainWindow((string)item.Tag);
+            MainWindow win = new MainWindow((EGameType)item.Tag);
             win.Show();
             this.Close();
         }

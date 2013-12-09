@@ -250,7 +250,7 @@ namespace UITestProject
         /// <summary>
         /// Verify that the 'DisplayText' property of 'Type de carte : demo' label contains 'demo'
         /// </summary>
-        public string UITypedecartedemoText1DisplayText = "demo";
+        public string UITypedecartedemoText1DisplayText = EGameType.DEMO.ToString().ToLower();
         #endregion
     }
     

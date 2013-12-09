@@ -5,9 +5,9 @@
     <Grid>
         <Button x:Name="StartUpButton" Content="Lancer Partie" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" IsCancel="True" Click="StartUpButton_Click"/>
         <ComboBox x:Name="GameTypeComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120">
-            <ComboBoxItem IsSelected="True" Tag="DEMO">Carte Demo (5x5)</ComboBoxItem>
-            <ComboBoxItem Tag="SMALL">Petite Carte (10x10)</ComboBoxItem>
-            <ComboBoxItem Tag="NORMAL">Carte Normale (15x15)</ComboBoxItem>
+            <ComboBoxItem x:Name="DemoItem" IsSelected="True">Carte Demo (5x5)</ComboBoxItem>
+            <ComboBoxItem x:Name="SmallItem">Petite Carte (10x10)</ComboBoxItem>
+            <ComboBoxItem x:Name="NormalItem">Carte Normale (15x15)</ComboBoxItem>
         </ComboBox>
 
     </Grid>

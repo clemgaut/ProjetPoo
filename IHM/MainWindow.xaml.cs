@@ -26,22 +26,22 @@ namespace IHM
         GameBuilder builder;
         Rectangle selectedVisual;
 
-        public MainWindow(string mapType)
+        public MainWindow(EGameType mapType)
         {
             InitializeComponent();
 
             //TODO gérer les différents types de jeux
             switch(mapType)
             {
-                case "DEMO":
+                case EGameType.DEMO:
                     builder = new DemoGameBuilder();
                     break;
 
-                case "SMALL":
+                case EGameType.SMALL:
                     builder = new SmallGameBuilder();
                     break;
 
-                case "NORMAL":
+                case EGameType.NORMAL:
                     builder = new NormalGameBuilder();
                     break;
 
@@ -50,7 +50,7 @@ namespace IHM
                     this.Close();
                     break;
             }
-            MapLabel.Content = "Type de carte : " + mapType.ToLower();
+            MapLabel.Content = "Type de carte : " + mapType.ToString().ToLower();
             game = builder.getGame();
         }
 
