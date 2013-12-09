@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
@@ -23,16 +25,23 @@ namespace UITestProject
         {
         }
 
+        public void executeIHM(string fullPath)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = Path.GetFileName(fullPath);
+            psi.WorkingDirectory = Path.GetDirectoryName(fullPath);
+            Process.Start(psi);
+        }
+
         [TestMethod]
         public void TestDefaultMapLoad()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             //this.UIMap.StartIHM();
 
-            this.UIMap.executeIHM(fullPath);
+            executeIHM(fullPath);
             this.UIMap.LaunchGame();
             this.UIMap.AssertDemoMap();
-
             this.UIMap.CloseApp();
 
         }

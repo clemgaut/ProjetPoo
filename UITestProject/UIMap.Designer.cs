@@ -8,9 +8,6 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System.IO;
-using System.Diagnostics;
-
 namespace UITestProject
 {
     using System;
@@ -84,26 +81,32 @@ namespace UITestProject
             // Double-Click 'Nom' text box
             Mouse.DoubleClick(uINomEdit6, new Point(77, 11));
         }
-
-        public void executeIHM(string fullPath)
-        {
-            ProcessStartInfo psi = new ProcessStartInfo();
-            psi.FileName = Path.GetFileName(fullPath);
-            psi.WorkingDirectory = Path.GetDirectoryName(fullPath);
-            Process.Start(psi);
-        }
         
         /// <summary>
-        /// Appuie sur lancer partie
+        /// LaunchGame - Use 'LaunchGameParams' to pass parameters into this method.
         /// </summary>
         public void LaunchGame()
         {
             #region Variable Declarations
+            WpfComboBox uIComboBoxNationPlayerComboBox = this.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox;
+            WpfComboBox uIComboBoxNationPlayerComboBox1 = this.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox1;
             WpfButton uILancerPartieButton = this.UIStartUpWindowWindow.UILancerPartieButton;
             #endregion
 
+            // Last mouse action was not recorded.
+
+            // Select 'Gaulois' in 'ComboBoxNationPlayer1' combo box
+            uIComboBoxNationPlayerComboBox.SelectedItem = this.LaunchGameParams.UIComboBoxNationPlayerComboBoxSelectedItem;
+
+            // Last mouse action was not recorded.
+
+            // Select 'Nains' in 'ComboBoxNationPlayer2' combo box
+            uIComboBoxNationPlayerComboBox1.SelectedItem = this.LaunchGameParams.UIComboBoxNationPlayerComboBox1SelectedItem;
+
+            // Last mouse action was not recorded.
+
             // Click 'Lancer Partie' button
-            Mouse.Click(uILancerPartieButton, new Point(57, 9));
+            Mouse.Click(uILancerPartieButton, new Point(61, 14));
         }
         
         /// <summary>
@@ -120,7 +123,7 @@ namespace UITestProject
         }
         
         /// <summary>
-        /// Ferme l'appli
+        /// Fermme l'appli
         /// </summary>
         public void CloseApp()
         {
@@ -137,6 +140,18 @@ namespace UITestProject
         }
         
         #region Properties
+        public virtual LaunchGameParams LaunchGameParams
+        {
+            get
+            {
+                if ((this.mLaunchGameParams == null))
+                {
+                    this.mLaunchGameParams = new LaunchGameParams();
+                }
+                return this.mLaunchGameParams;
+            }
+        }
+        
         public virtual AssertDemoMapExpectedValues AssertDemoMapExpectedValues
         {
             get
@@ -223,6 +238,8 @@ namespace UITestProject
         #endregion
         
         #region Fields
+        private LaunchGameParams mLaunchGameParams;
+        
         private AssertDemoMapExpectedValues mAssertDemoMapExpectedValues;
         
         private UIDémarrerWindow mUIDémarrerWindow;
@@ -240,6 +257,26 @@ namespace UITestProject
     }
     
     /// <summary>
+    /// Parameters to be passed into 'LaunchGame'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class LaunchGameParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'Gaulois' in 'ComboBoxNationPlayer1' combo box
+        /// </summary>
+        public string UIComboBoxNationPlayerComboBoxSelectedItem = "Gaulois";
+        
+        /// <summary>
+        /// Select 'Nains' in 'ComboBoxNationPlayer2' combo box
+        /// </summary>
+        public string UIComboBoxNationPlayerComboBox1SelectedItem = "Nains";
+        #endregion
+    }
+    
+    /// <summary>
     /// Parameters to be passed into 'AssertDemoMap'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
@@ -250,7 +287,7 @@ namespace UITestProject
         /// <summary>
         /// Verify that the 'DisplayText' property of 'Type de carte : demo' label contains 'demo'
         /// </summary>
-        public string UITypedecartedemoText1DisplayText = EGameType.DEMO.ToString().ToLower();
+        public string UITypedecartedemoText1DisplayText = "demo";
         #endregion
     }
     
@@ -1194,10 +1231,46 @@ namespace UITestProject
                 return this.mUILancerPartieButton;
             }
         }
+        
+        public WpfComboBox UIComboBoxNationPlayerComboBox
+        {
+            get
+            {
+                if ((this.mUIComboBoxNationPlayerComboBox == null))
+                {
+                    this.mUIComboBoxNationPlayerComboBox = new WpfComboBox(this);
+                    #region Search Criteria
+                    this.mUIComboBoxNationPlayerComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "ComboBoxNationPlayer1";
+                    this.mUIComboBoxNationPlayerComboBox.WindowTitles.Add("StartUpWindow");
+                    #endregion
+                }
+                return this.mUIComboBoxNationPlayerComboBox;
+            }
+        }
+        
+        public WpfComboBox UIComboBoxNationPlayerComboBox1
+        {
+            get
+            {
+                if ((this.mUIComboBoxNationPlayerComboBox1 == null))
+                {
+                    this.mUIComboBoxNationPlayerComboBox1 = new WpfComboBox(this);
+                    #region Search Criteria
+                    this.mUIComboBoxNationPlayerComboBox1.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "ComboBoxNationPlayer2";
+                    this.mUIComboBoxNationPlayerComboBox1.WindowTitles.Add("StartUpWindow");
+                    #endregion
+                }
+                return this.mUIComboBoxNationPlayerComboBox1;
+            }
+        }
         #endregion
         
         #region Fields
         private WpfButton mUILancerPartieButton;
+        
+        private WpfComboBox mUIComboBoxNationPlayerComboBox;
+        
+        private WpfComboBox mUIComboBoxNationPlayerComboBox1;
         #endregion
     }
     
