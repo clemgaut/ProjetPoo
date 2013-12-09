@@ -26,11 +26,10 @@ namespace IHM
         GameBuilder builder;
         Rectangle selectedVisual;
 
-        public MainWindow(EGameType mapType)
+        public MainWindow(EGameType mapType, ENation nation1, ENation nation2)
         {
             InitializeComponent();
 
-            //TODO gérer les différents types de jeux
             switch(mapType)
             {
                 case EGameType.DEMO:

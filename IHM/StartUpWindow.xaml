@@ -9,6 +9,23 @@
             <ComboBoxItem x:Name="SmallItem">Petite Carte (10x10)</ComboBoxItem>
             <ComboBoxItem x:Name="NormalItem">Carte Normale (15x15)</ComboBoxItem>
         </ComboBox>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 1" x:Name="labelComboBox1" />
+            <ComboBox x:Name="ComboBoxNationPlayer1" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectionChanged="ComboBoxNationPlayer1_SelectionChanged">
+                <ComboBoxItem x:Name="Gaul1">Gaulois</ComboBoxItem>
+                <ComboBoxItem x:Name="Nain1">Nains</ComboBoxItem>
+                <ComboBoxItem x:Name="Viking1">Vikings</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 2" x:Name="labelComboBox2"/>
+            <ComboBox x:Name="ComboBoxNationPlayer2" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectionChanged="ComboBoxNationPlayer2_SelectionChanged">
+                <ComboBoxItem x:Name="Gaul2">Gaulois</ComboBoxItem>
+                <ComboBoxItem x:Name="Nain2">Nains</ComboBoxItem>
+                <ComboBoxItem x:Name="Viking2">Vikings</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
 
     </Grid>
 </Window>
