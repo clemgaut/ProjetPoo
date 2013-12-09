@@ -18,6 +18,7 @@ namespace UITestProject
     [CodedUITest]
     public class TestMapLoad
     {
+        string fullPath = @"C:\Users\clemgaut\Documents\Visual Studio 2012\Projects\ProjetPOO\IHM\bin\Debug\IHM.exe";
         public TestMapLoad()
         {
         }
@@ -26,9 +27,12 @@ namespace UITestProject
         public void TestDefaultMapLoad()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            this.UIMap.StartIHM();
+            //this.UIMap.StartIHM();
+
+            this.UIMap.executeIHM(fullPath);
             this.UIMap.LaunchGame();
             this.UIMap.AssertDemoMap();
+
             this.UIMap.CloseApp();
 
         }

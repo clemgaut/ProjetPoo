@@ -8,6 +8,9 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 
+using System.IO;
+using System.Diagnostics;
+
 namespace UITestProject
 {
     using System;
@@ -80,6 +83,14 @@ namespace UITestProject
 
             // Double-Click 'Nom' text box
             Mouse.DoubleClick(uINomEdit6, new Point(77, 11));
+        }
+
+        public void executeIHM(string fullPath)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = Path.GetFileName(fullPath);
+            psi.WorkingDirectory = Path.GetDirectoryName(fullPath);
+            Process.Start(psi);
         }
         
         /// <summary>
