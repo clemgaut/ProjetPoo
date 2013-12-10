@@ -1,7 +1,14 @@
 ﻿<Window x:Class="IHM.StartUpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ihm="clr-namespace:IHM"
         Title="StartUpWindow" Height="300" Width="300">
+
+    <Window.Resources>
+        <ihm:NegatingConverter x:Key="NegatingConverter"/>
+        <ihm:SelectedIndexToTextLabelColorConverter x:Key="SelectedIndexToTextLabelColorConverter"/>
+    </Window.Resources>
+
     <Grid>
         <Button x:Name="StartUpButton" Content="Lancer Partie" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" IsCancel="True" Click="StartUpButton_Click"/>
         <ComboBox x:Name="GameTypeComboBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120">
@@ -10,20 +17,20 @@
             <ComboBoxItem x:Name="NormalItem">Carte Normale (15x15)</ComboBoxItem>
         </ComboBox>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 1" x:Name="labelComboBox1" />
-            <ComboBox x:Name="ComboBoxNationPlayer1" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectionChanged="ComboBoxNationPlayer1_SelectionChanged">
-                <ComboBoxItem x:Name="Gaul1">Gaulois</ComboBoxItem>
-                <ComboBoxItem x:Name="Nain1">Nains</ComboBoxItem>
-                <ComboBoxItem x:Name="Viking1">Vikings</ComboBoxItem>
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 1" x:Name="labelComboBox1" Foreground="{Binding SelectedIndex, Converter={StaticResource SelectedIndexToTextLabelColorConverter}, ElementName=ComboBoxNationPlayer1, Mode=OneWay}"/>
+            <ComboBox x:Name="ComboBoxNationPlayer1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <ComboBoxItem x:Name="Gaul1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul2, Mode=OneWay}">Gaulois</ComboBoxItem>
+                <ComboBoxItem x:Name="Nain1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain2, Mode=OneWay}">Nains</ComboBoxItem>
+                <ComboBoxItem x:Name="Viking1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Viking2, Mode=OneWay}">Vikings</ComboBoxItem>
             </ComboBox>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
-            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 2" x:Name="labelComboBox2"/>
-            <ComboBox x:Name="ComboBoxNationPlayer2" HorizontalAlignment="Center" VerticalAlignment="Bottom" SelectionChanged="ComboBoxNationPlayer2_SelectionChanged">
-                <ComboBoxItem x:Name="Gaul2">Gaulois</ComboBoxItem>
-                <ComboBoxItem x:Name="Nain2">Nains</ComboBoxItem>
-                <ComboBoxItem x:Name="Viking2">Vikings</ComboBoxItem>
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 2" x:Name="labelComboBox2" Foreground="{Binding SelectedIndex, Converter={StaticResource SelectedIndexToTextLabelColorConverter}, ElementName=ComboBoxNationPlayer2, Mode=OneWay}"/>
+            <ComboBox x:Name="ComboBoxNationPlayer2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <ComboBoxItem x:Name="Gaul2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul1, Mode=OneWay}">Gaulois</ComboBoxItem>
+                <ComboBoxItem x:Name="Nain2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain1, Mode=OneWay}">Nains</ComboBoxItem>
+                <ComboBoxItem x:Name="Viking2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Viking1, Mode=OneWay}">Vikings</ComboBoxItem>
             </ComboBox>
         </StackPanel>
 

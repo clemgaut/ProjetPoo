@@ -49,7 +49,7 @@ namespace IHM
 
         private void StartUpButton_Click(object sender, RoutedEventArgs e)
         {
-            //We start the game only if both nations are selected, otherwise, we change the text color to red
+            //We start the game only if both nations are selected.
             if (ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1)
             {
                 // We retrieve game type with the tag
@@ -61,51 +61,6 @@ namespace IHM
                 win.Show();
                 this.Close();
             }
-            if (ComboBoxNationPlayer1.SelectedIndex == -1)
-                labelComboBox1.Foreground = System.Windows.Media.Brushes.Red;
-
-            if (ComboBoxNationPlayer2.SelectedIndex == -1)
-                labelComboBox2.Foreground = System.Windows.Media.Brushes.Red;
-        }
-
-        private void ComboBoxNationPlayer1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var comboBox = sender as ComboBox;
-            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
-
-            //On remet la couleur par défaut si un peuple est sélectionné
-            if (comboBox.SelectedIndex > -1)
-                labelComboBox1.Foreground = System.Windows.Media.Brushes.Black;
-
-            // On active tous les peuples, sauf celui qui est égal à celui sélectionné
-            foreach(ComboBoxItem item in ComboBoxNationPlayer2.Items)
-            {
-                item.IsEnabled = true;
-                if ((ENation)item.Tag == (ENation)selectedItem.Tag)
-                    item.IsEnabled = false;
-            }
-
-            e.Handled = true;
-        }
-
-        private void ComboBoxNationPlayer2_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var comboBox = sender as ComboBox;
-            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
-
-            //On remet la couleur par défaut si un peuple est sélectionné
-            if (comboBox.SelectedIndex > -1)
-                labelComboBox2.Foreground = System.Windows.Media.Brushes.Black;
-
-            // On active tous les peuples, sauf celui qui est égal à celui sélectionné
-            foreach (ComboBoxItem item in ComboBoxNationPlayer1.Items)
-            {
-                item.IsEnabled = true;
-                if ((ENation)item.Tag == (ENation)selectedItem.Tag)
-                    item.IsEnabled = false;
-            }
-
-            e.Handled = true;
         }
     }
 }
