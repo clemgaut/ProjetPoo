@@ -25,6 +25,7 @@ namespace IHM
         Game game;
         GameBuilder builder;
         Rectangle selectedVisual;
+        ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
 
         public MainWindow(EGameType mapType, ENation nation1, ENation nation2)
         {
@@ -83,16 +84,16 @@ namespace IHM
         private Rectangle createRectangle(int c, int l, Box tile)
         {
             var rectangle = new Rectangle();
-            if (tile is ForestBox) rectangle.Fill = Brushes.ForestGreen;
-            if (tile is SeaBox) rectangle.Fill = Brushes.Blue;
-            if (tile is MountainBox) rectangle.Fill = Brushes.Silver;
-            if (tile is LowlandBox) rectangle.Fill = Brushes.GreenYellow;
-            if (tile is DesertBox) rectangle.Fill = Brushes.PapayaWhip;
+            if (tile is ForestBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.FOREST);
+            if (tile is SeaBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.SEA);
+            if (tile is MountainBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.MOUTAIN);
+            if (tile is LowlandBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.LOWLAND);
+            if (tile is DesertBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.DESERT);
 
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
             rectangle.Tag = tile;
-            rectangle.Stroke = Brushes.Red;
+            rectangle.Stroke = Brushes.Gray;
             rectangle.StrokeThickness = 1;
 
             rectangle.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
