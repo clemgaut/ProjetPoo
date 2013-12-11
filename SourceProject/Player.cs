@@ -22,7 +22,7 @@ public class Player : IPlayer
 
 	public virtual void setNation(Nation nation)
 	{
-		throw new System.NotImplementedException();
+		_nation = nation;
 	}
 
 	public virtual string getName()
@@ -46,7 +46,7 @@ public class Player : IPlayer
 
 	public virtual Nation getNation()
 	{
-		throw new System.NotImplementedException();
+		return _nation;
 	}
 }
 

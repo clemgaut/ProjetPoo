@@ -14,31 +14,46 @@ public class Nation : INation
 {
 	private IEnumerable<Unit> units;
 
-	private UnitFactory unitFactory;
+	private IUnitFactory<Unit> unitFactory;
 
-	public virtual void createUnits(int nombreUnites)
-	{
-		throw new System.NotImplementedException();
-	}
+    private ENation nationType;
 
+    public Nation(ENation nation, int unitNumber)
+    {
+        nationType = nation;
+
+        switch(nationType)
+        {
+            case ENation.GAUL:
+                unitFactory = new UnitFactory<GaulUnit>();
+                break;
+
+            case ENation.NAIN:
+                unitFactory = new UnitFactory<NainUnit>();
+                break;
+
+            case ENation.VIKING:
+                unitFactory = new UnitFactory<VikingUnit>();
+                break;
+        }
+
+        units = unitFactory.getUnits(unitNumber);
+
+    }
 
 	public virtual int getUnitsNumber()
 	{
-		throw new System.NotImplementedException();
+        return units.Count();
 	}
 
-	public Nation(ENation nation, int unitNumber)
+    public virtual IEnumerable<Unit> getUnits()
 	{
-	}
-
-	public virtual Unit[] getUnits()
-	{
-		throw new System.NotImplementedException();
+		return units;
 	}
 
 	public virtual Unit getUnit(int i)
 	{
-		throw new System.NotImplementedException();
+		return units.ElementAt(i);
 	}
 
 	public virtual void setInitBox(int x, int y)

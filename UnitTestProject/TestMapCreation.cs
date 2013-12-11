@@ -24,7 +24,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestDemoGameBuilderMapCreation()
         {
-            DemoGameBuilder demoBuilder = new DemoGameBuilder();
+            DemoGameBuilder demoBuilder = new DemoGameBuilder(ENation.GAUL, ENation.NAIN);
 
             Assert.AreNotEqual(demoBuilder.getGame().getMap().getMap(), null);
 

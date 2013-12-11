@@ -13,16 +13,40 @@ using System.Text;
 public abstract class GameBuilder : IGameBuilder
 {
 	protected Game _game;
+    protected Player _player1;
+    protected Player _player2;
+    protected int _unitNumber;
 
-	public GameBuilder()
+    public GameBuilder()
 	{
         _game = new Game();
+        _player1 = new Player();
+        _player2 = new Player();
 	}
+
+    public void createPlayers(ENation nation1, ENation nation2)
+    {
+        Nation nationPlayer1 = new Nation(nation1, _unitNumber);
+        Nation nationPlayer2 = new Nation(nation2, _unitNumber);
+
+        _player1.setNation(nationPlayer1);
+        _player2.setNation(nationPlayer2);
+    }
 
 	public virtual Game getGame()
 	{
         return _game;
 	}
+
+    public virtual Player getPlayer1()
+    {
+        return _player1;
+    }
+
+    public virtual Player getPlayer2()
+    {
+        return _player2;
+    }
 
 }
 

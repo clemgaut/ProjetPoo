@@ -11,10 +11,12 @@ using System.Text;
 
 public class NormalGameBuilder : GameBuilder
 {
-	public NormalGameBuilder()
+    public NormalGameBuilder(ENation nation1, ENation nation2)
 	{
         Map map = new NormalMap();
         _game.setMap(map);
+        _unitNumber = 8;
+        createPlayers(nation1, nation2);
 	}
 
 }

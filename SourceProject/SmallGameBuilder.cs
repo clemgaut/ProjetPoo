@@ -11,10 +11,12 @@ using System.Text;
 
 public class SmallGameBuilder : GameBuilder
 {
-	public SmallGameBuilder()
+    public SmallGameBuilder(ENation nation1, ENation nation2)
 	{
         Map map = new SmallMap();
         _game.setMap(map);
+        _unitNumber = 6;
+        createPlayers(nation1, nation2);
 	}
 
 }

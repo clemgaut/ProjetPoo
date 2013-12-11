@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+
+
 namespace SourceProject
 {
     interface INation
     {
-        void createUnits(int nombreUnites);
         Unit getUnit(int i);
-        Unit[] getUnits();
+        IEnumerable<Unit> getUnits();
         int getUnitsNumber();
         void setInitBox(int x, int y);
     }

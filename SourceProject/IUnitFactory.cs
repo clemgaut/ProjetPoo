@@ -1,7 +1,7 @@
 ﻿using System;
 namespace SourceProject
 {
-    interface IUnitFactory
+    interface IUnitFactory<out T>
     {
         System.Collections.Generic.IEnumerable<Unit> getUnits(int unitNumber);
     }

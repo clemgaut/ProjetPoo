@@ -34,15 +34,15 @@ namespace IHM
             switch(mapType)
             {
                 case EGameType.DEMO:
-                    builder = new DemoGameBuilder();
+                    builder = new DemoGameBuilder(nation1, nation2);
                     break;
 
                 case EGameType.SMALL:
-                    builder = new SmallGameBuilder();
+                    builder = new SmallGameBuilder(nation1, nation2);
                     break;
 
                 case EGameType.NORMAL:
-                    builder = new NormalGameBuilder();
+                    builder = new NormalGameBuilder(nation1, nation2);
                     break;
 
                 default:
