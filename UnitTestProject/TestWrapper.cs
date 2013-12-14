@@ -38,5 +38,21 @@ namespace UnitTestProject
                 Assert.IsTrue(n >= 1 && n <= types);
             }
         }
+
+        [TestMethod]
+        public void TestInitCoordonates()
+        {
+            WrapperAlgo w = new WrapperAlgo();
+            System.Collections.Generic.List<int> map = new System.Collections.Generic.List<int>();
+            map.Add(2);
+            map.Add(3);
+            int size = 25;
+
+            System.Collections.Generic.List<int> l = w.initCoordonates(map, size);
+
+            Assert.AreEqual(l.Count, 2);
+            Assert.IsTrue(l[0] < size);
+            Assert.IsTrue(l[1] < size);
+        }
     }
 }

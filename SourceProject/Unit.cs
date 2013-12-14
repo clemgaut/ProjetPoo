@@ -18,19 +18,24 @@ public class Unit : IUnit
 
 	private int _offensive;
 
-    private int _x;
+    private int _line;
 
-    private int _y;
+    private int _column;
 
 	public virtual bool setLifePoints(int value)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void getBox()
+	public virtual int getLine()
 	{
-		throw new System.NotImplementedException();
+		return _line;
 	}
+
+    public virtual int getColumn()
+    {
+        return _column;
+    }
 
 	public virtual void getDefensive()
 	{
@@ -52,12 +57,15 @@ public class Unit : IUnit
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool move(int x, int y)
+	public virtual bool move(int line, int column)
 	{
-		throw new System.NotImplementedException();
+        _line = line;
+        _column = column;
+
+        return true;
 	}
 
-	public virtual bool attack(int x, int y)
+	public virtual bool attack(int line, int column)
 	{
 		throw new System.NotImplementedException();
 	}

@@ -29,6 +29,11 @@ public abstract class GameBuilder : IGameBuilder
         Nation nationPlayer1 = new Nation(nation1, _unitNumber);
         Nation nationPlayer2 = new Nation(nation2, _unitNumber);
 
+        List<List<int> > initCoord = (List<List<int> >)_game.getMap().getInitCoordonates();
+
+        nationPlayer1.setInitBox(initCoord[0][0], initCoord[0][1]);
+        nationPlayer2.setInitBox(initCoord[1][0], initCoord[1][1]);
+
         _player1.setNation(nationPlayer1);
         _player2.setNation(nationPlayer2);
     }

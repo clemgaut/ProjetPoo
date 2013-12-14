@@ -13,5 +13,6 @@ public:
 	DLL ~Algo(void);
 	DLL int fTest(int n);
 	DLL int* mapGeneration (int size, int types);
+	DLL int* initCoordonates(int map[], int size);
 };
 

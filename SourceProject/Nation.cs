@@ -56,9 +56,12 @@ public class Nation : INation
 		return units.ElementAt(i);
 	}
 
-	public virtual void setInitBox(int x, int y)
+	public virtual void setInitBox(int line, int column)
 	{
-		throw new System.NotImplementedException();
+		foreach(Unit u in units)
+        {
+            u.move(line, column);
+        }
 	}
 
 }
