@@ -18,6 +18,10 @@ public class Unit : IUnit
 
 	private int _offensive;
 
+    private int _x;
+
+    private int _y;
+
 	public virtual bool setLifePoints(int value)
 	{
 		throw new System.NotImplementedException();
@@ -76,9 +80,5 @@ public class Unit : IUnit
 	{
 		throw new System.NotImplementedException();
 	}
-
-    private int _x;
-    private int _y;
-
 }
 

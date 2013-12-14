@@ -51,6 +51,10 @@ namespace IHM
                     break;
             }
             MapLabel.Content = "Type de carte : " + mapType.ToString().ToLower();
+
+            labelNation1.Content = nation1.ToString();
+            labelNation2.Content = nation2.ToString();
+
             game = builder.getGame();
         }
 

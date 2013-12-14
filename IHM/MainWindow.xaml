@@ -7,10 +7,10 @@
         <StackPanel DockPanel.Dock="Bottom">
             <Grid VerticalAlignment="Top">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                    <Label Content="Peuple1" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <Label x:Name="labelNation1" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right">
-                    <Label Content="Peuple2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <Label x:Name="labelNation2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
             <Grid VerticalAlignment="Bottom">
