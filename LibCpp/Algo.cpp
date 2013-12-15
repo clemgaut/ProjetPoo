@@ -46,34 +46,18 @@ int* Algo::mapGeneration (int size, int types) {
 	// Perlin Noise
 	int a, b, c, d;
 	double x, y;
+	
+		for (int i = 0; i < fsize; i++) {
+ 
+			a = (i < size) ? rand () % types + 1 : map[i - size];
+			b = ((i % size) == (size - 1)) ? rand () % types + 1 : map[i + 1];
+			c = (i + size >= fsize) ? rand () % types + 1 : map[i + size];
+			d = ((i % size) == 0) ? rand () % types + 1 : map[i - 1];
 
-	for (int i = 0; i < fsize; i++) {
-
-		if (i < size)
-			a = rand () % types + 1;
-		else
-			a = map[i - size];
-
-		if ((i % size) == (size - 1))
-			b = rand () % types + 1;
-		else
-			b = map[i + 1];
-
-		if (i + size >= fsize)
-			c = rand () % types + 1;
-		else
-			c = map[i + size];
-
-		if ((i % size) == 0)
-			d = rand () % types + 1;
-		else
-			d = map[i - 1];
-
-		x = rand () % 2;
-		y = rand () % 2;
-		map[i] = interpolation_cos2D (a, b, c, d, x, y);
-	}
-
+			x = rand () % 2;
+			y = rand () % 2;
+			map[i] = interpolation_cos2D (a, b, c, d, x, y);
+		}
 
 	return map;
 }

@@ -52,6 +52,9 @@ namespace IHM
             }
             MapLabel.Content = "Type de carte : " + mapType.ToString().ToLower();
             game = builder.getGame();
+
+            Nation1Label.Content += nation1.ToString();
+            Nation2Label.Content += nation2.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
