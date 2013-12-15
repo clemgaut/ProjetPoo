@@ -31,6 +31,22 @@ namespace Wrapper {
 
 			return map;
 		}
+
+		System::Collections::Generic::List<int>^ initCoordonates(System::Collections::Generic::List<int>^ map, int size)
+		{
+			pin_ptr<int> p = &map->ToArray()[0];
+			int* mapC = p;
+
+			int* initCoordC = algoCpp->initCoordonates(mapC, size);
+
+			System::Collections::Generic::List<int>^ initCoord = gcnew System::Collections::Generic::List<int>(2);
+			initCoord->Add(initCoordC[0]);
+			initCoord->Add(initCoordC[1]);
+
+			delete[] initCoordC;
+
+			return initCoord;
+		}
 		
 
 	protected:

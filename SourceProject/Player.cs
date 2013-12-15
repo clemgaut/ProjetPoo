@@ -16,9 +16,12 @@ public class Player : IPlayer
 
 	private Nation _nation;
 
-	private int _unitMaxNb;
-
 	private int _points;
+
+    public Player()
+    {
+        _points = 0;
+    }
 
 	public virtual void setNation(Nation nation)
 	{
@@ -27,7 +30,7 @@ public class Player : IPlayer
 
 	public virtual string getName()
 	{
-		throw new System.NotImplementedException();
+		return _name;
 	}
 
 	public virtual void refresh()
@@ -35,14 +38,32 @@ public class Player : IPlayer
 		throw new System.NotImplementedException();
 	}
 
-	public Player()
+	public virtual List<Unit> getSelectableUnits()
 	{
+        List<Unit> l = new List<Unit>();
+
+        foreach(Unit u in _nation.getUnits())
+        {
+            if (u.hasMoves())
+                l.Add(u);
+        }
+        return l;
 	}
 
-	public virtual Unit[] getSelectableUnits()
-	{
-		throw new System.NotImplementedException();
-	}
+    /*
+     * Return the units that are on the rectangle with line and column in parameters
+     */
+    public virtual List<Unit> getUnits(int line, int column)
+    {
+        List<Unit> l = new List<Unit>();
+
+        foreach (Unit u in _nation.getUnits())
+        {
+            if (u.getLine() == line && u.getColumn() == column)
+                l.Add(u);
+        }
+        return l;
+    }
 
 	public virtual Nation getNation()
 	{

@@ -67,9 +67,19 @@ public abstract class Map : IMap
 		throw new System.NotImplementedException();
 	}
 
+    /*
+     * Return a list containing a list of coordonate.
+     * The first coordonate correpond to the line, the second to the column
+     */
 	public virtual IEnumerable<IEnumerable<int> > getInitCoordonates()
 	{
-		throw new System.NotImplementedException();
+        List<int> coord = wrapperAlgo.initCoordonates(convertMapToIntList(), Width * Height);
+
+        List<List<int>> initCoord = new List<List<int>>();
+        initCoord.Add(convertIntToCoordonates(coord[0]));
+        initCoord.Add(convertIntToCoordonates(coord[1]));
+
+        return initCoord;
 	}
 
 	public Map()
@@ -79,7 +89,53 @@ public abstract class Map : IMap
 	}
 
     /*
+     * Convert an int to a coordonate : a list with line number at 0 index and column at 1 index
+     */
+    protected List<int> convertIntToCoordonates(int coord)
+    {
+        List<int> l = new List<int>();
+
+        //We first add the line
+        l.Add(coord / Width);
+        //Then the column
+        l.Add(coord % Width);
+       
+        return l;
+    }
+
+    /*
+   * Convert a Box[,] to a List<int> according to the size of the map
+  */
+    protected List<int> convertMapToIntList()
+    {
+        List<int> l = new List<int>();
+
+        for (int line = 0; line < Height; line++)
+        {
+            for (int column = 0; column < Width; column++)
+            {
+                if (_map[line, column].GetType() == typeof(DesertBox))
+                    l.Add((int)EBoxType.DESERT);
+
+                if (_map[line, column].GetType() == typeof(ForestBox))
+                    l.Add((int)EBoxType.FOREST);
+
+                if (_map[line, column].GetType() == typeof(LowlandBox))
+                    l.Add((int)EBoxType.LOWLAND);
+
+                if (_map[line, column].GetType() == typeof(MountainBox))
+                    l.Add((int)EBoxType.MOUTAIN);
+
+                if (_map[line, column].GetType() == typeof(SeaBox))
+                    l.Add((int)EBoxType.SEA);
+            }
+        }
+        return l;
+    }
+
+    /*
      * Convert a List<int> to a Box[,] according to the size of the map
+     * Changes the current map according to the int list
     */
     protected void convertIntListToMap(List<int> l)
     {

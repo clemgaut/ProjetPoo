@@ -18,10 +18,26 @@ public class Game : IGame
 
 	protected Player _player2;
 
+    protected Player _activePlayer;
+
+    public Game()
+    {
+    }
+
 	public virtual void setMap(Map map)
 	{
         _map = map;
 	}
+
+    public void setPlayer1(Player p)
+    {
+        _player1 = p;
+    }
+
+    public void setPlayer2(Player p)
+    {
+        _player2 = p;
+    }
 
     public virtual Map getMap()
     {
@@ -35,12 +51,24 @@ public class Game : IGame
 
 	public virtual Player getActivePlayer()
 	{
-		throw new System.NotImplementedException();
+		return _activePlayer;
 	}
 
-	public Game()
-	{
-	}
+    public virtual Player getUnactivePlayer()
+    {
+        if (_activePlayer == _player1)
+            return _player2;
+
+        if (_activePlayer == _player2)
+            return _player1;
+
+        return null;
+    }
+
+    public virtual bool isPlayer1Active()
+    {
+        return _activePlayer == _player1;
+    }
 
 	public virtual void checkWinner()
 	{
@@ -70,7 +98,7 @@ public class Game : IGame
 
 	public virtual void start()
 	{
-		throw new System.NotImplementedException();
+        _activePlayer = _player1;
 	}
 
 	public virtual Unit getBestDefensiveUnit(int x, int y)
@@ -85,7 +113,10 @@ public class Game : IGame
 
 	public virtual void nextStep()
 	{
-		throw new System.NotImplementedException();
+        if (_activePlayer == _player1)
+            _activePlayer = _player2;
+        else
+            _activePlayer = _player1;
 	}
 
 

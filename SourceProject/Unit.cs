@@ -18,29 +18,48 @@ public class Unit : IUnit
 
 	private int _offensive;
 
+    private int _line;
+
+    private int _column;
+
+    private double _movePoints;
+
+    public Unit()
+    {
+        _lifePoints = 5;
+        _movePoints = 1;
+        _defensive = 1;
+        _offensive = 2;
+    }
+
 	public virtual bool setLifePoints(int value)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void getBox()
+	public virtual int getLine()
 	{
-		throw new System.NotImplementedException();
+		return _line;
 	}
 
-	public virtual void getDefensive()
+    public virtual int getColumn()
+    {
+        return _column;
+    }
+
+	public virtual int getDefensive()
 	{
-		throw new System.NotImplementedException();
+		return _defensive;
 	}
 
-	public virtual void getLifePoints()
+	public virtual int getLifePoints()
 	{
-		throw new System.NotImplementedException();
+		return _lifePoints;
 	}
 
-	public virtual void getOffensive()
+	public virtual int getOffensive()
 	{
-		throw new System.NotImplementedException();
+		return _offensive;
 	}
 
 	public virtual int getPoint()
@@ -48,23 +67,22 @@ public class Unit : IUnit
 		throw new System.NotImplementedException();
 	}
 
-	public virtual bool move(int x, int y)
+	public virtual bool move(int line, int column)
 	{
-		throw new System.NotImplementedException();
+        _line = line;
+        _column = column;
+
+        return true;
 	}
 
-	public virtual bool attack(int x, int y)
+	public virtual bool attack(int line, int column)
 	{
 		throw new System.NotImplementedException();
-	}
-
-	public Unit()
-	{
 	}
 
 	public virtual bool hasMoves()
 	{
-		throw new System.NotImplementedException();
+		return _movePoints > 0;
 	}
 
 	public virtual bool attack(Unit defUnit)
@@ -76,9 +94,5 @@ public class Unit : IUnit
 	{
 		throw new System.NotImplementedException();
 	}
-
-    private int _x;
-    private int _y;
-
 }
 

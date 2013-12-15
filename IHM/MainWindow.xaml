@@ -5,6 +5,7 @@
         Height="auto" Width="auto"
         Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <DockPanel x:Name="panel">
+
         <StackPanel DockPanel.Dock="Top">
             <Grid VerticalAlignment="Center">
                 <Grid.RowDefinitions>
@@ -24,13 +25,34 @@
                 <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
                     <Label Name="Nation2Label" Content="Peuple : " />
                     <Label Name="Units2Label" Content="Unité restantes : "/>
+
+        <StackPanel DockPanel.Dock="Bottom">
+            <Grid VerticalAlignment="Top">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <Label x:Name="labelNation1" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Label x:Name="labelNation2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
                 </StackPanel>
 
-                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Content="Fin du tour" Click="Button_Click" Grid.Column="2" Grid.Row="0"/>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Content="Fin du tour" Click="EndOfTurnButton_Click" Grid.Column="2" Grid.Row="0"/>
 
             </Grid>
         </StackPanel>
         
+		/*
+            <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Horizontal">
+            </StackPanel>
+            <Grid VerticalAlignment="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="InfoLabel"/>
+                    <Label Name="MapLabel"/>
+                </StackPanel>
+                <Button HorizontalAlignment="Right" Content="Fin du tour"  />
+            </Grid>
+		*/
+		
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
             <Label Name="MapLabel"/>
             <Label Name="InfoLabel"/>    

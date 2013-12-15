@@ -3,15 +3,16 @@ namespace SourceProject
 {
     interface IUnit
     {
-        bool attack(int x, int y);
-        void getBox();
-        void getDefensive();
-        void getLifePoints();
-        void getOffensive();
+        bool attack(int line, int column);
+        int getLine();
+        int getColumn();
+        int getDefensive();
+        int getLifePoints();
+        int getOffensive();
         int getPoint();
         bool hasMoves();
         bool isAlive();
-        bool move(int x, int y);
+        bool move(int line, int column);
         bool setLifePoints(int value);
     }
 }

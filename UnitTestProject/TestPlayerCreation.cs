@@ -21,12 +21,16 @@ namespace UnitTestProject
             {
                 Assert.AreNotEqual(u, null);
                 Assert.IsInstanceOfType(u, typeof(GaulUnit));
+                Assert.IsTrue(u.getColumn() >= 0 && u.getColumn() < 5);
+                Assert.IsTrue(u.getLine() >= 0 && u.getLine() < 5);
             }
 
             foreach (Unit u in demoBuilder.getPlayer2().getNation().getUnits())
             {
                 Assert.AreNotEqual(u, null);
                 Assert.IsInstanceOfType(u, typeof(NainUnit));
+                Assert.IsTrue(u.getColumn() >= 0 && u.getColumn() < 5);
+                Assert.IsTrue(u.getLine() >= 0 && u.getLine() < 5);
             }
         }
     }
