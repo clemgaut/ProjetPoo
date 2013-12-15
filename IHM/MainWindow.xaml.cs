@@ -194,30 +194,36 @@ namespace IHM
         {
             List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
             List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
+            List<Unit> nonEmptyList = new List<Unit>();
 
             unitInfoPanel.Children.Clear();
 
-            if (unitsActivePlayer.Count == 0 && unitsUnactivePlayer.Count == 0)
-            {
-                Label lbl = new Label();
-                lbl.Content = "There are no units on this tile";
-                unitInfoPanel.Children.Add(lbl);
-            }
-
             if(unitsActivePlayer.Count > 0)
             {
-                foreach(Unit u in unitsActivePlayer)
-                {
-                    unitInfoPanel.Children.Add(getUnitDescription(u));
-                }
+                nonEmptyList = unitsActivePlayer;
             }
 
             if (unitsUnactivePlayer.Count > 0)
             {
-                foreach (Unit u in unitsUnactivePlayer)
+                nonEmptyList = unitsUnactivePlayer;
+            }
+
+            if (nonEmptyList.Count > 0)
+            {
+                Label lbl = new Label();
+                lbl.Content = "There are " + nonEmptyList.Count + " units on this tile : ";
+                unitInfoPanel.Children.Add(lbl);
+
+                foreach (Unit u in nonEmptyList)
                 {
                     unitInfoPanel.Children.Add(getUnitDescription(u));
                 }
+            }
+            else
+            {
+                Label lbl = new Label();
+                lbl.Content = "There are no units on this tile.";
+                unitInfoPanel.Children.Add(lbl);
             }
         }
 
