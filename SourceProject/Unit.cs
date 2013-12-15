@@ -47,19 +47,19 @@ public class Unit : IUnit
         return _column;
     }
 
-	public virtual void getDefensive()
+	public virtual int getDefensive()
 	{
-		throw new System.NotImplementedException();
+		return _defensive;
 	}
 
-	public virtual void getLifePoints()
+	public virtual int getLifePoints()
 	{
-		throw new System.NotImplementedException();
+		return _lifePoints;
 	}
 
-	public virtual void getOffensive()
+	public virtual int getOffensive()
 	{
-		throw new System.NotImplementedException();
+		return _offensive;
 	}
 
 	public virtual int getPoint()

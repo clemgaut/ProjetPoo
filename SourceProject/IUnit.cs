@@ -6,9 +6,9 @@ namespace SourceProject
         bool attack(int line, int column);
         int getLine();
         int getColumn();
-        void getDefensive();
-        void getLifePoints();
-        void getOffensive();
+        int getDefensive();
+        int getLifePoints();
+        int getOffensive();
         int getPoint();
         bool hasMoves();
         bool isAlive();

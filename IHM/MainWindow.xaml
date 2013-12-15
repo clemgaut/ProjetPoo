@@ -13,6 +13,8 @@
                     <Label x:Name="labelNation2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Grid>
+            <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Horizontal">
+            </StackPanel>
             <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal">
                     <Label Name="InfoLabel"/>

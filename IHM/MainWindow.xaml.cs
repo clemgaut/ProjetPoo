@@ -185,7 +185,56 @@ namespace IHM
             rectangle.StrokeThickness = 3;
             InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
 
+            updateUnitInfo(row, column);
+
             e.Handled = true;
+        }
+
+        private void updateUnitInfo(int line, int column)
+        {
+            List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
+            List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
+
+            unitInfoPanel.Children.Clear();
+
+            if (unitsActivePlayer.Count == 0 && unitsUnactivePlayer.Count == 0)
+            {
+                Label lbl = new Label();
+                lbl.Content = "There are no units on this tile";
+                unitInfoPanel.Children.Add(lbl);
+            }
+
+            if(unitsActivePlayer.Count > 0)
+            {
+                foreach(Unit u in unitsActivePlayer)
+                {
+                    unitInfoPanel.Children.Add(getUnitDescription(u));
+                }
+            }
+
+            if (unitsUnactivePlayer.Count > 0)
+            {
+                foreach (Unit u in unitsUnactivePlayer)
+                {
+                    unitInfoPanel.Children.Add(getUnitDescription(u));
+                }
+            }
+        }
+
+       /*
+        * Return a stack panel containing a graphical description of the unit
+        */
+        private StackPanel getUnitDescription(Unit u)
+        {
+            StackPanel stack = new StackPanel();
+            stack.Orientation = Orientation.Vertical;
+
+            Label lbl = new Label();
+            lbl.Content = "Life : " + u.getLifePoints();
+
+            stack.Children.Add(lbl);
+
+            return stack;
         }
 
         private bool hasUnits(int line, int column)
