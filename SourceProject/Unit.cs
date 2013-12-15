@@ -22,6 +22,16 @@ public class Unit : IUnit
 
     private int _column;
 
+    private double _movePoints;
+
+    public Unit()
+    {
+        _lifePoints = 5;
+        _movePoints = 1;
+        _defensive = 1;
+        _offensive = 2;
+    }
+
 	public virtual bool setLifePoints(int value)
 	{
 		throw new System.NotImplementedException();
@@ -70,13 +80,9 @@ public class Unit : IUnit
 		throw new System.NotImplementedException();
 	}
 
-	public Unit()
-	{
-	}
-
 	public virtual bool hasMoves()
 	{
-		throw new System.NotImplementedException();
+		return _movePoints > 0;
 	}
 
 	public virtual bool attack(Unit defUnit)

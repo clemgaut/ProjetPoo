@@ -18,10 +18,22 @@ public class Game : IGame
 
 	protected Player _player2;
 
+    protected Player _activePlayer;
+
 	public virtual void setMap(Map map)
 	{
         _map = map;
 	}
+
+    public void setPlayer1(Player p)
+    {
+        _player1 = p;
+    }
+
+    public void setPlayer2(Player p)
+    {
+        _player2 = p;
+    }
 
     public virtual Map getMap()
     {
@@ -35,7 +47,7 @@ public class Game : IGame
 
 	public virtual Player getActivePlayer()
 	{
-		throw new System.NotImplementedException();
+		return _activePlayer;
 	}
 
 	public Game()
@@ -70,7 +82,7 @@ public class Game : IGame
 
 	public virtual void start()
 	{
-		throw new System.NotImplementedException();
+        _activePlayer = _player1;
 	}
 
 	public virtual Unit getBestDefensiveUnit(int x, int y)

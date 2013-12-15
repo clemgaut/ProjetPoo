@@ -56,6 +56,8 @@ namespace IHM
             labelNation2.Content = nation2.ToString();
 
             game = builder.getGame();
+
+            game.start();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -82,7 +84,7 @@ namespace IHM
                     mapGrid.Children.Add(rect);
                 }
             }
-            //updateUnitUI();
+            updateUnitUI();
         }
 
         private Rectangle createRectangle(int c, int l, Box tile)
@@ -104,9 +106,24 @@ namespace IHM
             return rectangle;
         }
 
+        /*
+         * Change the color of rectangle where active player units are
+         */
         private void updateUnitUI()
         {
-            var unit = game.getActivePlayer().getSelectableUnits();
+            List<Unit> selectableUnits = game.getActivePlayer().getSelectableUnits();
+
+            foreach(Unit u in selectableUnits)
+            {
+                Rectangle r = getRectangle(u.getLine(), u.getColumn());
+                r.Stroke = Brushes.GreenYellow;
+                r.StrokeThickness = 2;
+            }
+        }
+
+        private Rectangle getRectangle(int line, int column)
+        {
+            return mapGrid.Children.OfType<Rectangle>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column);
         }
 
         void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -121,6 +138,8 @@ namespace IHM
             selectedVisual.Tag = tile;
             rectangle.StrokeThickness = 3;
             InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
+
+            updateUnitUI();
 
             e.Handled = true;
         }

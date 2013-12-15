@@ -36,6 +36,9 @@ public abstract class GameBuilder : IGameBuilder
 
         _player1.setNation(nationPlayer1);
         _player2.setNation(nationPlayer2);
+
+        _game.setPlayer1(_player1);
+        _game.setPlayer2(_player2);
     }
 
 	public virtual Game getGame()

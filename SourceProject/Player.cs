@@ -39,9 +39,16 @@ public class Player : IPlayer
 	{
 	}
 
-	public virtual Unit[] getSelectableUnits()
+	public virtual List<Unit> getSelectableUnits()
 	{
-		throw new System.NotImplementedException();
+        List<Unit> l = new List<Unit>();
+
+        foreach(Unit u in _nation.getUnits())
+        {
+            if (u.hasMoves())
+                l.Add(u);
+        }
+        return l;
 	}
 
 	public virtual Nation getNation()
