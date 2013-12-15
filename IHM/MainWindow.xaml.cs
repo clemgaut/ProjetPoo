@@ -52,17 +52,12 @@ namespace IHM
             }
             MapLabel.Content = "Type de carte : " + mapType.ToString().ToLower();
 
-            labelNation1.Content = nation1.ToString();
-            labelNation2.Content = nation2.ToString();
-
             game = builder.getGame();
 
-<<<<<<< HEAD
             Nation1Label.Content += nation1.ToString();
             Nation2Label.Content += nation2.ToString();
-=======
+
             game.start();
->>>>>>> 135a0490bf2590c7d636e4d5d77b7a0d97d9c3b6
         }
 
         /*
@@ -126,13 +121,13 @@ namespace IHM
 
         private void updateNationLabel()
         {
-            var activeLabel = labelNation1;
-            var unactiveLabel = labelNation2;
+            var activeLabel = Nation1Label;
+            var unactiveLabel = Nation1Label;
 
             if (!game.isPlayer1Active())
             {
-                activeLabel = labelNation2;
-                unactiveLabel = labelNation1;
+                activeLabel = Nation2Label;
+                unactiveLabel = Nation2Label;
             }
             activeLabel.Foreground = Brushes.GreenYellow;
             activeLabel.FontWeight = FontWeights.Bold;

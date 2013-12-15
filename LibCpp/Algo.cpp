@@ -1,6 +1,7 @@
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+
 #define _USE_MATH_DEFINES
 #include <math.h>
 
@@ -63,7 +64,6 @@ int* Algo::mapGeneration (int size, int types) {
 	return map;
 }
 
-<<<<<<< HEAD
 int Algo::interpolation_cos (int a, int b, double x) {
 	return a * (1 - x) + b * x;
 }
@@ -74,7 +74,6 @@ int Algo::interpolation_cos2D (int a, int b, int c, int d, double x, double y) {
 	return interpolation_cos (x1, x2, y);
 }
 
-=======
 /*
 Return the init coordonates for the 2 nations of the map
 
@@ -101,4 +100,3 @@ int* Algo::initCoordonates(int map[], int size)
 
 	return initCoord;
 }
->>>>>>> 135a0490bf2590c7d636e4d5d77b7a0d97d9c3b6
