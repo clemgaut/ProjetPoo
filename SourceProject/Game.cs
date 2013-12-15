@@ -20,6 +20,10 @@ public class Game : IGame
 
     protected Player _activePlayer;
 
+    public Game()
+    {
+    }
+
 	public virtual void setMap(Map map)
 	{
         _map = map;
@@ -50,9 +54,21 @@ public class Game : IGame
 		return _activePlayer;
 	}
 
-	public Game()
-	{
-	}
+    public virtual Player getUnactivePlayer()
+    {
+        if (_activePlayer == _player1)
+            return _player2;
+
+        if (_activePlayer == _player2)
+            return _player1;
+
+        return null;
+    }
+
+    public virtual bool isPlayer1Active()
+    {
+        return _activePlayer == _player1;
+    }
 
 	public virtual void checkWinner()
 	{
@@ -97,7 +113,10 @@ public class Game : IGame
 
 	public virtual void nextStep()
 	{
-		throw new System.NotImplementedException();
+        if (_activePlayer == _player1)
+            _activePlayer = _player2;
+        else
+            _activePlayer = _player1;
 	}
 
 

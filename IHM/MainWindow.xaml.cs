@@ -60,9 +60,13 @@ namespace IHM
             game.start();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /*
+         * Click on end of turn button
+         */
+        private void EndOfTurnButton_Click(object sender, RoutedEventArgs e)
         {
-
+            game.nextStep();
+            updateForStep();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -84,7 +88,7 @@ namespace IHM
                     mapGrid.Children.Add(rect);
                 }
             }
-            updateUnitUI();
+            updateForStep();
         }
 
         private Rectangle createRectangle(int c, int l, Box tile)
@@ -107,17 +111,53 @@ namespace IHM
         }
 
         /*
-         * Change the color of rectangle where active player units are
+         * Does every UI update needed when we finish a game step
+         */
+        private void updateForStep()
+        {
+            updateUnitUI();
+            updateNationLabel();
+        }
+
+        private void updateNationLabel()
+        {
+            var activeLabel = labelNation1;
+            var unactiveLabel = labelNation2;
+
+            if (!game.isPlayer1Active())
+            {
+                activeLabel = labelNation2;
+                unactiveLabel = labelNation1;
+            }
+            activeLabel.Foreground = Brushes.GreenYellow;
+            activeLabel.FontWeight = FontWeights.Bold;
+            unactiveLabel.Foreground = Brushes.Red;
+            unactiveLabel.FontWeight = FontWeights.Normal;
+        }
+
+        /*
+         * Change the color of rectangle where player units are
          */
         private void updateUnitUI()
         {
-            List<Unit> selectableUnits = game.getActivePlayer().getSelectableUnits();
+            List<Unit> selectableUnits1 = game.getActivePlayer().getSelectableUnits();
 
-            foreach(Unit u in selectableUnits)
+            foreach(Unit u in selectableUnits1)
             {
                 Rectangle r = getRectangle(u.getLine(), u.getColumn());
                 r.Stroke = Brushes.GreenYellow;
-                r.StrokeThickness = 2;
+                if(r != selectedVisual)
+                    r.StrokeThickness = 2;
+            }
+
+            List<Unit> selectableUnits2 = game.getUnactivePlayer().getSelectableUnits();
+
+            foreach (Unit u in selectableUnits2)
+            {
+                Rectangle r = getRectangle(u.getLine(), u.getColumn());
+                r.Stroke = Brushes.Red;
+                if (r != selectedVisual)
+                    r.StrokeThickness = 2;
             }
         }
 
@@ -133,15 +173,25 @@ namespace IHM
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
 
-            if (selectedVisual != null) selectedVisual.StrokeThickness = 1;
+            if (selectedVisual != null)
+            {
+                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+                    selectedVisual.StrokeThickness = 2;
+                else
+                    selectedVisual.StrokeThickness = 1;
+            }
             selectedVisual = rectangle;
             selectedVisual.Tag = tile;
             rectangle.StrokeThickness = 3;
             InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
 
-            updateUnitUI();
-
             e.Handled = true;
+        }
+
+        private bool hasUnits(int line, int column)
+        {
+            return (game.getActivePlayer().getUnits(line, column).Count > 0 ||
+                game.getUnactivePlayer().getUnits(line, column).Count > 0);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
