@@ -13,5 +13,7 @@ public:
 	DLL ~Algo(void);
 	DLL int fTest(int n);
 	DLL int* mapGeneration (int size, int types);
+	DLL int Algo::interpolation_cos (int a, int b, double x);
+	DLL int Algo::interpolation_cos2D (int a, int b, int c, int d, double x, double y);
 };
 

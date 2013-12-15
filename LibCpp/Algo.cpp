@@ -1,6 +1,8 @@
 #include <stdio.h>      /* printf, scanf, puts, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 
 #include "Algo.h"
@@ -31,14 +33,58 @@ int* Algo::mapGeneration (int size, int types) {
 	/* initialize random seed: */
 	srand (time (NULL));
 
-	/* create new array*/
-	int* map = (int*)malloc(size*sizeof(int));
+	int fsize = size * size;
 
-	for (int i = 0; i < size; i++)
-	{
+	/* create new array*/
+	int* map = (int*)malloc(fsize*sizeof(int));
+
+	for (int i = 0; i < fsize; i++) {
 		/* generate secret number between 1 and types */
 		map[i] = rand() % types + 1;
 	}
 
+	// Perlin Noise
+	int a, b, c, d;
+	double x, y;
+
+	for (int i = 0; i < fsize; i++) {
+
+		if (i < size)
+			a = rand () % types + 1;
+		else
+			a = map[i - size];
+
+		if ((i % size) == (size - 1))
+			b = rand () % types + 1;
+		else
+			b = map[i + 1];
+
+		if (i + size >= fsize)
+			c = rand () % types + 1;
+		else
+			c = map[i + size];
+
+		if ((i % size) == 0)
+			d = rand () % types + 1;
+		else
+			d = map[i - 1];
+
+		x = rand () % 2;
+		y = rand () % 2;
+		map[i] = interpolation_cos2D (a, b, c, d, x, y);
+	}
+
+
 	return map;
 }
+
+int Algo::interpolation_cos (int a, int b, double x) {
+	return a * (1 - x) + b * x;
+}
+
+int Algo::interpolation_cos2D (int a, int b, int c, int d, double x, double y) {
+	int x1 = interpolation_cos (a, b, x);
+	int x2 = interpolation_cos (c, d, x);
+	return interpolation_cos (x1, x2, y);
+}
+
