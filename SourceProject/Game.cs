@@ -111,7 +111,7 @@ public class Game : IGame
         _activePlayer = _player1;
 	}
 
-	public virtual Unit getBestDefensiveUnit(int x, int y)
+	public virtual Unit getBestDefensiveUnit(int line, int column)
 	{
 		throw new System.NotImplementedException();
 	}
