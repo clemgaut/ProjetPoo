@@ -11,6 +11,7 @@
     </Window.Resources>
 
     <Grid Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
