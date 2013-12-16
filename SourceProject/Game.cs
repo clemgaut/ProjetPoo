@@ -11,11 +11,11 @@ using System.Linq;
 using System.Text;
 
 public class Game : IGame {
-    protected Map _map;
+	protected Map _map;
 
-    protected Player _player1;
+	protected Player _player1;
 
-    protected Player _player2;
+	protected Player _player2;
 
     protected Player _activePlayer;
 
@@ -26,7 +26,7 @@ public class Game : IGame {
 
     public virtual void setMap(Map map) {
         _map = map;
-    }
+	}
 
     public void setPlayer1(Player p) {
         _player1 = p;
@@ -50,11 +50,11 @@ public class Game : IGame {
 
     public virtual void setMaxSteps(int max) {
         _steps = max;
-    }
+	}
 
     public virtual Player getActivePlayer() {
-        return _activePlayer;
-    }
+		return _activePlayer;
+	}
 
     public virtual Player getUnactivePlayer() {
         if(_activePlayer == _player1)
@@ -71,37 +71,38 @@ public class Game : IGame {
     }
 
     public virtual void checkWinner() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
     public virtual void endOfPlay() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
     public virtual bool fight() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
 
     public virtual bool move() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
     public virtual void onPropertyChanged() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
     public virtual void start() {
         _activePlayer = _player1;
-    }
+	}
 
-    public virtual Unit getBestDefensiveUnit(int x, int y) {
-        throw new System.NotImplementedException();
-    }
+	public virtual Unit getBestDefensiveUnit(int line, int column)
+	{
+		throw new System.NotImplementedException();
+	}
 
     public virtual bool checkEndfOfGame() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 
     public virtual void nextStep() {
         if(_steps > 0 && _activePlayer == _player2)
@@ -111,14 +112,14 @@ public class Game : IGame {
             _activePlayer = _player2;
         else
             _activePlayer = _player1;
-    }
+	}
 
     public virtual int getSteps() {
         return _steps;
     }
 
     public virtual Player getWinner() {
-        throw new System.NotImplementedException();
-    }
+		throw new System.NotImplementedException();
+	}
 }
 

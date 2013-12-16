@@ -24,6 +24,7 @@ namespace IHM {
         GameBuilder builder;
         Rectangle selectedVisual;
         ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
+        StackPanel _selectedUnit;
 
         public MainWindow(EGameType mapType, ENation nation1, ENation nation2) {
             InitializeComponent();
@@ -52,6 +53,8 @@ namespace IHM {
 
             Nation1Label.Content += "[" + nation1.ToString() + "]";
             Nation2Label.Content += "[" + nation2.ToString() + "]";
+
+            _selectedUnit = null;
 
             game.start();
         }
@@ -154,14 +157,18 @@ namespace IHM {
             return mapGrid.Children.OfType<Rectangle>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column);
         }
 
-        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+        /*
+         * Called whenever someone click on a map rectangle
+         */
+        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
             var rectangle = sender as Rectangle;
             var tile = rectangle.Tag as Box;
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
 
-            if(selectedVisual != null) {
-                if(hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+            if (selectedVisual != null) {
+                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
                     selectedVisual.StrokeThickness = 2;
                 else
                     selectedVisual.StrokeThickness = 1;
@@ -171,12 +178,42 @@ namespace IHM {
             rectangle.StrokeThickness = 3;
             InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
 
+            if (_selectedUnit != null) {
+                make_action(row, column);
+            }
+            updateForStep();
             updateUnitInfo(row, column);
 
             e.Handled = true;
         }
 
-        private void updateUnitInfo(int line, int column) {
+        /*
+         * Is called to determine either to move a player or attack on other one
+         */
+        private void make_action(int row, int column) {
+            var unit = _selectedUnit.Tag as Unit;
+            int old_row = unit.getLine();
+            int old_column = unit.getColumn();
+
+            //If the opponent has no units, we move
+            if (game.getUnactivePlayer().getUnits(row, column).Count == 0)
+                unit.move(row, column);
+            else
+                unit.attack(game.getBestDefensiveUnit(row, column));
+
+            if (!hasUnits(old_row, old_column)) {
+                getRectangle(old_row, old_column).Stroke = Brushes.Gray;
+                getRectangle(old_row, old_column).StrokeThickness = 1;
+            }
+            
+            _selectedUnit = null;
+        }
+
+        /*
+         * Update information displayed about unit in the tile with line and column
+         */
+        private void updateUnitInfo(int line, int column)
+        {
             List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
             List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
             List<Unit> nonEmptyList = new List<Unit>();
@@ -196,8 +233,14 @@ namespace IHM {
                 lbl.Content = "There are " + nonEmptyList.Count + " units on this tile : ";
                 unitInfoPanel.Children.Add(lbl);
 
-                foreach(Unit u in nonEmptyList) {
-                    unitInfoPanel.Children.Add(getUnitDescription(u));
+                foreach (Unit u in nonEmptyList)
+                {
+                    StackPanel stack = getUnitDescription(u);
+                    unitInfoPanel.Children.Add(stack);
+
+                    //If it's an active player unit, we add events to select it
+                    if(nonEmptyList == unitsActivePlayer)
+                        stack.MouseDown += unitStackPanel_MouseDown;
                 }
             } else {
                 Label lbl = new Label();
@@ -206,9 +249,34 @@ namespace IHM {
             }
         }
 
-        /*
-         * Return a stack panel containing a graphical description of the unit
-         */
+        private void unitStackPanel_MouseDown(object sender, MouseButtonEventArgs e) {
+            var stack = sender as StackPanel;
+
+            selectUnit(stack);
+
+            e.Handled = true;
+            
+        }
+
+        private void selectUnit(StackPanel selectedUnit) {
+            if (_selectedUnit != null) {
+                Label lbl = _selectedUnit.Children.OfType<Label>().First();
+                lbl.FontWeight = FontWeights.Normal;
+            }
+
+            var unit = selectedUnit.Tag as Unit;
+
+            if (game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
+                Label newLbl = selectedUnit.Children.OfType<Label>().First();
+                newLbl.FontWeight = FontWeights.Bold;
+
+                _selectedUnit = selectedUnit;
+            }
+        }
+
+       /*
+        * Return a stack panel containing a graphical description of the unit
+        */
         private StackPanel getUnitDescription(Unit u) {
             StackPanel stack = new StackPanel();
             stack.Orientation = Orientation.Vertical;
@@ -217,6 +285,9 @@ namespace IHM {
             lbl.Content = "Life : " + u.getLifePoints();
 
             stack.Children.Add(lbl);
+
+            //we add a reference to the unit in the stack
+            stack.Tag = u;
 
             return stack;
         }
@@ -228,8 +299,12 @@ namespace IHM {
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             InfoLabel.Content = "Pas d'info";
-            if(selectedVisual != null)
-                selectedVisual.StrokeThickness = 0;
+            if (selectedVisual != null) {
+                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+                    selectedVisual.StrokeThickness = 2;
+                else
+                    selectedVisual.StrokeThickness = 1;
+            }
             selectedVisual = null;
         }
     }
