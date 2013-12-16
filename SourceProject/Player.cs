@@ -10,65 +10,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Player : IPlayer
-{
-	private string _name;
+public class Player : IPlayer {
 
-	private Nation _nation;
+    private string _name;
+    private Nation _nation;
+    private int _points;
 
-	private int _points;
-
-    public Player()
-    {
+    public Player() {
         _points = 0;
     }
 
-	public virtual void setNation(Nation nation)
-	{
-		_nation = nation;
-	}
+    public virtual void setName(string name) {
+        _name = name;
+    }
 
-	public virtual string getName()
-	{
-		return _name;
-	}
+    public virtual void setNation(Nation nation) {
+        _nation = nation;
+    }
 
-	public virtual void refresh()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual string getName() {
+        return _name;
+    }
 
-	public virtual List<Unit> getSelectableUnits()
-	{
+    public virtual void refresh() {
+        throw new System.NotImplementedException();
+    }
+
+    public virtual List<Unit> getSelectableUnits() {
         List<Unit> l = new List<Unit>();
 
-        foreach(Unit u in _nation.getUnits())
-        {
-            if (u.hasMoves())
+        foreach(Unit u in _nation.getUnits()) {
+            if(u.hasMoves())
                 l.Add(u);
         }
         return l;
-	}
+    }
 
     /*
      * Return the units that are on the rectangle with line and column in parameters
      */
-    public virtual List<Unit> getUnits(int line, int column)
-    {
+    public virtual List<Unit> getUnits(int line, int column) {
         List<Unit> l = new List<Unit>();
 
-        foreach (Unit u in _nation.getUnits())
-        {
-            if (u.getLine() == line && u.getColumn() == column)
+        foreach(Unit u in _nation.getUnits()) {
+            if(u.getLine() == line && u.getColumn() == column)
                 l.Add(u);
         }
         return l;
     }
 
-	public virtual Nation getNation()
-	{
-		return _nation;
-	}
+    public virtual Nation getNation() {
+        return _nation;
+    }
 
     public virtual int getNbUnits() {
         return _nation.getUnitsNumber();

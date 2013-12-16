@@ -1,8 +1,6 @@
 ﻿using System;
-namespace SourceProject
-{
-    interface IUnit
-    {
+namespace SourceProject {
+    interface IUnit {
         bool attack(int line, int column);
         int getLine();
         int getColumn();
@@ -13,6 +11,6 @@ namespace SourceProject
         bool hasMoves();
         bool isAlive();
         bool move(int line, int column);
-        bool setLifePoints(int value);
+        void setLifePoints(int value);
     }
 }

@@ -70,7 +70,13 @@ public class Unit : IUnit {
     }
 
     public virtual bool attack(Unit defUnit) {
-        throw new System.NotImplementedException();
+
+        /*double attWin = 1 - (0.5 * defUnit.getDefensive() / _offensive);
+
+        if (attWin == 100)*/
+
+        return true;
+
     }
 
     public virtual bool isAlive() {
