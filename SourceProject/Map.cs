@@ -10,69 +10,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class Map : IMap
-{
-	protected BoxFactory boxFactory;
+public abstract class Map : IMap {
 
+    protected BoxFactory boxFactory;
     protected Wrapper.WrapperAlgo wrapperAlgo;
+    protected Box[,] _map;
 
-	protected Box[,] _map;
-
-    public int Width
-    {
+    public int Width {
         get;
         set;
     }
 
-    public int Height
-    {
+    public int Height {
         get;
         set;
     }
 
-	public virtual void generateMap()
-	{
+    public virtual void generateMap() {
         _map = new Box[Height, Width];
         List<int> generatedMap = wrapperAlgo.mapGeneration(Height * Width, Enum.GetNames(typeof(EBoxType)).Length);
         convertIntListToMap(generatedMap);
-	}
+    }
 
-	public virtual void refreshMap()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void refreshMap() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void showMap()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void showMap() {
+        throw new System.NotImplementedException();
+    }
 
-	public void setBox(Box box, int line, int column)
-	{
+    public void setBox(Box box, int line, int column) {
         _map[line, column] = box;
-	}
+    }
 
-    public virtual Box getBox(int line, int column)
-    {
+    public virtual Box getBox(int line, int column) {
         return _map[line, column];
     }
 
-    public Box[,] getMap()
-    {
+    public Box[,] getMap() {
         return _map;
     }
 
-	public virtual void addNation(Nation nation)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void addNation(Nation nation) {
+        throw new System.NotImplementedException();
+    }
 
     /*
      * Return a list containing a list of coordonate.
      * The first coordonate correpond to the line, the second to the column
      */
-	public virtual IEnumerable<IEnumerable<int> > getInitCoordonates()
-	{
+    public virtual IEnumerable<IEnumerable<int>> getInitCoordonates() {
         List<int> coord = wrapperAlgo.initCoordonates(convertMapToIntList(), Width * Height);
 
         List<List<int>> initCoord = new List<List<int>>();
@@ -80,53 +68,48 @@ public abstract class Map : IMap
         initCoord.Add(convertIntToCoordonates(coord[1]));
 
         return initCoord;
-	}
+    }
 
-	public Map()
-	{
+    public Map() {
         wrapperAlgo = new Wrapper.WrapperAlgo();
         boxFactory = new BoxFactory();
-	}
+    }
 
     /*
      * Convert an int to a coordonate : a list with line number at 0 index and column at 1 index
      */
-    protected List<int> convertIntToCoordonates(int coord)
-    {
+    protected List<int> convertIntToCoordonates(int coord) {
         List<int> l = new List<int>();
 
         //We first add the line
         l.Add(coord / Width);
         //Then the column
         l.Add(coord % Width);
-       
+
         return l;
     }
 
     /*
    * Convert a Box[,] to a List<int> according to the size of the map
   */
-    protected List<int> convertMapToIntList()
-    {
+    protected List<int> convertMapToIntList() {
         List<int> l = new List<int>();
 
-        for (int line = 0; line < Height; line++)
-        {
-            for (int column = 0; column < Width; column++)
-            {
-                if (_map[line, column].GetType() == typeof(DesertBox))
+        for(int line = 0; line < Height; line++) {
+            for(int column = 0; column < Width; column++) {
+                if(_map[line, column].GetType() == typeof(DesertBox))
                     l.Add((int)EBoxType.DESERT);
 
-                if (_map[line, column].GetType() == typeof(ForestBox))
+                if(_map[line, column].GetType() == typeof(ForestBox))
                     l.Add((int)EBoxType.FOREST);
 
-                if (_map[line, column].GetType() == typeof(LowlandBox))
+                if(_map[line, column].GetType() == typeof(LowlandBox))
                     l.Add((int)EBoxType.LOWLAND);
 
-                if (_map[line, column].GetType() == typeof(MountainBox))
+                if(_map[line, column].GetType() == typeof(MountainBox))
                     l.Add((int)EBoxType.MOUTAIN);
 
-                if (_map[line, column].GetType() == typeof(SeaBox))
+                if(_map[line, column].GetType() == typeof(SeaBox))
                     l.Add((int)EBoxType.SEA);
             }
         }
@@ -137,14 +120,10 @@ public abstract class Map : IMap
      * Convert a List<int> to a Box[,] according to the size of the map
      * Changes the current map according to the int list
     */
-    protected void convertIntListToMap(List<int> l)
-    {
-        for(int line = 0; line<Height; line++)
-        {
-            for (int column = 0; column < Width; column++)
-            {
-                switch (l[line * Width + column])
-                {
+    protected void convertIntListToMap(List<int> l) {
+        for(int line = 0; line < Height; line++) {
+            for(int column = 0; column < Width; column++) {
+                switch(l[line * Width + column]) {
                     case (int)EBoxType.DESERT:
                         setBox(boxFactory.getBox(EBoxType.DESERT), line, column);
                         break;
@@ -167,7 +146,7 @@ public abstract class Map : IMap
 
                     default:
                         //TODO Error
-                        break;  
+                        break;
                 }
             }
         }

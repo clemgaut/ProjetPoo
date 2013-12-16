@@ -10,20 +10,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Nation : INation
-{
-	private IEnumerable<Unit> units;
+public class Nation : INation {
 
-	private IUnitFactory<Unit> unitFactory;
-
+    private IEnumerable<Unit> units;
+    private IUnitFactory<Unit> unitFactory;
     private ENation nationType;
 
-    public Nation(ENation nation, int unitNumber)
-    {
+    public Nation(ENation nation, int unitNumber) {
         nationType = nation;
 
-        switch(nationType)
-        {
+        switch(nationType) {
             case ENation.GAUL:
                 unitFactory = new UnitFactory<GaulUnit>();
                 break;
@@ -41,28 +37,23 @@ public class Nation : INation
 
     }
 
-	public virtual int getUnitsNumber()
-	{
+    public virtual int getUnitsNumber() {
         return units.Count();
-	}
+    }
 
-    public virtual IEnumerable<Unit> getUnits()
-	{
-		return units;
-	}
+    public virtual IEnumerable<Unit> getUnits() {
+        return units;
+    }
 
-	public virtual Unit getUnit(int i)
-	{
-		return units.ElementAt(i);
-	}
+    public virtual Unit getUnit(int i) {
+        return units.ElementAt(i);
+    }
 
-	public virtual void setInitBox(int line, int column)
-	{
-		foreach(Unit u in units)
-        {
+    public virtual void setInitBox(int line, int column) {
+        foreach(Unit u in units) {
             u.move(line, column);
         }
-	}
+    }
 
 }
 
