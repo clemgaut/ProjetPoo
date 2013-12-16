@@ -12,15 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace IHM
-{
+namespace IHM {
     /// <summary>
     /// Interaction logic for StartUpWindow.xaml
     /// </summary>
-    public partial class StartUpWindow : Window
-    {
-        public StartUpWindow()
-        {
+    public partial class StartUpWindow : Window {
+        public StartUpWindow() {
             InitializeComponent();
 
             initializeMapTags();
@@ -28,15 +25,13 @@ namespace IHM
             initializeNationTags();
         }
 
-        private void initializeMapTags()
-        {
+        private void initializeMapTags() {
             this.DemoItem.Tag = EGameType.DEMO;
             this.SmallItem.Tag = EGameType.SMALL;
             this.NormalItem.Tag = EGameType.NORMAL;
         }
 
-        private void initializeNationTags()
-        {
+        private void initializeNationTags() {
             this.Nain1.Tag = ENation.NAIN;
             this.Nain2.Tag = ENation.NAIN;
 
@@ -47,11 +42,9 @@ namespace IHM
             this.Viking2.Tag = ENation.VIKING;
         }
 
-        private void StartUpButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void StartUpButton_Click(object sender, RoutedEventArgs e) {
             //We start the game only if both nations are selected.
-            if (ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1)
-            {
+            if(ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1) {
                 // We retrieve game type with the tag
                 ComboBoxItem itemGame = (ComboBoxItem)GameTypeComboBox.SelectedItem;
                 ComboBoxItem itemNation1 = (ComboBoxItem)ComboBoxNationPlayer1.SelectedItem;

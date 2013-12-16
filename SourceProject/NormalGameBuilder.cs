@@ -9,16 +9,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class NormalGameBuilder : GameBuilder
-{
-    public NormalGameBuilder(ENation nation1, ENation nation2)
-	{
+public class NormalGameBuilder : GameBuilder {
+    public NormalGameBuilder(ENation nation1, ENation nation2) {
         Map map = new NormalMap();
         _game.setMap(map);
         _game.setMaxSteps(30);
         _unitNumber = 8;
         createPlayers(nation1, nation2);
-	}
+    }
 
 }
 

@@ -14,25 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SourceProject;
 
-namespace IHM
-{
+namespace IHM {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
+    public partial class MainWindow : Window {
         Map map;
         Game game;
         GameBuilder builder;
         Rectangle selectedVisual;
         ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
 
-        public MainWindow(EGameType mapType, ENation nation1, ENation nation2)
-        {
+        public MainWindow(EGameType mapType, ENation nation1, ENation nation2) {
             InitializeComponent();
 
-            switch(mapType)
-            {
+            switch(mapType) {
                 case EGameType.DEMO:
                     builder = new DemoGameBuilder(nation1, nation2);
                     break;
@@ -63,26 +59,21 @@ namespace IHM
         /*
          * Click on end of turn button
          */
-        private void EndOfTurnButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void EndOfTurnButton_Click(object sender, RoutedEventArgs e) {
             game.nextStep();
             updateForStep();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
+        private void Window_Loaded(object sender, RoutedEventArgs e) {
             map = game.getMap();
 
-            for (int c = 0; c < map.Width; c++)
-            {
+            for(int c = 0; c < map.Width; c++) {
                 mapGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
             }
 
-            for (int l = 0; l < map.Height; l++)
-            {
+            for(int l = 0; l < map.Height; l++) {
                 mapGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
-                for (int c = 0; c < map.Width; c++)
-                {
+                for(int c = 0; c < map.Width; c++) {
                     var tile = map.getBox(l, c);
                     var rect = createRectangle(l, c, tile);
                     mapGrid.Children.Add(rect);
@@ -91,14 +82,18 @@ namespace IHM
             updateForStep();
         }
 
-        private Rectangle createRectangle(int c, int l, Box tile)
-        {
+        private Rectangle createRectangle(int c, int l, Box tile) {
             var rectangle = new Rectangle();
-            if (tile is ForestBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.FOREST);
-            if (tile is SeaBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.SEA);
-            if (tile is MountainBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.MOUTAIN);
-            if (tile is LowlandBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.LOWLAND);
-            if (tile is DesertBox) rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.DESERT);
+            if(tile is ForestBox)
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.FOREST);
+            if(tile is SeaBox)
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.SEA);
+            if(tile is MountainBox)
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.MOUTAIN);
+            if(tile is LowlandBox)
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.LOWLAND);
+            if(tile is DesertBox)
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.DESERT);
 
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
@@ -113,15 +108,13 @@ namespace IHM
         /*
          * Does every UI update needed when we finish a game step
          */
-        private void updateForStep()
-        {
+        private void updateForStep() {
             updateUnitUI();
             updateInfoPanel();
         }
 
-        private void updateInfoPanel()
-        {
-            StepLabel.Content =  "Tours restants : " + game.getSteps();
+        private void updateInfoPanel() {
+            StepLabel.Content = "Tours restants : " + game.getSteps();
             Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
             Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
 
@@ -137,12 +130,10 @@ namespace IHM
         /*
          * Change the color of rectangle where player units are
          */
-        private void updateUnitUI()
-        {
+        private void updateUnitUI() {
             List<Unit> selectableUnits1 = game.getActivePlayer().getSelectableUnits();
 
-            foreach(Unit u in selectableUnits1)
-            {
+            foreach(Unit u in selectableUnits1) {
                 Rectangle r = getRectangle(u.getLine(), u.getColumn());
                 r.Stroke = Brushes.GreenYellow;
                 if(r != selectedVisual)
@@ -151,30 +142,26 @@ namespace IHM
 
             List<Unit> selectableUnits2 = game.getUnactivePlayer().getSelectableUnits();
 
-            foreach (Unit u in selectableUnits2)
-            {
+            foreach(Unit u in selectableUnits2) {
                 Rectangle r = getRectangle(u.getLine(), u.getColumn());
                 r.Stroke = Brushes.Red;
-                if (r != selectedVisual)
+                if(r != selectedVisual)
                     r.StrokeThickness = 2;
             }
         }
 
-        private Rectangle getRectangle(int line, int column)
-        {
+        private Rectangle getRectangle(int line, int column) {
             return mapGrid.Children.OfType<Rectangle>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column);
         }
 
-        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             var rectangle = sender as Rectangle;
             var tile = rectangle.Tag as Box;
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
 
-            if (selectedVisual != null)
-            {
-                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+            if(selectedVisual != null) {
+                if(hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
                     selectedVisual.StrokeThickness = 2;
                 else
                     selectedVisual.StrokeThickness = 1;
@@ -189,48 +176,40 @@ namespace IHM
             e.Handled = true;
         }
 
-        private void updateUnitInfo(int line, int column)
-        {
+        private void updateUnitInfo(int line, int column) {
             List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
             List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
             List<Unit> nonEmptyList = new List<Unit>();
 
             unitInfoPanel.Children.Clear();
 
-            if(unitsActivePlayer.Count > 0)
-            {
+            if(unitsActivePlayer.Count > 0) {
                 nonEmptyList = unitsActivePlayer;
             }
 
-            if (unitsUnactivePlayer.Count > 0)
-            {
+            if(unitsUnactivePlayer.Count > 0) {
                 nonEmptyList = unitsUnactivePlayer;
             }
 
-            if (nonEmptyList.Count > 0)
-            {
+            if(nonEmptyList.Count > 0) {
                 Label lbl = new Label();
                 lbl.Content = "There are " + nonEmptyList.Count + " units on this tile : ";
                 unitInfoPanel.Children.Add(lbl);
 
-                foreach (Unit u in nonEmptyList)
-                {
+                foreach(Unit u in nonEmptyList) {
                     unitInfoPanel.Children.Add(getUnitDescription(u));
                 }
-            }
-            else
-            {
+            } else {
                 Label lbl = new Label();
                 lbl.Content = "There are no units on this tile.";
                 unitInfoPanel.Children.Add(lbl);
             }
         }
 
-       /*
-        * Return a stack panel containing a graphical description of the unit
-        */
-        private StackPanel getUnitDescription(Unit u)
-        {
+        /*
+         * Return a stack panel containing a graphical description of the unit
+         */
+        private StackPanel getUnitDescription(Unit u) {
             StackPanel stack = new StackPanel();
             stack.Orientation = Orientation.Vertical;
 
@@ -242,16 +221,15 @@ namespace IHM
             return stack;
         }
 
-        private bool hasUnits(int line, int column)
-        {
+        private bool hasUnits(int line, int column) {
             return (game.getActivePlayer().getUnits(line, column).Count > 0 ||
                 game.getUnactivePlayer().getUnits(line, column).Count > 0);
         }
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             InfoLabel.Content = "Pas d'info";
-            if (selectedVisual != null) selectedVisual.StrokeThickness = 0;
+            if(selectedVisual != null)
+                selectedVisual.StrokeThickness = 0;
             selectedVisual = null;
         }
     }

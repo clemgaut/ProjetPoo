@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace IHM
-{
-    class ImageBrushFactory
-    {
+namespace IHM {
+    class ImageBrushFactory {
         private ImageBrush _desertBrush;
         private ImageBrush _forestBrush;
         private ImageBrush _lowlandBrush;
         private ImageBrush _mountainBrush;
         private ImageBrush _seaBrush;
 
-        public ImageBrushFactory()
-        {
+        public ImageBrushFactory() {
             BitmapImage _desertImage = new BitmapImage(new Uri(@"../../../textures/terrains/desert.png", UriKind.Relative));
             _desertBrush = new ImageBrush();
             _desertBrush.ImageSource = _desertImage;
@@ -29,21 +26,19 @@ namespace IHM
             BitmapImage _lowlandImage = new BitmapImage(new Uri(@"../../../textures/terrains/lowland.png", UriKind.Relative));
             _lowlandBrush = new ImageBrush();
             _lowlandBrush.ImageSource = _lowlandImage;
-            
+
             BitmapImage _mountainImage = new BitmapImage(new Uri(@"../../../textures/terrains/mountain.png", UriKind.Relative));
             _mountainBrush = new ImageBrush();
             _mountainBrush.ImageSource = _mountainImage;
-            
+
             BitmapImage _seaImage = new BitmapImage(new Uri(@"../../../textures/terrains/sea.png", UriKind.Relative));
             _seaBrush = new ImageBrush();
             _seaBrush.ImageSource = _seaImage;
         }
 
-        public ImageBrush getImageBrush(EBoxType boxType)
-        {
+        public ImageBrush getImageBrush(EBoxType boxType) {
             ImageBrush image = null;
-            switch(boxType)
-            {
+            switch(boxType) {
                 case EBoxType.DESERT:
                     image = _desertBrush;
                     break;
@@ -58,7 +53,7 @@ namespace IHM
                     break;
                 case EBoxType.SEA:
                     image = _seaBrush;
-                    break;                    
+                    break;
             }
 
             return image;
