@@ -9,9 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public enum EGameType : int
-{
-	DEMO,
-	NORMAL,
-	SMALL,
+public enum EGameType : int {
+
+    DEMO,
+    NORMAL,
+    SMALL,
 }

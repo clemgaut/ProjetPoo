@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class ForestBox : Box
-{
-	public ForestBox()
-	{
-	}
+public class ForestBox : Box {
+    public ForestBox() {
+    }
 
 }
 

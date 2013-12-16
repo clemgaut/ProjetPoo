@@ -1,8 +1,6 @@
 ﻿using System;
-namespace SourceProject
-{
-    interface IGame
-    {
+namespace SourceProject {
+    interface IGame {
         bool checkEndfOfGame();
         void checkWinner();
         void endOfPlay();

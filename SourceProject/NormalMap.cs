@@ -9,14 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class NormalMap : Map
-{
-	public NormalMap()
-	{
+public class NormalMap : Map {
+    public NormalMap() {
         Width = 15;
         Height = 15;
         generateMap();
-	}
+    }
 
 }
 

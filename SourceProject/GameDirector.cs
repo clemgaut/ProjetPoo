@@ -10,53 +10,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class GameDirector : IGameDirector
-{
-	protected GameBuilder _builder;
+public class GameDirector : IGameDirector {
+    protected GameBuilder _builder;
 
-	public virtual void buildGame(EGameType gameType, ENation nation1, ENation nation2)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void buildGame(EGameType gameType, ENation nation1, ENation nation2) {
+        throw new System.NotImplementedException();
+    }
 
-	public GameDirector()
-	{
-	}
+    public GameDirector() {
+    }
 
-	public virtual void initStep()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void initStep() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual Player getActivePlayer()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual Player getActivePlayer() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual Unit[] getSelectableUnits()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual Unit[] getSelectableUnits() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void SelectUnit(int i)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void SelectUnit(int i) {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void selectAdjacentBox(int x, int y)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void selectAdjacentBox(int x, int y) {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void endOfStep()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void endOfStep() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void stopGame()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void stopGame() {
+        throw new System.NotImplementedException();
+    }
 
 }
 

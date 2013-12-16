@@ -1,8 +1,6 @@
 ﻿using System;
-namespace SourceProject
-{
-    interface IGameBuilder
-    {
+namespace SourceProject {
+    interface IGameBuilder {
         Game getGame();
     }
 }

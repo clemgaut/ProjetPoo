@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 
 
-namespace SourceProject
-{
-    interface INation
-    {
+namespace SourceProject {
+    interface INation {
         Unit getUnit(int i);
         IEnumerable<Unit> getUnits();
         int getUnitsNumber();

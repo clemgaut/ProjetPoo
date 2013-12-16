@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class NainUnit : Unit
-{
-	public NainUnit()
-	{
-	}
+public class NainUnit : Unit {
+    public NainUnit() {
+    }
 
 }
 

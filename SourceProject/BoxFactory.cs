@@ -10,21 +10,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class BoxFactory : IBoxFactory
-{
-	protected Box _desertBox;
+public class BoxFactory : IBoxFactory {
+
+    protected Box _desertBox;
     protected Box _forestBox;
     protected Box _lowlandBox;
     protected Box _mountainBox;
     protected Box _seaBox;
 
-	public virtual Box getBox(EBoxType boxType)
-	{
+    public virtual Box getBox(EBoxType boxType) {
         Box box;
-		switch(boxType)
-        {
+        switch(boxType) {
             case EBoxType.DESERT:
-                box =  _desertBox;
+                box = _desertBox;
                 break;
 
             case EBoxType.FOREST:
@@ -48,16 +46,15 @@ public class BoxFactory : IBoxFactory
                 break;
         }
         return box;
-	}
+    }
 
-	public BoxFactory()
-	{
+    public BoxFactory() {
         _desertBox = new DesertBox();
         _forestBox = new ForestBox();
         _lowlandBox = new LowlandBox();
         _mountainBox = new MountainBox();
         _seaBox = new SeaBox();
-	}
+    }
 
 }
 

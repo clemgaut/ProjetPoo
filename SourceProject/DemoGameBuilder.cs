@@ -9,16 +9,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class DemoGameBuilder : GameBuilder
-{
-	public DemoGameBuilder(ENation nation1, ENation nation2)
-	{
+public class DemoGameBuilder : GameBuilder {
+
+    public DemoGameBuilder(ENation nation1, ENation nation2) {
         Map map = new DemoMap();
         _game.setMap(map);
         _unitNumber = 4;
         _game.setMaxSteps(5);
         createPlayers(nation1, nation2);
-	}
+    }
 
 }
 

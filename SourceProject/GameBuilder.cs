@@ -10,26 +10,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public abstract class GameBuilder : IGameBuilder
-{
-	protected Game _game;
+public abstract class GameBuilder : IGameBuilder {
+    protected Game _game;
     protected Player _player1;
     protected Player _player2;
     protected int _unitNumber;
 
-    public GameBuilder()
-	{
+    public GameBuilder() {
         _game = new Game();
         _player1 = new Player();
         _player2 = new Player();
-	}
+    }
 
-    public void createPlayers(ENation nation1, ENation nation2)
-    {
+    public void createPlayers(ENation nation1, ENation nation2) {
         Nation nationPlayer1 = new Nation(nation1, _unitNumber);
         Nation nationPlayer2 = new Nation(nation2, _unitNumber);
 
-        List<List<int> > initCoord = (List<List<int> >)_game.getMap().getInitCoordonates();
+        List<List<int>> initCoord = (List<List<int>>)_game.getMap().getInitCoordonates();
 
         nationPlayer1.setInitBox(initCoord[0][0], initCoord[0][1]);
         nationPlayer2.setInitBox(initCoord[1][0], initCoord[1][1]);
@@ -41,18 +38,15 @@ public abstract class GameBuilder : IGameBuilder
         _game.setPlayer2(_player2);
     }
 
-	public virtual Game getGame()
-	{
+    public virtual Game getGame() {
         return _game;
-	}
+    }
 
-    public virtual Player getPlayer1()
-    {
+    public virtual Player getPlayer1() {
         return _player1;
     }
 
-    public virtual Player getPlayer2()
-    {
+    public virtual Player getPlayer2() {
         return _player2;
     }
 

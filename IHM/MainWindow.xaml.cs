@@ -160,15 +160,14 @@ namespace IHM {
         /*
          * Called whenever someone click on a map rectangle
          */
-        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             var rectangle = sender as Rectangle;
             var tile = rectangle.Tag as Box;
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
 
-            if (selectedVisual != null) {
-                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+            if(selectedVisual != null) {
+                if(hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
                     selectedVisual.StrokeThickness = 2;
                 else
                     selectedVisual.StrokeThickness = 1;
@@ -178,7 +177,7 @@ namespace IHM {
             rectangle.StrokeThickness = 3;
             InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
 
-            if (_selectedUnit != null) {
+            if(_selectedUnit != null) {
                 make_action(row, column);
             }
             updateForStep();
@@ -196,24 +195,23 @@ namespace IHM {
             int old_column = unit.getColumn();
 
             //If the opponent has no units, we move
-            if (game.getUnactivePlayer().getUnits(row, column).Count == 0)
+            if(game.getUnactivePlayer().getUnits(row, column).Count == 0)
                 unit.move(row, column);
             else
                 unit.attack(game.getBestDefensiveUnit(row, column));
 
-            if (!hasUnits(old_row, old_column)) {
+            if(!hasUnits(old_row, old_column)) {
                 getRectangle(old_row, old_column).Stroke = Brushes.Gray;
                 getRectangle(old_row, old_column).StrokeThickness = 1;
             }
-            
+
             _selectedUnit = null;
         }
 
         /*
          * Update information displayed about unit in the tile with line and column
          */
-        private void updateUnitInfo(int line, int column)
-        {
+        private void updateUnitInfo(int line, int column) {
             List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
             List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
             List<Unit> nonEmptyList = new List<Unit>();
@@ -233,8 +231,7 @@ namespace IHM {
                 lbl.Content = "There are " + nonEmptyList.Count + " units on this tile : ";
                 unitInfoPanel.Children.Add(lbl);
 
-                foreach (Unit u in nonEmptyList)
-                {
+                foreach(Unit u in nonEmptyList) {
                     StackPanel stack = getUnitDescription(u);
                     unitInfoPanel.Children.Add(stack);
 
@@ -255,18 +252,18 @@ namespace IHM {
             selectUnit(stack);
 
             e.Handled = true;
-            
+
         }
 
         private void selectUnit(StackPanel selectedUnit) {
-            if (_selectedUnit != null) {
+            if(_selectedUnit != null) {
                 Label lbl = _selectedUnit.Children.OfType<Label>().First();
                 lbl.FontWeight = FontWeights.Normal;
             }
 
             var unit = selectedUnit.Tag as Unit;
 
-            if (game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
+            if(game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
                 Label newLbl = selectedUnit.Children.OfType<Label>().First();
                 newLbl.FontWeight = FontWeights.Bold;
 
@@ -274,9 +271,9 @@ namespace IHM {
             }
         }
 
-       /*
-        * Return a stack panel containing a graphical description of the unit
-        */
+        /*
+         * Return a stack panel containing a graphical description of the unit
+         */
         private StackPanel getUnitDescription(Unit u) {
             StackPanel stack = new StackPanel();
             stack.Orientation = Orientation.Vertical;
@@ -299,8 +296,8 @@ namespace IHM {
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             InfoLabel.Content = "Pas d'info";
-            if (selectedVisual != null) {
-                if (hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
+            if(selectedVisual != null) {
+                if(hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
                     selectedVisual.StrokeThickness = 2;
                 else
                     selectedVisual.StrokeThickness = 1;

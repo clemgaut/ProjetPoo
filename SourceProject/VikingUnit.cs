@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class VikingUnit : Unit
-{
-	public VikingUnit()
-	{
-	}
+public class VikingUnit : Unit {
+    public VikingUnit() {
+    }
 
 }
 

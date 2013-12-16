@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class GaulUnit : Unit
-{
-	public GaulUnit()
-	{
-	}
+public class GaulUnit : Unit {
+    public GaulUnit() {
+    }
 
 }
 

@@ -9,14 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class DemoMap : Map
-{
-	public DemoMap()
-	{
+public class DemoMap : Map {
+
+    public DemoMap() {
         Width = 5;
         Height = 5;
         generateMap();
-	}
+    }
 
 }
 

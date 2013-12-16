@@ -9,11 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Box
-{
-	public Box()
-	{
-	}
+public class Box {
+    public Box() {
+    }
 
 }
 

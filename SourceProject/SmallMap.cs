@@ -9,14 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class SmallMap : Map
-{
-	public SmallMap()
-	{
+public class SmallMap : Map {
+    public SmallMap() {
         Width = 10;
         Height = 10;
         generateMap();
-	}
+    }
 
 }
 

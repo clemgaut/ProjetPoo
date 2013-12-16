@@ -10,22 +10,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class UnitFactory<T>  : IUnitFactory<T> where T : Unit, new()
-{
-	public UnitFactory()
-	{
-	}
+public class UnitFactory<T> : IUnitFactory<T> where T : Unit, new() {
+    public UnitFactory() {
+    }
 
-	public virtual IEnumerable<Unit> getUnits(int unitNumber)
-	{
+    public virtual IEnumerable<Unit> getUnits(int unitNumber) {
         List<Unit> unitList = new List<Unit>();
 
-        for(int i=0; i<unitNumber; i++)
-        {
+        for(int i = 0; i < unitNumber; i++) {
             unitList.Add(new T());
         }
         return unitList;
-	}
+    }
 
 }
 
