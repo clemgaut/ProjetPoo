@@ -10,89 +10,71 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Unit : IUnit
-{
-	private int _defensive;
+public class Unit : IUnit {
 
-	private int _lifePoints;
-
-	private int _offensive;
-
+    private int _defensive;
+    private int _lifePoints;
+    private int _offensive;
     private int _line;
-
     private int _column;
-
     private double _movePoints;
 
-    public Unit()
-    {
+    public Unit() {
         _lifePoints = 5;
         _movePoints = 1;
         _defensive = 1;
         _offensive = 2;
     }
 
-	public virtual bool setLifePoints(int value)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void setLifePoints(int value) {
+        _lifePoints = value;
+    }
 
-	public virtual int getLine()
-	{
-		return _line;
-	}
+    public virtual int getLine() {
+        return _line;
+    }
 
-    public virtual int getColumn()
-    {
+    public virtual int getColumn() {
         return _column;
     }
 
-	public virtual int getDefensive()
-	{
-		return _defensive;
-	}
+    public virtual int getDefensive() {
+        return _defensive;
+    }
 
-	public virtual int getLifePoints()
-	{
-		return _lifePoints;
-	}
+    public virtual int getLifePoints() {
+        return _lifePoints;
+    }
 
-	public virtual int getOffensive()
-	{
-		return _offensive;
-	}
+    public virtual int getOffensive() {
+        return _offensive;
+    }
 
-	public virtual int getPoint()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual int getPoint() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual bool move(int line, int column)
-	{
+    public virtual bool move(int line, int column) {
         _line = line;
         _column = column;
 
         return true;
-	}
+    }
 
-	public virtual bool attack(int line, int column)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool attack(int line, int column) {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual bool hasMoves()
-	{
-		return _movePoints > 0;
-	}
+    public virtual bool hasMoves() {
+        return _movePoints > 0;
+    }
 
-	public virtual bool attack(Unit defUnit)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool attack(Unit defUnit) {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual bool isAlive()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool isAlive() {
+        return _lifePoints > 0;
+    }
 }
 

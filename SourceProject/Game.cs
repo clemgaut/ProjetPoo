@@ -95,9 +95,15 @@ public class Game : IGame {
         _activePlayer = _player1;
 	}
 
-	public virtual Unit getBestDefensiveUnit(int line, int column)
-	{
-		throw new System.NotImplementedException();
+	public virtual Unit getBestDefensiveUnit(int line, int column) {
+        List<Unit> unitsUnactivePlayer = getUnactivePlayer().getUnits(line, column);
+        Unit bestDefUnit = null;
+
+        foreach(Unit u in unitsUnactivePlayer) 
+            if(bestDefUnit == null || bestDefUnit.getDefensive() < u.getDefensive())
+                bestDefUnit = u;
+
+        return bestDefUnit;		
 	}
 
     public virtual bool checkEndfOfGame() {
