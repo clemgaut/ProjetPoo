@@ -54,8 +54,8 @@ namespace IHM
 
             game = builder.getGame();
 
-            Nation1Label.Content += nation1.ToString();
-            Nation2Label.Content += nation2.ToString();
+            Nation1Label.Content += "[" + nation1.ToString() + "]";
+            Nation2Label.Content += "[" + nation2.ToString() + "]";
 
             game.start();
         }
@@ -116,19 +116,18 @@ namespace IHM
         private void updateForStep()
         {
             updateUnitUI();
-            updateNationLabel();
+            updateInfoPanel();
         }
 
-        private void updateNationLabel()
+        private void updateInfoPanel()
         {
-            var activeLabel = Nation1Label;
-            var unactiveLabel = Nation2Label;
+            StepLabel.Content =  "Tours restants : " + game.getSteps();
+            Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
+            Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
 
-            if (!game.isPlayer1Active())
-            {
-                activeLabel = Nation2Label;
-                unactiveLabel = Nation1Label;
-            }
+            var activeLabel = (game.isPlayer1Active()) ? Nation1Label : Nation2Label;
+            var unactiveLabel = (game.isPlayer1Active()) ? Nation2Label : Nation1Label;
+
             activeLabel.Foreground = Brushes.GreenYellow;
             activeLabel.FontWeight = FontWeights.Bold;
             unactiveLabel.Foreground = Brushes.Red;

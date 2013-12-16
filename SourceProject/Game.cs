@@ -20,6 +20,8 @@ public class Game : IGame
 
     protected Player _activePlayer;
 
+    protected int _steps;
+
     public Game()
     {
     }
@@ -39,6 +41,14 @@ public class Game : IGame
         _player2 = p;
     }
 
+    public virtual Player getPlayer1() {
+        return _player1;
+    }
+
+    public virtual Player getPlayer2() {
+        return _player2;
+    }
+
     public virtual Map getMap()
     {
         return _map;
@@ -46,7 +56,7 @@ public class Game : IGame
 
 	public virtual void setMaxSteps(int max)
 	{
-		throw new System.NotImplementedException();
+        _steps = max;
 	}
 
 	public virtual Player getActivePlayer()
@@ -113,12 +123,19 @@ public class Game : IGame
 
 	public virtual void nextStep()
 	{
+        if (_steps > 0 && _activePlayer == _player2)
+            _steps--;
+
         if (_activePlayer == _player1)
             _activePlayer = _player2;
         else
             _activePlayer = _player1;
 	}
 
+    public virtual int getSteps()
+    {
+        return _steps;
+    }
 
 	public virtual Player getWinner()
 	{

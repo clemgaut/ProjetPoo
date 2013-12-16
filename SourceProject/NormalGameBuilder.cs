@@ -15,6 +15,7 @@ public class NormalGameBuilder : GameBuilder
 	{
         Map map = new NormalMap();
         _game.setMap(map);
+        _game.setMaxSteps(30);
         _unitNumber = 8;
         createPlayers(nation1, nation2);
 	}

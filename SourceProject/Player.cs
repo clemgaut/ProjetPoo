@@ -69,5 +69,9 @@ public class Player : IPlayer
 	{
 		return _nation;
 	}
+
+    public virtual int getNbUnits() {
+        return _nation.getUnitsNumber();
+    }
 }
 

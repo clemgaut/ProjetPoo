@@ -16,6 +16,7 @@ public class DemoGameBuilder : GameBuilder
         Map map = new DemoMap();
         _game.setMap(map);
         _unitNumber = 4;
+        _game.setMaxSteps(5);
         createPlayers(nation1, nation2);
 	}
 

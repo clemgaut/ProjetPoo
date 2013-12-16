@@ -15,6 +15,7 @@ public class SmallGameBuilder : GameBuilder
 	{
         Map map = new SmallMap();
         _game.setMap(map);
+        _game.setMaxSteps(20);
         _unitNumber = 6;
         createPlayers(nation1, nation2);
 	}
