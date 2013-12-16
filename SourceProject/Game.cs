@@ -10,34 +10,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Game : IGame
-{
-	protected Map _map;
+public class Game : IGame {
+    protected Map _map;
 
-	protected Player _player1;
+    protected Player _player1;
 
-	protected Player _player2;
+    protected Player _player2;
 
     protected Player _activePlayer;
 
     protected int _steps;
 
-    public Game()
-    {
+    public Game() {
     }
 
-	public virtual void setMap(Map map)
-	{
+    public virtual void setMap(Map map) {
         _map = map;
-	}
+    }
 
-    public void setPlayer1(Player p)
-    {
+    public void setPlayer1(Player p) {
         _player1 = p;
     }
 
-    public void setPlayer2(Player p)
-    {
+    public void setPlayer2(Player p) {
         _player2 = p;
     }
 
@@ -49,98 +44,81 @@ public class Game : IGame
         return _player2;
     }
 
-    public virtual Map getMap()
-    {
+    public virtual Map getMap() {
         return _map;
     }
 
-	public virtual void setMaxSteps(int max)
-	{
+    public virtual void setMaxSteps(int max) {
         _steps = max;
-	}
+    }
 
-	public virtual Player getActivePlayer()
-	{
-		return _activePlayer;
-	}
+    public virtual Player getActivePlayer() {
+        return _activePlayer;
+    }
 
-    public virtual Player getUnactivePlayer()
-    {
-        if (_activePlayer == _player1)
+    public virtual Player getUnactivePlayer() {
+        if(_activePlayer == _player1)
             return _player2;
 
-        if (_activePlayer == _player2)
+        if(_activePlayer == _player2)
             return _player1;
 
         return null;
     }
 
-    public virtual bool isPlayer1Active()
-    {
+    public virtual bool isPlayer1Active() {
         return _activePlayer == _player1;
     }
 
-	public virtual void checkWinner()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void checkWinner() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void endOfPlay()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void endOfPlay() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual bool fight()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool fight() {
+        throw new System.NotImplementedException();
+    }
 
 
-	public virtual bool move()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool move() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void onPropertyChanged()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual void onPropertyChanged() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void start()
-	{
+    public virtual void start() {
         _activePlayer = _player1;
-	}
+    }
 
-	public virtual Unit getBestDefensiveUnit(int x, int y)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual Unit getBestDefensiveUnit(int x, int y) {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual bool checkEndfOfGame()
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual bool checkEndfOfGame() {
+        throw new System.NotImplementedException();
+    }
 
-	public virtual void nextStep()
-	{
-        if (_steps > 0 && _activePlayer == _player2)
+    public virtual void nextStep() {
+        if(_steps > 0 && _activePlayer == _player2)
             _steps--;
 
-        if (_activePlayer == _player1)
+        if(_activePlayer == _player1)
             _activePlayer = _player2;
         else
             _activePlayer = _player1;
-	}
+    }
 
-    public virtual int getSteps()
-    {
+    public virtual int getSteps() {
         return _steps;
     }
 
-	public virtual Player getWinner()
-	{
-		throw new System.NotImplementedException();
-	}
-
+    public virtual Player getWinner() {
+        throw new System.NotImplementedException();
+    }
 }
 
