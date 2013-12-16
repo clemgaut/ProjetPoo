@@ -19,13 +19,13 @@
                 </Grid.ColumnDefinitions>
                 
                 <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
-                    <Label Name="Nation1Label" Content="Peuple : " />
-                    <Label Name="Units1Label" Content="Unité restantes : "/>
+                    <Label x:Name="Nation1Label" Content="Peuple : " />
+                    <Label x:Name="Units1Label" Content="Unité restantes : "/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
-                    <Label Name="Nation2Label" Content="Peuple : " />
-                    <Label Name="Units2Label" Content="Unité restantes : "/>
+                    <Label x:Name="Nation2Label" Content="Peuple : " />
+                    <Label x:Name="Units2Label" Content="Unité restantes : "/>
                 </StackPanel>
 
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Content="Fin du tour" Click="EndOfTurnButton_Click" Grid.Column="2" Grid.Row="0"/>

@@ -122,12 +122,12 @@ namespace IHM
         private void updateNationLabel()
         {
             var activeLabel = Nation1Label;
-            var unactiveLabel = Nation1Label;
+            var unactiveLabel = Nation2Label;
 
             if (!game.isPlayer1Active())
             {
                 activeLabel = Nation2Label;
-                unactiveLabel = Nation2Label;
+                unactiveLabel = Nation1Label;
             }
             activeLabel.Foreground = Brushes.GreenYellow;
             activeLabel.FontWeight = FontWeights.Bold;
