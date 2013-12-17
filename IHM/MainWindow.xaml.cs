@@ -26,7 +26,7 @@ namespace IHM {
         ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
         StackPanel _selectedUnit;
 
-        public MainWindow(EGameType mapType, ENation nation1, ENation nation2) {
+        public MainWindow(EGameType mapType, ENation nation1, ENation nation2, string nameP1, string nameP2) {
             InitializeComponent();
 
             switch(mapType) {
@@ -51,8 +51,11 @@ namespace IHM {
 
             game = builder.getGame();
 
-            Nation1Label.Content += "[" + nation1.ToString() + "]";
-            Nation2Label.Content += "[" + nation2.ToString() + "]";
+            game.getPlayer1().setName(nameP1);
+            game.getPlayer2().setName(nameP2);
+
+            Nation1Label.Content = nameP1 + " [" + nation1.ToString() + "]";
+            Nation2Label.Content = nameP2 + " [" + nation2.ToString() + "]";
 
             _selectedUnit = null;
 

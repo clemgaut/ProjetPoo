@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ihm="clr-namespace:IHM"
         WindowStartupLocation="CenterScreen"
-        Title="SmallWorld Game Launcher" Height="300" Width="300">
+        Title="SmallWorld Game Launcher" Height="400" Width="300">
 
     <Window.Resources>
         <ihm:NegatingConverter x:Key="NegatingConverter"/>
@@ -32,6 +32,7 @@
 
         <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
             <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 1" x:Name="labelComboBox1" Foreground="{Binding SelectedIndex, Converter={StaticResource SelectedIndexToTextLabelColorConverter}, ElementName=ComboBoxNationPlayer1, Mode=OneWay}"/>
+            <TextBox Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="150" Text="Joueur 1" x:Name="labelPlayer1"></TextBox>
             <ComboBox x:Name="ComboBoxNationPlayer1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150">
                 <ComboBoxItem x:Name="Gaul1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul2, Mode=OneWay}" Content="Gaulois"/>
                 <ComboBoxItem x:Name="Nain1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain2, Mode=OneWay}" Content="Nains"/>
@@ -41,12 +42,13 @@
 
         <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">
             <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Peuple joueur 2" x:Name="labelComboBox2" Foreground="{Binding SelectedIndex, Converter={StaticResource SelectedIndexToTextLabelColorConverter}, ElementName=ComboBoxNationPlayer2, Mode=OneWay}"/>
+            <TextBox Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="150" Text="Joueur 2" x:Name="labelPlayer2"></TextBox>
             <ComboBox x:Name="ComboBoxNationPlayer2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150">
                 <ComboBoxItem x:Name="Gaul2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul1, Mode=OneWay}" Content="Gaulois"/>
                 <ComboBoxItem x:Name="Nain2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain1, Mode=OneWay}" Content="Nains"/>
                 <ComboBoxItem x:Name="Viking2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Viking1, Mode=OneWay}" Content="Vikings"/>
             </ComboBox>
         </StackPanel>
-
+        
     </Grid>
 </Window>
