@@ -1,12 +1,12 @@
 ﻿using System;
 namespace SourceProject {
     interface IUnit {
-        bool attack(int line, int column);
+        bool attack(Unit defUnit);
         int getLine();
         int getColumn();
-        int getDefensive();
+        double getDefensive();
         int getLifePoints();
-        int getOffensive();
+        double getOffensive();
         int getPoint();
         bool hasMoves();
         bool isAlive();

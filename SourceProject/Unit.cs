@@ -6,15 +6,12 @@
 //------------------------------------------------------------------------------
 using SourceProject;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 public class Unit : IUnit {
 
-    private int _defensive;
+    private double _defensive;
     private int _lifePoints;
-    private int _offensive;
+    private double _offensive;
     private int _line;
     private int _column;
     private double _movePoints;
@@ -38,16 +35,16 @@ public class Unit : IUnit {
         return _column;
     }
 
-    public virtual int getDefensive() {
-        return _defensive;
+    public virtual double getDefensive() {
+        return _defensive * (_lifePoints/5);
     }
 
     public virtual int getLifePoints() {
         return _lifePoints;
     }
 
-    public virtual int getOffensive() {
-        return _offensive;
+    public virtual double getOffensive() {
+        return _offensive * (_lifePoints / 5);
     }
 
     public virtual int getPoint() {
@@ -71,12 +68,36 @@ public class Unit : IUnit {
 
     public virtual bool attack(Unit defUnit) {
 
-        /*double attWin = 1 - (0.5 * defUnit.getDefensive() / _offensive);
+        double pAttWin;
+        int result;
 
-        if (attWin == 100)*/
+        Random random = new Random();
+        int nbCombat = random.Next(3, Math.Max(_lifePoints, defUnit.getLifePoints()) + 2);
 
-        return true;
+        for(int i = 0; i < nbCombat; i++) {
 
+            pAttWin = (1 - (0.5 * defUnit.getDefensive() / getOffensive())) * 100;
+
+            if(pAttWin == 100) {
+                defUnit.setLifePoints(0);
+                return true;
+            }
+
+            result = random.Next(0, 100);
+
+            if(result <= pAttWin)
+                defUnit.setLifePoints(getLifePoints() - 1);
+            else
+                _lifePoints--;
+
+            if(!defUnit.isAlive())
+                return true;
+
+            if(!isAlive())
+                return false;
+        }
+
+        return false;
     }
 
     public virtual bool isAlive() {
