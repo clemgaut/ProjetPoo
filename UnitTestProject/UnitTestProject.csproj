@@ -54,6 +54,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestMapCreation.cs" />
     <Compile Include="TestPlayerCreation.cs" />
+    <Compile Include="TestBoxFactory.cs" />
+    <Compile Include="TestUnitFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SourceProject\SourceProject.csproj">

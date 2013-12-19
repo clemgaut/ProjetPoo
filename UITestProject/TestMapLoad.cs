@@ -33,7 +33,7 @@ namespace UITestProject
             Process.Start(psi);
         }
 
-        [TestMethod]
+        /*[TestMethod]
         public void TestDefaultMapLoad()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
@@ -44,7 +44,7 @@ namespace UITestProject
             this.UIMap.AssertDemoMap();
             this.UIMap.CloseApp();
 
-        }
+        }*/
 
         #region Additional test attributes
 
