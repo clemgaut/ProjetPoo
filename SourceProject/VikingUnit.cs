@@ -13,6 +13,19 @@ public class VikingUnit : Unit {
     public VikingUnit() {
     }
 
-    
+    public virtual int getPoint(Map m) {
+        Box b = m.getBox(_line, _column);
+        int point;
+
+        if(b.GetType() == typeof(DesertBox) || b.GetType() == typeof(SeaBox))
+            point = 0;
+        else 
+            point = 1;
+       
+        if(m.waterAround(_line, _column))
+            point++;
+
+        return point;
+    }
 }
 

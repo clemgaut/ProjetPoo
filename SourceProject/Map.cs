@@ -89,6 +89,22 @@ public abstract class Map : IMap {
         return l;
     }
 
+    public bool waterAround(int line, int column) {
+
+        for(int i = line-1; i <= line+1; i++)
+            for(int j = column-1; j <= column+1; j++)
+                if(!outOfMap(i, j) && (i != line || j != column)) // If we are not out of the map and not on the box
+                    if(_map[i, j].GetType() == typeof(SeaBox))
+                        return true;
+        
+        return false;
+    }
+
+    
+    private bool outOfMap(int line, int column) {
+        return line < 0 || line >= Width || column < 0 || column >= Height;
+    }
+
     /*
    * Convert a Box[,] to a List<int> according to the size of the map
   */
