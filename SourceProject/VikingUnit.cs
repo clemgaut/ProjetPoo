@@ -13,25 +13,6 @@ public class VikingUnit : Unit {
     public VikingUnit() {
     }
 
-    public virtual int getPoint(Map m) {
-      /*  Box b = m.getBox(_line, _column);
-        if(b.GetType() == typeof(EBoxType.LOWLAND) )
-
-             if(_map[line, column].GetType() == typeof(DesertBox))
-                    l.Add((int)EBoxType.DESERT);
-
-                if(_map[line, column].GetType() == typeof(ForestBox))
-                    l.Add((int)EBoxType.FOREST);
-
-                if(_map[line, column].GetType() == typeof(LowlandBox))
-                    l.Add((int)EBoxType.LOWLAND);
-
-                if(_map[line, column].GetType() == typeof(MountainBox))
-                    l.Add((int)EBoxType.MOUTAIN);
-
-                if(_map[line, column].GetType() == typeof(SeaBox))
-
-        */
-    }
+    
 }
 

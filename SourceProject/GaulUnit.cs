@@ -13,5 +13,15 @@ public class GaulUnit : Unit {
     public GaulUnit() {
     }
 
+    public virtual int getPoint(Map m) {
+        Box b = m.getBox(_line, _column);
+        
+        if(b.GetType() == typeof(LowlandBox))
+            return 2;
+        else if (b.GetType() == typeof(MountainBox))
+            return 0;
+        else
+            return 1;
+    }
 }
 
