@@ -45,6 +45,10 @@ public class Nation : INation {
         return units;
     }
 
+    public virtual void deleteDeadUnits() {
+        units = units.Where(u => u.isAlive());
+    }
+
     public virtual Unit getUnit(int i) {
         return units.ElementAt(i);
     }

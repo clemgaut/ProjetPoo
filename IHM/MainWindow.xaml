@@ -47,7 +47,7 @@
         </StackPanel>
 
 
-        <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Horizontal" DockPanel.Dock="Bottom" />
+        
 
         <!--   <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal">
@@ -63,9 +63,13 @@
             <Label Name="InfoLabel"/>
         </StackPanel>
 
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Top">
-            <Grid Name="mapGrid" Background="Orange" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Center">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Top">
+                <Grid Name="mapGrid" Background="Orange" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </ScrollViewer>
+            <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
+        </StackPanel>
 
+        
     </DockPanel>
 </Window>

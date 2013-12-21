@@ -200,8 +200,23 @@ namespace IHM {
             //If the opponent has no units, we move
             if(game.getUnactivePlayer().getUnits(row, column).Count == 0)
                 unit.move(row, column);
-            else
-                unit.attack(game.getBestDefensiveUnit(row, column));
+            else {
+                Unit defUnit = null;
+                bool result = true;
+
+                // While there are defensive unit and we win battle we continue to fight
+                while(result && (defUnit = game.getBestDefensiveUnit(row, column)) != null) {
+                    result = unit.attack(defUnit);
+                    game.getUnactivePlayer().getNation().deleteDeadUnits();
+                }
+
+                // If we win battle
+                if(result)
+                    unit.move(row, column);
+                else
+                    game.getActivePlayer().getNation().deleteDeadUnits();
+
+            }
 
             if(!hasUnits(old_row, old_column)) {
                 getRectangle(old_row, old_column).Stroke = Brushes.Gray;
