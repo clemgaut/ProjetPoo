@@ -21,15 +21,17 @@
                 <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
                     <Label x:Name="Nation1Label" Content="Peuple " />
                     <Label x:Name="Units1Label" Content="Unité restantes : "/>
+                    <Label x:Name="Points1Label" Content="Point : "/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
                     <Label x:Name="Nation2Label" Content="Peuple " />
                     <Label x:Name="Units2Label" Content="Unité restantes : "/>
+                    <Label x:Name="Points2Label" Content="Point : "/>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" Grid.Column="2" Grid.Row="0">
-                    <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0">
+                    <Button HorizontalAlignment="Center" Height="25" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
                     <Label x:Name="StepLabel" Content="Tours restants : " />
                 </StackPanel>
                 <!--<StackPanel DockPanel.Dock="Bottom">

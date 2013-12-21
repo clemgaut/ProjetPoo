@@ -66,5 +66,15 @@ public class Player : IPlayer {
     public virtual int getNbUnits() {
         return _nation.getUnitsNumber();
     }
+
+    public virtual int getPoints(Map m) {
+
+        int point = 0;
+
+        foreach(Unit u in _nation.getUnits())
+            point += u.getPoint(m);
+
+        return point;
+    }
 }
 

@@ -123,6 +123,7 @@ namespace IHM {
             StepLabel.Content = "Tours restants : " + game.getSteps();
             Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
             Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
+            Points1Label.Content = "Points : " + game.getPlayer1().getNbUnits();
 
             var activeLabel = (game.isPlayer1Active()) ? Nation1Label : Nation2Label;
             var unactiveLabel = (game.isPlayer1Active()) ? Nation2Label : Nation1Label;
