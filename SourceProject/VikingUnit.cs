@@ -13,7 +13,7 @@ public class VikingUnit : Unit {
     public VikingUnit() {
     }
 
-    public virtual int getPoint(Map m) {
+    public override int getPoint(Map m) {
         Box b = m.getBox(_line, _column);
         int point;
 

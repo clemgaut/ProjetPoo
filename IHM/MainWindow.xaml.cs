@@ -123,7 +123,8 @@ namespace IHM {
             StepLabel.Content = "Tours restants : " + game.getSteps();
             Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
             Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
-            Points1Label.Content = "Points : " + game.getPlayer1().getNbUnits();
+            Points1Label.Content = "Points : " + game.getPlayer1().getPoints(game.getMap());
+            Points2Label.Content = "Points : " + game.getPlayer2().getPoints(game.getMap());
 
             var activeLabel = (game.isPlayer1Active()) ? Nation1Label : Nation2Label;
             var unactiveLabel = (game.isPlayer1Active()) ? Nation2Label : Nation1Label;
@@ -179,7 +180,7 @@ namespace IHM {
             selectedVisual = rectangle;
             selectedVisual.Tag = tile;
             rectangle.StrokeThickness = 3;
-            InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", column, row, tile);
+            InfoLabel.Content = String.Format("[{0:00} - {1:00}] {2}", row, column, tile);
 
             if(_selectedUnit != null) {
                 make_action(row, column);

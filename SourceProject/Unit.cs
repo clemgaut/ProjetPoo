@@ -23,40 +23,42 @@ public class Unit : IUnit {
      * Set the unit life point to value
      * @param value Number of life point
      */
-    public virtual void setLifePoints(int value) {
+    public void setLifePoints(int value) {
         _lifePoints = value;
     }
 
-    public virtual int getLine() {
+    public int getLine() {
         return _line;
     }
 
-    public virtual int getColumn() {
+    public int getColumn() {
         return _column;
     }
 
-    public virtual double getDefensive() {
+    public double getDefensive() {
         return _defensive * (_lifePoints/5);
     }
 
-    public virtual int getLifePoints() {
+    public int getLifePoints() {
         return _lifePoints;
     }
 
-    public virtual double getOffensive() {
+    public double getOffensive() {
         return _offensive * (_lifePoints / 5);
     }
 
-    public abstract virtual int getPoint(Map m);
+    public virtual int getPoint(Map m) {
+        return 10;
+    }
 
-    public virtual bool move(int line, int column) {
+    public bool move(int line, int column) {
         _line = line;
         _column = column;
 
         return true;
     }
 
-    public virtual bool hasMoves() {
+    public bool hasMoves() {
         return _movePoints > 0;
     }
 
@@ -65,7 +67,7 @@ public class Unit : IUnit {
      * @param defUnit the unit to attack
      * @return true if the unit kill the defensive unit, false if the unit die
      */
-    public virtual bool attack(Unit defUnit) {
+    public bool attack(Unit defUnit) {
 
         double pAttWin;
         int result;
@@ -99,7 +101,7 @@ public class Unit : IUnit {
         return false;
     }
 
-    public virtual bool isAlive() {
+    public bool isAlive() {
         return _lifePoints > 0;
     }
 }

@@ -7,7 +7,7 @@ namespace SourceProject {
         double getDefensive();
         int getLifePoints();
         double getOffensive();
-        int getPoint();
+        int getPoint(Map m);
         bool hasMoves();
         bool isAlive();
         bool move(int line, int column);

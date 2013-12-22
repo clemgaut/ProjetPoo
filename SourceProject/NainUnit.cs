@@ -7,7 +7,7 @@ public class NainUnit : Unit {
     public NainUnit() {
     }
 
-    public virtual int getPoint(Map m) {
+    public override int getPoint(Map m) {
         Box b = m.getBox(_line, _column);
 
         if(b.GetType() == typeof(ForestBox))
