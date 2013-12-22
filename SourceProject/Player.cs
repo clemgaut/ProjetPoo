@@ -67,14 +67,16 @@ public class Player : IPlayer {
         return _nation.getUnitsNumber();
     }
 
-    public virtual int getPoints(Map m) {
+    public virtual int getPoints() {
+        return _points;
+    }
 
-        int point = 0;
-
-        foreach(Unit u in _nation.getUnits())
-            point += u.getPoint(m);
-
-        return point;
+    /*
+     * Update the player points (called at the end of the player's step)
+     */
+    public virtual void updatePoints(Map m) {
+        foreach (Unit u in _nation.getUnits())
+            _points += u.getPoint(m);
     }
 }
 

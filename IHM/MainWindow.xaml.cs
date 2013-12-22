@@ -66,8 +66,22 @@ namespace IHM {
          * Click on end of turn button
          */
         private void EndOfTurnButton_Click(object sender, RoutedEventArgs e) {
+            Player winner = null;
+
             game.nextStep();
             updateForStep();
+            if (game.checkEndfOfGame()) {
+                winner = game.getWinner();
+
+                if (winner == null)
+                    MessageBox.Show(this, "Match nul !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
+                else
+                    MessageBox.Show(this, winner.getName() + " vainqueur !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
+
+                StartUpWindow startUpWindow = new StartUpWindow();
+                startUpWindow.Show();
+                this.Close();
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e) {
@@ -124,8 +138,8 @@ namespace IHM {
             StepLabel.Content = "Tours restants : " + game.getSteps();
             Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
             Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
-            Points1Label.Content = "Points : " + game.getPlayer1().getPoints(game.getMap());
-            Points2Label.Content = "Points : " + game.getPlayer2().getPoints(game.getMap());
+            Points1Label.Content = "Points : " + game.getPlayer1().getPoints();
+            Points2Label.Content = "Points : " + game.getPlayer2().getPoints();
 
             var activeLabel = (game.isPlayer1Active()) ? Nation1Label : Nation2Label;
             var unactiveLabel = (game.isPlayer1Active()) ? Nation2Label : Nation1Label;
@@ -273,9 +287,11 @@ namespace IHM {
             selectUnit(stack);
 
             e.Handled = true;
-
         }
 
+        /**
+         * Select the unit according to the object selected
+         */
         private void selectUnit(StackPanel selectedUnit) {
             if(_selectedUnit != null) {
                 Label lbl = _selectedUnit.Children.OfType<Label>().First();
@@ -284,11 +300,17 @@ namespace IHM {
 
             var unit = selectedUnit.Tag as Unit;
 
+            /*
+             * Evite la sélection d'une unité par le joueur adverse lors du changement de tour
+             */
             if(game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
-                Label newLbl = selectedUnit.Children.OfType<Label>().First();
-                newLbl.FontWeight = FontWeights.Bold;
+                if (selectedUnit != _selectedUnit) {
+                    Label newLbl = selectedUnit.Children.OfType<Label>().First();
+                    newLbl.FontWeight = FontWeights.Bold;
 
-                _selectedUnit = selectedUnit;
+                    _selectedUnit = selectedUnit;
+                } else
+                    _selectedUnit = null;
             }
         }
 

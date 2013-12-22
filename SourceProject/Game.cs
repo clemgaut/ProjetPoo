@@ -106,13 +106,22 @@ public class Game : IGame {
         return bestDefUnit;
     }
 
+    /**
+     * Return true if the game is over
+     */
     public virtual bool checkEndfOfGame() {
-        throw new System.NotImplementedException();
+        return (_steps == 0 || _player1.getNbUnits() == 0 || _player2.getNbUnits()==0);
     }
 
+    /**
+     * Change the current player, update points and update step number
+     */
     public virtual void nextStep() {
         if(_steps > 0 && _activePlayer == _player2)
             _steps--;
+
+        if (_activePlayer != null)
+            _activePlayer.updatePoints(_map);
 
         if(_activePlayer == _player1)
             _activePlayer = _player2;
@@ -125,7 +134,12 @@ public class Game : IGame {
     }
 
     public virtual Player getWinner() {
-        throw new System.NotImplementedException();
+        if (_player1.getPoints() < _player2.getPoints())
+            return _player2;
+        if (_player1.getPoints() > _player2.getPoints())
+            return _player1;
+
+        return null;
     }
 }
 
