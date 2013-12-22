@@ -73,22 +73,23 @@ namespace IHM {
         private void Window_Loaded(object sender, RoutedEventArgs e) {
             map = game.getMap();
 
-            for(int c = 0; c < map.Width; c++) {
+            for(int i = 0; i < map.Width; i++) {
                 mapGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
+                mapGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
             }
 
             for(int l = 0; l < map.Height; l++) {
-                mapGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
                 for(int c = 0; c < map.Width; c++) {
                     var tile = map.getBox(l, c);
                     var rect = createRectangle(l, c, tile);
                     mapGrid.Children.Add(rect);
                 }
             }
+
             updateForStep();
         }
 
-        private Rectangle createRectangle(int c, int l, Box tile) {
+        private Rectangle createRectangle(int l, int c, Box tile) {
             var rectangle = new Rectangle();
             if(tile is ForestBox)
                 rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.FOREST);

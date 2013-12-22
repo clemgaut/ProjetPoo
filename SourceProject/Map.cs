@@ -102,7 +102,7 @@ public abstract class Map : IMap {
 
     
     private bool outOfMap(int line, int column) {
-        return line < 0 || line >= Width || column < 0 || column >= Height;
+        return line < 0 || line >= Height || column < 0 || column >= Width;
     }
 
     /*
