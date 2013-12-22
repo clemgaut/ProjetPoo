@@ -108,6 +108,9 @@
       <Name>SourceProject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="smallworld2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>copy "$(SolutionDir)$(ConfigurationName)\LibCpp.dll" "$(TargetDir)"</PreBuildEvent>

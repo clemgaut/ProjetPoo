@@ -55,5 +55,25 @@ namespace IHM {
                 this.Close();
             }
         }
+
+        private void ComboBoxNation_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            StartUpButton.IsEnabled = (ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1);
+        }
+
+        private void labelPlayer2_Focus(object sender, RoutedEventArgs e) {
+            if(labelPlayer2.IsFocused && labelPlayer2.Text == "Joueur 2")
+                labelPlayer2.Text = "";
+
+            if(!labelPlayer2.IsFocused && labelPlayer2.Text == "")
+                labelPlayer2.Text = "Joueur 2";
+        }
+
+        private void labelPlayer1_Focus(object sender, RoutedEventArgs e) {
+            if(labelPlayer1.IsFocused && labelPlayer1.Text == "Joueur 1")
+                labelPlayer1.Text = "";
+
+            if(!labelPlayer1.IsFocused && labelPlayer1.Text == "")
+                labelPlayer1.Text = "Joueur 1";
+        }
     }
 }
