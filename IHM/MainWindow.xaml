@@ -49,7 +49,7 @@
         </StackPanel>
 
 
-        
+
 
         <!--   <Grid VerticalAlignment="Bottom">
                 <StackPanel Orientation="Horizontal">
@@ -72,6 +72,8 @@
             <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
         </StackPanel>
 
-        
+
+
     </DockPanel>
+
 </Window>

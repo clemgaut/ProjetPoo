@@ -3,11 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ihm="clr-namespace:IHM"
         WindowStartupLocation="CenterScreen"
-        Title="SmallWorld Game Launcher" Height="480" Width="640">
+        Title="Bienvenue sur SmallWorld" Height="480" Width="640">
 
 
     <Window.Background>
-        <ImageBrush ImageSource="smallworld2.jpg" Opacity="0.75"/>
+        <ImageBrush ImageSource="smallworld2.jpg"/>
     </Window.Background>
 
     <Window.Resources>
@@ -43,7 +43,7 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="StartUpButton" Content="Lancer Partie" Width="120" Height="24" Margin="20" IsEnabled="False" Click="StartUpButton_Click" />
+        <Button x:Name="StartUpButton" Content="Lancer la partie" Width="120" Height="24" Margin="20" IsEnabled="False" Click="StartUpButton_Click" />
 
     </StackPanel>
 </Window>
