@@ -3,9 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SmallWorld" MinHeight="600" MinWidth="600"
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        Background="Gray"
         Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Resources>
+        <Cursor x:Key="Cursor1">Arrow</Cursor>
+    </Window.Resources>
 
+    <Window.Background>
+        <ImageBrush ImageSource="background.jpeg"/>
+    </Window.Background>
     <DockPanel x:Name="panel">
 
         <StackPanel DockPanel.Dock="Top">
@@ -19,22 +24,27 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
-                    <Label x:Name="Nation1Label" Content="Peuple " />
-                    <Label x:Name="Units1Label" Content="Unité restantes : "/>
-                    <Label x:Name="Points1Label" Content="Point : "/>
-                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="3" Grid.Column="0" Grid.Row="0" Margin="20" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Background="DodgerBlue" Grid.Column="0" Grid.Row="0">
+                        <Label x:Name="Nation1Label" Content="Peuple " FontWeight="Bold" FontFamily="Bookman Old Style" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontSize="14" />
+                        <Label x:Name="Units1Label" Content="Unité restantes : "/>
+                        <Label x:Name="Points1Label" Content="Point : "/>
+                    </StackPanel>
+                </Border>
 
-                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
-                    <Label x:Name="Nation2Label" Content="Peuple " />
-                    <Label x:Name="Units2Label" Content="Unité restantes : "/>
-                    <Label x:Name="Points2Label" Content="Point : "/>
+                <Border BorderThickness="3" Grid.Column="1" Grid.Row="0" Margin="20" BorderBrush="Black">
+                    <StackPanel Orientation="Vertical" Background="Firebrick" >
+                        <Label x:Name="Nation2Label" Content="Peuple " FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
+                        <Label x:Name="Units2Label" Content="Unité restantes : "/>
+                        <Label x:Name="Points2Label" Content="Point : "/>
+                    </StackPanel>
+                </Border>
+                <Border BorderThickness="3" Grid.Column="2" Grid.Row="0" Margin="20" BorderBrush="Black" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Background="DarkOliveGreen" >
+                    <Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
+                    <Label x:Name="StepLabel" FontWeight="ExtraBold" Content="Tours restants : " />
                 </StackPanel>
-
-                <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0">
-                    <Button HorizontalAlignment="Center" Height="25" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
-                    <Label x:Name="StepLabel" Content="Tours restants : " />
-                </StackPanel>
+                </Border>
             </Grid>
         </StackPanel>
 
@@ -45,10 +55,10 @@
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Center">
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Left">
-                <Border BorderBrush="Black" BorderThickness="2">
-                  <Grid Name="mapGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
-             </Border>
-               
+
+                <Grid Name="mapGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+
+
             </ScrollViewer>
             <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
         </StackPanel>
