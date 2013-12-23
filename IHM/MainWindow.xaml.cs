@@ -268,7 +268,12 @@ namespace IHM {
 
                 foreach(Unit u in nonEmptyList) {
                     StackPanel stack = getUnitDescription(u);
-                    unitInfoPanel.Children.Add(stack);
+                    Border border = new Border();
+                    border.BorderThickness = new Thickness(2);
+                    border.Child = stack;
+                    border.Margin = new Thickness(10);
+                    
+                    unitInfoPanel.Children.Add(border);
 
                     //If it's an active player unit, we add events to select it
                     if(nonEmptyList == unitsActivePlayer)
@@ -294,8 +299,10 @@ namespace IHM {
          */
         private void selectUnit(StackPanel selectedUnit) {
             if(_selectedUnit != null) {
-                Label lbl = _selectedUnit.Children.OfType<Label>().First();
-                lbl.FontWeight = FontWeights.Normal;
+                Border parent = (Border)_selectedUnit.Parent;
+                parent.BorderThickness = new Thickness(2);
+                foreach(Label lbl in _selectedUnit.Children)
+                    lbl.FontWeight = FontWeights.Normal;
             }
 
             var unit = selectedUnit.Tag as Unit;
@@ -305,9 +312,11 @@ namespace IHM {
              */
             if(game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
                 if (selectedUnit != _selectedUnit) {
-                    Label newLbl = selectedUnit.Children.OfType<Label>().First();
-                    newLbl.FontWeight = FontWeights.Bold;
-
+                    Border parent = (Border)selectedUnit.Parent;
+                    parent.BorderThickness = new Thickness(3);
+                    foreach(Label lbl in selectedUnit.Children)
+                        lbl.FontWeight = FontWeights.Bold;
+                   
                     _selectedUnit = selectedUnit;
                 } else
                     _selectedUnit = null;
@@ -319,13 +328,22 @@ namespace IHM {
          */
         private StackPanel getUnitDescription(Unit u) {
             StackPanel stack = new StackPanel();
-            stack.Orientation = Orientation.Vertical;
+            stack.Orientation = Orientation.Horizontal;
+            stack.Background = new SolidColorBrush(Colors.Gray);
 
-            Label lbl = new Label();
-            lbl.Content = "Life : " + u.getLifePoints();
+            Label lbLife = new Label();
+            lbLife.Content = "Vie : " + u.getLifePoints();
+            Label lbPoint = new Label();
+            lbPoint.Content = "Point : " + u.getPoint(game.getMap());
+            Label lbOff = new Label();
+            lbOff.Content = "Attaque : " + u.getOffensive();
+            Label lbDeff = new Label();
+            lbDeff.Content = "Defense : " + u.getDefensive();
 
-            stack.Children.Add(lbl);
-
+            stack.Children.Add(lbLife);
+            stack.Children.Add(lbPoint);
+            stack.Children.Add(lbOff);
+            stack.Children.Add(lbDeff);
             //we add a reference to the unit in the stack
             stack.Tag = u;
 
