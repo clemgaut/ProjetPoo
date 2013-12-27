@@ -117,7 +117,7 @@ int* Algo::initCoordonates(int map[], int size)
 * return : an array containing nbMoves triple : (row, col, weight)
 */
 
-int* Algo::getBestMove(int map[], int size, int unitType, int pos, int opponents[], int nbOpponents, int *nbMoves) {
+int* Algo::getBestMoves(int map[], int size, int unitType, int pos, int opponents[], int nbOpponents, int *nbMoves) {
 	int * bestMoves = NULL;
 	(*nbMoves) = 0;
 

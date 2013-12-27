@@ -54,5 +54,21 @@ namespace UnitTestProject
             Assert.IsTrue(l[0] < size);
             Assert.IsTrue(l[1] < size);
         }
+
+        [TestMethod]
+        public void TestPossibleMoves() {
+            GameBuilder builder = new NormalGameBuilder(ENation.GAUL, ENation.NAIN);
+            Game g = builder.getGame();
+            g.start();
+
+            WrapperAlgo w = new WrapperAlgo();
+            ENation nat = g.getActivePlayer().getNation().nationType;
+            int pos = g.getActivePlayer().getNation().getUnit(0).getLine() * g.getMap().Width + g.getActivePlayer().getNation().getUnit(0).getColumn();
+
+            System.Collections.Generic.List<int> l = w.possibleMoves(g.getMap().convertMapToIntList(), (int) nat, pos, g.getOpponentUnitsPositions());
+
+            Assert.AreEqual(l.Count % 2, 0);
+
+        }
     }
 }

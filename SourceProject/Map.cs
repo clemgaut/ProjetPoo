@@ -108,7 +108,7 @@ public abstract class Map : IMap {
     /*
    * Convert a Box[,] to a List<int> according to the size of the map
   */
-    protected List<int> convertMapToIntList() {
+    public List<int> convertMapToIntList() {
         List<int> l = new List<int>();
 
         for(int line = 0; line < Height; line++) {

@@ -16,7 +16,7 @@ public:
 	DLL int Algo::interpolation_cos (int a, int b, double x);
 	DLL int Algo::interpolation_cos2D (int a, int b, int c, int d, double x, double y);
 	DLL int* initCoordonates(int map[], int size);
-	DLL int* getBestMove(int map[], int size, int unitType, int pos, int opponents[], int nbOpponents, int *nbMoves);
+	DLL int* getBestMoves(int map[], int size, int unitType, int pos, int opponents[], int nbOpponents, int *nbMoves);
 	DLL int getNbOpponents(int pos, int* opponents, int nbAllOpponents);
 	DLL int getPoints(int pos, int* map, int size, int unitType);
 	DLL bool hasWaterBorder(int pos, int* map, int size);

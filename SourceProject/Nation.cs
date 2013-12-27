@@ -14,7 +14,10 @@ public class Nation : INation {
 
     private IEnumerable<Unit> units;
     private IUnitFactory<Unit> unitFactory;
-    private ENation nationType;
+    public ENation nationType {
+        set;
+        get;
+    }
 
     public Nation(ENation nation, int unitNumber) {
         nationType = nation;

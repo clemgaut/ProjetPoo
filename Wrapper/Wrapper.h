@@ -2,6 +2,7 @@
 #pragma once
 
 #include "Algo.h"
+#include <math.h>
 
 using namespace System;
 
@@ -46,6 +47,30 @@ namespace Wrapper {
 			delete[] initCoordC;
 
 			return initCoord;
+		}
+
+		System::Collections::Generic::List<int>^ possibleMoves(System::Collections::Generic::List<int>^ map, int unitType, int pos, System::Collections::Generic::List<int>^ opponents) {
+			pin_ptr<int> pmap = &map->ToArray()[0];
+			int* mapC = pmap;
+
+			pin_ptr<int> popp = &opponents->ToArray()[0];
+			int* oppC = popp;
+
+			int nbMoves = 0;
+			int* moves = algoCpp->getBestMoves(mapC, ((int)sqrt((double)map->Count)), unitType, pos, oppC, opponents->Count, &nbMoves);
+
+			System::Collections::Generic::List<int>^ lMoves = gcnew System::Collections::Generic::List<int>();
+
+			//We skip the weight for now
+			for(int i = 0; i < 3*nbMoves;) {
+				lMoves->Add(moves[i++]);
+				lMoves->Add(moves[i++]);
+				moves[i++];
+			}
+
+			delete[] moves;
+
+			return lMoves;
 		}
 		
 

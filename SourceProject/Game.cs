@@ -66,6 +66,18 @@ public class Game : IGame {
         return null;
     }
 
+    /**
+     * Return a list with the int position of the opponent units (row*width+col)
+     */
+    public virtual List<int> getOpponentUnitsPositions() {
+        List<int> l = new List<int>();
+
+        foreach (Unit u in getUnactivePlayer().getNation().getUnits()) {
+            l.Add(u.getLine() * _map.Width + u.getColumn());
+        }
+        return l;
+    }
+
     public virtual bool isPlayer1Active() {
         return _activePlayer == _player1;
     }
