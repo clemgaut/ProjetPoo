@@ -25,6 +25,7 @@ namespace IHM {
         Rectangle selectedVisual;
         ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
         StackPanel _selectedUnit;
+        Wrapper.WrapperAlgo wrap = new Wrapper.WrapperAlgo();
 
         public MainWindow(EGameType mapType, ENation nation1, ENation nation2, string nameP1, string nameP2) {
             InitializeComponent();
@@ -67,6 +68,9 @@ namespace IHM {
          */
         private void EndOfTurnButton_Click(object sender, RoutedEventArgs e) {
             Player winner = null;
+            _selectedUnit = null;
+
+            setDefaultOpacity();
 
             game.nextStep();
             updateForStep();
@@ -186,6 +190,8 @@ namespace IHM {
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
 
+            setDefaultOpacity();
+
             if(selectedVisual != null) {
                 if(hasUnits(Grid.GetRow(selectedVisual), Grid.GetColumn(selectedVisual)))
                     selectedVisual.StrokeThickness = 2;
@@ -286,10 +292,29 @@ namespace IHM {
             }
         }
 
+        /**
+         * Called when we click on one unit
+         */
         private void unitStackPanel_MouseDown(object sender, MouseButtonEventArgs e) {
             var stack = sender as StackPanel;
 
             selectUnit(stack);
+
+            if (_selectedUnit != null) {
+                ENation nation = game.getActivePlayer().getNation().nationType;
+                Unit u = (Unit) _selectedUnit.Tag;
+                int pos = u.getLine() * map.Width + u.getColumn();
+                List<int> moves = wrap.possibleMoves(map.convertMapToIntList(), (int) nation, pos, game.getOpponentUnitsPositions());
+
+                for (int i = 0; i < moves.Count; ) {
+                    int row = moves[i++];
+                    int col = moves[i++];
+
+                    Rectangle r = getRectangle(row, col);
+                    r.Opacity = 0.5;
+                }
+            } else
+                setDefaultOpacity();
 
             e.Handled = true;
         }
@@ -364,6 +389,12 @@ namespace IHM {
                     selectedVisual.StrokeThickness = 1;
             }
             selectedVisual = null;
+            setDefaultOpacity();
+        }
+
+        private void setDefaultOpacity() {
+            foreach (Rectangle r in mapGrid.Children)
+                r.Opacity = 1;
         }
     }
 }

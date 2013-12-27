@@ -110,6 +110,10 @@
       <Project>{07006e94-91f0-44c2-b20e-7a216dfdb884}</Project>
       <Name>SourceProject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Wrapper\Wrapper.vcxproj">
+      <Project>{8d6c184e-5bcf-4e01-8ef2-331e045f3b1b}</Project>
+      <Name>Wrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="smallworld2.jpg" />

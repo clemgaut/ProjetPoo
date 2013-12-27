@@ -53,8 +53,12 @@ namespace Wrapper {
 			pin_ptr<int> pmap = &map->ToArray()[0];
 			int* mapC = pmap;
 
-			pin_ptr<int> popp = &opponents->ToArray()[0];
-			int* oppC = popp;
+			int* oppC = 0;
+
+			if(opponents->Count > 0) {
+				pin_ptr<int> popp = &opponents->ToArray()[0];
+				oppC = popp;
+			}
 
 			int nbMoves = 0;
 			int* moves = algoCpp->getBestMoves(mapC, ((int)sqrt((double)map->Count)), unitType, pos, oppC, opponents->Count, &nbMoves);
