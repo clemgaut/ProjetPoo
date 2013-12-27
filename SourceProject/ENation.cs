@@ -11,7 +11,7 @@ using System.Text;
 
 public enum ENation : int {
 
-    GAUL,
+    GAUL = 1,
     NAIN,
     VIKING,
 }

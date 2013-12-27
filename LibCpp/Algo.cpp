@@ -100,3 +100,104 @@ int* Algo::initCoordonates(int map[], int size)
 
 	return initCoord;
 }
+
+/**
+* map[i] :  DESERT = 1,
+    FOREST,
+    LOWLAND,
+    MOUTAIN,
+    SEA,
+
+* unitType : GAUL = 1,
+    NAIN,
+    VIKING,
+
+* nbMoves : pointer referencing the number of moves found.
+
+* return : an array containing nbMoves triple : (row, col, weight)
+*/
+
+int* Algo::getBestMove(int map[], int size, int unitType, int pos, int opponents[], int nbOpponents, int *nbMoves) {
+	int * bestMoves = NULL;
+	(*nbMoves) = 0;
+
+	int unitRow = pos / size;
+	int unitCol = pos % size;
+
+	for(int row = 0; row < size; row ++) {
+		for(int col = 0; col < size; col++) {
+			// If (the tile isn't too far and not a sea (except for viking)) or is a mountain for nain on a mountain
+			if(((abs(unitRow - row) + abs(unitCol - col)) <= 1 && (unitType == 3 || map[row*size+col] != 5)) 
+				|| (unitType == 2 && map[row*size+col] == 4 && map[pos] == 4)) {
+				(*nbMoves)++;
+				bestMoves = (int*)realloc(bestMoves, 3 * (*nbMoves)*sizeof(int));
+
+				if(bestMoves != NULL) {
+					bestMoves[((*nbMoves) - 1) * 3] = row;
+					bestMoves[((*nbMoves) - 1) * 3 + 1] = col;
+					bestMoves[((*nbMoves) - 1) * 3 + 2] = getPoints(row*size + col, map, size, unitType) - getNbOpponents(row*size + col, opponents, nbOpponents);
+				}
+			}
+		}
+	}
+	return bestMoves;
+}
+
+int Algo::getNbOpponents(int pos, int* opponents, int nbAllOpponents) {
+	int nbOpponents = 0;
+
+	for(int i = 0; i < nbAllOpponents; i++) {
+		if(opponents[i] == pos)
+			nbOpponents++;
+	}
+	return nbOpponents;
+}
+
+/**
+* tileType[i] :  DESERT = 1,
+FOREST,
+LOWLAND,
+MOUTAIN,
+SEA,
+
+* unitType : GAUL = 1,
+NAIN,
+VIKING,
+*/
+int Algo::getPoints(int pos, int* map, int size, int unitType) {
+	int points = 1;
+
+	if(unitType == 1 && map[pos] == 3)
+		points++;
+	if(unitType == 1 && map[pos] == 4)
+		points--;
+
+	if(unitType == 2 && map[pos] == 2)
+		points++;
+	if(unitType == 2 && map[pos] == 3)
+		points--;
+
+	if(unitType == 3 && hasWaterBorder(pos, map, size))
+		points++;
+	if(unitType == 3 && map[pos] == 1)
+		points--;
+
+	return points;
+}
+
+bool Algo::hasWaterBorder(int pos, int* map, int size) {
+	int unitRow = pos / size;
+	int unitCol = pos % size;
+
+	bool hasWater = false;
+
+	for(int row = unitRow - 1; row <= unitRow + 1; row++) {
+		for(int col = unitCol - 1; col <= unitCol + 1; col++) {
+			if(row > 0 && col > 0 && row < size && col < size) {
+				if(map[row*size + col] == 5)
+					hasWater = true;
+			}
+		}
+	}
+	return hasWater;
+}
