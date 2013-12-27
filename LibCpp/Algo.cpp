@@ -181,6 +181,8 @@ int Algo::getPoints(int pos, int* map, int size, int unitType) {
 		points++;
 	if(unitType == 3 && map[pos] == 1)
 		points--;
+	if(unitType == 3 && map[pos] == 5)
+		points--;
 
 	return points;
 }

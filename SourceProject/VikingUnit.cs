@@ -27,5 +27,32 @@ public class VikingUnit : Unit {
 
         return point;
     }
+    public override bool move(int line, int column, Map m) {
+        bool move = canMove(line, column, m);
+        if (move) {
+            _line = line;
+            _column = column;
+            _movePoints--;
+        }
+        return move;
+    }
+
+    public override bool canMove(int line, int column, Map m) {
+        if (_movePoints < 1)
+            return false;
+        if (_line < 0 || _column < 0) {
+            _line = line;
+            _column = column;
+            _movePoints--;
+            return true;
+        } else {
+            if ((Math.Abs(line - _line) + Math.Abs(column - _column)) > 1)
+                return false;
+            else {
+
+                return true;
+            }
+        }
+    }
 }
 

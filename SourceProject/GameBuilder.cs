@@ -26,10 +26,14 @@ public abstract class GameBuilder : IGameBuilder {
         Nation nationPlayer1 = new Nation(nation1, _unitNumber);
         Nation nationPlayer2 = new Nation(nation2, _unitNumber);
 
-        List<List<int>> initCoord = (List<List<int>>)_game.getMap().getInitCoordonates();
+        bool nation1Place = false, nation2Place = false;
 
-        nationPlayer1.setInitBox(initCoord[0][0], initCoord[0][1]);
-        nationPlayer2.setInitBox(initCoord[1][0], initCoord[1][1]);
+        while (!nation1Place || !nation2Place) {
+            List<List<int>> initCoord = (List<List<int>>) _game.getMap().getInitCoordonates();
+
+            nation1Place = nationPlayer1.setInitBox(initCoord[0][0], initCoord[0][1], _game.getMap());
+            nation2Place = nationPlayer2.setInitBox(initCoord[1][0], initCoord[1][1], _game.getMap());
+        }
 
         _player1.setNation(nationPlayer1);
         _player2.setNation(nationPlayer2);

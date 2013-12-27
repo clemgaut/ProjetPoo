@@ -129,6 +129,7 @@ public class Game : IGame {
      * Change the current player, update points and update step number
      */
     public virtual void nextStep() {
+        _activePlayer.getNation().initMovePoints();
         if(_steps > 0 && _activePlayer == _player2)
             _steps--;
 

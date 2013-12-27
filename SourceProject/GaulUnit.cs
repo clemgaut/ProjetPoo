@@ -23,5 +23,37 @@ public class GaulUnit : Unit {
         else
             return 1;
     }
+    public override bool move(int line, int column, Map m) {
+        bool move = canMove(line, column, m);
+        if (move) {
+            _line = line;
+            _column = column;
+            if (m.getBox(line, column).GetType() == typeof(LowlandBox))
+                _movePoints = _movePoints - 0.5;
+            else
+                _movePoints--;
+        }
+        return move;
+    }
+
+    public override bool canMove(int line, int column, Map m) {
+        if (_movePoints == 0)
+            return false;
+        if (_movePoints < 1 && m.getBox(line, column).GetType() != typeof(LowlandBox))
+            return false;
+        if (_line < 0 || _column < 0) {
+            if (m.getBox(line, column).GetType() == typeof(SeaBox))
+                return false;
+            else
+                return true;
+        } else {
+            if ((Math.Abs(line - _line) + Math.Abs(column - _column)) > 1
+                || m.getBox(line, column).GetType() == typeof(SeaBox))
+                return false;
+            else {
+                return true;
+            }
+        }
+    }
 }
 

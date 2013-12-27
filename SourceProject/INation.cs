@@ -7,6 +7,6 @@ namespace SourceProject {
         Unit getUnit(int i);
         IEnumerable<Unit> getUnits();
         int getUnitsNumber();
-        void setInitBox(int line, int column);
+        bool setInitBox(int line, int column, Map m);
     }
 }

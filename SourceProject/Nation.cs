@@ -56,11 +56,24 @@ public class Nation : INation {
         return units.ElementAt(i);
     }
 
-    public virtual void setInitBox(int line, int column) {
+    public virtual bool setInitBox(int line, int column, Map m) {
+        bool move = true;
         foreach(Unit u in units) {
-            u.move(line, column);
+            move = move && u.move(line, column, m);
+            u.initMovePoints();
         }
+        if (!move) {
+            foreach (Unit u in units) {
+                u.nullPosition();
+            }
+        }
+        return move;
     }
 
+
+    internal void initMovePoints() {
+        foreach (Unit u in units)
+            u.initMovePoints();
+    }
 }
 

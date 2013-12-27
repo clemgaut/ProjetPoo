@@ -158,7 +158,7 @@ namespace IHM {
          * Change the color of rectangle where player units are
          */
         private void updateUnitUI() {
-            List<Unit> selectableUnits1 = game.getActivePlayer().getSelectableUnits();
+            List<Unit> selectableUnits1 = (List<Unit>)game.getActivePlayer().getNation().getUnits();
 
             foreach(Unit u in selectableUnits1) {
                 Rectangle r = getRectangle(u.getLine(), u.getColumn());
@@ -167,7 +167,7 @@ namespace IHM {
                     r.StrokeThickness = 2;
             }
 
-            List<Unit> selectableUnits2 = game.getUnactivePlayer().getSelectableUnits();
+            List<Unit> selectableUnits2 = (List<Unit>) game.getUnactivePlayer().getNation().getUnits();
 
             foreach(Unit u in selectableUnits2) {
                 Rectangle r = getRectangle(u.getLine(), u.getColumn());
@@ -220,25 +220,27 @@ namespace IHM {
             int old_row = unit.getLine();
             int old_column = unit.getColumn();
 
-            //If the opponent has no units, we move
-            if(game.getUnactivePlayer().getUnits(row, column).Count == 0)
-                unit.move(row, column);
-            else {
-                Unit defUnit = null;
-                bool result = true;
+            if (unit.canMove(row, column, map)) {
+                //If the opponent has no units, we move
+                if (game.getUnactivePlayer().getUnits(row, column).Count == 0)
+                    unit.move(row, column, map);
+                else {
+                    Unit defUnit = null;
+                    bool result = true;
 
-                // While there are defensive unit and we win battle we continue to fight
-                while(result && (defUnit = game.getBestDefensiveUnit(row, column)) != null) {
-                    result = unit.attack(defUnit);
-                    game.getUnactivePlayer().getNation().deleteDeadUnits();
+                    // While there are defensive unit and we win battle we continue to fight
+                    while (result && (defUnit = game.getBestDefensiveUnit(row, column)) != null) {
+                        result = unit.attack(defUnit);
+                        game.getUnactivePlayer().getNation().deleteDeadUnits();
+                    }
+
+                    // If we win battle
+                    if (result)
+                        unit.move(row, column, map);
+                    else
+                        game.getActivePlayer().getNation().deleteDeadUnits();
+
                 }
-
-                // If we win battle
-                if(result)
-                    unit.move(row, column);
-                else
-                    game.getActivePlayer().getNation().deleteDeadUnits();
-
             }
 
             if(!hasUnits(old_row, old_column)) {
@@ -282,7 +284,7 @@ namespace IHM {
                     unitInfoPanel.Children.Add(border);
 
                     //If it's an active player unit, we add events to select it
-                    if(nonEmptyList == unitsActivePlayer)
+                    if(nonEmptyList == unitsActivePlayer && u.hasMoves())
                         stack.MouseDown += unitStackPanel_MouseDown;
                 }
             } else {
@@ -311,7 +313,9 @@ namespace IHM {
                     int col = moves[i++];
 
                     Rectangle r = getRectangle(row, col);
-                    r.Opacity = 0.5;
+                    //Peut mieux faire (param en plus à passer au cpp pour gérer le cas du 1/2 point de deplacement des gaulois)
+                    if(u.canMove(row, col,map))
+                        r.Opacity = 0.5;
                 }
             } else
                 setDefaultOpacity();
@@ -354,7 +358,10 @@ namespace IHM {
         private StackPanel getUnitDescription(Unit u) {
             StackPanel stack = new StackPanel();
             stack.Orientation = Orientation.Horizontal;
-            stack.Background = new SolidColorBrush(Colors.Gray);
+            if(u.hasMoves())
+                stack.Background = new SolidColorBrush(Colors.LightGray);
+            else
+                stack.Background = new SolidColorBrush(Colors.DarkGray);
 
             Label lbLife = new Label();
             lbLife.Content = "Vie : " + u.getLifePoints();

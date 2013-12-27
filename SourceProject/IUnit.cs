@@ -10,7 +10,7 @@ namespace SourceProject {
         int getPoint(Map m);
         bool hasMoves();
         bool isAlive();
-        bool move(int line, int column);
+        bool move(int line, int column, Map m);
         void setLifePoints(int value);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using SourceProject;
 using System;
 
-public class Unit : IUnit {
+public abstract class Unit : IUnit {
 
     protected int _lifePoints;
     protected double _movePoints;
@@ -17,6 +17,8 @@ public class Unit : IUnit {
         _movePoints = 1;
         _defensive = 1;
         _offensive = 2;
+        _line = -1;
+        _column = -1;
     }
 
     /**
@@ -51,15 +53,16 @@ public class Unit : IUnit {
         return 10;
     }
 
-    public bool move(int line, int column) {
-        _line = line;
-        _column = column;
+    public abstract bool move(int line, int column, Map m);
 
-        return true;
-    }
+    public abstract bool canMove(int line, int column, Map m);
 
     public bool hasMoves() {
         return _movePoints > 0;
+    }
+
+    public void initMovePoints() {
+        _movePoints = 1;
     }
 
     /**
@@ -103,6 +106,11 @@ public class Unit : IUnit {
 
     public bool isAlive() {
         return _lifePoints > 0;
+    }
+
+    internal void nullPosition() {
+        _column = -1;
+        _line = -1;
     }
 }
 
