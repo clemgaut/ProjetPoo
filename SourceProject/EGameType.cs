@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// Enumeration used to specify the game type
+/// </summary>
 public enum EGameType : int {
 
     DEMO,

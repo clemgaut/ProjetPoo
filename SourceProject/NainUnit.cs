@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The nain unit
+/// </summary>
 public class NainUnit : Unit {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public NainUnit() {
     }
 

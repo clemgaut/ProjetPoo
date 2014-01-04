@@ -1,5 +1,8 @@
 ﻿using System;
 namespace SourceProject {
+    /// <summary>
+    /// Interface for the unit
+    /// </summary>
     interface IUnit {
         bool attack(Unit defUnit);
         int getLine();

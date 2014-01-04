@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The factory for boxes
+/// </summary>
 public class BoxFactory : IBoxFactory {
 
     protected Box _desertBox;
@@ -18,6 +21,11 @@ public class BoxFactory : IBoxFactory {
     protected Box _mountainBox;
     protected Box _seaBox;
 
+    /// <summary>
+    /// Return the box wanted or null if not found
+    /// </summary>
+    /// <param name="boxType">The type of box wanted</param>
+    /// <returns>The box wanted or null if not found</returns>
     public virtual Box getBox(EBoxType boxType) {
         Box box;
         switch(boxType) {
@@ -48,6 +56,9 @@ public class BoxFactory : IBoxFactory {
         return box;
     }
 
+    /// <summary>
+    /// Constructor : build all boxes
+    /// </summary>
     public BoxFactory() {
         _desertBox = new DesertBox();
         _forestBox = new ForestBox();

@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The map of a normal game
+/// </summary>
 public class NormalMap : Map {
+    /// <summary>
+    /// Constructor : build a 15x15 map
+    /// </summary>
     public NormalMap() {
         Width = 15;
         Height = 15;

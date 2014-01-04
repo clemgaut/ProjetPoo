@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// Enumeration used to specify the box type
+/// </summary>
 public enum EBoxType : int {
 
     DESERT = 1,

@@ -8,8 +8,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// The lowland box
+/// </summary>
 public class LowlandBox : Box {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public LowlandBox() {
     }
 

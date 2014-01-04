@@ -9,8 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The desert box
+/// </summary>
 public class DesertBox : Box {
-
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public DesertBox() {
     }
 

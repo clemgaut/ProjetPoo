@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SourceProject.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,12 +51,10 @@
     <Compile Include="ForestBox.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameBuilder.cs" />
-    <Compile Include="GameDirector.cs" />
     <Compile Include="GaulUnit.cs" />
     <Compile Include="IBoxFactory.cs" />
     <Compile Include="IGame.cs" />
     <Compile Include="IGameBuilder.cs" />
-    <Compile Include="IGameDirector.cs" />
     <Compile Include="IMap.cs" />
     <Compile Include="INation.cs" />
     <Compile Include="IPlayer.cs" />

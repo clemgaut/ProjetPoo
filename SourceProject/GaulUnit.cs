@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The gaul unit
+/// </summary>
 public class GaulUnit : Unit {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public GaulUnit() {
     }
 

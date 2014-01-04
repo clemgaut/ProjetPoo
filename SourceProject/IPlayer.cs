@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 namespace SourceProject {
+    /// <summary>
+    /// Interface for the player
+    /// </summary>
     interface IPlayer {
         string getName();
         Nation getNation();
-        List<Unit> getSelectableUnits();
-        void refresh();
         void setNation(Nation nation);
     }
 }

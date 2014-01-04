@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The mountain box
+/// </summary>
 public class MountainBox : Box {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public MountainBox() {
     }
 

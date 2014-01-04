@@ -8,8 +8,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// The forest box
+/// </summary>
 public class ForestBox : Box {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public ForestBox() {
     }
 

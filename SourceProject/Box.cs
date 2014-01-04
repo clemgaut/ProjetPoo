@@ -9,7 +9,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// Base class for all boxes
 public class Box {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public Box() {
     }
 

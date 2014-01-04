@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// A nation
+/// </summary>
 public class Nation : INation {
 
     private IEnumerable<Unit> units;
@@ -19,6 +22,11 @@ public class Nation : INation {
         get;
     }
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="nation">The nation type</param>
+    /// <param name="unitNumber">The number of unit (depends on the game's type)</param>
     public Nation(ENation nation, int unitNumber) {
         nationType = nation;
 
@@ -40,22 +48,45 @@ public class Nation : INation {
 
     }
 
+    /// <summary>
+    /// Get the number of units
+    /// </summary>
+    /// <returns>The number of units.</returns>
     public virtual int getUnitsNumber() {
         return units.Count();
     }
 
+    /// <summary>
+    /// Get the units
+    /// </summary>
+    /// <returns>The units.</returns>
     public virtual IEnumerable<Unit> getUnits() {
         return units;
     }
 
+    /// <summary>
+    /// Delete dead units
+    /// </summary>
     public virtual void deleteDeadUnits() {
         units = units.Where(u => u.isAlive());
     }
 
+    /// <summary>
+    /// Get the unit number i
+    /// </summary>
+    /// <param name="i">The unit's number (index in the units list)</param>
+    /// <returns>The unit.</returns>
     public virtual Unit getUnit(int i) {
         return units.ElementAt(i);
     }
 
+    /// <summary>
+    /// Move nation's units to the init box if possible. Return false if not possible to move.
+    /// </summary>
+    /// <param name="line">The line of the init box</param>
+    /// <param name="column">The column of the init box</param>
+    /// <param name="m">The map the nation's unit will be</param>
+    /// <returns>False if not possible to move, true otherwise</returns>
     public virtual bool setInitBox(int line, int column, Map m) {
         bool move = true;
         foreach(Unit u in units) {
@@ -70,7 +101,9 @@ public class Nation : INation {
         return move;
     }
 
-
+    /// <summary>
+    /// Initialize the move points of each unit of the nation.
+    /// </summary>
     internal void initMovePoints() {
         foreach (Unit u in units)
             u.initMovePoints();

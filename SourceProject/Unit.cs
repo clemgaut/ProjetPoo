@@ -49,12 +49,29 @@ public abstract class Unit : IUnit {
         return _offensive * (_lifePoints / 5);
     }
 
-    public virtual int getPoint(Map m) {
-        return 10;
-    }
+    /// <summary>
+    /// Get the points won by the unit
+    /// </summary>
+    /// <param name="m">The map that the player is on</param>
+    /// <returns>The points</returns>
+    public abstract int getPoint(Map m);
 
+    /// <summary>
+    /// Move the unit to the tile if possible
+    /// </summary>
+    /// <param name="line">The tile's line the unit want to move</param>
+    /// <param name="column">The tile's column the unit want to move</param>
+    /// <param name="m">The map on which the unit is placed</param>
+    /// <returns>True if the unit moved to the tile, false otherwise</returns>
     public abstract bool move(int line, int column, Map m);
 
+    /// <summary>
+    /// Return wether the unit can move to the tile or not
+    /// </summary>
+    /// <param name="line">The tile's line the unit want to move</param>
+    /// <param name="column">The tile's column the unit want to move</param>
+    /// <param name="m">The map on which the unit is placed</param>
+    /// <returns>True if the unit can move to the tile, false otherwise</returns>
     public abstract bool canMove(int line, int column, Map m);
 
     public bool hasMoves() {

@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// Enumeration used to specify the nation type
+/// </summary>
 public enum ENation : int {
 
     GAUL = 1,

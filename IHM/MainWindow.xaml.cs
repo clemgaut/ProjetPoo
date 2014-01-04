@@ -107,6 +107,9 @@ namespace IHM {
             updateForStep();
         }
 
+        /*
+         * Create a tile rectangle
+         */
         private Rectangle createRectangle(int l, int c, Box tile) {
             var rectangle = new Rectangle();
             if(tile is ForestBox)
@@ -138,6 +141,9 @@ namespace IHM {
             updateInfoPanel();
         }
 
+        /*
+         * Update informations about the general info panel( players and game info)
+         */
         private void updateInfoPanel() {
             StepLabel.Content = "Tours restants : " + game.getSteps();
             Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
@@ -177,6 +183,9 @@ namespace IHM {
             }
         }
 
+        /*
+         * Return the rectangle on line,column
+         */
         private Rectangle getRectangle(int line, int column) {
             return mapGrid.Children.OfType<Rectangle>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column);
         }
@@ -382,6 +391,9 @@ namespace IHM {
             return stack;
         }
 
+        /*
+         * Check if there still is at least one unit in the game
+         */
         private bool hasUnits(int line, int column) {
             return (game.getActivePlayer().getUnits(line, column).Count > 0 ||
                 game.getUnactivePlayer().getUnits(line, column).Count > 0);
