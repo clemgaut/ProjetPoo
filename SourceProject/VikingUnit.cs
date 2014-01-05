@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The viking unit
+/// </summary>
 public class VikingUnit : Unit {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public VikingUnit() {
     }
 

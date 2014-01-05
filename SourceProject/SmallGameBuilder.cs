@@ -10,6 +10,11 @@ using System.Linq;
 using System.Text;
 
 public class SmallGameBuilder : GameBuilder {
+    /// <summary>
+    /// Constructor : build the game (map, players)
+    /// </summary>
+    /// <param name="nation1">The nation of the first player</param>
+    /// <param name="nation2">The nation of the second player</param>
     public SmallGameBuilder(ENation nation1, ENation nation2) {
         Map map = new SmallMap();
         _game.setMap(map);

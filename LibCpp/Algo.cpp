@@ -75,10 +75,7 @@ int Algo::interpolation_cos2D (int a, int b, int c, int d, double x, double y) {
 }
 
 /*
-Return the init coordonates for the 2 nations of the map
-
-(First step -> random)
-Second step : TODO
+Return the init (random) coordonates for the 2 nations of the map
 
 map : the current map
 size : the map size
@@ -102,16 +99,22 @@ int* Algo::initCoordonates(int map[], int size)
 }
 
 /**
+Get the best moves for the given unit
+map : the map
 * map[i] :  DESERT = 1,
     FOREST,
     LOWLAND,
     MOUTAIN,
     SEA,
+size : the map's size
 
-* unitType : GAUL = 1,
+* unitType : The type of the current unit :
+	GAUL = 1,
     NAIN,
     VIKING,
-
+* pos : the position of the unit
+* opponents : The opponents' position
+* nbOpponents : the size of opponents
 * nbMoves : pointer referencing the number of moves found.
 
 * return : an array containing nbMoves triple : (row, col, weight)
@@ -143,6 +146,13 @@ int* Algo::getBestMoves(int map[], int size, int unitType, int pos, int opponent
 	return bestMoves;
 }
 
+/**
+* Get the number of opponents on the tile
+* pos : the tile position
+* opponents : the array of all opponents' position
+* nbAllOpponents : the size of opponents
+* return : the number of opponents at the possiton pos.
+*/
 int Algo::getNbOpponents(int pos, int* opponents, int nbAllOpponents) {
 	int nbOpponents = 0;
 
@@ -154,7 +164,15 @@ int Algo::getNbOpponents(int pos, int* opponents, int nbAllOpponents) {
 }
 
 /**
-* tileType[i] :  DESERT = 1,
+Get the points of the unit at pos
+
+pos : the position of the unit
+map : the map
+size : the size of the map
+unitType : the type of the unit
+return : the points won by the unit.
+
+* map[i] :  DESERT = 1,
 FOREST,
 LOWLAND,
 MOUTAIN,
@@ -187,6 +205,14 @@ int Algo::getPoints(int pos, int* map, int size, int unitType) {
 	return points;
 }
 
+/**
+Chech if there is water around the pos
+
+pos : the position to check
+map : the map
+size : the map's size
+return : true if there is water around pos, false otherwise
+*/
 bool Algo::hasWaterBorder(int pos, int* map, int size) {
 	int unitRow = pos / size;
 	int unitCol = pos % size;

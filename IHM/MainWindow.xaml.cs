@@ -146,8 +146,8 @@ namespace IHM {
          */
         private void updateInfoPanel() {
             StepLabel.Content = "Tours restants : " + game.getSteps();
-            Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNbUnits();
-            Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNbUnits();
+            Units1Label.Content = "Unitées restantes : " + game.getPlayer1().getNation().getUnitsNumber();
+            Units2Label.Content = "Unitées restantes : " + game.getPlayer2().getNation().getUnitsNumber();
             Points1Label.Content = "Points : " + game.getPlayer1().getPoints();
             Points2Label.Content = "Points : " + game.getPlayer2().getPoints();
 
@@ -231,7 +231,7 @@ namespace IHM {
 
             if (unit.canMove(row, column, map)) {
                 //If the opponent has no units, we move
-                if (game.getUnactivePlayer().getUnits(row, column).Count == 0)
+                if (game.getUnactivePlayer().getNation().getUnits(row, column).Count == 0)
                     unit.move(row, column, map);
                 else {
                     Unit defUnit = null;
@@ -264,8 +264,8 @@ namespace IHM {
          * Update information displayed about unit in the tile with line and column
          */
         private void updateUnitInfo(int line, int column) {
-            List<Unit> unitsActivePlayer = game.getActivePlayer().getUnits(line, column);
-            List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getUnits(line, column);
+            List<Unit> unitsActivePlayer = game.getActivePlayer().getNation().getUnits(line, column);
+            List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getNation().getUnits(line, column);
             List<Unit> nonEmptyList = new List<Unit>();
 
             unitInfoPanel.Children.Clear();
@@ -348,7 +348,7 @@ namespace IHM {
             /*
              * Evite la sélection d'une unité par le joueur adverse lors du changement de tour
              */
-            if(game.getActivePlayer().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
+            if (game.getActivePlayer().getNation().getUnits(unit.getLine(), unit.getColumn()).Count > 0) {
                 if (selectedUnit != _selectedUnit) {
                     Border parent = (Border)selectedUnit.Parent;
                     parent.BorderThickness = new Thickness(3);
@@ -395,8 +395,8 @@ namespace IHM {
          * Check if there still is at least one unit in the game
          */
         private bool hasUnits(int line, int column) {
-            return (game.getActivePlayer().getUnits(line, column).Count > 0 ||
-                game.getUnactivePlayer().getUnits(line, column).Count > 0);
+            return (game.getActivePlayer().getNation().getUnits(line, column).Count > 0 ||
+                game.getUnactivePlayer().getNation().getUnits(line, column).Count > 0);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {

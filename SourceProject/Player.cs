@@ -10,33 +10,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The player class
+/// </summary>
 public class Player : IPlayer {
 
     private string _name;
     private Nation _nation;
     private int _points;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public Player() {
         _points = 0;
     }
 
+    /// <summary>
+    /// Set the name of the player
+    /// </summary>
+    /// <param name="name">The new player's name</param>
     public virtual void setName(string name) {
         _name = name;
     }
 
+    /// <summary>
+    /// Set a nation to the player
+    /// </summary>
+    /// <param name="nation">The new player's nation</param>
     public virtual void setNation(Nation nation) {
         _nation = nation;
     }
 
+    /// <summary>
+    /// Get the player's name
+    /// </summary>
+    /// <returns>The player's name</returns>
     public virtual string getName() {
         return _name;
     }
 
-    public virtual void refresh() {
-        throw new System.NotImplementedException();
-    }
-
-    public virtual List<Unit> getSelectableUnits() {
+    /*public virtual List<Unit> getSelectableUnits() {
         List<Unit> l = new List<Unit>();
 
         foreach(Unit u in _nation.getUnits()) {
@@ -44,36 +58,28 @@ public class Player : IPlayer {
                 l.Add(u);
         }
         return l;
-    }
+    }*/
 
-    /*
-     * Return the units that are on the rectangle with line and column in parameters
-     */
-    public virtual List<Unit> getUnits(int line, int column) {
-        List<Unit> l = new List<Unit>();
-
-        foreach(Unit u in _nation.getUnits()) {
-            if(u.getLine() == line && u.getColumn() == column)
-                l.Add(u);
-        }
-        return l;
-    }
-
+    /// <summary>
+    /// Get the player's nation
+    /// </summary>
+    /// <returns>The player's nation</returns>
     public virtual Nation getNation() {
         return _nation;
     }
 
-    public virtual int getNbUnits() {
-        return _nation.getUnitsNumber();
-    }
-
+    /// <summary>
+    /// Get the player's points (points are added at the end of the step)
+    /// </summary>
+    /// <returns>The player's points</returns>
     public virtual int getPoints() {
         return _points;
     }
 
-    /*
-     * Update the player points (called at the end of the player's step)
-     */
+    /// <summary>
+    /// Update the player points (points are added at the end of the step, called at the end of the player's step)
+    /// </summary>
+    /// <param name="m">The map used to compute the points</param>
     public virtual void updatePoints(Map m) {
         foreach (Unit u in _nation.getUnits())
             _points += u.getPoint(m);

@@ -17,6 +17,14 @@ namespace Wrapper {
 		WrapperAlgo(){algoCpp = new Algo();}
 		~WrapperAlgo(){delete algoCpp;}
 		System::Int32 fTest(int n){return algoCpp->fTest(n);}
+		/**
+		Generate a coherent square map.
+		size : the size of the map (only the width) : example : 5 for a 5x5 map
+		types : the number of different tiles
+
+		return : A list representing the map. The 2D map is coded as an 1D array and map[line,column] = generatedMap[line*width+column].
+				 Moreover, 1 <= generatedMap[line*width+column] <= types
+		*/
 		System::Collections::Generic::List<int>^ mapGeneration(int size, int types)
 		{
 			System::Collections::Generic::List<int>^ map = gcnew System::Collections::Generic::List<int>(size);
@@ -33,6 +41,12 @@ namespace Wrapper {
 			return map;
 		}
 
+		/**
+		Get the init coordonates of a nation.
+		map : the current map
+		size : the map size
+		return a list with the init line at index 0 and the init column at index 1.
+		*/
 		System::Collections::Generic::List<int>^ initCoordonates(System::Collections::Generic::List<int>^ map, int size)
 		{
 			pin_ptr<int> p = &map->ToArray()[0];
@@ -49,6 +63,15 @@ namespace Wrapper {
 			return initCoord;
 		}
 
+		/**
+		Get all possible moves for a given unit
+		map : the map
+		* unitType : The type of the current unit
+		* pos : the position of the unit
+		* opponents : The opponents' position
+
+		* return : an array containing some pair : (row, col) of possible moves
+		*/
 		System::Collections::Generic::List<int>^ possibleMoves(System::Collections::Generic::List<int>^ map, int unitType, int pos, System::Collections::Generic::List<int>^ opponents) {
 			pin_ptr<int> pmap = &map->ToArray()[0];
 			int* mapC = pmap;

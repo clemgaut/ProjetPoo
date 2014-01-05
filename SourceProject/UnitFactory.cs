@@ -10,10 +10,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The unit factory
+/// </summary>
+/// <typeparam name="T">Class of the unit returned by the factory</typeparam>
 public class UnitFactory<T> : IUnitFactory<T> where T : Unit, new() {
     public UnitFactory() {
     }
 
+    /// <summary>
+    /// Get a certain number of T
+    /// </summary>
+    /// <param name="unitNumber">The number of unit to get</param>
+    /// <returns>A list of unit (type T).</returns>
     public virtual IEnumerable<Unit> getUnits(int unitNumber) {
         List<Unit> unitList = new List<Unit>();
 

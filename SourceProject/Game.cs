@@ -143,7 +143,7 @@ public class Game : IGame {
     /// <param name="column">The tile's column</param>
     /// <returns>The best defensive unit, null if none</returns>
     public virtual Unit getBestDefensiveUnit(int line, int column) {
-        List<Unit> unitsUnactivePlayer = getUnactivePlayer().getUnits(line, column);
+        List<Unit> unitsUnactivePlayer = getUnactivePlayer().getNation().getUnits(line, column);
         Unit bestDefUnit = null;
 
         foreach(Unit u in unitsUnactivePlayer)
@@ -158,7 +158,7 @@ public class Game : IGame {
     /// </summary>
     /// <returns>True if the game is over, false otherwise.</returns>
     public virtual bool checkEndfOfGame() {
-        return (_steps == 0 || _player1.getNbUnits() == 0 || _player2.getNbUnits()==0);
+        return (_steps == 0 || _player1.getNation().getUnitsNumber() == 0 || _player2.getNation().getUnitsNumber() == 0);
     }
 
     /// <summary>

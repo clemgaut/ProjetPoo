@@ -81,6 +81,22 @@ public class Nation : INation {
     }
 
     /// <summary>
+    /// Return the units placed on the tile with the given coordonates
+    /// </summary>
+    /// <param name="line">The tile's line</param>
+    /// <param name="column">The tile's column</param>
+    /// <returns>A list of unit (empty if none).</returns>
+    public virtual List<Unit> getUnits(int line, int column) {
+        List<Unit> l = new List<Unit>();
+
+        foreach(Unit u in units) {
+            if(u.getLine() == line && u.getColumn() == column)
+                l.Add(u);
+        }
+        return l;
+    }
+
+    /// <summary>
     /// Move nation's units to the init box if possible. Return false if not possible to move.
     /// </summary>
     /// <param name="line">The line of the init box</param>

@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 
 public class SmallMap : Map {
+    /// <summary>
+    /// Constructor : build a 10x10 map
+    /// </summary>
     public SmallMap() {
         Width = 10;
         Height = 10;

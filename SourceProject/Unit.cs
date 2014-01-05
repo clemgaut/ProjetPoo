@@ -1,6 +1,9 @@
 ﻿using SourceProject;
 using System;
 
+/// <summary>
+/// The unit class
+/// </summary>
 public abstract class Unit : IUnit {
 
     protected int _lifePoints;
@@ -12,6 +15,9 @@ public abstract class Unit : IUnit {
     protected int _line;
     protected int _column;
 
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public Unit() {
         _lifePoints = 5;
         _movePoints = 1;
@@ -21,30 +27,50 @@ public abstract class Unit : IUnit {
         _column = -1;
     }
 
-    /**
-     * Set the unit life point to value
-     * @param value Number of life point
-     */
+    /// <summary>
+    /// Set the unit life point to value
+    /// </summary>
+    /// <param name="value">The new value of unit's lifepoints</param>
     public void setLifePoints(int value) {
         _lifePoints = value;
     }
 
+    /// <summary>
+    /// Get the line where the unit is.
+    /// </summary>
+    /// <returns>The line where the unit is</returns>
     public int getLine() {
         return _line;
     }
 
+    /// <summary>
+    /// Get the column where the unit is.
+    /// </summary>
+    /// <returns>The column where the unit is</returns>
     public int getColumn() {
         return _column;
     }
 
+    /// <summary>
+    /// Get the defensive points of the unit. Depends on his life points
+    /// </summary>
+    /// <returns>The defensive points of the unit></returns>
     public double getDefensive() {
         return _defensive * (_lifePoints/5);
     }
 
+    /// <summary>
+    /// Get the life points of the unit
+    /// </summary>
+    /// <returns>The life points of the unit</returns>
     public int getLifePoints() {
         return _lifePoints;
     }
 
+    /// <summary>
+    /// Get the offensive points of the unit. Depends on his life points
+    /// </summary>
+    /// <returns>The offensive points of the unit></returns>
     public double getOffensive() {
         return _offensive * (_lifePoints / 5);
     }
@@ -74,19 +100,26 @@ public abstract class Unit : IUnit {
     /// <returns>True if the unit can move to the tile, false otherwise</returns>
     public abstract bool canMove(int line, int column, Map m);
 
+    /// <summary>
+    /// Chech if the unit has move points
+    /// </summary>
+    /// <returns>False if the unit has no move point, true otherwise</returns>
     public bool hasMoves() {
         return _movePoints > 0;
     }
 
+    /// <summary>
+    /// Initialize the move points (set to 1).
+    /// </summary>
     public void initMovePoints() {
         _movePoints = 1;
     }
 
-    /**
-     * Attack an unit
-     * @param defUnit the unit to attack
-     * @return true if the unit kill the defensive unit, false if the unit die
-     */
+    /// <summary>
+    /// Attack an unit
+    /// </summary>
+    /// <param name="defUnit">The unit to attack (defensive unit)</param>
+    /// <returns>True if the unit kill the defensive unit, false if the unit die</returns>
     public bool attack(Unit defUnit) {
 
         double pAttWin;
@@ -121,10 +154,17 @@ public abstract class Unit : IUnit {
         return false;
     }
 
+    /// <summary>
+    /// Check if the unit is alive
+    /// </summary>
+    /// <returns>True if the unit has life points, false otherwise</returns>
     public bool isAlive() {
         return _lifePoints > 0;
     }
 
+    /// <summary>
+    /// Set the unit to an null position (outside the map) : -1:-1
+    /// </summary>
     internal void nullPosition() {
         _column = -1;
         _line = -1;

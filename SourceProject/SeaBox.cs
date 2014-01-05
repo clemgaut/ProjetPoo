@@ -9,7 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/// <summary>
+/// The sea Box
+/// </summary>
 public class SeaBox : Box {
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public SeaBox() {
     }
 
