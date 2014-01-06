@@ -243,7 +243,7 @@ namespace IHM {
             int old_row = unit.getLine();
             int old_column = unit.getColumn();
 
-            if (unit.canMove(row, column, map)) {
+            if (unit.canMove(row, column, map) && (old_row!=row || old_column!=column)) {
                 //If the opponent has no units, we move
                 if (game.getUnactivePlayer().getNation().getUnits(row, column).Count == 0)
                     unit.move(row, column, map);

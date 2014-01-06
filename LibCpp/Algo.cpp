@@ -130,8 +130,8 @@ int* Algo::getBestMoves(int map[], int size, int unitType, int pos, int opponent
 	for(int row = 0; row < size; row ++) {
 		for(int col = 0; col < size; col++) {
 			// If (the tile isn't too far and not a sea (except for viking)) or is a mountain for nain on a mountain
-			if(((abs(unitRow - row) + abs(unitCol - col)) <= 1 && (unitType == 3 || map[row*size+col] != 5)) 
-				|| (unitType == 2 && map[row*size+col] == 4 && map[pos] == 4)) {
+			if(((abs(unitRow - row) + abs(unitCol - col)) == 1 && (unitType == 3 || map[row*size+col] != 5)) 
+				|| (unitType == 2 && map[row*size + col] == 4 && map[pos] == 4 && pos != row*size + col)) {
 				(*nbMoves)++;
 				bestMoves = (int*)realloc(bestMoves, 3 * (*nbMoves)*sizeof(int));
 
