@@ -150,7 +150,7 @@ public abstract class Map : IMap {
                     l.Add((int)EBoxType.LOWLAND);
 
                 if(_map[line, column].GetType() == typeof(MountainBox))
-                    l.Add((int)EBoxType.MOUTAIN);
+                    l.Add((int)EBoxType.MOUNTAIN);
 
                 if(_map[line, column].GetType() == typeof(SeaBox))
                     l.Add((int)EBoxType.SEA);
@@ -179,8 +179,8 @@ public abstract class Map : IMap {
                         setBox(boxFactory.getBox(EBoxType.LOWLAND), line, column);
                         break;
 
-                    case (int)EBoxType.MOUTAIN:
-                        setBox(boxFactory.getBox(EBoxType.MOUTAIN), line, column);
+                    case (int)EBoxType.MOUNTAIN:
+                        setBox(boxFactory.getBox(EBoxType.MOUNTAIN), line, column);
                         break;
 
                     case (int)EBoxType.SEA:

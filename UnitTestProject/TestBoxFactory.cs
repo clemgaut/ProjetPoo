@@ -26,7 +26,7 @@ namespace UnitTestProject {
 
         [TestMethod]
         public void TestMountainBoxCreation() {
-            Box mountainBox = factory.getBox(EBoxType.MOUTAIN);
+            Box mountainBox = factory.getBox(EBoxType.MOUNTAIN);
             Assert.IsInstanceOfType(mountainBox, typeof(MountainBox));
         }
 

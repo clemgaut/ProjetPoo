@@ -17,6 +17,6 @@ public enum EBoxType : int {
     DESERT = 1,
     FOREST,
     LOWLAND,
-    MOUTAIN,
+    MOUNTAIN,
     SEA,
 }
