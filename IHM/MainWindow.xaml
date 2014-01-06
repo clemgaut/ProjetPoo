@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SmallWorld" MinHeight="600" MinWidth="600"
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Unloaded="Window_Unloaded"
         Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Window.Resources>
         <Cursor x:Key="Cursor1">Arrow</Cursor>
@@ -41,7 +42,8 @@
                 </Border>
                 <Border BorderThickness="3" Grid.Column="2" Grid.Row="0" Margin="20" BorderBrush="Black" HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical" Background="DarkOliveGreen" >
-                    <Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
+                        <Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
+<Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Menu" Click="Menu_Click" Width="85"/>
                     <Label x:Name="StepLabel" FontWeight="ExtraBold" Content="Tours restants : " />
                 </StackPanel>
                 </Border>

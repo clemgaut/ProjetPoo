@@ -6,11 +6,10 @@
       mc:Ignorable="d" 
 	Title="save">
 
-
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel x:Name="panel" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        </StackPanel>
+        <Button x:Name="menu" Content="Retour au menu" Margin="20" Click="menu_Click"/>
+    </StackPanel>
 
-        <ListBox x:Name="filesList"/>
-        <Button x:Name="menu" Content="Retour au menu" Click="menu_Click"/>
-        
-  </StackPanel>
 </Page>

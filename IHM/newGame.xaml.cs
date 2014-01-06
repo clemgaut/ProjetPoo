@@ -50,11 +50,11 @@ namespace IHM {
                 ComboBoxItem itemNation1 = (ComboBoxItem)ComboBoxNationPlayer1.SelectedItem;
                 ComboBoxItem itemNation2 = (ComboBoxItem)ComboBoxNationPlayer2.SelectedItem;
 
-                MainWindow win = new MainWindow((EGameType)itemGame.Tag, (ENation)itemNation1.Tag, (ENation)itemNation2.Tag, labelPlayer1.Text, labelPlayer2.Text);
-                win.Show();
+                StartUpWindow parent = (StartUpWindow)this.Parent;
+                parent.gameWindow = new MainWindow(parent, (EGameType)itemGame.Tag, (ENation)itemNation1.Tag, (ENation)itemNation2.Tag, labelPlayer1.Text, labelPlayer2.Text);
+                parent.gameWindow.Show();
 
-                Window parent = (Window)this.Parent;
-                parent.Close();
+                parent.Hide();
             }
         }
 

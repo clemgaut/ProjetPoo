@@ -28,17 +28,13 @@ namespace IHM {
         StackPanel _selectedUnit;
         Wrapper.WrapperAlgo wrap = new Wrapper.WrapperAlgo();
 
-        public void Load() {
+        StartUpWindow start;
 
-        }
-
-        public void Save() {
-
-        }
-
-
-        public MainWindow(EGameType mapType, ENation nation1, ENation nation2, string nameP1, string nameP2) {
+        public MainWindow(StartUpWindow win, EGameType mapType, ENation nation1, ENation nation2, string nameP1, string nameP2) {
             InitializeComponent();
+
+            start = win;
+            start.inGame = true;
 
             switch(mapType) {
                 case EGameType.DEMO:
@@ -424,6 +420,15 @@ namespace IHM {
         private void setDefaultOpacity() {
             foreach (Rectangle r in mapGrid.Children)
                 r.Opacity = 1;
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e) {
+            start.inGame = false;
+            start.Show();
+        }
+
+        private void Menu_Click(object sender, RoutedEventArgs e) {
+            start.Show();
         }
     }
 }

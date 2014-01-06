@@ -5,6 +5,7 @@
         WindowStartupLocation="CenterScreen"
         Title="Bienvenue sur SmallWorld" Height="480" Width="640">
 
+      
 
     <Window.Background>
         <ImageBrush ImageSource="smallworld2.jpg"/>

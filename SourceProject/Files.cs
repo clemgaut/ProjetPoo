@@ -15,13 +15,16 @@ public class Files {
     public static List<String> getSaves() {
 
         if(!Directory.Exists(path))
-            return null;
+            return new List<String>();
 
         List<String> files = new List<String>(Directory.GetFiles(path));
         files.RemoveAll(f => Path.GetExtension(f) != ".small");
-        files.ForEach(f => Path.GetFileNameWithoutExtension(f));
+        List<String> cleanList = new List<string>();
+        
+        files.ForEach(f => cleanList.Add(Path.GetFileNameWithoutExtension(f)));
 
-        return files;
+        
+        return cleanList;
     }
 
     // load or save the file

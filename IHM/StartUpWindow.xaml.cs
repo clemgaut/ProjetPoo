@@ -17,8 +17,13 @@ namespace IHM {
     /// Interaction logic for StartUpWindow.xaml
     /// </summary>
     public partial class StartUpWindow : Window {
+
+        public MainWindow gameWindow;
+        public bool inGame = false;
+
         public StartUpWindow() {
             InitializeComponent();
+            inGame = false;
             Content = new menu();
 
         }

@@ -12,8 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 
 namespace IHM {
+
     /// <summary>
     /// Interaction logic for save.xaml
     /// </summary>
@@ -31,82 +39,66 @@ namespace IHM {
 
         private void loadFilesList() {
 
+            panel.Children.Clear();
+
+            Button bSave = new Button();
+            bSave.Content = "Nouvelle sauvegarde";
+            bSave.Padding = new Thickness(5);
+            bSave.Margin = new Thickness(5);
+            bSave.Name = "newSave";
+            bSave.Width = 150;
+            bSave.Height = 30;
+            bSave.Click += newSave_Click;
+
+            panel.Children.Add(bSave);
+
             List<String> saves = new List<String>();
             saves = Files.getSaves();
 
             foreach(String file in saves) {
-                Button bSave = new Button();
+                bSave = new Button();
                 bSave.Content = file;
-                bSave.Height = 100;
+                bSave.Padding = new Thickness(5);
+                bSave.Margin = new Thickness(5);
+                bSave.Width = 150;
+                bSave.Height = 30;
                 bSave.Name = "button" + file;
 
-                // bSave.Click += fichierSauvegarde_Click;
+                bSave.Click += save_Click;
 
-                filesList.Items.Add(bSave);
+                panel.Children.Add(bSave);
             }
         }
 
-        /*    private void newsave_Click(object sender, RoutedEventArgs e)
-            {
+        private void newSave_Click(object sender, RoutedEventArgs e) {
 
-                string nomSession = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-                nomSession = nomSession.Split('\\')[1];
-                string date = DateTime.Now.ToFileTime().ToString();
+            string user = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\')[1];
+            string defName = user + "_" + DateTime.Now.ToFileTime().ToString();
 
-                string nom_defaut = nomSession + "_" + date;
+            Files.saveHandle(defName, false);
+            loadFilesList();
 
-                CustomInputBox dialog = new CustomInputBox("Entrez un nom pour la sauvegarde :", nom_defaut);
-                dialog.ShowDialog();
-                if (!dialog.Canceled)
-                    doAction(dialog.InputText);
-
-
-            }
-
-
-            private void fichierSauvegarde_Click(object sender, RoutedEventArgs e)
-            {
-                Button b = sender as Button;
-                string nomSauvegarde = b.Content as String;
-
-                string message;
-                if (charger)
-                {
-                    message = "Charger la partie " + nomSauvegarde + " ?";
-                }
-                else
-                {
-                    message = "Remplacer la sauvegarde " + nomSauvegarde + " ?";
-                }
-
-                OKCancelDialog dialog = new OKCancelDialog(message);
-                dialog.ShowDialog();
-                if (dialog.DialogResult.HasValue && dialog.DialogResult.Value)
-                    doAction(nomSauvegarde);
-
-
-            }
-
-            private void doAction(string n)
-            {
-                GestionFichiers.action(n, charger);
-
-                if (charger)
-                {
-                    mainWindow.afficherJeu();
-                }
-                else
-                {
-                    mainWindow.afficherJeu();
-                }
-            }
-
-            private void refreshListeFichiers()
-            {
-                listeFichiers.Items.Clear();
-                loadFilesList();
-            }
+            saveFile(defName);
         }
-        }*/
+
+
+        private void save_Click(object sender, RoutedEventArgs e) {
+            Button button = (Button)sender;
+            string name = (String)button.Content;
+
+            string msg = "Remplacer la sauvegarde " + name + " ?";
+
+            MessageBoxResult result2 = MessageBox.Show(msg, "Confirmer la sauvegarde", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if(result2 == MessageBoxResult.OK)
+                saveFile(name);
+        }
+
+        private void saveFile(String name) {
+            Files.saveHandle(name, false);
+            StartUpWindow parent = (StartUpWindow)this.Parent;
+            parent.gameWindow.Show();
+            parent.Hide();
+        }
+
     }
 }
