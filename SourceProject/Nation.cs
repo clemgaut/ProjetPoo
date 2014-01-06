@@ -17,7 +17,9 @@ using System.Text;
 [Serializable]
 public class Nation : INation {
 
-    private IEnumerable<Unit> units;
+    
+    private List<Unit> units;
+    [NonSerialized]
     private IUnitFactory<Unit> unitFactory;
     public ENation nationType {
         set;
@@ -62,8 +64,7 @@ public class Nation : INation {
     /// Get the units
     /// </summary>
     /// <returns>The units.</returns>
-    public virtual IEnumerable<Unit> getUnits() {
-
+    public virtual List<Unit> getUnits() {
         return (units.Count() == 0) ? new List<Unit>() : units;
     }
 
@@ -71,7 +72,7 @@ public class Nation : INation {
     /// Delete dead units
     /// </summary>
     public virtual void deleteDeadUnits() {
-        units = units.Where(u => u.isAlive());
+        units.RemoveAll(u => !u.isAlive());
     }
 
     /// <summary>

@@ -25,7 +25,7 @@ public class UnitFactory<T> : IUnitFactory<T> where T : Unit, new() {
     /// </summary>
     /// <param name="unitNumber">The number of unit to get</param>
     /// <returns>A list of unit (type T).</returns>
-    public virtual IEnumerable<Unit> getUnits(int unitNumber) {
+    public virtual List<Unit> getUnits(int unitNumber) {
         List<Unit> unitList = new List<Unit>();
 
         for(int i = 0; i < unitNumber; i++) {
