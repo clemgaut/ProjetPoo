@@ -4,6 +4,8 @@ using System;
 /// <summary>
 /// The unit class
 /// </summary>
+/// 
+[Serializable]
 public abstract class Unit : IUnit {
 
     protected int _lifePoints;

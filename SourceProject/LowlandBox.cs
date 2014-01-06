@@ -11,6 +11,8 @@ using System.Text;
 /// <summary>
 /// The lowland box
 /// </summary>
+/// 
+[Serializable]
 public class LowlandBox : Box {
     /// <summary>
     /// Constructor

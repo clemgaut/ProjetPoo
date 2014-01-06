@@ -51,6 +51,9 @@ namespace IHM {
                 ComboBoxItem itemNation2 = (ComboBoxItem)ComboBoxNationPlayer2.SelectedItem;
 
                 StartUpWindow parent = (StartUpWindow)this.Parent;
+                if(parent.inGame)
+                    parent.gameWindow.Close();
+
                 parent.gameWindow = new MainWindow(parent, (EGameType)itemGame.Tag, (ENation)itemNation1.Tag, (ENation)itemNation2.Tag, labelPlayer1.Text, labelPlayer2.Text);
                 parent.gameWindow.Show();
 

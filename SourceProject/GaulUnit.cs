@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The gaul unit
 /// </summary>
+/// 
+[Serializable]
 public class GaulUnit : Unit {
     /// <summary>
     /// Constructor

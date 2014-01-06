@@ -11,6 +11,8 @@ using System.Text;
 /// <summary>
 /// The forest box
 /// </summary>
+/// 
+[Serializable]
 public class ForestBox : Box {
     /// <summary>
     /// Constructor

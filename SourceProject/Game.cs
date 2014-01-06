@@ -27,6 +27,7 @@ public class Game : IGame {
 
     protected int _steps;
 
+    [NonSerialized]
     public static Game instance;
 
     /// <summary>

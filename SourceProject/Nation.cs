@@ -13,6 +13,8 @@ using System.Text;
 /// <summary>
 /// A nation
 /// </summary>
+/// 
+[Serializable]
 public class Nation : INation {
 
     private IEnumerable<Unit> units;

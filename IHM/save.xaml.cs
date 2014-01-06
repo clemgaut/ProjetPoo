@@ -73,7 +73,7 @@ namespace IHM {
         private void newSave_Click(object sender, RoutedEventArgs e) {
 
             string user = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Split('\\')[1];
-            string defName = user + "_" + DateTime.Now.ToFileTime().ToString();
+            string defName = user + "_" + DateTime.Now.ToString("ddMMyyyy_HHmmss");
 
             Files.saveHandle(defName, false);
             loadFilesList();

@@ -13,6 +13,8 @@ using System.Text;
 /// <summary>
 /// The factory for boxes
 /// </summary>
+/// 
+[Serializable]
 public class BoxFactory : IBoxFactory {
 
     protected Box _desertBox;

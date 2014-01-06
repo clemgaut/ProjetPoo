@@ -9,10 +9,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+[Serializable]
 public class SmallMap : Map {
     /// <summary>
     /// Constructor : build a 10x10 map
     /// </summary>
+    /// 
+    
     public SmallMap() {
         Width = 10;
         Height = 10;

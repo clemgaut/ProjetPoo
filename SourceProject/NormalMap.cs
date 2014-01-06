@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The map of a normal game
 /// </summary>
+/// 
+[Serializable]
 public class NormalMap : Map {
     /// <summary>
     /// Constructor : build a 15x15 map

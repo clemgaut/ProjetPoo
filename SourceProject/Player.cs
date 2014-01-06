@@ -13,6 +13,7 @@ using System.Text;
 /// <summary>
 /// The player class
 /// </summary>
+[Serializable]
 public class Player : IPlayer {
 
     private string _name;

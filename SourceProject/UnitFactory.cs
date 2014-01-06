@@ -14,6 +14,8 @@ using System.Text;
 /// The unit factory
 /// </summary>
 /// <typeparam name="T">Class of the unit returned by the factory</typeparam>
+/// 
+[Serializable]
 public class UnitFactory<T> : IUnitFactory<T> where T : Unit, new() {
     public UnitFactory() {
     }

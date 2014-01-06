@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The map for demo game
 /// </summary>
+/// 
+[Serializable]
 public class DemoMap : Map {
     /// <summary>
     /// Constructor : build a 5x5 map

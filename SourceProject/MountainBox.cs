@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The mountain box
 /// </summary>
+/// 
+[Serializable]
 public class MountainBox : Box {
     /// <summary>
     /// Constructor

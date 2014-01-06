@@ -6,6 +6,8 @@ using System.Text;
 /// <summary>
 /// The nain unit
 /// </summary>
+/// 
+[Serializable]
 public class NainUnit : Unit {
     /// <summary>
     /// Constructor

@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The desert box
 /// </summary>
+/// 
+[Serializable]
 public class DesertBox : Box {
     /// <summary>
     /// Constructor

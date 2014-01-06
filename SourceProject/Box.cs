@@ -9,7 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-/// Base class for all boxes
+/// Base class for all 
+[Serializable]
 public class Box {
     /// <summary>
     /// Constructor

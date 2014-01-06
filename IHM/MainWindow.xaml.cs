@@ -69,6 +69,24 @@ namespace IHM {
             game.start();
         }
 
+        public MainWindow(StartUpWindow win) {
+            InitializeComponent();
+
+            start = win;
+            start.inGame = true;
+
+            game = Game.instance;
+
+            MapLabel.Content = "Type de carte : " + game.getMap().GetType().ToString().ToLower();
+
+            Nation1Label.Content = game.getPlayer1().getName() + " [" + game.getPlayer1().getNation().nationType + "]";
+            Nation2Label.Content = game.getPlayer2().getName() + " [" + game.getPlayer2().getNation().nationType + "]";
+
+            _selectedUnit = null;
+
+            game.start();
+        }
+
         /*
          * Click on end of turn button
          */
@@ -423,11 +441,20 @@ namespace IHM {
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e) {
+           
+            if(!start.IsActive)
+                start = new StartUpWindow();
+            start.gameWindow = this;
             start.inGame = false;
             start.Show();
         }
 
         private void Menu_Click(object sender, RoutedEventArgs e) {
+            if(!start.IsActive)
+                start = new StartUpWindow();
+            start.gameWindow = this;
+            start.Content = new menu();
+            start.inGame = true;
             start.Show();
         }
     }

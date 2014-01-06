@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The sea Box
 /// </summary>
+/// 
+[Serializable]
 public class SeaBox : Box {
     /// <summary>
     /// Constructor

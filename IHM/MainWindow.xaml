@@ -42,8 +42,8 @@
                 </Border>
                 <Border BorderThickness="3" Grid.Column="2" Grid.Row="0" Margin="20" BorderBrush="Black" HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical" Background="DarkOliveGreen" >
-                        <Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
-<Button HorizontalAlignment="Center" Height="25" Margin="15" Content="Menu" Click="Menu_Click" Width="85"/>
+                        <Button HorizontalAlignment="Center" Height="25" Margin="3" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="85"/>
+<Button HorizontalAlignment="Center" Height="25" Margin="3" Content="Menu" Click="Menu_Click" Width="85"/>
                     <Label x:Name="StepLabel" FontWeight="ExtraBold" Content="Tours restants : " />
                 </StackPanel>
                 </Border>

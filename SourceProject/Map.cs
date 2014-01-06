@@ -13,9 +13,13 @@ using System.Text;
 /// <summary>
 /// The map class
 /// </summary>
+/// 
+[Serializable]
 public abstract class Map : IMap {
 
+    [NonSerialized]
     protected BoxFactory boxFactory;
+    [NonSerialized]
     protected Wrapper.WrapperAlgo wrapperAlgo;
     protected Box[,] _map;
 

@@ -25,7 +25,6 @@ namespace IHM {
             InitializeComponent();
             inGame = false;
             Content = new menu();
-
         }
     }
 

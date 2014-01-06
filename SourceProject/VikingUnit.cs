@@ -12,6 +12,8 @@ using System.Text;
 /// <summary>
 /// The viking unit
 /// </summary>
+/// 
+[Serializable]
 public class VikingUnit : Unit {
     /// <summary>
     /// Constructor
