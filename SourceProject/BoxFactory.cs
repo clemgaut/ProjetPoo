@@ -43,7 +43,7 @@ public class BoxFactory : IBoxFactory {
                 box = _lowlandBox;
                 break;
 
-            case EBoxType.MOUTAIN:
+            case EBoxType.MOUNTAIN:
                 box = _mountainBox;
                 break;
 

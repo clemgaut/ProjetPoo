@@ -48,7 +48,7 @@ namespace IHM {
                 case EBoxType.LOWLAND:
                     image = _lowlandBrush;
                     break;
-                case EBoxType.MOUTAIN:
+                case EBoxType.MOUNTAIN:
                     image = _mountainBrush;
                     break;
                 case EBoxType.SEA:

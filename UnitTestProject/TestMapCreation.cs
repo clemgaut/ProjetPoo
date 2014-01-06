@@ -14,6 +14,12 @@ namespace UnitTestProject
             Assert.AreEqual(demoMap.Height, 5);
             Assert.AreEqual(demoMap.Width, 5);
 
+            Assert.IsTrue(demoMap.outOfMap(5, 5));
+            Assert.IsTrue(demoMap.outOfMap(-1, 3));
+            Assert.IsTrue(demoMap.outOfMap(3, -1));
+            Assert.IsFalse(demoMap.outOfMap(0, 0));
+            Assert.IsFalse(demoMap.outOfMap(4, 4));
+
             foreach (Box b in demoMap.getMap())
             {
                 Assert.AreNotEqual(b, null);

@@ -26,7 +26,7 @@ namespace UnitTestProject {
 
         [TestMethod]
         public void TestMountainBoxCreation() {
-            Box mountainBox = factory.getBox(EBoxType.MOUTAIN);
+            Box mountainBox = factory.getBox(EBoxType.MOUNTAIN);
             Assert.IsInstanceOfType(mountainBox, typeof(MountainBox));
         }
 
@@ -34,6 +34,12 @@ namespace UnitTestProject {
         public void TestSeaBoxCreation() {
             Box seaBox = factory.getBox(EBoxType.SEA);
             Assert.IsInstanceOfType(seaBox, typeof(SeaBox));
+        }
+
+        [TestMethod]
+        public void TestNullBoxCreation() {
+            Box nullBox = factory.getBox((EBoxType)10);
+            Assert.IsNull(nullBox);
         }
     }
 }

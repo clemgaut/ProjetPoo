@@ -11,6 +11,12 @@ namespace UnitTestProject
         {
             DemoGameBuilder demoBuilder = new DemoGameBuilder(ENation.GAUL, ENation.NAIN);
 
+            Assert.IsNull(demoBuilder.getGame().getActivePlayer());
+            Assert.IsNull(demoBuilder.getGame().getUnactivePlayer());
+
+            demoBuilder.getPlayer1().setName("Player1");
+            Assert.AreEqual(demoBuilder.getPlayer1().getName(), "Player1");
+
             Assert.AreNotEqual(demoBuilder.getPlayer1(), null);
             Assert.AreNotEqual(demoBuilder.getPlayer2(), null);
 

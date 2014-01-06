@@ -141,7 +141,7 @@ namespace IHM {
             if(tile is SeaBox)
                 rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.SEA);
             if(tile is MountainBox)
-                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.MOUTAIN);
+                rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.MOUNTAIN);
             if(tile is LowlandBox)
                 rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.LOWLAND);
             if(tile is DesertBox)
@@ -188,22 +188,26 @@ namespace IHM {
          * Change the color of rectangle where player units are
          */
         private void updateUnitUI() {
-            List<Unit> selectableUnits1 = (List<Unit>)game.getActivePlayer().getNation().getUnits();
+            if (game.getActivePlayer().getNation().getUnits() != null) {
+                List<Unit> selectableUnits1 = game.getActivePlayer().getNation().getUnits().ToList();
 
-            foreach(Unit u in selectableUnits1) {
-                Rectangle r = getRectangle(u.getLine(), u.getColumn());
-                r.Stroke = Brushes.GreenYellow;
-                if(r != selectedVisual)
-                    r.StrokeThickness = 2;
+                foreach (Unit u in selectableUnits1) {
+                    Rectangle r = getRectangle(u.getLine(), u.getColumn());
+                    r.Stroke = Brushes.GreenYellow;
+                    if (r != selectedVisual)
+                        r.StrokeThickness = 2;
+                }
             }
 
-            List<Unit> selectableUnits2 = (List<Unit>) game.getUnactivePlayer().getNation().getUnits();
+            if (game.getUnactivePlayer().getNation().getUnits() != null) {
+                List<Unit> selectableUnits2 = game.getUnactivePlayer().getNation().getUnits().ToList();
 
-            foreach(Unit u in selectableUnits2) {
-                Rectangle r = getRectangle(u.getLine(), u.getColumn());
-                r.Stroke = Brushes.Red;
-                if(r != selectedVisual)
-                    r.StrokeThickness = 2;
+                foreach (Unit u in selectableUnits2) {
+                    Rectangle r = getRectangle(u.getLine(), u.getColumn());
+                    r.Stroke = Brushes.Red;
+                    if (r != selectedVisual)
+                        r.StrokeThickness = 2;
+                }
             }
         }
 
@@ -253,7 +257,7 @@ namespace IHM {
             int old_row = unit.getLine();
             int old_column = unit.getColumn();
 
-            if (unit.canMove(row, column, map)) {
+            if (unit.canMove(row, column, map) && (old_row!=row || old_column!=column)) {
                 //If the opponent has no units, we move
                 if (game.getUnactivePlayer().getNation().getUnits(row, column).Count == 0)
                     unit.move(row, column, map);

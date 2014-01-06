@@ -131,7 +131,7 @@ public abstract class Map : IMap {
     /// <param name="line">The line</param>
     /// <param name="column">The column</param>
     /// <returns>True if the coordonates are inside the map, false otherwise.</returns>
-    private bool outOfMap(int line, int column) {
+    public bool outOfMap(int line, int column) {
         return line < 0 || line >= Height || column < 0 || column >= Width;
     }
 
@@ -154,7 +154,7 @@ public abstract class Map : IMap {
                     l.Add((int)EBoxType.LOWLAND);
 
                 if(_map[line, column].GetType() == typeof(MountainBox))
-                    l.Add((int)EBoxType.MOUTAIN);
+                    l.Add((int)EBoxType.MOUNTAIN);
 
                 if(_map[line, column].GetType() == typeof(SeaBox))
                     l.Add((int)EBoxType.SEA);
@@ -183,16 +183,12 @@ public abstract class Map : IMap {
                         setBox(boxFactory.getBox(EBoxType.LOWLAND), line, column);
                         break;
 
-                    case (int)EBoxType.MOUTAIN:
-                        setBox(boxFactory.getBox(EBoxType.MOUTAIN), line, column);
+                    case (int)EBoxType.MOUNTAIN:
+                        setBox(boxFactory.getBox(EBoxType.MOUNTAIN), line, column);
                         break;
 
                     case (int)EBoxType.SEA:
                         setBox(boxFactory.getBox(EBoxType.SEA), line, column);
-                        break;
-
-                    default:
-                        //TODO Error
                         break;
                 }
             }
