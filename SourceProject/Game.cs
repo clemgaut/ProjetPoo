@@ -193,10 +193,14 @@ public class Game : IGame {
     }
 
     /// <summary>
-    /// Return the winner (player with most points)
+    /// Return the winner (player alive or with most points)
     /// </summary>
     /// <returns>The winner</returns>
     public virtual Player getWinner() {
+        if (_player1.getNation().getUnitsNumber() == 0)
+            return _player2;
+        if (_player2.getNation().getUnitsNumber() == 0)
+            return _player1;
         if (_player1.getPoints() < _player2.getPoints())
             return _player2;
         if (_player1.getPoints() > _player2.getPoints())

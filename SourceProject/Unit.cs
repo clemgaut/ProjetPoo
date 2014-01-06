@@ -15,6 +15,8 @@ public abstract class Unit : IUnit {
     protected int _line;
     protected int _column;
 
+    private static Random random = new Random();
+
     /// <summary>
     /// Constructor
     /// </summary>
@@ -125,7 +127,6 @@ public abstract class Unit : IUnit {
         double pAttWin;
         int result;
 
-        Random random = new Random();
         int nbCombat = random.Next(3, Math.Max(_lifePoints, defUnit.getLifePoints()) + 2);
 
         for(int i = 0; i < nbCombat; i++) {
@@ -140,7 +141,7 @@ public abstract class Unit : IUnit {
             result = random.Next(0, 100);
 
             if(result <= pAttWin)
-                defUnit.setLifePoints(getLifePoints() - 1);
+                defUnit.setLifePoints(defUnit.getLifePoints() - 1);
             else
                 _lifePoints--;
 

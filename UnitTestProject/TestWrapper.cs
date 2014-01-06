@@ -7,6 +7,27 @@ namespace UnitTestProject
     [TestClass]
     public class UnitTestConnectWrapper
     {
+        private int[] lmap = 
+        { (int)EBoxType.DESERT, (int)EBoxType.FOREST, (int)EBoxType.FOREST, (int)EBoxType.MOUNTAIN, (int)EBoxType.MOUNTAIN,
+        (int)EBoxType.SEA, (int)EBoxType.LOWLAND, (int)EBoxType.MOUNTAIN, (int)EBoxType.FOREST, (int)EBoxType.DESERT,
+        (int)EBoxType.SEA, (int)EBoxType.LOWLAND, (int)EBoxType.LOWLAND, (int)EBoxType.LOWLAND, (int)EBoxType.MOUNTAIN,
+        (int)EBoxType.LOWLAND, (int)EBoxType.SEA, (int)EBoxType.FOREST, (int)EBoxType.DESERT, (int)EBoxType.SEA,
+        (int)EBoxType.MOUNTAIN, (int)EBoxType.LOWLAND, (int)EBoxType.FOREST, (int)EBoxType.DESERT, (int)EBoxType.MOUNTAIN};
+
+        private Game getDemoGame(ENation nation1, int line1, int column1, ENation nation2, int line2, int column2) {
+            DemoGameBuilder demoBuilder = new DemoGameBuilder(nation1, nation2);
+            Game game = demoBuilder.getGame();
+            DemoMap map = new DemoMap();
+            map.convertIntListToMap(new System.Collections.Generic.List<int>(lmap));
+            game.setMap(map);
+            game.getPlayer1().getNation().moveToNullPosition();
+            game.getPlayer2().getNation().moveToNullPosition();
+            game.getPlayer1().getNation().setInitBox(line1, column1, map);
+            game.getPlayer2().getNation().setInitBox(line2, column2, map);
+
+            return game;
+        }
+
         [TestMethod]
         public void TestMethodWrapperCreation()
         {

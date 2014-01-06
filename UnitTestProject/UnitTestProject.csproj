@@ -75,6 +75,8 @@
     <Compile Include="TestBoxFactory.cs" />
     <Compile Include="TestUnitFactory.cs" />
     <Compile Include="TestUnitActions.cs" />
+    <Compile Include="TestGame.cs" />
+    <Compile Include="TestGameBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SourceProject\SourceProject.csproj">

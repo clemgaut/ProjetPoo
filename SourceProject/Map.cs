@@ -127,7 +127,7 @@ public abstract class Map : IMap {
     /// <param name="line">The line</param>
     /// <param name="column">The column</param>
     /// <returns>True if the coordonates are inside the map, false otherwise.</returns>
-    private bool outOfMap(int line, int column) {
+    public bool outOfMap(int line, int column) {
         return line < 0 || line >= Height || column < 0 || column >= Width;
     }
 
@@ -185,10 +185,6 @@ public abstract class Map : IMap {
 
                     case (int)EBoxType.SEA:
                         setBox(boxFactory.getBox(EBoxType.SEA), line, column);
-                        break;
-
-                    default:
-                        //TODO Error
                         break;
                 }
             }

@@ -33,23 +33,23 @@ namespace UnitTestProject {
 
             game.start();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsTrue(game.isPlayer1Active());
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(0, 1, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 5);
 
             game.nextStep();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(1, 1, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 8);
         }
@@ -60,7 +60,7 @@ namespace UnitTestProject {
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsTrue(game.isPlayer1Active());
             //Sea box
             Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).move(3, 4, map));
             //Too far box
@@ -77,10 +77,11 @@ namespace UnitTestProject {
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             //One normal move
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(4, 3, map));
+            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).hasMoves());
 
             //One mountain move
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(0, 4, map));
@@ -93,23 +94,23 @@ namespace UnitTestProject {
 
             game.start();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsTrue(game.isPlayer1Active());
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(1, 1, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 5);
 
             game.nextStep();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(1, 2, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 8);
         }
@@ -120,7 +121,7 @@ namespace UnitTestProject {
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsTrue(game.isPlayer1Active());
             //Sea box
             Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).move(1, 0, map));
             //Too far box
@@ -137,10 +138,11 @@ namespace UnitTestProject {
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             //One normal move
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(0, 2, map));
+            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).hasMoves());
 
             //One lowland move
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(1, 1, map));
@@ -156,36 +158,34 @@ namespace UnitTestProject {
 
             game.start();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(VikingUnit));
+            Assert.IsTrue(game.isPlayer1Active());
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(3, 4, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 6);
 
             game.nextStep();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(1).GetType(), typeof(VikingUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(1, 4, map));
 
             game.nextStep();
 
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(NainUnit));
+            Assert.IsFalse(game.isPlayer1Active());
 
             Assert.AreEqual(game.getUnactivePlayer().getPoints(), 10);
         }
 
         [TestMethod]
         public void TestMoveNotAllowedViking() {
-            Game game = getDemoGame(ENation.GAUL, 0, 0, ENation.NAIN, 2, 2);
+            Game game = getDemoGame(ENation.VIKING, 0, 0, ENation.NAIN, 2, 2);
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
-            //Sea box
-            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).move(1, 0, map));
+            Assert.IsTrue(game.isPlayer1Active());
             //Too far box
             Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).move(1, 1, map));
 
@@ -196,20 +196,43 @@ namespace UnitTestProject {
 
         [TestMethod]
         public void TestMoveAllowedViking() {
-            Game game = getDemoGame(ENation.GAUL, 0, 1, ENation.NAIN, 2, 2);
+            Game game = getDemoGame(ENation.VIKING, 1, 1, ENation.NAIN, 2, 2);
             Map map = game.getMap();
 
             game.start();
-            Assert.AreEqual(game.getActivePlayer().getNation().getUnit(0).GetType(), typeof(GaulUnit));
+            Assert.IsTrue(game.isPlayer1Active());
 
             //One normal move
-            Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(0, 2, map));
+            Assert.IsTrue(game.getActivePlayer().getNation().getUnit(0).move(1, 2, map));
+            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(0).hasMoves());
 
-            //One lowland move
-            Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(1, 1, map));
-            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(1).move(1, 2, map));
-            Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(2, 1, map));
-            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(1).move(1, 1, map));
+            //One sea move
+            Assert.IsTrue(game.getActivePlayer().getNation().getUnit(1).move(0, 1, map));
+            Assert.IsFalse(game.getActivePlayer().getNation().getUnit(1).move(0, 2, map));
+        }
+
+        [TestMethod]
+        public void TestBasicFight() {
+            NainUnit nain = new NainUnit();
+            VikingUnit vik = new VikingUnit();
+
+            vik.setLifePoints(0);
+
+            Assert.IsTrue(nain.attack(vik));
+        }
+
+        [TestMethod]
+        public void TestRandomFight() {
+            int nainWin = 0;
+            for (int i = 0; i < 10000; i++) {
+                NainUnit nain = new NainUnit();
+                VikingUnit vik = new VikingUnit();
+
+                if (nain.attack(vik))
+                    nainWin++;
+            }
+            //Can statistically fail sometimes rarely
+            Assert.IsTrue(nainWin < 8000 && nainWin > 7000);
         }
     }
 }

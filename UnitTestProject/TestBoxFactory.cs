@@ -35,5 +35,11 @@ namespace UnitTestProject {
             Box seaBox = factory.getBox(EBoxType.SEA);
             Assert.IsInstanceOfType(seaBox, typeof(SeaBox));
         }
+
+        [TestMethod]
+        public void TestNullBoxCreation() {
+            Box nullBox = factory.getBox((EBoxType)10);
+            Assert.IsNull(nullBox);
+        }
     }
 }
