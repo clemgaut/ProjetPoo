@@ -63,7 +63,8 @@ public class Nation : INation {
     /// </summary>
     /// <returns>The units.</returns>
     public virtual IEnumerable<Unit> getUnits() {
-        return units;
+
+        return (units.Count() == 0) ? new List<Unit>() : units;
     }
 
     /// <summary>
