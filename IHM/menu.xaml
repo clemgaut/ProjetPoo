@@ -1,0 +1,20 @@
+﻿<Page x:Class="IHM.menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+	Title="menu" >
+   
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+    
+        <Button Content="Nouvelle Partie" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="newGame_Click"/>
+
+        <Button Content="Charger" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="load_Click"/>
+
+        <Button Content="Sauvegarder" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="save_Click"/>
+
+        <Button Content="Quitter" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="close_Click"/>
+
+    </StackPanel>
+</Page>

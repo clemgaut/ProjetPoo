@@ -1,0 +1,16 @@
+﻿<Page x:Class="IHM.save"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+	Title="save">
+
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <ListBox x:Name="filesList"/>
+        <Button x:Name="menu" Content="Retour au menu" Click="menu_Click"/>
+        
+  </StackPanel>
+</Page>

@@ -29,6 +29,7 @@ public class Game : IGame {
     protected int _steps;
 
     public static Game instance;
+
     /// <summary>
     /// Constructor
     /// </summary>

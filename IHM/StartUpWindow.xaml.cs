@@ -19,61 +19,9 @@ namespace IHM {
     public partial class StartUpWindow : Window {
         public StartUpWindow() {
             InitializeComponent();
+            Content = new menu();
 
-            initializeMapTags();
-
-            initializeNationTags();
-        }
-
-        private void initializeMapTags() {
-            this.DemoItem.Tag = EGameType.DEMO;
-            this.SmallItem.Tag = EGameType.SMALL;
-            this.NormalItem.Tag = EGameType.NORMAL;
-        }
-
-        private void initializeNationTags() {
-            this.Nain1.Tag = ENation.NAIN;
-            this.Nain2.Tag = ENation.NAIN;
-
-            this.Gaul1.Tag = ENation.GAUL;
-            this.Gaul2.Tag = ENation.GAUL;
-
-            this.Viking1.Tag = ENation.VIKING;
-            this.Viking2.Tag = ENation.VIKING;
-        }
-
-        private void StartUpButton_Click(object sender, RoutedEventArgs e) {
-            //We start the game only if both nations are selected.
-            if(ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1) {
-                // We retrieve game type with the tag
-                ComboBoxItem itemGame = (ComboBoxItem)GameTypeComboBox.SelectedItem;
-                ComboBoxItem itemNation1 = (ComboBoxItem)ComboBoxNationPlayer1.SelectedItem;
-                ComboBoxItem itemNation2 = (ComboBoxItem)ComboBoxNationPlayer2.SelectedItem;
-
-                MainWindow win = new MainWindow((EGameType)itemGame.Tag, (ENation)itemNation1.Tag, (ENation)itemNation2.Tag, labelPlayer1.Text, labelPlayer2.Text);
-                win.Show();
-                this.Close();
-            }
-        }
-
-        private void ComboBoxNation_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-            StartUpButton.IsEnabled = (ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1);
-        }
-
-        private void labelPlayer2_Focus(object sender, RoutedEventArgs e) {
-            if(labelPlayer2.IsFocused && labelPlayer2.Text == "Joueur 2")
-                labelPlayer2.Text = "";
-
-            if(!labelPlayer2.IsFocused && labelPlayer2.Text == "")
-                labelPlayer2.Text = "Joueur 2";
-        }
-
-        private void labelPlayer1_Focus(object sender, RoutedEventArgs e) {
-            if(labelPlayer1.IsFocused && labelPlayer1.Text == "Joueur 1")
-                labelPlayer1.Text = "";
-
-            if(!labelPlayer1.IsFocused && labelPlayer1.Text == "")
-                labelPlayer1.Text = "Joueur 1";
         }
     }
+
 }

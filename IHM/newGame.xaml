@@ -1,0 +1,49 @@
+﻿<Page x:Class="IHM.newGame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ihm="clr-namespace:IHM"
+      mc:Ignorable="d" 
+	Title="newGame">
+
+
+    <Page.Resources>
+        <ihm:NegatingConverter x:Key="NegatingConverter"/>
+        <ihm:SelectedIndexToTextLabelColorConverter x:Key="SelectedIndexToTextLabelColorConverter"/>
+    </Page.Resources>
+
+       <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <ComboBox x:Name="GameTypeComboBox" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="180" Margin="10">
+            <ComboBoxItem x:Name="DemoItem" >Carte Demo (5x5)</ComboBoxItem>
+            <ComboBoxItem x:Name="SmallItem">Petite Carte (10x10)</ComboBoxItem>
+            <ComboBoxItem x:Name="NormalItem" IsSelected="True">Carte Normale (15x15)</ComboBoxItem>
+        </ComboBox>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox Margin="10" Height="24" TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="150" Text="Joueur 1" x:Name="labelPlayer1" GotFocus="labelPlayer1_Focus" LostFocus="labelPlayer1_Focus"></TextBox>
+                <ComboBox x:Name="ComboBoxNationPlayer1"  Height="24" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" SelectionChanged="ComboBoxNation_SelectionChanged">
+                    <ComboBoxItem x:Name="Gaul1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul2, Mode=OneWay}" Content="Gaulois"/>
+                    <ComboBoxItem x:Name="Nain1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain2, Mode=OneWay}" Content="Nains"/>
+                    <ComboBoxItem x:Name="Viking1" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Viking2, Mode=OneWay}" Content="Vikings"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox Margin="10" Height="24" TextAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="150" Text="Joueur 2" x:Name="labelPlayer2" GotFocus="labelPlayer2_Focus" LostFocus="labelPlayer2_Focus"></TextBox>
+                <ComboBox x:Name="ComboBoxNationPlayer2" Height="24" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" SelectionChanged="ComboBoxNation_SelectionChanged">
+                    <ComboBoxItem x:Name="Gaul2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Gaul1, Mode=OneWay}" Content="Gaulois"/>
+                    <ComboBoxItem x:Name="Nain2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Nain1, Mode=OneWay}" Content="Nains"/>
+                    <ComboBoxItem x:Name="Viking2" IsEnabled="{Binding IsSelected, Converter={StaticResource NegatingConverter}, ElementName=Viking1, Mode=OneWay}" Content="Vikings"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="StartUpButton" Content="Lancer la partie" Width="120" Height="24" Margin="20" IsEnabled="False" Click="StartUpButton_Click" />
+
+        <Button x:Name="MenuButton" Content="Retour au menu" Width="120" Height="24" Margin="20" IsEnabled="True" Click="MenuButton_Click" />
+
+    </StackPanel>
+</Page>
