@@ -13,7 +13,11 @@ using System.Text;
 /// <summary>
 /// The game (map, players and steps)
 /// </summary>
+/// 
+[Serializable]
 public class Game : IGame {
+
+
     protected Map _map;
 
     protected Player _player1;
@@ -24,10 +28,12 @@ public class Game : IGame {
 
     protected int _steps;
 
+    public static Game instance;
     /// <summary>
     /// Constructor
     /// </summary>
     public Game() {
+        instance = this;
     }
 
     /// <summary>

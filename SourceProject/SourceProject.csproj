@@ -48,6 +48,7 @@
     <Compile Include="EBoxType.cs" />
     <Compile Include="EGameType.cs" />
     <Compile Include="ENation.cs" />
+    <Compile Include="Files.cs" />
     <Compile Include="ForestBox.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameBuilder.cs" />

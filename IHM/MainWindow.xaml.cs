@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using SourceProject;
 
 namespace IHM {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -26,6 +27,15 @@ namespace IHM {
         ImageBrushFactory imageBrushFactory = new ImageBrushFactory();
         StackPanel _selectedUnit;
         Wrapper.WrapperAlgo wrap = new Wrapper.WrapperAlgo();
+
+        public void Load() {
+
+        }
+
+        public void Save() {
+
+        }
+
 
         public MainWindow(EGameType mapType, ENation nation1, ENation nation2, string nameP1, string nameP2) {
             InitializeComponent();
