@@ -110,11 +110,18 @@ public class Nation : INation {
             u.initMovePoints();
         }
         if (!move) {
-            foreach (Unit u in units) {
-                u.nullPosition();
-            }
+            moveToNullPosition();
         }
         return move;
+    }
+
+    /// <summary>
+    /// Move all units outside the map
+    /// </summary>
+    public void moveToNullPosition() {
+        foreach (Unit u in units) {
+            u.nullPosition();
+        }
     }
 
     /// <summary>

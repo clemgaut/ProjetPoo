@@ -13,7 +13,6 @@ using System.Text;
 /// <summary>
 /// The game (map, players and steps)
 /// </summary>
-/// 
 [Serializable]
 public class Game : IGame {
 

@@ -163,7 +163,7 @@ public abstract class Map : IMap {
     /// Convert a List of int (EBoxType) to a Box[,] according to the size of the map. Changes the current map.
     /// </summary>
     /// <param name="l">The list of int representing the map.</param>
-    protected void convertIntListToMap(List<int> l) {
+    public void convertIntListToMap(List<int> l) {
         for(int line = 0; line < Height; line++) {
             for(int column = 0; column < Width; column++) {
                 switch(l[line * Width + column]) {
