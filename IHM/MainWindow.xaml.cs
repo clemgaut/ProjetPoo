@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Effects;
 using SourceProject;
 
 namespace IHM {
@@ -71,6 +72,8 @@ namespace IHM {
 
         public MainWindow(StartUpWindow win) {
             InitializeComponent();
+
+            blurEffect(false);
 
             start = win;
             start.inGame = true;
@@ -150,9 +153,11 @@ namespace IHM {
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
             rectangle.Tag = tile;
-            rectangle.Stroke = Brushes.Gray;
+            VisualBrush vb = new VisualBrush();
+            vb.Opacity = 0;
+            rectangle.Stroke = vb;
             rectangle.StrokeThickness = 1;
-
+          
             Ellipse ell = new Ellipse();
             ell.Width = 25;
             ell.Height = 25;
@@ -546,10 +551,27 @@ namespace IHM {
         private void Menu_Click(object sender, RoutedEventArgs e) {
             if(!start.IsActive)
                 start = new StartUpWindow();
+
+            blurEffect(true);
+
             start.gameWindow = this;
             start.Content = new menu();
             start.inGame = true;
             start.Show();
+        }
+
+        public void blurEffect(bool on) {
+
+            if(on) {
+                BlurEffect blur = new BlurEffect();
+                blur.Radius = 5;
+                Effect = blur;
+                Opacity = 0.8;
+            } else {
+                Effect = null;
+                Opacity = 1;
+            }
+            
         }
     }
 }

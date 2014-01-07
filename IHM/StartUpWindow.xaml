@@ -3,6 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ihm="clr-namespace:IHM"
         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        IsManipulationEnabled="True"
+        BorderThickness="0"
+        ResizeMode="NoResize"
         Title="Bienvenue sur SmallWorld" Height="480" Width="640">
 
       

@@ -50,6 +50,7 @@ namespace IHM {
 
         private void gameButton_Click(object sender, RoutedEventArgs e) {
             parent.Hide();
+            parent.gameWindow.blurEffect(false);
         }
 
     }
