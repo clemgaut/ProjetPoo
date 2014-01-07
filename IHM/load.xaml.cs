@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace IHM {
     /// <summary>
@@ -39,7 +31,6 @@ namespace IHM {
             foreach(String file in saves) {
                 Button bLoad = new Button();
                 bLoad.Content = file;
-                bLoad.Padding = new Thickness(5);
                 bLoad.Margin = new Thickness(5);
                 bLoad.Width = 150;
                 bLoad.Height = 30;

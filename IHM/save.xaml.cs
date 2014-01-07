@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace IHM {
 
@@ -46,7 +47,10 @@ namespace IHM {
                 bSave.Margin = new Thickness(5);
                 bSave.Width = 150;
                 bSave.Height = 30;
-                bSave.Name = "button" + file;
+
+                bSave.Name = "button" + file.Replace(" ", "_");
+                bSave.BorderBrush = Brushes.SlateGray;
+                bSave.Background = Brushes.SlateGray;
 
                 bSave.Click += save_Click;
 
