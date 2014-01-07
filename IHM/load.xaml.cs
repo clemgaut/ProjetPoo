@@ -43,8 +43,10 @@ namespace IHM {
                 bLoad.Margin = new Thickness(5);
                 bLoad.Width = 150;
                 bLoad.Height = 30;
-                bLoad.Name = "button" + file;
-
+               
+                bLoad.Name = "button" +  file.Replace(" ", "_");
+                bLoad.BorderBrush = Brushes.SlateGray;
+                bLoad.Background = Brushes.SlateGray;
                 bLoad.Click += load_Click;
 
                 panel.Children.Add(bLoad);

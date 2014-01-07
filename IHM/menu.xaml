@@ -6,17 +6,18 @@
       mc:Ignorable="d" 
       Loaded="Page_Loaded"
 	Title="menu" >
-   
+
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-    
-        <Button Content="Nouvelle Partie" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="newGame_Click"/>
 
-        <Button Content="Charger" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="load_Click"/>
+        <Button Content="Nouvelle Partie" HorizontalAlignment="Center" Height="30" Margin="10" Width="120" Click="newGame_Click"/>
 
-        <Button Name="saveButton" IsEnabled="False" Content="Sauvegarder" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="save_Click"/>
+        <Button Content="Charger" HorizontalAlignment="Center" Height="30" Margin="10" Width="120" Click="load_Click"/>
 
-           <Button Content="Quitter" HorizontalAlignment="Center" Height="25" Margin="10" Width="120" Click="close_Click"/>
-        <Button Name="gameButton" Content="Retour au jeu" HorizontalAlignment="Center" Height="25" Visibility="Hidden" Margin="10" Width="120" Click="gameButton_Click"/>
+        <Button Name="saveButton" IsEnabled="False" Content="Sauvegarder" HorizontalAlignment="Center" Height="30" Margin="10" Width="120" Click="save_Click"/>
+
+        <Button Content="Quitter" HorizontalAlignment="Center" Height="30" Margin="10" Width="120" Click="close_Click"/>
+        
+        <Button Name="gameButton" Content="Retour au jeu" HorizontalAlignment="Center" Height="30" Visibility="Hidden" Margin="10" Width="120" Click="gameButton_Click"/>
 
 
     </StackPanel>

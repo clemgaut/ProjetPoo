@@ -43,6 +43,7 @@ namespace IHM {
         }
 
         private void StartUpButton_Click(object sender, RoutedEventArgs e) {
+
             //We start the game only if both nations are selected.
             if(ComboBoxNationPlayer1.SelectedIndex > -1 && ComboBoxNationPlayer2.SelectedIndex > -1) {
                 // We retrieve game type with the tag
