@@ -426,7 +426,7 @@ namespace IHM {
             if(_selectedUnit != null) {
                 Border parent = (Border)_selectedUnit.Parent;
                 parent.BorderThickness = new Thickness(2);
-                foreach(Label lbl in _selectedUnit.Children)
+                foreach (Label lbl in _selectedUnit.Children.OfType<Label>())
                     lbl.FontWeight = FontWeights.Normal;
             }
 
@@ -439,7 +439,7 @@ namespace IHM {
                 if (selectedUnit != _selectedUnit) {
                     Border parent = (Border)selectedUnit.Parent;
                     parent.BorderThickness = new Thickness(3);
-                    foreach(Label lbl in selectedUnit.Children)
+                    foreach(Label lbl in selectedUnit.Children.OfType<Label>())
                         lbl.FontWeight = FontWeights.Bold;
                    
                     _selectedUnit = selectedUnit;
@@ -461,6 +461,36 @@ namespace IHM {
 
             Label lbLife = new Label();
             lbLife.Content = "Vie : " + u.getLifePoints();
+            LinearGradientBrush myVerticalGradient = new LinearGradientBrush();
+            myVerticalGradient.StartPoint = new Point(0, 0.5);
+            myVerticalGradient.EndPoint = new Point(1, 0.5);
+            myVerticalGradient.GradientStops.Add(new GradientStop(Colors.Red, 0.0));
+            if (u.getLifePoints() > 0)
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.Red, 0.2));
+            else
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 0.2));
+            if (u.getLifePoints() > 1)
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.OrangeRed, 0.4));
+            else
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 0.4));
+            if (u.getLifePoints() > 2)
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.Orange, 0.6));
+            else
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 0.6));
+            if (u.getLifePoints() > 3)
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.YellowGreen, 0.8));
+            else
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 0.8));
+            if (u.getLifePoints() > 4)
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.Green, 1.0));
+            else
+                myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 1.0));
+            Rectangle lifeBar = new Rectangle();
+            lifeBar.Fill = myVerticalGradient;
+            lifeBar.Width = 50;
+            lifeBar.Height = 7;
+
+
             Label lbPoint = new Label();
             lbPoint.Content = "Point : " + u.getPoint(game.getMap());
             Label lbOff = new Label();
@@ -469,6 +499,7 @@ namespace IHM {
             lbDeff.Content = "Defense : " + u.getDefensive();
 
             stack.Children.Add(lbLife);
+            stack.Children.Add(lifeBar);
             stack.Children.Add(lbPoint);
             stack.Children.Add(lbOff);
             stack.Children.Add(lbDeff);
