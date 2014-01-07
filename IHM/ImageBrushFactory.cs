@@ -14,24 +14,26 @@ namespace IHM {
         private ImageBrush _mountainBrush;
         private ImageBrush _seaBrush;
 
+        private static String baseUri = "../../../textures/terrains/";
+
         public ImageBrushFactory() {
-            BitmapImage _desertImage = new BitmapImage(new Uri(@"../../../textures/terrains/desert.png", UriKind.Relative));
+            BitmapImage _desertImage = new BitmapImage(new Uri(@baseUri + "desert.png", UriKind.Relative));
             _desertBrush = new ImageBrush();
             _desertBrush.ImageSource = _desertImage;
 
-            BitmapImage _forestImage = new BitmapImage(new Uri(@"../../../textures/terrains/forest.png", UriKind.Relative));
+            BitmapImage _forestImage = new BitmapImage(new Uri(@baseUri + "forest.png", UriKind.Relative));
             _forestBrush = new ImageBrush();
             _forestBrush.ImageSource = _forestImage;
 
-            BitmapImage _lowlandImage = new BitmapImage(new Uri(@"../../../textures/terrains/lowland.png", UriKind.Relative));
+            BitmapImage _lowlandImage = new BitmapImage(new Uri(@baseUri + "lowland.png", UriKind.Relative));
             _lowlandBrush = new ImageBrush();
             _lowlandBrush.ImageSource = _lowlandImage;
 
-            BitmapImage _mountainImage = new BitmapImage(new Uri(@"../../../textures/terrains/mountain.png", UriKind.Relative));
+            BitmapImage _mountainImage = new BitmapImage(new Uri(@baseUri + "mountain.png", UriKind.Relative));
             _mountainBrush = new ImageBrush();
             _mountainBrush.ImageSource = _mountainImage;
 
-            BitmapImage _seaImage = new BitmapImage(new Uri(@"../../../textures/terrains/sea.png", UriKind.Relative));
+            BitmapImage _seaImage = new BitmapImage(new Uri(@baseUri + "sea.png", UriKind.Relative));
             _seaBrush = new ImageBrush();
             _seaBrush.ImageSource = _seaImage;
         }

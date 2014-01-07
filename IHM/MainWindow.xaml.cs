@@ -352,7 +352,7 @@ namespace IHM {
                     Rectangle r = getRectangle(row, col);
                     //Peut mieux faire (param en plus à passer au cpp pour gérer le cas du 1/2 point de deplacement des gaulois)
                     if(u.canMove(row, col,map))
-                        r.Opacity = 0.5;
+                        r.Opacity = 1;
                 }
             } else
                 setDefaultOpacity();
@@ -441,7 +441,7 @@ namespace IHM {
 
         private void setDefaultOpacity() {
             foreach (Rectangle r in mapGrid.Children)
-                r.Opacity = 1;
+                r.Opacity = 0.6;
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e) {
