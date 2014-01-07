@@ -123,7 +123,7 @@ namespace IHM {
             for(int l = 0; l < map.Height; l++) {
                 for(int c = 0; c < map.Width; c++) {
                     var tile = map.getBox(l, c);
-                    var rect = createRectangle(l, c, tile);
+                    var rect = createTile(l, c, tile);
                     mapGrid.Children.Add(rect);
                 }
             }
@@ -132,9 +132,9 @@ namespace IHM {
         }
 
         /*
-         * Create a tile rectangle
+         * Create a tile
          */
-        private Rectangle createRectangle(int l, int c, Box tile) {
+        private Grid createTile(int l, int c, Box tile) {
             var rectangle = new Rectangle();
             if(tile is ForestBox)
                 rectangle.Fill = imageBrushFactory.getImageBrush(EBoxType.FOREST);
@@ -153,8 +153,31 @@ namespace IHM {
             rectangle.Stroke = Brushes.Gray;
             rectangle.StrokeThickness = 1;
 
-            rectangle.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
-            return rectangle;
+            Ellipse ell = new Ellipse();
+            ell.Width = 25;
+            ell.Height = 25;
+            ell.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            ell.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+            ell.Visibility = System.Windows.Visibility.Hidden;
+
+            TextBlock text = new TextBlock();
+            text.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
+            text.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+            text.TextAlignment = TextAlignment.Center;
+            text.Visibility = System.Windows.Visibility.Hidden;
+
+            Grid grid = new Grid();
+
+            grid.Children.Add(rectangle);
+            grid.Children.Add(ell);
+            grid.Children.Add(text);
+
+            Grid.SetColumn(grid, c);
+            Grid.SetRow(grid, l);
+
+            grid.MouseLeftButtonDown += new MouseButtonEventHandler(grid_MouseLeftButtonDown);
+
+            return grid;
         }
 
         /*
@@ -185,7 +208,7 @@ namespace IHM {
         }
 
         /*
-         * Change the color of rectangle where player units are
+         * Change the color of rectangle where player units are and update the number of units
          */
         private void updateUnitUI() {
             if (game.getActivePlayer().getNation().getUnits() != null) {
@@ -196,6 +219,15 @@ namespace IHM {
                     r.Stroke = Brushes.GreenYellow;
                     if (r != selectedVisual)
                         r.StrokeThickness = 2;
+
+                    Ellipse ell = getEllipse(u.getLine(), u.getColumn());
+                    ell.Fill = Brushes.GreenYellow;
+
+                    TextBlock text = getText(u.getLine(), u.getColumn());
+                    text.Text = "" + game.getActivePlayer().getNation().getUnits(u.getLine(), u.getColumn()).Count;
+
+                    ell.Visibility = System.Windows.Visibility.Visible;
+                    text.Visibility = System.Windows.Visibility.Visible;
                 }
             }
 
@@ -207,6 +239,15 @@ namespace IHM {
                     r.Stroke = Brushes.Red;
                     if (r != selectedVisual)
                         r.StrokeThickness = 2;
+
+                    Ellipse ell = getEllipse(u.getLine(), u.getColumn());
+                    ell.Fill = Brushes.Red;
+
+                    TextBlock text = getText(u.getLine(), u.getColumn());
+                    text.Text = "" + game.getUnactivePlayer().getNation().getUnits(u.getLine(), u.getColumn()).Count;
+
+                    ell.Visibility = System.Windows.Visibility.Visible;
+                    text.Visibility = System.Windows.Visibility.Visible;
                 }
             }
         }
@@ -215,14 +256,29 @@ namespace IHM {
          * Return the rectangle on line,column
          */
         private Rectangle getRectangle(int line, int column) {
-            return mapGrid.Children.OfType<Rectangle>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column);
+            return mapGrid.Children.OfType<Grid>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column).Children.OfType<Rectangle>().FirstOrDefault();
+        }
+
+        /*
+         * Return the textblock on line,column
+         */
+        private TextBlock getText(int line, int column) {
+            return mapGrid.Children.OfType<Grid>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column).Children.OfType<TextBlock>().FirstOrDefault();
+        }
+
+        /*
+         * Return the ellipse on line,column
+         */
+        private Ellipse getEllipse(int line, int column) {
+            return mapGrid.Children.OfType<Grid>().FirstOrDefault(child => Grid.GetRow(child) == line && Grid.GetColumn(child) == column).Children.OfType<Ellipse>().FirstOrDefault();
         }
 
         /*
          * Called whenever someone click on a map rectangle
          */
-        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-            var rectangle = sender as Rectangle;
+        void grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            var grid = sender as Grid;
+            Rectangle rectangle = grid.Children.OfType<Rectangle>().FirstOrDefault();
             var tile = rectangle.Tag as Box;
             int row = Grid.GetRow(rectangle);
             int column = Grid.GetColumn(rectangle);
@@ -283,6 +339,9 @@ namespace IHM {
             if(!hasUnits(old_row, old_column)) {
                 getRectangle(old_row, old_column).Stroke = Brushes.Gray;
                 getRectangle(old_row, old_column).StrokeThickness = 1;
+
+                getText(old_row, old_column).Visibility = System.Windows.Visibility.Hidden;
+                getEllipse(old_row, old_column).Visibility = System.Windows.Visibility.Hidden;
             }
 
             _selectedUnit = null;
@@ -440,8 +499,8 @@ namespace IHM {
         }
 
         private void setDefaultOpacity() {
-            foreach (Rectangle r in mapGrid.Children)
-                r.Opacity = 0.6;
+            foreach (Grid g in mapGrid.Children)
+                g.Children.OfType<Rectangle>().FirstOrDefault().Opacity = 0.6;
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e) {
