@@ -7,11 +7,12 @@ namespace SourceProject {
     /// Interface for the nation
     /// </summary>
     interface INation {
-        public virtual int getUnitsNumber();
-        public virtual List<IUnit> getUnits();
-        public virtual void deleteDeadUnits();
-        public virtual IUnit getUnit(int i);
-        public virtual List<IUnit> getUnits(int line, int column);
-        public virtual bool setInitBox(int line, int column, IMap m);
-        public void moveToNullPosition();
+        int getUnitsNumber();
+        List<Unit> getUnits();
+        void deleteDeadUnits();
+        Unit getUnit(int i);
+        List<Unit> getUnits(int line, int column);
+        bool setInitBox(int line, int column, Map m);
+        void moveToNullPosition();
+    }
 }

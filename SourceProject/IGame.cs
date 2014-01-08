@@ -5,22 +5,22 @@ namespace SourceProject {
     /// Interface for the game
     /// </summary>
     interface IGame {
-        public virtual void setMap(IMap map);
-        public void setPlayer1(IPlayer p);
-        public void setPlayer2(IPlayer p);
-        public virtual IPlayer getPlayer1();
-        public virtual IPlayer getPlayer2();
-        public virtual IMap getMap();
-        public virtual void setMaxSteps(int max);
-        public virtual IPlayer getActivePlayer();
-        public virtual IPlayer getUnactivePlayer();
-        public virtual List<int> getOpponentUnitsPositions();
-        public virtual bool isPlayer1Active();
-        public virtual void start();
-        public virtual IUnit getBestDefensiveUnit(int line, int column);
-        public virtual bool checkEndfOfGame();
-        public virtual void nextStep();
-        public virtual int getSteps();
-        public virtual IPlayer getWinner();
+        void setMap(Map map);
+        void setPlayer1(Player p);
+        void setPlayer2(Player p);
+        Player getPlayer1();
+        Player getPlayer2();
+        Map getMap();
+        void setMaxSteps(int max);
+        Player getActivePlayer();
+        Player getUnactivePlayer();
+        List<int> getOpponentUnitsPositions();
+        bool isPlayer1Active();
+        void start();
+        Unit getBestDefensiveUnit(int line, int column);
+        bool checkEndfOfGame();
+        void nextStep();
+        int getSteps();
+        Player getWinner();
     }
 }
