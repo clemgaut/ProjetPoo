@@ -489,6 +489,12 @@ namespace IHM {
             lifeBar.Height = 7;
 
 
+            Rectangle iPoint = new Rectangle();
+            iPoint.Width = 24;
+            iPoint.Height = 24;
+            iPoint.Fill = imageBrushFactory.getPointImage();
+            
+
             Label lbPoint = new Label();
             lbPoint.Content = "Point : " + u.getPoint(game.getMap());
             Label lbOff = new Label();
@@ -498,6 +504,7 @@ namespace IHM {
 
             stack.Children.Add(lbLife);
             stack.Children.Add(lifeBar);
+            stack.Children.Add(iPoint);
             stack.Children.Add(lbPoint);
             stack.Children.Add(lbOff);
             stack.Children.Add(lbDeff);

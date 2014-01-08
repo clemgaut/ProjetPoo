@@ -14,6 +14,8 @@ namespace IHM {
         private ImageBrush _mountainBrush;
         private ImageBrush _seaBrush;
 
+        private ImageBrush _point;
+
         private static String baseUri = "../../../textures/terrains/";
 
         public ImageBrushFactory() {
@@ -36,6 +38,15 @@ namespace IHM {
             BitmapImage _seaImage = new BitmapImage(new Uri(@baseUri + "sea.png", UriKind.Relative));
             _seaBrush = new ImageBrush();
             _seaBrush.ImageSource = _seaImage;
+
+            BitmapImage _pointImage = new BitmapImage(new Uri(@baseUri + "../ressources/point.png", UriKind.Relative));
+            _point = new ImageBrush();
+            _point.ImageSource = _pointImage;
+
+        }
+
+        public ImageBrush getPointImage() {
+            return _point;
         }
 
         public ImageBrush getImageBrush(EBoxType boxType) {
