@@ -14,4 +14,5 @@ namespace SourceProject {
         public virtual List<IUnit> getUnits(int line, int column);
         public virtual bool setInitBox(int line, int column, IMap m);
         public void moveToNullPosition();
+    }
 }

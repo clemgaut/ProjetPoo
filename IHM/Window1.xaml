@@ -1,0 +1,27 @@
+﻿<Window x:Class="IHM.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="ToolWindow"
+        Title="Vainqueur " Height="300" Width="400">
+
+    <StackPanel Orientation="Vertical">
+
+        <Label Content="Joueur1 a gagné !"></Label>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="17 points" Width="140" Height="21"></Label>
+            <Image Width="105" Source="C:\Users\Matthieu\Git\ProjetPoo\IHM\versus.png" RenderTransformOrigin="0.5,0.5" Height="110">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.037"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label Content="15 points" Height="32"></Label>
+        </StackPanel>
+        <Button Content="Félicitation !"/>
+    </StackPanel>
+</Window>
