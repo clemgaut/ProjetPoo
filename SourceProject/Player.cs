@@ -51,16 +51,6 @@ public class Player : IPlayer {
         return _name;
     }
 
-    /*public virtual List<Unit> getSelectableUnits() {
-        List<Unit> l = new List<Unit>();
-
-        foreach(Unit u in _nation.getUnits()) {
-            if(u.hasMoves())
-                l.Add(u);
-        }
-        return l;
-    }*/
-
     /// <summary>
     /// Get the player's nation
     /// </summary>

@@ -5,6 +5,6 @@ namespace SourceProject {
     /// </summary>
     /// <typeparam name="T">Class of the unit returned by the factory</typeparam>
     interface IUnitFactory<out T> {
-        System.Collections.Generic.List<Unit> getUnits(int unitNumber);
+        System.Collections.Generic.List<IUnit> getUnits(int unitNumber);
     }
 }

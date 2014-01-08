@@ -571,12 +571,17 @@ namespace IHM {
                     selectedVisual.StrokeThickness = 1;
             }
             selectedVisual = null;
+            _selectedUnit = null;
             setDefaultOpacity();
         }
 
         private void setDefaultOpacity() {
-            foreach (Grid g in mapGrid.Children)
-                g.Children.OfType<Rectangle>().FirstOrDefault().Opacity = 0.6;
+            foreach (Grid g in mapGrid.Children) {
+                if(_selectedUnit != null)
+                    g.Children.OfType<Rectangle>().FirstOrDefault().Opacity = 0.6;
+                else
+                    g.Children.OfType<Rectangle>().FirstOrDefault().Opacity = 1;
+            }
         }
 
         private void Window_Unloaded(object sender, RoutedEventArgs e) {

@@ -5,8 +5,11 @@ namespace SourceProject {
     /// Interface for the player
     /// </summary>
     interface IPlayer {
-        string getName();
-        Nation getNation();
-        void setNation(Nation nation);
+        public virtual void setName(string name);
+        public virtual void setNation(INation nation);
+        public virtual string getName();
+        public virtual INation getNation();
+        public virtual int getPoints();
+        public virtual void updatePoints(IMap m);
     }
 }

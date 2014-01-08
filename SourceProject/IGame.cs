@@ -1,17 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace SourceProject {
     /// <summary>
     /// Interface for the game
     /// </summary>
     interface IGame {
-        bool checkEndfOfGame();
-        Player getActivePlayer();
-        Unit getBestDefensiveUnit(int x, int y);
-        Player getWinner();
-        void nextStep();
-        void setMap(Map map);
-        Map getMap();
-        void setMaxSteps(int max);
-        void start();
+        public virtual void setMap(IMap map);
+        public void setPlayer1(IPlayer p);
+        public void setPlayer2(IPlayer p);
+        public virtual IPlayer getPlayer1();
+        public virtual IPlayer getPlayer2();
+        public virtual IMap getMap();
+        public virtual void setMaxSteps(int max);
+        public virtual IPlayer getActivePlayer();
+        public virtual IPlayer getUnactivePlayer();
+        public virtual List<int> getOpponentUnitsPositions();
+        public virtual bool isPlayer1Active();
+        public virtual void start();
+        public virtual IUnit getBestDefensiveUnit(int line, int column);
+        public virtual bool checkEndfOfGame();
+        public virtual void nextStep();
+        public virtual int getSteps();
+        public virtual IPlayer getWinner();
     }
 }
