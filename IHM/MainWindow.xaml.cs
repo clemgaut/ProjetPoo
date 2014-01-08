@@ -451,6 +451,7 @@ namespace IHM {
                         lbl.FontWeight = FontWeights.Bold;
                    
                     _selectedUnit = selectedUnit;
+                    setDefaultOpacity();
                 } else
                     _selectedUnit = null;
             }
