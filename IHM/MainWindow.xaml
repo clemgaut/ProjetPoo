@@ -31,8 +31,8 @@
                 </StackPanel>
                 <StackPanel x:Name="unitP1InfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
             </StackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <DockPanel HorizontalAlignment="Center" Margin="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Top">
                     <Border Grid.Column="2" Grid.Row="0" Margin="20" HorizontalAlignment="Center">
                         <StackPanel Orientation="Horizontal">
                             <Button HorizontalAlignment="Center" Height="30" Margin="3" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="120"/>
@@ -41,10 +41,10 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
-                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                    <Grid Name="mapGrid" HorizontalAlignment="Center" Background="Gray" VerticalAlignment="Center" Margin="10" />
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom">
+                    <Grid Name="mapGrid" HorizontalAlignment="Center" Background="Gray" VerticalAlignment="Center" />
                 </ScrollViewer>
-            </StackPanel>
+            </DockPanel>
 
 
             <StackPanel Orientation="Vertical" Background="Firebrick">
