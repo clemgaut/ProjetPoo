@@ -15,6 +15,10 @@ namespace IHM {
         private ImageBrush _seaBrush;
 
         private ImageBrush _point;
+        private ImageBrush _life;
+        private ImageBrush _sword;
+        private ImageBrush _helmet;
+        private ImageBrush _boots;
 
         private static String baseUri = "../../../textures/terrains/";
 
@@ -50,14 +54,31 @@ namespace IHM {
             BitmapImage _swordImage = new BitmapImage(new Uri(@baseUri + "../ressources/sword.png", UriKind.Relative));
             _sword = new ImageBrush();
             _sword.ImageSource = _swordImage;
+
             BitmapImage _helmetImage = new BitmapImage(new Uri(@baseUri + "../ressources/helmet.png", UriKind.Relative));
             _helmet = new ImageBrush();
             _helmet.ImageSource = _helmetImage;
 
+            BitmapImage _bootsImage = new BitmapImage(new Uri(@baseUri + "../ressources/boots.png", UriKind.Relative));
+            _boots = new ImageBrush();
+            _boots.ImageSource = _bootsImage;
         }
 
         public ImageBrush getPointImage() {
             return _point;
+        }
+
+        public ImageBrush getLifeImage() {
+            return _life;
+        }
+        public ImageBrush getSwordImage() {
+            return _sword;
+        }
+        public ImageBrush getHelmetImage() {
+            return _helmet;
+        }
+        public ImageBrush getBootsImage() {
+            return _boots;
         }
 
         public ImageBrush getImageBrush(EBoxType boxType) {

@@ -31,6 +31,10 @@ public abstract class Unit : IUnit {
         _column = -1;
     }
 
+    public double getMoves() {
+        return _movePoints;
+    }
+
     /// <summary>
     /// Set the unit life point to value
     /// </summary>

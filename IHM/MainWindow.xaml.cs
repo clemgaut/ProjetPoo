@@ -493,31 +493,61 @@ namespace IHM {
                 myVerticalGradient.GradientStops.Add(new GradientStop(Colors.Green, 1.0));
             else
                 myVerticalGradient.GradientStops.Add(new GradientStop(Colors.White, 1.0));
+            
             Rectangle lifeBar = new Rectangle();
             lifeBar.Fill = myVerticalGradient;
             lifeBar.Width = 50;
             lifeBar.Height = 7;
+            lifeBar.ToolTip = u.getLifePoints() + "/5";
 
+            Rectangle iLife = new Rectangle();
+            iLife.Width = iLife.Height = 24;
+            iLife.Fill = imageBrushFactory.getLifeImage();
+            iLife.ToolTip = "Vie";
 
             Rectangle iPoint = new Rectangle();
-            iPoint.Width = 24;
-            iPoint.Height = 24;
+            iPoint.Width = iPoint.Height = 24;
             iPoint.Fill = imageBrushFactory.getPointImage();
-            
+            iPoint.ToolTip = "Point";
+
+            Rectangle iSword = new Rectangle();
+            iSword.Width = iSword.Height = 24;
+            iSword.Fill = imageBrushFactory.getSwordImage();
+            iSword.ToolTip = "Attaque";
+
+            Rectangle iHelmet = new Rectangle();
+            iHelmet.Width = iHelmet.Height = 24;
+            iHelmet.Fill = imageBrushFactory.getHelmetImage();
+            iHelmet.ToolTip = "Défense";
+
+            Rectangle iBoots = new Rectangle();
+            iBoots.Width = iBoots.Height = 24;
+            iBoots.Fill = imageBrushFactory.getBootsImage();
+            iBoots.ToolTip = "Déplacement";
 
             Label lbPoint = new Label();
-            lbPoint.Content = "Point : " + u.getPoint(game.getMap());
+            lbPoint.Content = u.getPoint(game.getMap());
             Label lbOff = new Label();
-            lbOff.Content = "Attaque : " + u.getOffensive();
+            lbOff.Content = u.getOffensive();
             Label lbDeff = new Label();
-            lbDeff.Content = "Defense : " + u.getDefensive();
+            lbDeff.Content = u.getDefensive();
+            Label lbMoves = new Label();
+            lbMoves.Content = u.getMoves();
 
-            stack.Children.Add(lbLife);
+            stack.Children.Add(iLife);
             stack.Children.Add(lifeBar);
+
             stack.Children.Add(iPoint);
             stack.Children.Add(lbPoint);
+
+            stack.Children.Add(iSword);
             stack.Children.Add(lbOff);
+
+            stack.Children.Add(iHelmet);
             stack.Children.Add(lbDeff);
+
+            stack.Children.Add(iBoots);
+            stack.Children.Add(lbMoves);
             //we add a reference to the unit in the stack
             stack.Tag = u;
 
