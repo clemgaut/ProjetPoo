@@ -20,7 +20,7 @@ namespace IHM {
         private ImageBrush _helmet;
         private ImageBrush _boots;
 
-        private static String baseUri = "../../../textures/terrains/";
+        private static String baseUri = "../../../IHM/textures/terrains/";
 
         public ImageBrushFactory() {
             BitmapImage _desertImage = new BitmapImage(new Uri(@baseUri + "desert.png", UriKind.Relative));
