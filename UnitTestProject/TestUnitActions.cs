@@ -232,7 +232,7 @@ namespace UnitTestProject {
                     nainWin++;
             }
             //Can statistically fail sometimes rarely
-            Assert.IsTrue(nainWin < 8000 && nainWin > 7000);
+            Assert.IsTrue(nainWin < 3500 && nainWin > 2500);
         }
     }
 }

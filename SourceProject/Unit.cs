@@ -126,14 +126,14 @@ public abstract class Unit : IUnit {
     /// <returns>True if the unit kill the defensive unit, false if the unit die</returns>
     public bool attack(Unit defUnit) {
 
-        double pAttWin;
+        int pAttWin;
         int result;
 
         int nbCombat = random.Next(3, Math.Max(_lifePoints, defUnit.getLifePoints()) + 2);
 
         for(int i = 0; i < nbCombat; i++) {
 
-            pAttWin = (1 - (0.5 * defUnit.getDefensive() / getOffensive())) * 100;
+            pAttWin = (int)((1 - (0.5 * defUnit.getDefensive() / getOffensive())) * 100);
 
             if(pAttWin == 100) {
                 defUnit.setLifePoints(0);
