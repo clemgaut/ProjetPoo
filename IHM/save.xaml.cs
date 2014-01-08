@@ -84,6 +84,7 @@ namespace IHM {
         private void saveFile(String name) {
             Files.saveHandle(name, false);
             StartUpWindow parent = (StartUpWindow)this.Parent;
+            parent.gameWindow.blurEffect(false);
             parent.gameWindow.Show();
             parent.Hide();
         }

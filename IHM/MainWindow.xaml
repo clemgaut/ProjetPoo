@@ -61,8 +61,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Center" >
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" Background="Transparent" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Left">
-                <Grid Name="mapGrid" HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Center" Margin="10" />
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Left">
+                <Grid Name="mapGrid" HorizontalAlignment="Center" Background="Gray" VerticalAlignment="Center" Margin="10" />
             </ScrollViewer>
             <StackPanel x:Name="unitInfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
         </StackPanel>

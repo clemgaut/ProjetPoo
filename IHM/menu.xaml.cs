@@ -39,7 +39,7 @@ namespace IHM {
         private void close_Click(object sender, RoutedEventArgs e) {
             if(parent.inGame)
                 parent.gameWindow.Close();
-            parent.Close();
+            Application.Current.MainWindow.Close();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e) {

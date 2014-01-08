@@ -371,9 +371,6 @@ namespace IHM {
             }
 
             if(nonEmptyList.Count > 0) {
-                Label lbl = new Label();
-                lbl.Content = "There are " + nonEmptyList.Count + " units on this tile : ";
-                unitInfoPanel.Children.Add(lbl);
 
                 foreach(Unit u in nonEmptyList) {
                     StackPanel stack = getUnitDescription(u);
