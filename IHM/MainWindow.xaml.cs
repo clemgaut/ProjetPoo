@@ -385,11 +385,7 @@ namespace IHM {
                     if(nonEmptyList == unitsActivePlayer && u.hasMoves())
                         stack.MouseDown += unitStackPanel_MouseDown;
                 }
-            } else {
-                Label lbl = new Label();
-                lbl.Content = "There are no units on this tile.";
-                unitInfoPanel.Children.Add(lbl);
-            }
+            } 
         }
 
         /**
