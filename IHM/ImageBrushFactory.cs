@@ -43,6 +43,17 @@ namespace IHM {
             _point = new ImageBrush();
             _point.ImageSource = _pointImage;
 
+            BitmapImage _lifeImage = new BitmapImage(new Uri(@baseUri + "../ressources/life.png", UriKind.Relative));
+            _life = new ImageBrush();
+            _life.ImageSource = _lifeImage;
+
+            BitmapImage _swordImage = new BitmapImage(new Uri(@baseUri + "../ressources/sword.png", UriKind.Relative));
+            _sword = new ImageBrush();
+            _sword.ImageSource = _swordImage;
+            BitmapImage _helmetImage = new BitmapImage(new Uri(@baseUri + "../ressources/helmet.png", UriKind.Relative));
+            _helmet = new ImageBrush();
+            _helmet.ImageSource = _helmetImage;
+
         }
 
         public ImageBrush getPointImage() {
