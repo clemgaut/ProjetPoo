@@ -18,9 +18,9 @@ using System.Text;
 public class Nation : INation {
 
     
-    private List<Unit> units;
+    private List<Unit> _units;
     [NonSerialized]
-    private IUnitFactory<Unit> unitFactory;
+    private IUnitFactory<Unit> _unitFactory;
     public ENation nationType {
         set;
         get;
@@ -36,19 +36,19 @@ public class Nation : INation {
 
         switch(nationType) {
             case ENation.GAUL:
-                unitFactory = new UnitFactory<GaulUnit>();
+                _unitFactory = new UnitFactory<GaulUnit>();
                 break;
 
             case ENation.NAIN:
-                unitFactory = new UnitFactory<NainUnit>();
+                _unitFactory = new UnitFactory<NainUnit>();
                 break;
 
             case ENation.VIKING:
-                unitFactory = new UnitFactory<VikingUnit>();
+                _unitFactory = new UnitFactory<VikingUnit>();
                 break;
         }
 
-        units = unitFactory.getUnits(unitNumber);
+        _units = _unitFactory.getUnits(unitNumber);
 
     }
 
@@ -57,7 +57,7 @@ public class Nation : INation {
     /// </summary>
     /// <returns>The number of units.</returns>
     public virtual int getUnitsNumber() {
-        return units.Count();
+        return _units.Count();
     }
 
     /// <summary>
@@ -65,14 +65,14 @@ public class Nation : INation {
     /// </summary>
     /// <returns>The units.</returns>
     public virtual List<Unit> getUnits() {
-        return (units.Count() == 0) ? new List<Unit>() : units;
+        return (_units.Count() == 0) ? new List<Unit>() : _units;
     }
 
     /// <summary>
     /// Delete dead units
     /// </summary>
     public virtual void deleteDeadUnits() {
-        units.RemoveAll(u => !u.isAlive());
+        _units.RemoveAll(u => !u.isAlive());
     }
 
     /// <summary>
@@ -81,7 +81,7 @@ public class Nation : INation {
     /// <param name="i">The unit's number (index in the units list)</param>
     /// <returns>The unit.</returns>
     public virtual Unit getUnit(int i) {
-        return units.ElementAt(i);
+        return _units.ElementAt(i);
     }
 
     /// <summary>
@@ -93,7 +93,7 @@ public class Nation : INation {
     public virtual List<Unit> getUnits(int line, int column) {
         List<Unit> l = new List<Unit>();
 
-        foreach(Unit u in units) {
+        foreach(Unit u in _units) {
             if(u.getLine() == line && u.getColumn() == column)
                 l.Add(u);
         }
@@ -109,7 +109,7 @@ public class Nation : INation {
     /// <returns>False if not possible to move, true otherwise</returns>
     public virtual bool setInitBox(int line, int column, Map m) {
         bool move = true;
-        foreach(Unit u in units) {
+        foreach(Unit u in _units) {
             move = move && u.move(line, column, m);
             u.initMovePoints();
         }
@@ -123,7 +123,7 @@ public class Nation : INation {
     /// Move all units outside the map
     /// </summary>
     public void moveToNullPosition() {
-        foreach (Unit u in units) {
+        foreach (Unit u in _units) {
             u.nullPosition();
         }
     }
@@ -132,7 +132,7 @@ public class Nation : INation {
     /// Initialize the move points of each unit of the nation.
     /// </summary>
     internal void initMovePoints() {
-        foreach (Unit u in units)
+        foreach (Unit u in _units)
             u.initMovePoints();
     }
 }

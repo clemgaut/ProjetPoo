@@ -541,6 +541,7 @@ namespace IHM {
                     selectedVisual.StrokeThickness = 1;
             }
             selectedVisual = null;
+            _selectedUnit = null;
             setDefaultOpacity();
         }
 

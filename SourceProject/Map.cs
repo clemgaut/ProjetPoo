@@ -18,9 +18,9 @@ using System.Text;
 public abstract class Map : IMap {
 
     [NonSerialized]
-    protected BoxFactory boxFactory;
+    protected BoxFactory _boxFactory;
     [NonSerialized]
-    protected Wrapper.WrapperAlgo wrapperAlgo;
+    protected Wrapper.WrapperAlgo _wrapperAlgo;
     protected Box[,] _map;
 
     public int Width {
@@ -38,7 +38,7 @@ public abstract class Map : IMap {
     /// </summary>
     public virtual void generateMap() {
         _map = new Box[Height, Width];
-        List<int> generatedMap = wrapperAlgo.mapGeneration(Height * Width, Enum.GetNames(typeof(EBoxType)).Length);
+        List<int> generatedMap = _wrapperAlgo.mapGeneration(Height * Width, Enum.GetNames(typeof(EBoxType)).Length);
         convertIntListToMap(generatedMap);
     }
 
@@ -75,7 +75,7 @@ public abstract class Map : IMap {
     /// </summary>
     /// <returns>A list containing a list of the init coordonates (2 elements in this list)</returns>
     public virtual IEnumerable<IEnumerable<int>> getInitCoordonates() {
-        List<int> coord = wrapperAlgo.initCoordonates(convertMapToIntList(), Width * Height);
+        List<int> coord = _wrapperAlgo.initCoordonates(convertMapToIntList(), Width * Height);
 
         List<List<int>> initCoord = new List<List<int>>();
         initCoord.Add(convertIntToCoordonates(coord[0]));
@@ -88,8 +88,8 @@ public abstract class Map : IMap {
     /// Constructor
     /// </summary>
     public Map() {
-        wrapperAlgo = new Wrapper.WrapperAlgo();
-        boxFactory = new BoxFactory();
+        _wrapperAlgo = new Wrapper.WrapperAlgo();
+        _boxFactory = new BoxFactory();
     }
 
     /// <summary>
@@ -172,23 +172,23 @@ public abstract class Map : IMap {
             for(int column = 0; column < Width; column++) {
                 switch(l[line * Width + column]) {
                     case (int)EBoxType.DESERT:
-                        setBox(boxFactory.getBox(EBoxType.DESERT), line, column);
+                        setBox(_boxFactory.getBox(EBoxType.DESERT), line, column);
                         break;
 
                     case (int)EBoxType.FOREST:
-                        setBox(boxFactory.getBox(EBoxType.FOREST), line, column);
+                        setBox(_boxFactory.getBox(EBoxType.FOREST), line, column);
                         break;
 
                     case (int)EBoxType.LOWLAND:
-                        setBox(boxFactory.getBox(EBoxType.LOWLAND), line, column);
+                        setBox(_boxFactory.getBox(EBoxType.LOWLAND), line, column);
                         break;
 
                     case (int)EBoxType.MOUNTAIN:
-                        setBox(boxFactory.getBox(EBoxType.MOUNTAIN), line, column);
+                        setBox(_boxFactory.getBox(EBoxType.MOUNTAIN), line, column);
                         break;
 
                     case (int)EBoxType.SEA:
-                        setBox(boxFactory.getBox(EBoxType.SEA), line, column);
+                        setBox(_boxFactory.getBox(EBoxType.SEA), line, column);
                         break;
                 }
             }
