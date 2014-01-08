@@ -60,7 +60,7 @@ public abstract class Unit : IUnit {
     /// </summary>
     /// <returns>The defensive points of the unit></returns>
     public double getDefensive() {
-        return _defensive * (_lifePoints/5);
+        return _defensive * (_lifePoints/5.0);
     }
 
     /// <summary>
@@ -76,7 +76,7 @@ public abstract class Unit : IUnit {
     /// </summary>
     /// <returns>The offensive points of the unit></returns>
     public double getOffensive() {
-        return _offensive * (_lifePoints / 5);
+        return _offensive * (_lifePoints / 5.0);
     }
 
     /// <summary>
