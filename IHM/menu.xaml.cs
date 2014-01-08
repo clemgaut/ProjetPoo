@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace IHM {
     /// <summary>
@@ -19,7 +7,7 @@ namespace IHM {
     /// </summary>
     public partial class menu : Page {
 
-        private StartUpWindow parent; 
+        private StartUpWindow parent;
         public menu() {
             InitializeComponent();
         }
@@ -39,7 +27,8 @@ namespace IHM {
         private void close_Click(object sender, RoutedEventArgs e) {
             if(parent.inGame)
                 parent.gameWindow.Close();
-            Application.Current.MainWindow.Close();
+            parent.Close();
+            Application.Current.Shutdown();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e) {

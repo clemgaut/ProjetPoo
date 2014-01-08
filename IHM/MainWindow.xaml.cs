@@ -550,7 +550,7 @@ namespace IHM {
                 start = new StartUpWindow();
 
             blurEffect(true);
-
+            
             start.gameWindow = this;
             start.Content = new menu();
             start.inGame = true;
@@ -560,11 +560,13 @@ namespace IHM {
         public void blurEffect(bool on) {
 
             if(on) {
+                this.IsEnabled = false;
                 BlurEffect blur = new BlurEffect();
                 blur.Radius = 5;
                 Effect = blur;
                 Opacity = 0.8;
             } else {
+                this.IsEnabled = true;
                 Effect = null;
                 Opacity = 1;
             }
