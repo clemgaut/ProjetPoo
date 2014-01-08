@@ -359,14 +359,24 @@ namespace IHM {
             List<Unit> unitsActivePlayer = game.getActivePlayer().getNation().getUnits(line, column);
             List<Unit> unitsUnactivePlayer = game.getUnactivePlayer().getNation().getUnits(line, column);
             List<Unit> nonEmptyList = new List<Unit>();
+            StackPanel activePanel = new StackPanel();
 
-            unitInfoPanel.Children.Clear();
+            unitP1InfoPanel.Children.Clear();
+            unitP2InfoPanel.Children.Clear();
 
             if(unitsActivePlayer.Count > 0) {
+                if (game.isPlayer1Active())
+                    activePanel = unitP1InfoPanel;
+                else
+                    activePanel = unitP2InfoPanel;
                 nonEmptyList = unitsActivePlayer;
             }
 
             if(unitsUnactivePlayer.Count > 0) {
+                if (game.isPlayer1Active())
+                    activePanel = unitP2InfoPanel;
+                else
+                    activePanel = unitP1InfoPanel;
                 nonEmptyList = unitsUnactivePlayer;
             }
 
@@ -378,8 +388,8 @@ namespace IHM {
                     border.BorderThickness = new Thickness(2);
                     border.Child = stack;
                     border.Margin = new Thickness(10);
-                    
-                    unitInfoPanel.Children.Add(border);
+
+                    activePanel.Children.Add(border);
 
                     //If it's an active player unit, we add events to select it
                     if(nonEmptyList == unitsActivePlayer && u.hasMoves())
