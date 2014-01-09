@@ -94,7 +94,7 @@ namespace IHM {
          * Click on end of turn button
          */
         private void EndOfTurnButton_Click(object sender, RoutedEventArgs e) {
-            Player winner = null;
+            
             _selectedUnit = null;
 
             setDefaultOpacity();
@@ -102,14 +102,8 @@ namespace IHM {
             _game.nextStep();
             updateForStep();
             if (_game.checkEndfOfGame()) {
-                winner = _game.getWinner();
-                Player looser = (_game.getWinner() == _game.getPlayer1()) ? _game.getPlayer2() : _game.getPlayer1();
-                EndWindow victoryWin = new EndWindow();
-
-                if(winner == null)
-                    MessageBox.Show(this, "Match nul !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
-                else
-                    victoryWin = new EndWindow(winner, _game.getPlayer1().getPoints(), _game.getPlayer2().getPoints());
+                
+                EndWindow victoryWin = new EndWindow(_game.getWinner(), _game.getPlayer1().getPoints(), _game.getPlayer2().getPoints());
 
                 victoryWin.ShowDialog();
 
