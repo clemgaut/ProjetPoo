@@ -10,14 +10,14 @@
 -->
     <StackPanel Orientation="Vertical" Width="300" Margin="15">
 
-        <Label Name="lblWin" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,0,0,30"></Label>
+        <Label x:Name="lblWin" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,0,0,30"></Label>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Label Name="lblPt1" Width="100" VerticalAlignment="Stretch" VerticalContentAlignment="Center"
+            <Label x:Name="lblPt1" Width="100" VerticalAlignment="Stretch" VerticalContentAlignment="Center"
         		HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" 
         		FontSize="48" FontFamily="Old English Text MT" />
-            <Image Width="100" Source="C:\Users\Matthieu\Git\ProjetPoo\IHM\versus.png" HorizontalAlignment="Center"/>
-            <Label Name="lblPt2" Width="100" VerticalAlignment="Stretch" VerticalContentAlignment="Center" 
+            <Image Width="100" Source="versus.png" HorizontalAlignment="Center"/>
+            <Label x:Name="lblPt2" Width="100" VerticalAlignment="Stretch" VerticalContentAlignment="Center" 
         		HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"
         		FontSize="48" FontFamily="Old English Text MT" />
         </StackPanel>
