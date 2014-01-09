@@ -14,44 +14,47 @@
         <ImageBrush ImageSource="background.jpeg"/>
     </Window.Background>
     
-    <DockPanel x:Name="panel">
+    <DockPanel x:Name="panel" >
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
             <Label Name="MapLabel"/>
             <Label Name="InfoLabel"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="20" HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical" Background="DodgerBlue">
-                <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="15,50" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical" Background="DodgerBlue"  Width="275" VerticalAlignment="Center" Height="500">
+                <StackPanel Orientation="Vertical" >
                     <Label x:Name="Nation1Label" Content="Peuple " FontWeight="Bold" FontFamily="Bookman Old Style" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontSize="14" />
                     <Label x:Name="Units1Label" Content="Unité restantes : "/>
                     <Label x:Name="Points1Label" Content="Point : "/>
                 </StackPanel>
-                <StackPanel x:Name="unitP1InfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
+                <StackPanel x:Name="unitP1InfoPanel" VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="Center"/>
             </StackPanel>
+            
             <DockPanel HorizontalAlignment="Center" Margin="10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Top">
-                    <Border Grid.Column="2" Grid.Row="0" Margin="20" HorizontalAlignment="Center">
+                    
                         <StackPanel Orientation="Horizontal">
                             <Button HorizontalAlignment="Center" Height="30" Margin="3" Content="Fin du tour" Click="EndOfTurnButton_Click" Width="120"/>
                             <Label x:Name="StepLabel" Foreground="Azure" FontWeight="ExtraBold" Content="Tours restants : " Height="30" Width="120" />
                             <Button HorizontalAlignment="Center" Height="30" Margin="3" Content="Menu" Click="Menu_Click" Width="120"/>
                         </StackPanel>
-                    </Border>
+                    
                 </StackPanel>
+                
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom">
                     <Grid Name="mapGrid" HorizontalAlignment="Center" Background="Gray" VerticalAlignment="Center" />
                 </ScrollViewer>
             </DockPanel>
 
 
-            <StackPanel Orientation="Vertical" Background="Firebrick">
+            <StackPanel Orientation="Vertical" Background="Firebrick" Width="275" VerticalAlignment="Center" Height="500">
                 <StackPanel Orientation="Vertical" >
                     <Label x:Name="Nation2Label" Content="Peuple " FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
                     <Label x:Name="Units2Label" Content="Unité restantes : "/>
                     <Label x:Name="Points2Label" Content="Point : "/>
                 </StackPanel>
-                <StackPanel x:Name="unitP2InfoPanel" VerticalAlignment="Center" Orientation="Vertical" />
+                <StackPanel x:Name="unitP2InfoPanel" VerticalAlignment="Center" Orientation="Vertical" HorizontalAlignment="Center" />
             </StackPanel>
         </StackPanel>
 

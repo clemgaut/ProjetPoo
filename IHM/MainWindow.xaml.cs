@@ -390,7 +390,7 @@ namespace IHM {
                     Border border = new Border();
                     border.BorderThickness = new Thickness(2);
                     border.Child = stack;
-                    border.Margin = new Thickness(10);
+                    border.Margin = new Thickness(5, 10, 5, 10);
 
                     activePanel.Children.Add(border);
 
@@ -500,8 +500,8 @@ namespace IHM {
             
             Rectangle lifeBar = new Rectangle();
             lifeBar.Fill = myVerticalGradient;
-            lifeBar.Width = 50;
-            lifeBar.Height = 7;
+            lifeBar.Width = 40;
+            lifeBar.Height = 8;
             lifeBar.ToolTip = u.getLifePoints() + "/5";
 
             Rectangle iLife = new Rectangle();
