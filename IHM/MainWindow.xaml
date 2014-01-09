@@ -9,13 +9,11 @@
         ResizeMode="NoResize"
         Unloaded="Window_Unloaded"
         Loaded="Window_Loaded" MouseLeftButtonDown="Window_MouseLeftButtonDown">
-    <Window.Resources>
-        <Cursor x:Key="Cursor1">Arrow</Cursor>
-    </Window.Resources>
 
     <Window.Background>
         <ImageBrush ImageSource="background.jpeg"/>
     </Window.Background>
+    
     <DockPanel x:Name="panel">
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
             <Label Name="MapLabel"/>

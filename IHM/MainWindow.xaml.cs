@@ -103,11 +103,15 @@ namespace IHM {
             updateForStep();
             if (_game.checkEndfOfGame()) {
                 winner = _game.getWinner();
+                Player looser = (_game.getWinner() == _game.getPlayer1()) ? _game.getPlayer2() : _game.getPlayer1();
+                Window1 victoryWin = new Window1();
 
-                if (winner == null)
+                if(winner == null)
                     MessageBox.Show(this, "Match nul !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
                 else
-                    MessageBox.Show(this, winner.getName() + " vainqueur !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
+                    victoryWin = new Window1(winner, _game.getPlayer1().getPoints(), _game.getPlayer2().getPoints());
+
+                victoryWin.ShowDialog();
 
                 StartUpWindow startUpWindow = new StartUpWindow();
                 startUpWindow.Show();

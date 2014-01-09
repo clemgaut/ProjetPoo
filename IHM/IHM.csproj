@@ -182,6 +182,9 @@
   <ItemGroup>
     <Resource Include="versus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="minibg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>copy "$(SolutionDir)$(ConfigurationName)\LibCpp.dll" "$(TargetDir)"</PreBuildEvent>
