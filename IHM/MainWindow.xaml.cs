@@ -104,12 +104,7 @@ namespace IHM {
             if (_game.checkEndfOfGame()) {
                 winner = _game.getWinner();
                 Player looser = (_game.getWinner() == _game.getPlayer1()) ? _game.getPlayer2() : _game.getPlayer1();
-                Window1 endWindow = new Window1();
-
-                if (winner == null)
-                    MessageBox.Show(this, "Match nul !", "Fin du jeu", MessageBoxButton.OK, MessageBoxImage.None);
-                else
-                    endWindow = new Window1(winner, winner.getPoints(), looser.getPoints());
+                Window1 endWindow = new Window1(winner, winner.getPoints(), looser.getPoints());
                 endWindow.Show();
 
                 StartUpWindow startUpWindow = new StartUpWindow();

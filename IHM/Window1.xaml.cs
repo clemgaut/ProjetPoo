@@ -26,7 +26,10 @@ namespace IHM {
 
         public Window1(Player winner, int pt1, int pt2) {
             InitializeComponent();
-            lblWin.Content = "Le vainqueur est " + winner.getName() + " !";
+            if (winner != null)
+                lblWin.Content = "Le vainqueur est " + winner.getName() + " !";
+            else
+                lblWin.Content = "Match nul !";
             lblPt1.Content = pt1;
             lblPt2.Content = pt2;
         }
