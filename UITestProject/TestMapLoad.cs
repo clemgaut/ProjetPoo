@@ -30,14 +30,23 @@ namespace UITestProject {
         }
 
         [TestMethod]
-        public void CodedUITestMethod1() {
+        public void LoadNormalMap() {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             executeIHM(fullPath);
             this.UIMap.StartGaulNain();
             this.UIMap.AssertNation1();
             this.UIMap.AssertNation2();
             this.UIMap.AssertUnits();
-            //this.UIMap.QuitGame();
+        }
+
+        [TestMethod]
+        public void LoadSmallMap() {
+            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+            executeIHM(fullPath);
+            this.UIMap.LoadSmallMapGaulViking();
+            this.UIMap.AssertNation1Gaul();
+            this.UIMap.AssertNation2Viking();
+            this.UIMap.AssertUnitNumber6();
         }
 
         #region Additional test attributes

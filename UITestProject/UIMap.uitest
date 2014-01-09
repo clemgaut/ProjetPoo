@@ -171,6 +171,114 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UINouvellePartieButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="49" Y="11" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SetValueAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIGameTypeComboBoxComboBox">
+      <ParameterName />
+      <Value Encoded="false">Petite Carte (10x10)</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
+    <SetValueAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox">
+      <ParameterName />
+      <Value Encoded="false">Gaulois</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
+    <SetValueAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox1">
+      <ParameterName />
+      <Value Encoded="false">Vikings</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UILancerlapartieButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="82" Y="20" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="LoadSmallMapGaulViking">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIJoueur1GAULText.UIJoueur1GAULText1">
+      <ParameterName />
+      <PropertyName>Name</PropertyName>
+      <ExpectedValue>GAUL</ExpectedValue>
+      <MessageOnValidationFailure />
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertNation1Gaul">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIJoueur2NAINText.UIJoueur2VIKINGText1">
+      <ParameterName />
+      <PropertyName>DisplayText</PropertyName>
+      <ExpectedValue>VIKING</ExpectedValue>
+      <MessageOnValidationFailure />
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertNation2Viking">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIUnitéesrestantes8Text.UIUnitéesrestantes6Text1">
+      <ParameterName />
+      <PropertyName>DisplayText</PropertyName>
+      <ExpectedValue>6</ExpectedValue>
+      <MessageOnValidationFailure />
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertUnitNumber6">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
   </ExecuteActions>
   <CleanupActions />
   <OnErrorActions />
@@ -255,6 +363,19 @@
               <SupportLevel>0</SupportLevel>
               <Descendants />
             </UIObject>
+            <UIObject ControlType="ComboBox" Id="UIGameTypeComboBoxComboBox" FriendlyName="GameTypeComboBox" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">ComboBox</PropertyCondition>
+                <PropertyCondition Name="AutomationId">GameTypeComboBox</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
           </Descendants>
         </TopLevelWindow>
         <TopLevelWindow ControlType="Window" Id="UISmallWorldWindow" FriendlyName="SmallWorld" SpecialControlType="None" SessionId="1312042">
@@ -328,6 +449,22 @@
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
+                <UIObject ControlType="Text" Id="UIJoueur2VIKINGText1" FriendlyName="Joueur 2 [VIKING]" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>SmallWorld</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>Distinct</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition>
+                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">Joueur 2 [VIKING]</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
               </Descendants>
             </UIObject>
             <UIObject ControlType="Text" Id="UIUnitéesrestantes8Text" FriendlyName="Unitées restantes : 8" SpecialControlType="None">
@@ -354,6 +491,22 @@
                     <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
                     <PropertyCondition Name="ControlType">Text</PropertyCondition>
                     <PropertyCondition Name="Name">Unitées restantes : 8</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+                <UIObject ControlType="Text" Id="UIUnitéesrestantes6Text1" FriendlyName="Unitées restantes : 6" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>SmallWorld</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>Distinct</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition>
+                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">Unitées restantes : 6</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />

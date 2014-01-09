@@ -11,7 +11,6 @@
 namespace UITestProject
 {
     using System;
-    using System.Threading;
     using System.CodeDom.Compiler;
     using System.Collections.Generic;
     using System.Drawing;
@@ -112,9 +111,83 @@ namespace UITestProject
             Mouse.Click(uIMenuButton, new Point(42, 12));
 
             // Last mouse action was not recorded.
-            Thread.Sleep(100);
+
             // Click 'Quitter' button
             Mouse.Click(uIQuitterButton, new Point(87, 19));
+        }
+        
+        /// <summary>
+        /// LoadSmallMapGaulViking - Use 'LoadSmallMapGaulVikingParams' to pass parameters into this method.
+        /// </summary>
+        public void LoadSmallMapGaulViking()
+        {
+            #region Variable Declarations
+            WpfButton uINouvellePartieButton = this.UIBienvenuesurSmallWorWindow.UINouvellePartieButton;
+            WpfComboBox uIGameTypeComboBoxComboBox = this.UIBienvenuesurSmallWorWindow.UIGameTypeComboBoxComboBox;
+            WpfComboBox uIComboBoxNationPlayerComboBox = this.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox;
+            WpfComboBox uIComboBoxNationPlayerComboBox1 = this.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox1;
+            WpfButton uILancerlapartieButton = this.UIBienvenuesurSmallWorWindow.UILancerlapartieButton;
+            #endregion
+
+            // Click 'Nouvelle Partie' button
+            Mouse.Click(uINouvellePartieButton, new Point(49, 11));
+
+            // Select 'Petite Carte (10x10)' in 'GameTypeComboBox' combo box
+            uIGameTypeComboBoxComboBox.SelectedItem = this.LoadSmallMapGaulVikingParams.UIGameTypeComboBoxComboBoxSelectedItem;
+
+            // Last mouse action was not recorded.
+
+            // Select 'Gaulois' in 'ComboBoxNationPlayer1' combo box
+            uIComboBoxNationPlayerComboBox.SelectedItem = this.LoadSmallMapGaulVikingParams.UIComboBoxNationPlayerComboBoxSelectedItem;
+
+            // Last mouse action was not recorded.
+
+            // Select 'Vikings' in 'ComboBoxNationPlayer2' combo box
+            uIComboBoxNationPlayerComboBox1.SelectedItem = this.LoadSmallMapGaulVikingParams.UIComboBoxNationPlayerComboBox1SelectedItem;
+
+            // Last mouse action was not recorded.
+
+            // Click 'Lancer la partie' button
+            Mouse.Click(uILancerlapartieButton, new Point(82, 20));
+        }
+        
+        /// <summary>
+        /// AssertNation1Gaul - Use 'AssertNation1GaulExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertNation1Gaul()
+        {
+            #region Variable Declarations
+            WpfText uIJoueur1GAULText1 = this.UISmallWorldWindow.UIJoueur1GAULText.UIJoueur1GAULText1;
+            #endregion
+
+            // Verify that the 'Name' property of 'Joueur 1 [GAUL]' label contains 'GAUL'
+            StringAssert.Contains(uIJoueur1GAULText1.Name, this.AssertNation1GaulExpectedValues.UIJoueur1GAULText1Name);
+        }
+        
+        /// <summary>
+        /// AssertNation2Viking - Use 'AssertNation2VikingExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertNation2Viking()
+        {
+            #region Variable Declarations
+            WpfText uIJoueur2VIKINGText1 = this.UISmallWorldWindow.UIJoueur2NAINText.UIJoueur2VIKINGText1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Joueur 2 [VIKING]' label contains 'VIKING'
+            StringAssert.Contains(uIJoueur2VIKINGText1.DisplayText, this.AssertNation2VikingExpectedValues.UIJoueur2VIKINGText1DisplayText);
+        }
+        
+        /// <summary>
+        /// AssertUnitNumber6 - Use 'AssertUnitNumber6ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertUnitNumber6()
+        {
+            #region Variable Declarations
+            WpfText uIUnitéesrestantes6Text1 = this.UISmallWorldWindow.UIUnitéesrestantes8Text.UIUnitéesrestantes6Text1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Unitées restantes : 6' label contains '6'
+            StringAssert.Contains(uIUnitéesrestantes6Text1.DisplayText, this.AssertUnitNumber6ExpectedValues.UIUnitéesrestantes6Text1DisplayText);
         }
         
         #region Properties
@@ -166,6 +239,54 @@ namespace UITestProject
             }
         }
         
+        public virtual LoadSmallMapGaulVikingParams LoadSmallMapGaulVikingParams
+        {
+            get
+            {
+                if ((this.mLoadSmallMapGaulVikingParams == null))
+                {
+                    this.mLoadSmallMapGaulVikingParams = new LoadSmallMapGaulVikingParams();
+                }
+                return this.mLoadSmallMapGaulVikingParams;
+            }
+        }
+        
+        public virtual AssertNation1GaulExpectedValues AssertNation1GaulExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertNation1GaulExpectedValues == null))
+                {
+                    this.mAssertNation1GaulExpectedValues = new AssertNation1GaulExpectedValues();
+                }
+                return this.mAssertNation1GaulExpectedValues;
+            }
+        }
+        
+        public virtual AssertNation2VikingExpectedValues AssertNation2VikingExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertNation2VikingExpectedValues == null))
+                {
+                    this.mAssertNation2VikingExpectedValues = new AssertNation2VikingExpectedValues();
+                }
+                return this.mAssertNation2VikingExpectedValues;
+            }
+        }
+        
+        public virtual AssertUnitNumber6ExpectedValues AssertUnitNumber6ExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertUnitNumber6ExpectedValues == null))
+                {
+                    this.mAssertUnitNumber6ExpectedValues = new AssertUnitNumber6ExpectedValues();
+                }
+                return this.mAssertUnitNumber6ExpectedValues;
+            }
+        }
+        
         public UIBienvenuesurSmallWorWindow UIBienvenuesurSmallWorWindow
         {
             get
@@ -199,6 +320,14 @@ namespace UITestProject
         private AssertNation2ExpectedValues mAssertNation2ExpectedValues;
         
         private AssertUnitsExpectedValues mAssertUnitsExpectedValues;
+        
+        private LoadSmallMapGaulVikingParams mLoadSmallMapGaulVikingParams;
+        
+        private AssertNation1GaulExpectedValues mAssertNation1GaulExpectedValues;
+        
+        private AssertNation2VikingExpectedValues mAssertNation2VikingExpectedValues;
+        
+        private AssertUnitNumber6ExpectedValues mAssertUnitNumber6ExpectedValues;
         
         private UIBienvenuesurSmallWorWindow mUIBienvenuesurSmallWorWindow;
         
@@ -268,6 +397,76 @@ namespace UITestProject
         /// Verify that the 'DisplayText' property of 'Unitées restantes : 8' label contains '8'
         /// </summary>
         public string UIUnitéesrestantes8Text1DisplayText = "8";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'LoadSmallMapGaulViking'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class LoadSmallMapGaulVikingParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Select 'Petite Carte (10x10)' in 'GameTypeComboBox' combo box
+        /// </summary>
+        public string UIGameTypeComboBoxComboBoxSelectedItem = "Petite Carte (10x10)";
+        
+        /// <summary>
+        /// Select 'Gaulois' in 'ComboBoxNationPlayer1' combo box
+        /// </summary>
+        public string UIComboBoxNationPlayerComboBoxSelectedItem = "Gaulois";
+        
+        /// <summary>
+        /// Select 'Vikings' in 'ComboBoxNationPlayer2' combo box
+        /// </summary>
+        public string UIComboBoxNationPlayerComboBox1SelectedItem = "Vikings";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertNation1Gaul'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class AssertNation1GaulExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Name' property of 'Joueur 1 [GAUL]' label contains 'GAUL'
+        /// </summary>
+        public string UIJoueur1GAULText1Name = "GAUL";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertNation2Viking'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class AssertNation2VikingExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Joueur 2 [VIKING]' label contains 'VIKING'
+        /// </summary>
+        public string UIJoueur2VIKINGText1DisplayText = "VIKING";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertUnitNumber6'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class AssertUnitNumber6ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Unitées restantes : 6' label contains '6'
+        /// </summary>
+        public string UIUnitéesrestantes6Text1DisplayText = "6";
         #endregion
     }
     
@@ -364,6 +563,22 @@ namespace UITestProject
                 return this.mUIQuitterButton;
             }
         }
+        
+        public WpfComboBox UIGameTypeComboBoxComboBox
+        {
+            get
+            {
+                if ((this.mUIGameTypeComboBoxComboBox == null))
+                {
+                    this.mUIGameTypeComboBoxComboBox = new WpfComboBox(this);
+                    #region Search Criteria
+                    this.mUIGameTypeComboBoxComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "GameTypeComboBox";
+                    this.mUIGameTypeComboBoxComboBox.WindowTitles.Add("Bienvenue sur SmallWorld");
+                    #endregion
+                }
+                return this.mUIGameTypeComboBoxComboBox;
+            }
+        }
         #endregion
         
         #region Fields
@@ -376,6 +591,8 @@ namespace UITestProject
         private WpfButton mUILancerlapartieButton;
         
         private WpfButton mUIQuitterButton;
+        
+        private WpfComboBox mUIGameTypeComboBoxComboBox;
         #endregion
     }
     
@@ -524,10 +741,29 @@ namespace UITestProject
                 return this.mUIJoueur2NAINText1;
             }
         }
+        
+        public WpfText UIJoueur2VIKINGText1
+        {
+            get
+            {
+                if ((this.mUIJoueur2VIKINGText1 == null))
+                {
+                    this.mUIJoueur2VIKINGText1 = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIJoueur2VIKINGText1.SearchProperties[WpfText.PropertyNames.Name] = "Joueur 2 [VIKING]";
+                    this.mUIJoueur2VIKINGText1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
+                    this.mUIJoueur2VIKINGText1.WindowTitles.Add("SmallWorld");
+                    #endregion
+                }
+                return this.mUIJoueur2VIKINGText1;
+            }
+        }
         #endregion
         
         #region Fields
         private WpfText mUIJoueur2NAINText1;
+        
+        private WpfText mUIJoueur2VIKINGText1;
         #endregion
     }
     
@@ -561,10 +797,29 @@ namespace UITestProject
                 return this.mUIUnitéesrestantes8Text1;
             }
         }
+        
+        public WpfText UIUnitéesrestantes6Text1
+        {
+            get
+            {
+                if ((this.mUIUnitéesrestantes6Text1 == null))
+                {
+                    this.mUIUnitéesrestantes6Text1 = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIUnitéesrestantes6Text1.SearchProperties[WpfText.PropertyNames.Name] = "Unitées restantes : 6";
+                    this.mUIUnitéesrestantes6Text1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
+                    this.mUIUnitéesrestantes6Text1.WindowTitles.Add("SmallWorld");
+                    #endregion
+                }
+                return this.mUIUnitéesrestantes6Text1;
+            }
+        }
         #endregion
         
         #region Fields
         private WpfText mUIUnitéesrestantes8Text1;
+        
+        private WpfText mUIUnitéesrestantes6Text1;
         #endregion
     }
 }
