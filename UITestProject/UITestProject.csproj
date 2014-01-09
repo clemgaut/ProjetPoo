@@ -79,13 +79,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="UIMap.uitest" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SourceProject\SourceProject.csproj">
       <Project>{07006e94-91f0-44c2-b20e-7a216dfdb884}</Project>
       <Name>SourceProject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIMap.uitest" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

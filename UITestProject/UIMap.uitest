@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="2f6961c6-1376-4447-b0e1-ffcb21847ba1" AssemblyVersion="12.0.21005.1" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="d7ade2d3-95cf-4dbc-8032-e7cd71e695ef" AssemblyVersion="12.0.21005.1" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.11.9600.16428" WarningLevel="1" />
@@ -41,149 +41,45 @@
   </Configuration>
   <InitializeActions />
   <ExecuteActions>
-    <MouseAction UIObjectName="UIMap.UIDémarrerWindow.UIDémarrerButton">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="22" Y="41" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIMenuDémarrerWindow.UIItemWindow.UIMenuDémarrerClient.UIOrdinateurMenuItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="95" Y="26" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIOrdinateurWindow.UIArborescenceWindow.UIArborescenceTree.UIBureauTreeItem.UIBibliothèquesTreeItem.UIDocumentsTreeItem">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="47" Y="15" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow.UIVisualStudio2012ListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="124" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow.UIVisualStudio2012ListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="124" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow1.UIProjectsListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="80" Y="17" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow2.UIProjetPOOListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="77" Y="15" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow3.UIIHMListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="80" Y="20" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow4.UIBinListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="77" Y="11" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow5.UIDebugListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="77" Y="11" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIDocumentsWindow.UIItemWindow6.UIIHMListItem.UINomEdit">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="77" Y="11" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>DoubleClick</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction Comment="Démarre l'IHM" MarkerInformation="StartIHM">
-      <ParameterName />
-      <StepId>-1</StepId>
-      <Direction>Start</Direction>
-      <Outcome />
-      <Disabled>false</Disabled>
-      <WorkItemId>0</WorkItemId>
-      <MarkerRegionType>Action</MarkerRegionType>
-    </TestStepMarkerAction>
     <ErrorAction>
       <ContinueOnError>True</ContinueOnError>
       <ParameterName />
       <Message>Last mouse action was not recorded.</Message>
     </ErrorAction>
-    <SetValueAction UIObjectName="UIMap.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox">
+    <MouseAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UINouvellePartieButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="89" Y="8" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
+    <SetValueAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox">
       <ParameterName />
       <Value Encoded="false">Gaulois</Value>
       <Type>String</Type>
     </SetValueAction>
-    <ErrorAction>
-      <ContinueOnError>True</ContinueOnError>
-      <ParameterName />
-      <Message>Last mouse action was not recorded.</Message>
-    </ErrorAction>
-    <SetValueAction UIObjectName="UIMap.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox1">
+    <SetValueAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox1">
       <ParameterName />
       <Value Encoded="false">Nains</Value>
       <Type>String</Type>
     </SetValueAction>
-    <ErrorAction>
-      <ContinueOnError>True</ContinueOnError>
-      <ParameterName />
-      <Message>Last mouse action was not recorded.</Message>
-    </ErrorAction>
-    <MouseAction UIObjectName="UIMap.UIStartUpWindowWindow.UILancerPartieButton">
+    <MouseAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UILancerlapartieButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="61" Y="14" />
+      <Location X="68" Y="15" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="" MarkerInformation="LaunchGame">
+    <TestStepMarkerAction Comment="" MarkerInformation="StartGaulNain">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -192,15 +88,15 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Action</MarkerRegionType>
     </TestStepMarkerAction>
-    <StringAssertAction UIObjectName="UIMap.UIIHMPrincipaleWindow.UITypedecartedemoText.UITypedecartedemoText1">
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIJoueur1GAULText.UIJoueur1GAULText1">
       <ParameterName />
       <PropertyName>DisplayText</PropertyName>
-      <ExpectedValue>demo</ExpectedValue>
-      <MessageOnValidationFailure>Carte demo pas chargée</MessageOnValidationFailure>
+      <ExpectedValue>GAUL</ExpectedValue>
+      <MessageOnValidationFailure>Wrong nation</MessageOnValidationFailure>
       <Comparison>CurrentCulture</Comparison>
       <PropertyCondition>Contains</PropertyCondition>
     </StringAssertAction>
-    <TestStepMarkerAction Comment="Vérifie que le champ de carte contient &quot;demo&quot;" MarkerInformation="AssertDemoMap">
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertNation1">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -209,25 +105,64 @@
       <WorkItemId>0</WorkItemId>
       <MarkerRegionType>Assertion</MarkerRegionType>
     </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIIHMPrincipaleWindow.UIIHMPrincipaleTitleBar">
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIJoueur2NAINText.UIJoueur2NAINText1">
+      <ParameterName />
+      <PropertyName>DisplayText</PropertyName>
+      <ExpectedValue>NAIN</ExpectedValue>
+      <MessageOnValidationFailure>Wrong nation</MessageOnValidationFailure>
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertNation2">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <StringAssertAction UIObjectName="UIMap.UISmallWorldWindow.UIUnitéesrestantes8Text.UIUnitéesrestantes8Text1">
+      <ParameterName />
+      <PropertyName>DisplayText</PropertyName>
+      <ExpectedValue>8</ExpectedValue>
+      <MessageOnValidationFailure />
+      <Comparison>CurrentCulture</Comparison>
+      <PropertyCondition>Contains</PropertyCondition>
+    </StringAssertAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="AssertUnits">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UISmallWorldWindow.UIMenuButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="442" Y="9" />
+      <Location X="42" Y="12" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <MouseAction UIObjectName="UIMap.UIIHMPrincipaleWindow.UIIHMPrincipaleTitleBar.UIFermerButton">
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Last mouse action was not recorded.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIBienvenuesurSmallWorWindow.UIQuitterButton">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="27" Y="12" />
+      <Location X="87" Y="19" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
     </MouseAction>
-    <TestStepMarkerAction Comment="Fermme l'appli" MarkerInformation="CloseApp">
+    <TestStepMarkerAction Comment="" MarkerInformation="QuitGame">
       <ParameterName />
       <StepId>-1</StepId>
       <Direction>Start</Direction>
@@ -242,562 +177,28 @@
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UIDémarrerWindow" FriendlyName="Démarrer" SpecialControlType="None" SessionId="131112">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Démarrer</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Démarrer</PropertyCondition>
-            <PropertyCondition Name="ClassName">Button</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Button" Id="UIDémarrerButton" FriendlyName="Démarrer" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Démarrer</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="Name">Démarrer</PropertyCondition>
-                <PropertyCondition Name="ControlType">Button</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants />
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIMenuDémarrerWindow" FriendlyName="Menu Démarrer" SpecialControlType="None" SessionId="65742">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Menu Démarrer</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Menu Démarrer</PropertyCondition>
-            <PropertyCondition Name="ClassName">DV2ControlHost</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Menu Démarrer</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlId">7</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Client" Id="UIMenuDémarrerClient" FriendlyName="Menu Démarrer" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Menu Démarrer</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="MenuItem" Id="UIOrdinateurMenuItem" FriendlyName="Ordinateur" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Menu Démarrer</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>Expand</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Ordinateur</PropertyCondition>
-                        <PropertyCondition Name="ControlType">MenuItem</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIOrdinateurWindow" FriendlyName="Ordinateur" SpecialControlType="None" SessionId="983676">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Ordinateur</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Ordinateur</PropertyCondition>
-            <PropertyCondition Name="ClassName">CabinetWClass</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Window" Id="UIArborescenceWindow" FriendlyName="Arborescence" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Ordinateur</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlId">100</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Tree" Id="UIArborescenceTree" FriendlyName="Arborescence" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Ordinateur</WindowTitle>
-                  </WindowTitles>
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Contrôle Arborescence d’espace de noms</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Tree</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="TreeItem" Id="UIBureauTreeItem" FriendlyName="Bureau" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Ordinateur</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>Expand</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Bureau</PropertyCondition>
-                        <PropertyCondition Name="Value">0</PropertyCondition>
-                        <PropertyCondition Name="ControlType">TreeItem</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants>
-                        <UIObject ControlType="TreeItem" Id="UIBibliothèquesTreeItem" FriendlyName="Bibliothèques" SpecialControlType="None">
-                          <TechnologyName>MSAA</TechnologyName>
-                          <WindowTitles>
-                            <WindowTitle>Ordinateur</WindowTitle>
-                          </WindowTitles>
-                          <SearchConfigurations>
-                            <SearchConfiguration>NextTo</SearchConfiguration>
-                            <SearchConfiguration>Expand</SearchConfiguration>
-                          </SearchConfigurations>
-                          <AndCondition Id="SearchCondition">
-                            <PropertyCondition Name="Name">Bibliothèques</PropertyCondition>
-                            <PropertyCondition Name="Value">1</PropertyCondition>
-                            <PropertyCondition Name="ControlType">TreeItem</PropertyCondition>
-                          </AndCondition>
-                          <SupportLevel>0</SupportLevel>
-                          <Descendants>
-                            <UIObject ControlType="TreeItem" Id="UIDocumentsTreeItem" FriendlyName="Documents" SpecialControlType="None">
-                              <TechnologyName>MSAA</TechnologyName>
-                              <WindowTitles>
-                                <WindowTitle>Ordinateur</WindowTitle>
-                              </WindowTitles>
-                              <SearchConfigurations>
-                                <SearchConfiguration>NextTo</SearchConfiguration>
-                                <SearchConfiguration>Expand</SearchConfiguration>
-                              </SearchConfigurations>
-                              <AndCondition Id="SearchCondition">
-                                <PropertyCondition Name="Name">Documents</PropertyCondition>
-                                <PropertyCondition Name="Value">2</PropertyCondition>
-                                <PropertyCondition Name="ControlType">TreeItem</PropertyCondition>
-                              </AndCondition>
-                              <SupportLevel>0</SupportLevel>
-                              <Descendants />
-                            </UIObject>
-                          </Descendants>
-                        </UIObject>
-                      </Descendants>
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIDocumentsWindow" FriendlyName="Documents" SpecialControlType="None" SessionId="983676">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Documents</WindowTitle>
-            <WindowTitle>Visual Studio 2012</WindowTitle>
-            <WindowTitle>Projects</WindowTitle>
-            <WindowTitle>ProjetPOO</WindowTitle>
-            <WindowTitle>IHM</WindowTitle>
-            <WindowTitle>bin</WindowTitle>
-            <WindowTitle>Debug</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Documents</PropertyCondition>
-            <PropertyCondition Name="ClassName">CabinetWClass</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Documents</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIVisualStudio2012ListItem" FriendlyName="Visual Studio 2012" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Documents</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Visual Studio 2012</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Documents</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow1" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Visual Studio 2012</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIProjectsListItem" FriendlyName="Projects" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Visual Studio 2012</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Projects</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Visual Studio 2012</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow2" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Projects</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIProjetPOOListItem" FriendlyName="ProjetPOO" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Projects</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">ProjetPOO</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Projects</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow3" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>ProjetPOO</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIIHMListItem" FriendlyName="IHM" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>ProjetPOO</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">IHM</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>ProjetPOO</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow4" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>IHM</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIBinListItem" FriendlyName="bin" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>IHM</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">bin</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>IHM</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow5" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>bin</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIDebugListItem" FriendlyName="Debug" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>bin</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">Debug</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>bin</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-            <UIObject ControlType="Window" Id="UIItemWindow6" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles>
-                <WindowTitle>Debug</WindowTitle>
-              </WindowTitles>
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="AccessibleName">Vue d’éléments</PropertyCondition>
-                <PropertyCondition Name="ClassName">DirectUIHWND</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="ListItem" Id="UIIHMListItem" FriendlyName="IHM" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles>
-                    <WindowTitle>Debug</WindowTitle>
-                  </WindowTitles>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">IHM</PropertyCondition>
-                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants>
-                    <UIObject ControlType="Edit" Id="UINomEdit" FriendlyName="Nom" SpecialControlType="None">
-                      <TechnologyName>MSAA</TechnologyName>
-                      <WindowTitles>
-                        <WindowTitle>Debug</WindowTitle>
-                      </WindowTitles>
-                      <SearchConfigurations>
-                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                      </SearchConfigurations>
-                      <AndCondition Id="SearchCondition">
-                        <PropertyCondition Name="Name">Nom</PropertyCondition>
-                        <PropertyCondition Name="ControlType">Edit</PropertyCondition>
-                      </AndCondition>
-                      <SupportLevel>0</SupportLevel>
-                      <Descendants />
-                    </UIObject>
-                  </Descendants>
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIStartUpWindowWindow" FriendlyName="StartUpWindow" SpecialControlType="None" SessionId="394202">
+        <TopLevelWindow ControlType="Window" Id="UIBienvenuesurSmallWorWindow" FriendlyName="Bienvenue sur SmallWorld" SpecialControlType="None" SessionId="459500">
           <TechnologyName>UIA</TechnologyName>
           <WindowTitles>
-            <WindowTitle>StartUpWindow</WindowTitle>
+            <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
           </WindowTitles>
           <AndCondition>
             <PropertyCondition Name="ControlType">Window</PropertyCondition>
-            <PropertyCondition Name="Name">StartUpWindow</PropertyCondition>
+            <PropertyCondition Name="Name">Bienvenue sur SmallWorld</PropertyCondition>
             <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
             <PropertyCondition Name="ClassName" Operator="Contains">HwndWrapper</PropertyCondition>
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Button" Id="UILancerPartieButton" FriendlyName="Lancer Partie" SpecialControlType="None">
+            <UIObject ControlType="Button" Id="UINouvellePartieButton" FriendlyName="Nouvelle Partie" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>StartUpWindow</WindowTitle>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
               </WindowTitles>
               <AndCondition>
                 <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
                 <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                <PropertyCondition Name="AutomationId">StartUpButton</PropertyCondition>
+                <PropertyCondition Name="Name">Nouvelle Partie</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants />
@@ -805,7 +206,7 @@
             <UIObject ControlType="ComboBox" Id="UIComboBoxNationPlayerComboBox" FriendlyName="ComboBoxNationPlayer1" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>StartUpWindow</WindowTitle>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
               </WindowTitles>
               <AndCondition>
                 <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
@@ -818,7 +219,7 @@
             <UIObject ControlType="ComboBox" Id="UIComboBoxNationPlayerComboBox1" FriendlyName="ComboBoxNationPlayer2" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>StartUpWindow</WindowTitle>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
               </WindowTitles>
               <AndCondition>
                 <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
@@ -828,37 +229,63 @@
               <SupportLevel>0</SupportLevel>
               <Descendants />
             </UIObject>
+            <UIObject ControlType="Button" Id="UILancerlapartieButton" FriendlyName="Lancer la partie" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                <PropertyCondition Name="AutomationId">StartUpButton</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
+            <UIObject ControlType="Button" Id="UIQuitterButton" FriendlyName="Quitter" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Bienvenue sur SmallWorld</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                <PropertyCondition Name="Name">Quitter</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
+            </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIIHMPrincipaleWindow" FriendlyName="IHM Principale" SpecialControlType="None" SessionId="66746">
+        <TopLevelWindow ControlType="Window" Id="UISmallWorldWindow" FriendlyName="SmallWorld" SpecialControlType="None" SessionId="1312042">
           <TechnologyName>UIA</TechnologyName>
           <WindowTitles>
-            <WindowTitle>IHM Principale</WindowTitle>
+            <WindowTitle>SmallWorld</WindowTitle>
           </WindowTitles>
           <AndCondition>
             <PropertyCondition Name="ControlType">Window</PropertyCondition>
-            <PropertyCondition Name="Name">IHM Principale</PropertyCondition>
+            <PropertyCondition Name="Name">SmallWorld</PropertyCondition>
             <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
             <PropertyCondition Name="ClassName" Operator="Contains">HwndWrapper</PropertyCondition>
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="Text" Id="UITypedecartedemoText" FriendlyName="Type de carte : demo" SpecialControlType="None">
+            <UIObject ControlType="Text" Id="UIJoueur1GAULText" FriendlyName="Joueur 1 [GAUL]" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>IHM Principale</WindowTitle>
+                <WindowTitle>SmallWorld</WindowTitle>
               </WindowTitles>
               <AndCondition>
                 <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
                 <PropertyCondition Name="ControlType">Text</PropertyCondition>
-                <PropertyCondition Name="AutomationId">MapLabel</PropertyCondition>
+                <PropertyCondition Name="AutomationId">Nation1Label</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Text" Id="UITypedecartedemoText1" FriendlyName="Type de carte : demo" SpecialControlType="None">
+                <UIObject ControlType="Text" Id="UIJoueur1GAULText1" FriendlyName="Joueur 1 [GAUL]" SpecialControlType="None">
                   <TechnologyName>UIA</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>IHM Principale</WindowTitle>
+                    <WindowTitle>SmallWorld</WindowTitle>
                   </WindowTitles>
                   <SearchConfigurations>
                     <SearchConfiguration>Distinct</SearchConfiguration>
@@ -866,37 +293,85 @@
                   <AndCondition>
                     <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
                     <PropertyCondition Name="ControlType">Text</PropertyCondition>
-                    <PropertyCondition Name="Name">Type de carte : demo</PropertyCondition>
+                    <PropertyCondition Name="Name">Joueur 1 [GAUL]</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
               </Descendants>
             </UIObject>
-            <UIObject ControlType="TitleBar" Id="UIIHMPrincipaleTitleBar" FriendlyName="IHM Principale" SpecialControlType="None">
+            <UIObject ControlType="Text" Id="UIJoueur2NAINText" FriendlyName="Joueur 2 [NAIN]" SpecialControlType="None">
               <TechnologyName>UIA</TechnologyName>
               <WindowTitles>
-                <WindowTitle>IHM Principale</WindowTitle>
+                <WindowTitle>SmallWorld</WindowTitle>
               </WindowTitles>
               <AndCondition>
-                <PropertyCondition Name="ControlType">TitleBar</PropertyCondition>
-                <PropertyCondition Name="AutomationId">TitleBar</PropertyCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                <PropertyCondition Name="AutomationId">Nation2Label</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Button" Id="UIFermerButton" FriendlyName="Fermer" SpecialControlType="None">
+                <UIObject ControlType="Text" Id="UIJoueur2NAINText1" FriendlyName="Joueur 2 [NAIN]" SpecialControlType="None">
                   <TechnologyName>UIA</TechnologyName>
                   <WindowTitles>
-                    <WindowTitle>IHM Principale</WindowTitle>
+                    <WindowTitle>SmallWorld</WindowTitle>
                   </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>Distinct</SearchConfiguration>
+                  </SearchConfigurations>
                   <AndCondition>
-                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
-                    <PropertyCondition Name="Name">Fermer</PropertyCondition>
+                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">Joueur 2 [NAIN]</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
               </Descendants>
+            </UIObject>
+            <UIObject ControlType="Text" Id="UIUnitéesrestantes8Text" FriendlyName="Unitées restantes : 8" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>SmallWorld</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                <PropertyCondition Name="AutomationId">Units1Label</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Text" Id="UIUnitéesrestantes8Text1" FriendlyName="Unitées restantes : 8" SpecialControlType="None">
+                  <TechnologyName>UIA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>SmallWorld</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>Distinct</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition>
+                    <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Text</PropertyCondition>
+                    <PropertyCondition Name="Name">Unitées restantes : 8</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Button" Id="UIMenuButton" FriendlyName="Menu" SpecialControlType="None">
+              <TechnologyName>UIA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>SmallWorld</WindowTitle>
+              </WindowTitles>
+              <AndCondition>
+                <PropertyCondition Name="FrameworkId">WPF</PropertyCondition>
+                <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                <PropertyCondition Name="Name">Menu</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants />
             </UIObject>
           </Descendants>
         </TopLevelWindow>

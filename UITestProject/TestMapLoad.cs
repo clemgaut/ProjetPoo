@@ -1,50 +1,44 @@
 ﻿using System;
-using System.IO;
-using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Diagnostics;
+using System.IO;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
-namespace UITestProject
-{
+namespace UITestProject {
     /// <summary>
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class TestMapLoad
-    {
+    public class TestMapLoad {
         string fullPath = @"C:\Users\clemgaut\Documents\Visual Studio 2012\Projects\ProjetPOO\IHM\bin\Debug\IHM.exe";
-        public TestMapLoad()
-        {
+        public TestMapLoad() {
         }
 
-        public void executeIHM(string fullPath)
-        {
+        public void executeIHM(string fullPath) {
             ProcessStartInfo psi = new ProcessStartInfo();
             psi.FileName = Path.GetFileName(fullPath);
             psi.WorkingDirectory = Path.GetDirectoryName(fullPath);
             Process.Start(psi);
         }
 
-        /*[TestMethod]
-        public void TestDefaultMapLoad()
-        {
+        [TestMethod]
+        public void CodedUITestMethod1() {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            //this.UIMap.StartIHM();
-
             executeIHM(fullPath);
-            this.UIMap.LaunchGame();
-            this.UIMap.AssertDemoMap();
-            this.UIMap.CloseApp();
-
-        }*/
+            this.UIMap.StartGaulNain();
+            this.UIMap.AssertNation1();
+            this.UIMap.AssertNation2();
+            this.UIMap.AssertUnits();
+            //this.UIMap.QuitGame();
+        }
 
         #region Additional test attributes
 
@@ -70,25 +64,19 @@ namespace UITestProject
         ///Gets or sets the test context which provides
         ///information about and functionality for the current test run.
         ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
+        public TestContext TestContext {
+            get {
                 return testContextInstance;
             }
-            set
-            {
+            set {
                 testContextInstance = value;
             }
         }
         private TestContext testContextInstance;
 
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
+        public UIMap UIMap {
+            get {
+                if ((this.map == null)) {
                     this.map = new UIMap();
                 }
 
