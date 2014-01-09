@@ -15,16 +15,16 @@ using SourceProject;
 
 namespace IHM {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for EndWindow.xaml
     /// </summary>
-    public partial class Window1 : Window {
+    public partial class EndWindow : Window {
         
-        public Window1() {
+        public EndWindow() {
             InitializeComponent();
 
         }
 
-        public Window1(Player winner, int pt1, int pt2) {
+        public EndWindow(Player winner, int pt1, int pt2) {
             InitializeComponent();
             lblWin.Content = "Le vainqueur est " + winner.getName() + " !";
             lblPt1.Content = pt1;
