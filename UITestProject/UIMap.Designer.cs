@@ -11,6 +11,7 @@
 namespace UITestProject
 {
     using System;
+    using System.Threading;
     using System.CodeDom.Compiler;
     using System.Collections.Generic;
     using System.Drawing;
@@ -18,7 +19,6 @@ namespace UITestProject
     using System.Windows.Input;
     using Microsoft.VisualStudio.TestTools.UITest.Extension;
     using Microsoft.VisualStudio.TestTools.UITesting;
-    using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     using Microsoft.VisualStudio.TestTools.UITesting.WpfControls;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
@@ -31,236 +31,186 @@ namespace UITestProject
     {
         
         /// <summary>
-        /// Démarre l'IHM
+        /// StartGaulNain - Use 'StartGaulNainParams' to pass parameters into this method.
         /// </summary>
-        public void StartIHM()
+        public void StartGaulNain()
         {
             #region Variable Declarations
-            WinButton uIDémarrerButton = this.UIDémarrerWindow.UIDémarrerButton;
-            WinMenuItem uIOrdinateurMenuItem = this.UIMenuDémarrerWindow.UIItemWindow.UIMenuDémarrerClient.UIOrdinateurMenuItem;
-            WinTreeItem uIDocumentsTreeItem = this.UIOrdinateurWindow.UIArborescenceWindow.UIArborescenceTree.UIBureauTreeItem.UIBibliothèquesTreeItem.UIDocumentsTreeItem;
-            WinEdit uINomEdit = this.UIDocumentsWindow.UIItemWindow.UIVisualStudio2012ListItem.UINomEdit;
-            WinEdit uINomEdit1 = this.UIDocumentsWindow.UIItemWindow1.UIProjectsListItem.UINomEdit;
-            WinEdit uINomEdit2 = this.UIDocumentsWindow.UIItemWindow2.UIProjetPOOListItem.UINomEdit;
-            WinEdit uINomEdit3 = this.UIDocumentsWindow.UIItemWindow3.UIIHMListItem.UINomEdit;
-            WinEdit uINomEdit4 = this.UIDocumentsWindow.UIItemWindow4.UIBinListItem.UINomEdit;
-            WinEdit uINomEdit5 = this.UIDocumentsWindow.UIItemWindow5.UIDebugListItem.UINomEdit;
-            WinEdit uINomEdit6 = this.UIDocumentsWindow.UIItemWindow6.UIIHMListItem.UINomEdit;
+            WpfButton uINouvellePartieButton = this.UIBienvenuesurSmallWorWindow.UINouvellePartieButton;
+            WpfComboBox uIComboBoxNationPlayerComboBox = this.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox;
+            WpfComboBox uIComboBoxNationPlayerComboBox1 = this.UIBienvenuesurSmallWorWindow.UIComboBoxNationPlayerComboBox1;
+            WpfButton uILancerlapartieButton = this.UIBienvenuesurSmallWorWindow.UILancerlapartieButton;
             #endregion
 
-            // Click 'Démarrer' button
-            Mouse.Click(uIDémarrerButton, new Point(22, 41));
+            // Last mouse action was not recorded.
 
-            // Click 'Ordinateur' menu item
-            Mouse.Click(uIOrdinateurMenuItem, new Point(95, 26));
-
-            // Click 'Bureau' -> 'Bibliothèques' -> 'Documents' tree item
-            Mouse.Click(uIDocumentsTreeItem, new Point(47, 15));
-
-            // Click 'Nom' text box
-            Mouse.Click(uINomEdit, new Point(124, 14));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit, new Point(124, 14));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit1, new Point(80, 17));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit2, new Point(77, 15));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit3, new Point(80, 20));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit4, new Point(77, 11));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit5, new Point(77, 11));
-
-            // Double-Click 'Nom' text box
-            Mouse.DoubleClick(uINomEdit6, new Point(77, 11));
-        }
-        
-        /// <summary>
-        /// LaunchGame - Use 'LaunchGameParams' to pass parameters into this method.
-        /// </summary>
-        public void LaunchGame()
-        {
-            #region Variable Declarations
-            WpfComboBox uIComboBoxNationPlayerComboBox = this.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox;
-            WpfComboBox uIComboBoxNationPlayerComboBox1 = this.UIStartUpWindowWindow.UIComboBoxNationPlayerComboBox1;
-            WpfButton uILancerPartieButton = this.UIStartUpWindowWindow.UILancerPartieButton;
-            #endregion
+            // Click 'Nouvelle Partie' button
+            Mouse.Click(uINouvellePartieButton, new Point(89, 8));
 
             // Last mouse action was not recorded.
 
             // Select 'Gaulois' in 'ComboBoxNationPlayer1' combo box
-            uIComboBoxNationPlayerComboBox.SelectedItem = this.LaunchGameParams.UIComboBoxNationPlayerComboBoxSelectedItem;
-
-            // Last mouse action was not recorded.
+            uIComboBoxNationPlayerComboBox.SelectedItem = this.StartGaulNainParams.UIComboBoxNationPlayerComboBoxSelectedItem;
 
             // Select 'Nains' in 'ComboBoxNationPlayer2' combo box
-            uIComboBoxNationPlayerComboBox1.SelectedItem = this.LaunchGameParams.UIComboBoxNationPlayerComboBox1SelectedItem;
+            uIComboBoxNationPlayerComboBox1.SelectedItem = this.StartGaulNainParams.UIComboBoxNationPlayerComboBox1SelectedItem;
+
+            // Click 'Lancer la partie' button
+            Mouse.Click(uILancerlapartieButton, new Point(68, 15));
+        }
+        
+        /// <summary>
+        /// AssertNation1 - Use 'AssertNation1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertNation1()
+        {
+            #region Variable Declarations
+            WpfText uIJoueur1GAULText1 = this.UISmallWorldWindow.UIJoueur1GAULText.UIJoueur1GAULText1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Joueur 1 [GAUL]' label contains 'GAUL'
+            StringAssert.Contains(uIJoueur1GAULText1.DisplayText, this.AssertNation1ExpectedValues.UIJoueur1GAULText1DisplayText, "Wrong nation");
+        }
+        
+        /// <summary>
+        /// AssertNation2 - Use 'AssertNation2ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertNation2()
+        {
+            #region Variable Declarations
+            WpfText uIJoueur2NAINText1 = this.UISmallWorldWindow.UIJoueur2NAINText.UIJoueur2NAINText1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Joueur 2 [NAIN]' label contains 'NAIN'
+            StringAssert.Contains(uIJoueur2NAINText1.DisplayText, this.AssertNation2ExpectedValues.UIJoueur2NAINText1DisplayText, "Wrong nation");
+        }
+        
+        /// <summary>
+        /// AssertUnits - Use 'AssertUnitsExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertUnits()
+        {
+            #region Variable Declarations
+            WpfText uIUnitéesrestantes8Text1 = this.UISmallWorldWindow.UIUnitéesrestantes8Text.UIUnitéesrestantes8Text1;
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Unitées restantes : 8' label contains '8'
+            StringAssert.Contains(uIUnitéesrestantes8Text1.DisplayText, this.AssertUnitsExpectedValues.UIUnitéesrestantes8Text1DisplayText);
+        }
+        
+        /// <summary>
+        /// QuitGame
+        /// </summary>
+        public void QuitGame()
+        {
+            #region Variable Declarations
+            WpfButton uIMenuButton = this.UISmallWorldWindow.UIMenuButton;
+            WpfButton uIQuitterButton = this.UIBienvenuesurSmallWorWindow.UIQuitterButton;
+            #endregion
+
+            // Click 'Menu' button
+            Mouse.Click(uIMenuButton, new Point(42, 12));
 
             // Last mouse action was not recorded.
-
-            // Click 'Lancer Partie' button
-            Mouse.Click(uILancerPartieButton, new Point(61, 14));
-        }
-        
-        /// <summary>
-        /// Vérifie que le champ de carte contient "demo"
-        /// </summary>
-        public void AssertDemoMap()
-        {
-            #region Variable Declarations
-            WpfText uITypedecartedemoText1 = this.UIIHMPrincipaleWindow.UITypedecartedemoText.UITypedecartedemoText1;
-            #endregion
-
-            // Verify that the 'DisplayText' property of 'Type de carte : demo' label contains 'demo'
-            StringAssert.Contains(uITypedecartedemoText1.DisplayText, this.AssertDemoMapExpectedValues.UITypedecartedemoText1DisplayText, "Carte demo pas chargée");
-        }
-        
-        /// <summary>
-        /// Fermme l'appli
-        /// </summary>
-        public void CloseApp()
-        {
-            #region Variable Declarations
-            WpfTitleBar uIIHMPrincipaleTitleBar = this.UIIHMPrincipaleWindow.UIIHMPrincipaleTitleBar;
-            WpfButton uIFermerButton = this.UIIHMPrincipaleWindow.UIIHMPrincipaleTitleBar.UIFermerButton;
-            #endregion
-
-            // Click 'IHM Principale' title bar
-            Mouse.Click(uIIHMPrincipaleTitleBar, new Point(442, 9));
-
-            // Click 'Fermer' button
-            Mouse.Click(uIFermerButton, new Point(27, 12));
+            Thread.Sleep(100);
+            // Click 'Quitter' button
+            Mouse.Click(uIQuitterButton, new Point(87, 19));
         }
         
         #region Properties
-        public virtual LaunchGameParams LaunchGameParams
+        public virtual StartGaulNainParams StartGaulNainParams
         {
             get
             {
-                if ((this.mLaunchGameParams == null))
+                if ((this.mStartGaulNainParams == null))
                 {
-                    this.mLaunchGameParams = new LaunchGameParams();
+                    this.mStartGaulNainParams = new StartGaulNainParams();
                 }
-                return this.mLaunchGameParams;
+                return this.mStartGaulNainParams;
             }
         }
         
-        public virtual AssertDemoMapExpectedValues AssertDemoMapExpectedValues
+        public virtual AssertNation1ExpectedValues AssertNation1ExpectedValues
         {
             get
             {
-                if ((this.mAssertDemoMapExpectedValues == null))
+                if ((this.mAssertNation1ExpectedValues == null))
                 {
-                    this.mAssertDemoMapExpectedValues = new AssertDemoMapExpectedValues();
+                    this.mAssertNation1ExpectedValues = new AssertNation1ExpectedValues();
                 }
-                return this.mAssertDemoMapExpectedValues;
+                return this.mAssertNation1ExpectedValues;
             }
         }
         
-        public UIDémarrerWindow UIDémarrerWindow
+        public virtual AssertNation2ExpectedValues AssertNation2ExpectedValues
         {
             get
             {
-                if ((this.mUIDémarrerWindow == null))
+                if ((this.mAssertNation2ExpectedValues == null))
                 {
-                    this.mUIDémarrerWindow = new UIDémarrerWindow();
+                    this.mAssertNation2ExpectedValues = new AssertNation2ExpectedValues();
                 }
-                return this.mUIDémarrerWindow;
+                return this.mAssertNation2ExpectedValues;
             }
         }
         
-        public UIMenuDémarrerWindow UIMenuDémarrerWindow
+        public virtual AssertUnitsExpectedValues AssertUnitsExpectedValues
         {
             get
             {
-                if ((this.mUIMenuDémarrerWindow == null))
+                if ((this.mAssertUnitsExpectedValues == null))
                 {
-                    this.mUIMenuDémarrerWindow = new UIMenuDémarrerWindow();
+                    this.mAssertUnitsExpectedValues = new AssertUnitsExpectedValues();
                 }
-                return this.mUIMenuDémarrerWindow;
+                return this.mAssertUnitsExpectedValues;
             }
         }
         
-        public UIOrdinateurWindow UIOrdinateurWindow
+        public UIBienvenuesurSmallWorWindow UIBienvenuesurSmallWorWindow
         {
             get
             {
-                if ((this.mUIOrdinateurWindow == null))
+                if ((this.mUIBienvenuesurSmallWorWindow == null))
                 {
-                    this.mUIOrdinateurWindow = new UIOrdinateurWindow();
+                    this.mUIBienvenuesurSmallWorWindow = new UIBienvenuesurSmallWorWindow();
                 }
-                return this.mUIOrdinateurWindow;
+                return this.mUIBienvenuesurSmallWorWindow;
             }
         }
         
-        public UIDocumentsWindow UIDocumentsWindow
+        public UISmallWorldWindow UISmallWorldWindow
         {
             get
             {
-                if ((this.mUIDocumentsWindow == null))
+                if ((this.mUISmallWorldWindow == null))
                 {
-                    this.mUIDocumentsWindow = new UIDocumentsWindow();
+                    this.mUISmallWorldWindow = new UISmallWorldWindow();
                 }
-                return this.mUIDocumentsWindow;
-            }
-        }
-        
-        public UIStartUpWindowWindow UIStartUpWindowWindow
-        {
-            get
-            {
-                if ((this.mUIStartUpWindowWindow == null))
-                {
-                    this.mUIStartUpWindowWindow = new UIStartUpWindowWindow();
-                }
-                return this.mUIStartUpWindowWindow;
-            }
-        }
-        
-        public UIIHMPrincipaleWindow UIIHMPrincipaleWindow
-        {
-            get
-            {
-                if ((this.mUIIHMPrincipaleWindow == null))
-                {
-                    this.mUIIHMPrincipaleWindow = new UIIHMPrincipaleWindow();
-                }
-                return this.mUIIHMPrincipaleWindow;
+                return this.mUISmallWorldWindow;
             }
         }
         #endregion
         
         #region Fields
-        private LaunchGameParams mLaunchGameParams;
+        private StartGaulNainParams mStartGaulNainParams;
         
-        private AssertDemoMapExpectedValues mAssertDemoMapExpectedValues;
+        private AssertNation1ExpectedValues mAssertNation1ExpectedValues;
         
-        private UIDémarrerWindow mUIDémarrerWindow;
+        private AssertNation2ExpectedValues mAssertNation2ExpectedValues;
         
-        private UIMenuDémarrerWindow mUIMenuDémarrerWindow;
+        private AssertUnitsExpectedValues mAssertUnitsExpectedValues;
         
-        private UIOrdinateurWindow mUIOrdinateurWindow;
+        private UIBienvenuesurSmallWorWindow mUIBienvenuesurSmallWorWindow;
         
-        private UIDocumentsWindow mUIDocumentsWindow;
-        
-        private UIStartUpWindowWindow mUIStartUpWindowWindow;
-        
-        private UIIHMPrincipaleWindow mUIIHMPrincipaleWindow;
+        private UISmallWorldWindow mUISmallWorldWindow;
         #endregion
     }
     
     /// <summary>
-    /// Parameters to be passed into 'LaunchGame'
+    /// Parameters to be passed into 'StartGaulNain'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class LaunchGameParams
+    public class StartGaulNainParams
     {
         
         #region Fields
@@ -277,958 +227,77 @@ namespace UITestProject
     }
     
     /// <summary>
-    /// Parameters to be passed into 'AssertDemoMap'
+    /// Parameters to be passed into 'AssertNation1'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class AssertDemoMapExpectedValues
+    public class AssertNation1ExpectedValues
     {
         
         #region Fields
         /// <summary>
-        /// Verify that the 'DisplayText' property of 'Type de carte : demo' label contains 'demo'
+        /// Verify that the 'DisplayText' property of 'Joueur 1 [GAUL]' label contains 'GAUL'
         /// </summary>
-        public string UITypedecartedemoText1DisplayText = "demo";
+        public string UIJoueur1GAULText1DisplayText = "GAUL";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'AssertNation2'
+    /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIDémarrerWindow : WinWindow
+    public class AssertNation2ExpectedValues
     {
-        
-        public UIDémarrerWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Démarrer";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "Button";
-            this.WindowTitles.Add("Démarrer");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UIDémarrerButton
-        {
-            get
-            {
-                if ((this.mUIDémarrerButton == null))
-                {
-                    this.mUIDémarrerButton = new WinButton(this);
-                    #region Search Criteria
-                    this.mUIDémarrerButton.SearchProperties[WinButton.PropertyNames.Name] = "Démarrer";
-                    this.mUIDémarrerButton.WindowTitles.Add("Démarrer");
-                    #endregion
-                }
-                return this.mUIDémarrerButton;
-            }
-        }
-        #endregion
         
         #region Fields
-        private WinButton mUIDémarrerButton;
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Joueur 2 [NAIN]' label contains 'NAIN'
+        /// </summary>
+        public string UIJoueur2NAINText1DisplayText = "NAIN";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'AssertUnits'
+    /// </summary>
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIMenuDémarrerWindow : WinWindow
+    public class AssertUnitsExpectedValues
     {
-        
-        public UIMenuDémarrerWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Menu Démarrer";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DV2ControlHost";
-            this.WindowTitles.Add("Menu Démarrer");
-            #endregion
-        }
-        
-        #region Properties
-        public UIItemWindow UIItemWindow
-        {
-            get
-            {
-                if ((this.mUIItemWindow == null))
-                {
-                    this.mUIItemWindow = new UIItemWindow(this);
-                }
-                return this.mUIItemWindow;
-            }
-        }
-        #endregion
         
         #region Fields
-        private UIItemWindow mUIItemWindow;
+        /// <summary>
+        /// Verify that the 'DisplayText' property of 'Unitées restantes : 8' label contains '8'
+        /// </summary>
+        public string UIUnitéesrestantes8Text1DisplayText = "8";
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow : WinWindow
+    public class UIBienvenuesurSmallWorWindow : WpfWindow
     {
         
-        public UIItemWindow(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
+        public UIBienvenuesurSmallWorWindow()
         {
             #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "7";
-            this.WindowTitles.Add("Menu Démarrer");
-            #endregion
-        }
-        
-        #region Properties
-        public UIMenuDémarrerClient UIMenuDémarrerClient
-        {
-            get
-            {
-                if ((this.mUIMenuDémarrerClient == null))
-                {
-                    this.mUIMenuDémarrerClient = new UIMenuDémarrerClient(this);
-                }
-                return this.mUIMenuDémarrerClient;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIMenuDémarrerClient mUIMenuDémarrerClient;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIMenuDémarrerClient : WinClient
-    {
-        
-        public UIMenuDémarrerClient(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.WindowTitles.Add("Menu Démarrer");
-            #endregion
-        }
-        
-        #region Properties
-        public WinMenuItem UIOrdinateurMenuItem
-        {
-            get
-            {
-                if ((this.mUIOrdinateurMenuItem == null))
-                {
-                    this.mUIOrdinateurMenuItem = new WinMenuItem(this);
-                    #region Search Criteria
-                    this.mUIOrdinateurMenuItem.SearchProperties[WinMenuItem.PropertyNames.Name] = "Ordinateur";
-                    this.mUIOrdinateurMenuItem.WindowTitles.Add("Menu Démarrer");
-                    #endregion
-                }
-                return this.mUIOrdinateurMenuItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinMenuItem mUIOrdinateurMenuItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIOrdinateurWindow : WinWindow
-    {
-        
-        public UIOrdinateurWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Ordinateur";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "CabinetWClass";
-            this.WindowTitles.Add("Ordinateur");
-            #endregion
-        }
-        
-        #region Properties
-        public UIArborescenceWindow UIArborescenceWindow
-        {
-            get
-            {
-                if ((this.mUIArborescenceWindow == null))
-                {
-                    this.mUIArborescenceWindow = new UIArborescenceWindow(this);
-                }
-                return this.mUIArborescenceWindow;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIArborescenceWindow mUIArborescenceWindow;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIArborescenceWindow : WinWindow
-    {
-        
-        public UIArborescenceWindow(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "100";
-            this.WindowTitles.Add("Ordinateur");
-            #endregion
-        }
-        
-        #region Properties
-        public UIArborescenceTree UIArborescenceTree
-        {
-            get
-            {
-                if ((this.mUIArborescenceTree == null))
-                {
-                    this.mUIArborescenceTree = new UIArborescenceTree(this);
-                }
-                return this.mUIArborescenceTree;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIArborescenceTree mUIArborescenceTree;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIArborescenceTree : WinTree
-    {
-        
-        public UIArborescenceTree(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinTree.PropertyNames.Name] = "Contrôle Arborescence d’espace de noms";
-            this.WindowTitles.Add("Ordinateur");
-            #endregion
-        }
-        
-        #region Properties
-        public UIBureauTreeItem UIBureauTreeItem
-        {
-            get
-            {
-                if ((this.mUIBureauTreeItem == null))
-                {
-                    this.mUIBureauTreeItem = new UIBureauTreeItem(this);
-                }
-                return this.mUIBureauTreeItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIBureauTreeItem mUIBureauTreeItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIBureauTreeItem : WinTreeItem
-    {
-        
-        public UIBureauTreeItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinTreeItem.PropertyNames.Name] = "Bureau";
-            this.SearchProperties["Value"] = "0";
-            this.WindowTitles.Add("Ordinateur");
-            #endregion
-        }
-        
-        #region Properties
-        public UIBibliothèquesTreeItem UIBibliothèquesTreeItem
-        {
-            get
-            {
-                if ((this.mUIBibliothèquesTreeItem == null))
-                {
-                    this.mUIBibliothèquesTreeItem = new UIBibliothèquesTreeItem(this);
-                }
-                return this.mUIBibliothèquesTreeItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIBibliothèquesTreeItem mUIBibliothèquesTreeItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIBibliothèquesTreeItem : WinTreeItem
-    {
-        
-        public UIBibliothèquesTreeItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinTreeItem.PropertyNames.Name] = "Bibliothèques";
-            this.SearchProperties["Value"] = "1";
-            this.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
-            this.SearchConfigurations.Add(SearchConfiguration.NextSibling);
-            this.WindowTitles.Add("Ordinateur");
-            #endregion
-        }
-        
-        #region Properties
-        public WinTreeItem UIDocumentsTreeItem
-        {
-            get
-            {
-                if ((this.mUIDocumentsTreeItem == null))
-                {
-                    this.mUIDocumentsTreeItem = new WinTreeItem(this);
-                    #region Search Criteria
-                    this.mUIDocumentsTreeItem.SearchProperties[WinTreeItem.PropertyNames.Name] = "Documents";
-                    this.mUIDocumentsTreeItem.SearchProperties["Value"] = "2";
-                    this.mUIDocumentsTreeItem.SearchConfigurations.Add(SearchConfiguration.ExpandWhileSearching);
-                    this.mUIDocumentsTreeItem.SearchConfigurations.Add(SearchConfiguration.NextSibling);
-                    this.mUIDocumentsTreeItem.WindowTitles.Add("Ordinateur");
-                    #endregion
-                }
-                return this.mUIDocumentsTreeItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinTreeItem mUIDocumentsTreeItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIDocumentsWindow : WinWindow
-    {
-        
-        public UIDocumentsWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "Documents";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "CabinetWClass";
-            this.WindowTitles.Add("Documents");
-            this.WindowTitles.Add("Visual Studio 2012");
-            this.WindowTitles.Add("Projects");
-            this.WindowTitles.Add("ProjetPOO");
-            this.WindowTitles.Add("IHM");
-            this.WindowTitles.Add("bin");
-            this.WindowTitles.Add("Debug");
-            #endregion
-        }
-        
-        #region Properties
-        public UIItemWindow1 UIItemWindow
-        {
-            get
-            {
-                if ((this.mUIItemWindow == null))
-                {
-                    this.mUIItemWindow = new UIItemWindow1(this);
-                }
-                return this.mUIItemWindow;
-            }
-        }
-        
-        public UIItemWindow11 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow11(this);
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-        
-        public UIItemWindow2 UIItemWindow2
-        {
-            get
-            {
-                if ((this.mUIItemWindow2 == null))
-                {
-                    this.mUIItemWindow2 = new UIItemWindow2(this);
-                }
-                return this.mUIItemWindow2;
-            }
-        }
-        
-        public UIItemWindow3 UIItemWindow3
-        {
-            get
-            {
-                if ((this.mUIItemWindow3 == null))
-                {
-                    this.mUIItemWindow3 = new UIItemWindow3(this);
-                }
-                return this.mUIItemWindow3;
-            }
-        }
-        
-        public UIItemWindow4 UIItemWindow4
-        {
-            get
-            {
-                if ((this.mUIItemWindow4 == null))
-                {
-                    this.mUIItemWindow4 = new UIItemWindow4(this);
-                }
-                return this.mUIItemWindow4;
-            }
-        }
-        
-        public UIItemWindow5 UIItemWindow5
-        {
-            get
-            {
-                if ((this.mUIItemWindow5 == null))
-                {
-                    this.mUIItemWindow5 = new UIItemWindow5(this);
-                }
-                return this.mUIItemWindow5;
-            }
-        }
-        
-        public UIItemWindow6 UIItemWindow6
-        {
-            get
-            {
-                if ((this.mUIItemWindow6 == null))
-                {
-                    this.mUIItemWindow6 = new UIItemWindow6(this);
-                }
-                return this.mUIItemWindow6;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIItemWindow1 mUIItemWindow;
-        
-        private UIItemWindow11 mUIItemWindow1;
-        
-        private UIItemWindow2 mUIItemWindow2;
-        
-        private UIItemWindow3 mUIItemWindow3;
-        
-        private UIItemWindow4 mUIItemWindow4;
-        
-        private UIItemWindow5 mUIItemWindow5;
-        
-        private UIItemWindow6 mUIItemWindow6;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow1 : WinWindow
-    {
-        
-        public UIItemWindow1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("Documents");
-            #endregion
-        }
-        
-        #region Properties
-        public UIVisualStudio2012ListItem UIVisualStudio2012ListItem
-        {
-            get
-            {
-                if ((this.mUIVisualStudio2012ListItem == null))
-                {
-                    this.mUIVisualStudio2012ListItem = new UIVisualStudio2012ListItem(this);
-                }
-                return this.mUIVisualStudio2012ListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIVisualStudio2012ListItem mUIVisualStudio2012ListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIVisualStudio2012ListItem : WinListItem
-    {
-        
-        public UIVisualStudio2012ListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "Visual Studio 2012";
-            this.WindowTitles.Add("Documents");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("Documents");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow11 : WinWindow
-    {
-        
-        public UIItemWindow11(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("Visual Studio 2012");
-            #endregion
-        }
-        
-        #region Properties
-        public UIProjectsListItem UIProjectsListItem
-        {
-            get
-            {
-                if ((this.mUIProjectsListItem == null))
-                {
-                    this.mUIProjectsListItem = new UIProjectsListItem(this);
-                }
-                return this.mUIProjectsListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIProjectsListItem mUIProjectsListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIProjectsListItem : WinListItem
-    {
-        
-        public UIProjectsListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "Projects";
-            this.WindowTitles.Add("Visual Studio 2012");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("Visual Studio 2012");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow2 : WinWindow
-    {
-        
-        public UIItemWindow2(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("Projects");
-            #endregion
-        }
-        
-        #region Properties
-        public UIProjetPOOListItem UIProjetPOOListItem
-        {
-            get
-            {
-                if ((this.mUIProjetPOOListItem == null))
-                {
-                    this.mUIProjetPOOListItem = new UIProjetPOOListItem(this);
-                }
-                return this.mUIProjetPOOListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIProjetPOOListItem mUIProjetPOOListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIProjetPOOListItem : WinListItem
-    {
-        
-        public UIProjetPOOListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "ProjetPOO";
-            this.WindowTitles.Add("Projects");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("Projects");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow3 : WinWindow
-    {
-        
-        public UIItemWindow3(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("ProjetPOO");
-            #endregion
-        }
-        
-        #region Properties
-        public UIIHMListItem UIIHMListItem
-        {
-            get
-            {
-                if ((this.mUIIHMListItem == null))
-                {
-                    this.mUIIHMListItem = new UIIHMListItem(this);
-                }
-                return this.mUIIHMListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIIHMListItem mUIIHMListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIIHMListItem : WinListItem
-    {
-        
-        public UIIHMListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "IHM";
-            this.WindowTitles.Add("ProjetPOO");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("ProjetPOO");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow4 : WinWindow
-    {
-        
-        public UIItemWindow4(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("IHM");
-            #endregion
-        }
-        
-        #region Properties
-        public UIBinListItem UIBinListItem
-        {
-            get
-            {
-                if ((this.mUIBinListItem == null))
-                {
-                    this.mUIBinListItem = new UIBinListItem(this);
-                }
-                return this.mUIBinListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIBinListItem mUIBinListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIBinListItem : WinListItem
-    {
-        
-        public UIBinListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "bin";
-            this.WindowTitles.Add("IHM");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("IHM");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow5 : WinWindow
-    {
-        
-        public UIItemWindow5(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("bin");
-            #endregion
-        }
-        
-        #region Properties
-        public UIDebugListItem UIDebugListItem
-        {
-            get
-            {
-                if ((this.mUIDebugListItem == null))
-                {
-                    this.mUIDebugListItem = new UIDebugListItem(this);
-                }
-                return this.mUIDebugListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIDebugListItem mUIDebugListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIDebugListItem : WinListItem
-    {
-        
-        public UIDebugListItem(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "Debug";
-            this.WindowTitles.Add("bin");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("bin");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIItemWindow6 : WinWindow
-    {
-        
-        public UIItemWindow6(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Vue d’éléments";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "DirectUIHWND";
-            this.WindowTitles.Add("Debug");
-            #endregion
-        }
-        
-        #region Properties
-        public UIIHMListItem1 UIIHMListItem
-        {
-            get
-            {
-                if ((this.mUIIHMListItem == null))
-                {
-                    this.mUIIHMListItem = new UIIHMListItem1(this);
-                }
-                return this.mUIIHMListItem;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIIHMListItem1 mUIIHMListItem;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIIHMListItem1 : WinListItem
-    {
-        
-        public UIIHMListItem1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinListItem.PropertyNames.Name] = "IHM";
-            this.WindowTitles.Add("Debug");
-            #endregion
-        }
-        
-        #region Properties
-        public WinEdit UINomEdit
-        {
-            get
-            {
-                if ((this.mUINomEdit == null))
-                {
-                    this.mUINomEdit = new WinEdit(this);
-                    #region Search Criteria
-                    this.mUINomEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Nom";
-                    this.mUINomEdit.WindowTitles.Add("Debug");
-                    #endregion
-                }
-                return this.mUINomEdit;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinEdit mUINomEdit;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIStartUpWindowWindow : WpfWindow
-    {
-        
-        public UIStartUpWindowWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfWindow.PropertyNames.Name] = "StartUpWindow";
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "Bienvenue sur SmallWorld";
             this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("StartUpWindow");
+            this.WindowTitles.Add("Bienvenue sur SmallWorld");
             #endregion
         }
         
         #region Properties
-        public WpfButton UILancerPartieButton
+        public WpfButton UINouvellePartieButton
         {
             get
             {
-                if ((this.mUILancerPartieButton == null))
+                if ((this.mUINouvellePartieButton == null))
                 {
-                    this.mUILancerPartieButton = new WpfButton(this);
+                    this.mUINouvellePartieButton = new WpfButton(this);
                     #region Search Criteria
-                    this.mUILancerPartieButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "StartUpButton";
-                    this.mUILancerPartieButton.WindowTitles.Add("StartUpWindow");
+                    this.mUINouvellePartieButton.SearchProperties[WpfButton.PropertyNames.Name] = "Nouvelle Partie";
+                    this.mUINouvellePartieButton.WindowTitles.Add("Bienvenue sur SmallWorld");
                     #endregion
                 }
-                return this.mUILancerPartieButton;
+                return this.mUINouvellePartieButton;
             }
         }
         
@@ -1241,7 +310,7 @@ namespace UITestProject
                     this.mUIComboBoxNationPlayerComboBox = new WpfComboBox(this);
                     #region Search Criteria
                     this.mUIComboBoxNationPlayerComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "ComboBoxNationPlayer1";
-                    this.mUIComboBoxNationPlayerComboBox.WindowTitles.Add("StartUpWindow");
+                    this.mUIComboBoxNationPlayerComboBox.WindowTitles.Add("Bienvenue sur SmallWorld");
                     #endregion
                 }
                 return this.mUIComboBoxNationPlayerComboBox;
@@ -1257,139 +326,245 @@ namespace UITestProject
                     this.mUIComboBoxNationPlayerComboBox1 = new WpfComboBox(this);
                     #region Search Criteria
                     this.mUIComboBoxNationPlayerComboBox1.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "ComboBoxNationPlayer2";
-                    this.mUIComboBoxNationPlayerComboBox1.WindowTitles.Add("StartUpWindow");
+                    this.mUIComboBoxNationPlayerComboBox1.WindowTitles.Add("Bienvenue sur SmallWorld");
                     #endregion
                 }
                 return this.mUIComboBoxNationPlayerComboBox1;
             }
         }
+        
+        public WpfButton UILancerlapartieButton
+        {
+            get
+            {
+                if ((this.mUILancerlapartieButton == null))
+                {
+                    this.mUILancerlapartieButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUILancerlapartieButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "StartUpButton";
+                    this.mUILancerlapartieButton.WindowTitles.Add("Bienvenue sur SmallWorld");
+                    #endregion
+                }
+                return this.mUILancerlapartieButton;
+            }
+        }
+        
+        public WpfButton UIQuitterButton
+        {
+            get
+            {
+                if ((this.mUIQuitterButton == null))
+                {
+                    this.mUIQuitterButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIQuitterButton.SearchProperties[WpfButton.PropertyNames.Name] = "Quitter";
+                    this.mUIQuitterButton.WindowTitles.Add("Bienvenue sur SmallWorld");
+                    #endregion
+                }
+                return this.mUIQuitterButton;
+            }
+        }
         #endregion
         
         #region Fields
-        private WpfButton mUILancerPartieButton;
+        private WpfButton mUINouvellePartieButton;
         
         private WpfComboBox mUIComboBoxNationPlayerComboBox;
         
         private WpfComboBox mUIComboBoxNationPlayerComboBox1;
+        
+        private WpfButton mUILancerlapartieButton;
+        
+        private WpfButton mUIQuitterButton;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIIHMPrincipaleWindow : WpfWindow
+    public class UISmallWorldWindow : WpfWindow
     {
         
-        public UIIHMPrincipaleWindow()
+        public UISmallWorldWindow()
         {
             #region Search Criteria
-            this.SearchProperties[WpfWindow.PropertyNames.Name] = "IHM Principale";
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "SmallWorld";
             this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("IHM Principale");
+            this.WindowTitles.Add("SmallWorld");
             #endregion
         }
         
         #region Properties
-        public UITypedecartedemoText UITypedecartedemoText
+        public UIJoueur1GAULText UIJoueur1GAULText
         {
             get
             {
-                if ((this.mUITypedecartedemoText == null))
+                if ((this.mUIJoueur1GAULText == null))
                 {
-                    this.mUITypedecartedemoText = new UITypedecartedemoText(this);
+                    this.mUIJoueur1GAULText = new UIJoueur1GAULText(this);
                 }
-                return this.mUITypedecartedemoText;
+                return this.mUIJoueur1GAULText;
             }
         }
         
-        public UIIHMPrincipaleTitleBar UIIHMPrincipaleTitleBar
+        public UIJoueur2NAINText UIJoueur2NAINText
         {
             get
             {
-                if ((this.mUIIHMPrincipaleTitleBar == null))
+                if ((this.mUIJoueur2NAINText == null))
                 {
-                    this.mUIIHMPrincipaleTitleBar = new UIIHMPrincipaleTitleBar(this);
+                    this.mUIJoueur2NAINText = new UIJoueur2NAINText(this);
                 }
-                return this.mUIIHMPrincipaleTitleBar;
+                return this.mUIJoueur2NAINText;
+            }
+        }
+        
+        public UIUnitéesrestantes8Text UIUnitéesrestantes8Text
+        {
+            get
+            {
+                if ((this.mUIUnitéesrestantes8Text == null))
+                {
+                    this.mUIUnitéesrestantes8Text = new UIUnitéesrestantes8Text(this);
+                }
+                return this.mUIUnitéesrestantes8Text;
+            }
+        }
+        
+        public WpfButton UIMenuButton
+        {
+            get
+            {
+                if ((this.mUIMenuButton == null))
+                {
+                    this.mUIMenuButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIMenuButton.SearchProperties[WpfButton.PropertyNames.Name] = "Menu";
+                    this.mUIMenuButton.WindowTitles.Add("SmallWorld");
+                    #endregion
+                }
+                return this.mUIMenuButton;
             }
         }
         #endregion
         
         #region Fields
-        private UITypedecartedemoText mUITypedecartedemoText;
+        private UIJoueur1GAULText mUIJoueur1GAULText;
         
-        private UIIHMPrincipaleTitleBar mUIIHMPrincipaleTitleBar;
+        private UIJoueur2NAINText mUIJoueur2NAINText;
+        
+        private UIUnitéesrestantes8Text mUIUnitéesrestantes8Text;
+        
+        private WpfButton mUIMenuButton;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UITypedecartedemoText : WpfText
+    public class UIJoueur1GAULText : WpfText
     {
         
-        public UITypedecartedemoText(UITestControl searchLimitContainer) : 
+        public UIJoueur1GAULText(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WpfText.PropertyNames.AutomationId] = "MapLabel";
-            this.WindowTitles.Add("IHM Principale");
+            this.SearchProperties[WpfText.PropertyNames.AutomationId] = "Nation1Label";
+            this.WindowTitles.Add("SmallWorld");
             #endregion
         }
         
         #region Properties
-        public WpfText UITypedecartedemoText1
+        public WpfText UIJoueur1GAULText1
         {
             get
             {
-                if ((this.mUITypedecartedemoText1 == null))
+                if ((this.mUIJoueur1GAULText1 == null))
                 {
-                    this.mUITypedecartedemoText1 = new WpfText(this);
+                    this.mUIJoueur1GAULText1 = new WpfText(this);
                     #region Search Criteria
-                    this.mUITypedecartedemoText1.SearchProperties[WpfText.PropertyNames.Name] = "Type de carte : demo";
-                    this.mUITypedecartedemoText1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
-                    this.mUITypedecartedemoText1.WindowTitles.Add("IHM Principale");
+                    this.mUIJoueur1GAULText1.SearchProperties[WpfText.PropertyNames.Name] = "Joueur 1 [GAUL]";
+                    this.mUIJoueur1GAULText1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
+                    this.mUIJoueur1GAULText1.WindowTitles.Add("SmallWorld");
                     #endregion
                 }
-                return this.mUITypedecartedemoText1;
+                return this.mUIJoueur1GAULText1;
             }
         }
         #endregion
         
         #region Fields
-        private WpfText mUITypedecartedemoText1;
+        private WpfText mUIJoueur1GAULText1;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
-    public class UIIHMPrincipaleTitleBar : WpfTitleBar
+    public class UIJoueur2NAINText : WpfText
     {
         
-        public UIIHMPrincipaleTitleBar(UITestControl searchLimitContainer) : 
+        public UIJoueur2NAINText(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WpfTitleBar.PropertyNames.AutomationId] = "TitleBar";
-            this.WindowTitles.Add("IHM Principale");
+            this.SearchProperties[WpfText.PropertyNames.AutomationId] = "Nation2Label";
+            this.WindowTitles.Add("SmallWorld");
             #endregion
         }
         
         #region Properties
-        public WpfButton UIFermerButton
+        public WpfText UIJoueur2NAINText1
         {
             get
             {
-                if ((this.mUIFermerButton == null))
+                if ((this.mUIJoueur2NAINText1 == null))
                 {
-                    this.mUIFermerButton = new WpfButton(this);
+                    this.mUIJoueur2NAINText1 = new WpfText(this);
                     #region Search Criteria
-                    this.mUIFermerButton.SearchProperties[WpfButton.PropertyNames.Name] = "Fermer";
-                    this.mUIFermerButton.WindowTitles.Add("IHM Principale");
+                    this.mUIJoueur2NAINText1.SearchProperties[WpfText.PropertyNames.Name] = "Joueur 2 [NAIN]";
+                    this.mUIJoueur2NAINText1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
+                    this.mUIJoueur2NAINText1.WindowTitles.Add("SmallWorld");
                     #endregion
                 }
-                return this.mUIFermerButton;
+                return this.mUIJoueur2NAINText1;
             }
         }
         #endregion
         
         #region Fields
-        private WpfButton mUIFermerButton;
+        private WpfText mUIJoueur2NAINText1;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "12.0.21005.1")]
+    public class UIUnitéesrestantes8Text : WpfText
+    {
+        
+        public UIUnitéesrestantes8Text(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfText.PropertyNames.AutomationId] = "Units1Label";
+            this.WindowTitles.Add("SmallWorld");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfText UIUnitéesrestantes8Text1
+        {
+            get
+            {
+                if ((this.mUIUnitéesrestantes8Text1 == null))
+                {
+                    this.mUIUnitéesrestantes8Text1 = new WpfText(this);
+                    #region Search Criteria
+                    this.mUIUnitéesrestantes8Text1.SearchProperties[WpfText.PropertyNames.Name] = "Unitées restantes : 8";
+                    this.mUIUnitéesrestantes8Text1.SearchConfigurations.Add(SearchConfiguration.DisambiguateChild);
+                    this.mUIUnitéesrestantes8Text1.WindowTitles.Add("SmallWorld");
+                    #endregion
+                }
+                return this.mUIUnitéesrestantes8Text1;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfText mUIUnitéesrestantes8Text1;
         #endregion
     }
 }
